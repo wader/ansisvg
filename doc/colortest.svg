@@ -1,0 +1,2135 @@
+<svg viewBox="0 0 553 286" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        svg {
+            background-color: #000000
+        }
+
+        rect {
+            width: 7px;
+            height: 13px;
+            shape-rendering: crispedges;
+        }
+
+        text {
+            dominant-baseline: hanging;
+            font: 12px Monaco, Lucida Console, Courier;
+            font-weight: normal;
+            white-space: pre;
+            fill: #bbbbbb;
+        }
+        .u { text-decoration: underline; }
+        .i { filter: brightness(1.5) saturate(150%); }
+
+        .f0  {fill: #bbbbbb;}
+        .f30 {fill: #000000;}
+        .f31 {fill: #bb0000;}
+        .f32 {fill: #00bb00;}
+        .f33 {fill: #bbbb00;}
+        .f34 {fill: #0000bb;}
+        .f35 {fill: #bb00bb;}
+        .f36 {fill: #00bbbb;}
+        .f37 {fill: #bbbbbb;}
+        .b40 {fill: #000000;}
+        .b41 {fill: #bb0000;}
+        .b42 {fill: #bbbb00;}
+        .b43 {fill: #bbbb00;}
+        .b44 {fill: #0000bb;}
+        .b45 {fill: #bb00bb;}
+        .b46 {fill: #00bbbb;}
+        .b47 {fill: #bbbbbb;}
+        .f90 {fill: #555555;}
+        .f91 {fill: #ff5555;}
+        .f92 {fill: #55ff55;}
+        .f93 {fill: #ffff55;}
+        .f94 {fill: #5555ff;}
+        .f95 {fill: #ff55ff;}
+        .f96 {fill: #55ffff;}
+        .f97 {fill: #ffffff;}
+        .b100 {fill: #555555;}
+        .b101 {fill: #ff5555;}
+        .b102 {fill: #ffff55;}
+        .b103 {fill: #ffff55;}
+        .b104 {fill: #5555ff;}
+        .b105 {fill: #ff55ff;}
+        .b106 {fill: #55ffff;}
+        .b107 {fill: #ffffff;}
+    </style>
+    <rect x="0" y="13" class="b0"></rect>
+    <rect x="7" y="13" class="b0"></rect>
+    <rect x="14" y="13" class="b0"></rect>
+    <rect x="21" y="13" class="b0"></rect>
+    <rect x="28" y="13" class="b0"></rect>
+    <rect x="35" y="13" class="b0"></rect>
+    <rect x="42" y="13" class="b0"></rect>
+    <rect x="49" y="13" class="b0"></rect>
+    <rect x="56" y="13" class="b0"></rect>
+    <rect x="63" y="13" class="b0"></rect>
+    <rect x="70" y="13" class="b0"></rect>
+    <rect x="77" y="13" class="b0"></rect>
+    <rect x="84" y="13" class="b0"></rect>
+    <rect x="91" y="13" class="b0"></rect>
+    <rect x="98" y="13" class="b0"></rect>
+    <rect x="105" y="13" class="b0"></rect>
+    <rect x="112" y="13" class="b0"></rect>
+    <rect x="119" y="13" class="b0"></rect>
+    <rect x="126" y="13" class="b0"></rect>
+    <text x="126" y="13" class="f0  ">4</text>
+    <rect x="133" y="13" class="b0"></rect>
+    <text x="133" y="13" class="f0  ">0</text>
+    <rect x="140" y="13" class="b0"></rect>
+    <text x="140" y="13" class="f0  ">m</text>
+    <rect x="147" y="13" class="b0"></rect>
+    <rect x="154" y="13" class="b0"></rect>
+    <rect x="161" y="13" class="b0"></rect>
+    <rect x="168" y="13" class="b0"></rect>
+    <rect x="175" y="13" class="b0"></rect>
+    <rect x="182" y="13" class="b0"></rect>
+    <text x="182" y="13" class="f0  ">4</text>
+    <rect x="189" y="13" class="b0"></rect>
+    <text x="189" y="13" class="f0  ">1</text>
+    <rect x="196" y="13" class="b0"></rect>
+    <text x="196" y="13" class="f0  ">m</text>
+    <rect x="203" y="13" class="b0"></rect>
+    <rect x="210" y="13" class="b0"></rect>
+    <rect x="217" y="13" class="b0"></rect>
+    <rect x="224" y="13" class="b0"></rect>
+    <rect x="231" y="13" class="b0"></rect>
+    <rect x="238" y="13" class="b0"></rect>
+    <text x="238" y="13" class="f0  ">4</text>
+    <rect x="245" y="13" class="b0"></rect>
+    <text x="245" y="13" class="f0  ">2</text>
+    <rect x="252" y="13" class="b0"></rect>
+    <text x="252" y="13" class="f0  ">m</text>
+    <rect x="259" y="13" class="b0"></rect>
+    <rect x="266" y="13" class="b0"></rect>
+    <rect x="273" y="13" class="b0"></rect>
+    <rect x="280" y="13" class="b0"></rect>
+    <rect x="287" y="13" class="b0"></rect>
+    <rect x="294" y="13" class="b0"></rect>
+    <text x="294" y="13" class="f0  ">4</text>
+    <rect x="301" y="13" class="b0"></rect>
+    <text x="301" y="13" class="f0  ">3</text>
+    <rect x="308" y="13" class="b0"></rect>
+    <text x="308" y="13" class="f0  ">m</text>
+    <rect x="315" y="13" class="b0"></rect>
+    <rect x="322" y="13" class="b0"></rect>
+    <rect x="329" y="13" class="b0"></rect>
+    <rect x="336" y="13" class="b0"></rect>
+    <rect x="343" y="13" class="b0"></rect>
+    <rect x="350" y="13" class="b0"></rect>
+    <text x="350" y="13" class="f0  ">4</text>
+    <rect x="357" y="13" class="b0"></rect>
+    <text x="357" y="13" class="f0  ">4</text>
+    <rect x="364" y="13" class="b0"></rect>
+    <text x="364" y="13" class="f0  ">m</text>
+    <rect x="371" y="13" class="b0"></rect>
+    <rect x="378" y="13" class="b0"></rect>
+    <rect x="385" y="13" class="b0"></rect>
+    <rect x="392" y="13" class="b0"></rect>
+    <rect x="399" y="13" class="b0"></rect>
+    <rect x="406" y="13" class="b0"></rect>
+    <text x="406" y="13" class="f0  ">4</text>
+    <rect x="413" y="13" class="b0"></rect>
+    <text x="413" y="13" class="f0  ">5</text>
+    <rect x="420" y="13" class="b0"></rect>
+    <text x="420" y="13" class="f0  ">m</text>
+    <rect x="427" y="13" class="b0"></rect>
+    <rect x="434" y="13" class="b0"></rect>
+    <rect x="441" y="13" class="b0"></rect>
+    <rect x="448" y="13" class="b0"></rect>
+    <rect x="455" y="13" class="b0"></rect>
+    <rect x="462" y="13" class="b0"></rect>
+    <text x="462" y="13" class="f0  ">4</text>
+    <rect x="469" y="13" class="b0"></rect>
+    <text x="469" y="13" class="f0  ">6</text>
+    <rect x="476" y="13" class="b0"></rect>
+    <text x="476" y="13" class="f0  ">m</text>
+    <rect x="483" y="13" class="b0"></rect>
+    <rect x="490" y="13" class="b0"></rect>
+    <rect x="497" y="13" class="b0"></rect>
+    <rect x="504" y="13" class="b0"></rect>
+    <rect x="511" y="13" class="b0"></rect>
+    <rect x="518" y="13" class="b0"></rect>
+    <text x="518" y="13" class="f0  ">4</text>
+    <rect x="525" y="13" class="b0"></rect>
+    <text x="525" y="13" class="f0  ">7</text>
+    <rect x="532" y="13" class="b0"></rect>
+    <text x="532" y="13" class="f0  ">m</text>
+    <rect x="0" y="26" class="b0"></rect>
+    <rect x="7" y="26" class="b0"></rect>
+    <rect x="14" y="26" class="b0"></rect>
+    <rect x="21" y="26" class="b0"></rect>
+    <rect x="28" y="26" class="b0"></rect>
+    <rect x="35" y="26" class="b0"></rect>
+    <rect x="42" y="26" class="b0"></rect>
+    <text x="42" y="26" class="f0  ">m</text>
+    <rect x="49" y="26" class="b0"></rect>
+    <rect x="56" y="26" class="b0"></rect>
+    <rect x="63" y="26" class="b0"></rect>
+    <rect x="70" y="26" class="b0"></rect>
+    <text x="70" y="26" class="f0  ">g</text>
+    <rect x="77" y="26" class="b0"></rect>
+    <text x="77" y="26" class="f0  ">Y</text>
+    <rect x="84" y="26" class="b0"></rect>
+    <text x="84" y="26" class="f0  ">w</text>
+    <rect x="91" y="26" class="b0"></rect>
+    <rect x="98" y="26" class="b0"></rect>
+    <rect x="105" y="26" class="b0"></rect>
+    <rect x="112" y="26" class="b40"></rect>
+    <rect x="119" y="26" class="b40"></rect>
+    <rect x="126" y="26" class="b40"></rect>
+    <text x="126" y="26" class="f0  ">g</text>
+    <rect x="133" y="26" class="b40"></rect>
+    <text x="133" y="26" class="f0  ">Y</text>
+    <rect x="140" y="26" class="b40"></rect>
+    <text x="140" y="26" class="f0  ">w</text>
+    <rect x="147" y="26" class="b40"></rect>
+    <rect x="154" y="26" class="b40"></rect>
+    <rect x="161" y="26" class="b0"></rect>
+    <rect x="168" y="26" class="b41"></rect>
+    <rect x="175" y="26" class="b41"></rect>
+    <rect x="182" y="26" class="b41"></rect>
+    <text x="182" y="26" class="f0  ">g</text>
+    <rect x="189" y="26" class="b41"></rect>
+    <text x="189" y="26" class="f0  ">Y</text>
+    <rect x="196" y="26" class="b41"></rect>
+    <text x="196" y="26" class="f0  ">w</text>
+    <rect x="203" y="26" class="b41"></rect>
+    <rect x="210" y="26" class="b41"></rect>
+    <rect x="217" y="26" class="b0"></rect>
+    <rect x="224" y="26" class="b42"></rect>
+    <rect x="231" y="26" class="b42"></rect>
+    <rect x="238" y="26" class="b42"></rect>
+    <text x="238" y="26" class="f0  ">g</text>
+    <rect x="245" y="26" class="b42"></rect>
+    <text x="245" y="26" class="f0  ">Y</text>
+    <rect x="252" y="26" class="b42"></rect>
+    <text x="252" y="26" class="f0  ">w</text>
+    <rect x="259" y="26" class="b42"></rect>
+    <rect x="266" y="26" class="b42"></rect>
+    <rect x="273" y="26" class="b0"></rect>
+    <rect x="280" y="26" class="b43"></rect>
+    <rect x="287" y="26" class="b43"></rect>
+    <rect x="294" y="26" class="b43"></rect>
+    <text x="294" y="26" class="f0  ">g</text>
+    <rect x="301" y="26" class="b43"></rect>
+    <text x="301" y="26" class="f0  ">Y</text>
+    <rect x="308" y="26" class="b43"></rect>
+    <text x="308" y="26" class="f0  ">w</text>
+    <rect x="315" y="26" class="b43"></rect>
+    <rect x="322" y="26" class="b43"></rect>
+    <rect x="329" y="26" class="b0"></rect>
+    <rect x="336" y="26" class="b44"></rect>
+    <rect x="343" y="26" class="b44"></rect>
+    <rect x="350" y="26" class="b44"></rect>
+    <text x="350" y="26" class="f0  ">g</text>
+    <rect x="357" y="26" class="b44"></rect>
+    <text x="357" y="26" class="f0  ">Y</text>
+    <rect x="364" y="26" class="b44"></rect>
+    <text x="364" y="26" class="f0  ">w</text>
+    <rect x="371" y="26" class="b44"></rect>
+    <rect x="378" y="26" class="b44"></rect>
+    <rect x="385" y="26" class="b0"></rect>
+    <rect x="392" y="26" class="b45"></rect>
+    <rect x="399" y="26" class="b45"></rect>
+    <rect x="406" y="26" class="b45"></rect>
+    <text x="406" y="26" class="f0  ">g</text>
+    <rect x="413" y="26" class="b45"></rect>
+    <text x="413" y="26" class="f0  ">Y</text>
+    <rect x="420" y="26" class="b45"></rect>
+    <text x="420" y="26" class="f0  ">w</text>
+    <rect x="427" y="26" class="b45"></rect>
+    <rect x="434" y="26" class="b45"></rect>
+    <rect x="441" y="26" class="b0"></rect>
+    <rect x="448" y="26" class="b46"></rect>
+    <rect x="455" y="26" class="b46"></rect>
+    <rect x="462" y="26" class="b46"></rect>
+    <text x="462" y="26" class="f0  ">g</text>
+    <rect x="469" y="26" class="b46"></rect>
+    <text x="469" y="26" class="f0  ">Y</text>
+    <rect x="476" y="26" class="b46"></rect>
+    <text x="476" y="26" class="f0  ">w</text>
+    <rect x="483" y="26" class="b46"></rect>
+    <rect x="490" y="26" class="b46"></rect>
+    <rect x="497" y="26" class="b0"></rect>
+    <rect x="504" y="26" class="b47"></rect>
+    <rect x="511" y="26" class="b47"></rect>
+    <rect x="518" y="26" class="b47"></rect>
+    <text x="518" y="26" class="f0  ">g</text>
+    <rect x="525" y="26" class="b47"></rect>
+    <text x="525" y="26" class="f0  ">Y</text>
+    <rect x="532" y="26" class="b47"></rect>
+    <text x="532" y="26" class="f0  ">w</text>
+    <rect x="539" y="26" class="b47"></rect>
+    <rect x="546" y="26" class="b47"></rect>
+    <rect x="0" y="39" class="b0"></rect>
+    <rect x="7" y="39" class="b0"></rect>
+    <rect x="14" y="39" class="b0"></rect>
+    <rect x="21" y="39" class="b0"></rect>
+    <rect x="28" y="39" class="b0"></rect>
+    <rect x="35" y="39" class="b0"></rect>
+    <text x="35" y="39" class="f0  ">1</text>
+    <rect x="42" y="39" class="b0"></rect>
+    <text x="42" y="39" class="f0  ">m</text>
+    <rect x="49" y="39" class="b0"></rect>
+    <rect x="56" y="39" class="b0"></rect>
+    <rect x="63" y="39" class="b0"></rect>
+    <rect x="70" y="39" class="b0"></rect>
+    <text x="70" y="39" class="f0  i">g</text>
+    <rect x="77" y="39" class="b0"></rect>
+    <text x="77" y="39" class="f0  i">Y</text>
+    <rect x="84" y="39" class="b0"></rect>
+    <text x="84" y="39" class="f0  i">w</text>
+    <rect x="91" y="39" class="b0"></rect>
+    <rect x="98" y="39" class="b0"></rect>
+    <rect x="105" y="39" class="b0"></rect>
+    <rect x="112" y="39" class="b40"></rect>
+    <rect x="119" y="39" class="b40"></rect>
+    <rect x="126" y="39" class="b40"></rect>
+    <text x="126" y="39" class="f0  i">g</text>
+    <rect x="133" y="39" class="b40"></rect>
+    <text x="133" y="39" class="f0  i">Y</text>
+    <rect x="140" y="39" class="b40"></rect>
+    <text x="140" y="39" class="f0  i">w</text>
+    <rect x="147" y="39" class="b40"></rect>
+    <rect x="154" y="39" class="b40"></rect>
+    <rect x="161" y="39" class="b0"></rect>
+    <rect x="168" y="39" class="b41"></rect>
+    <rect x="175" y="39" class="b41"></rect>
+    <rect x="182" y="39" class="b41"></rect>
+    <text x="182" y="39" class="f0  i">g</text>
+    <rect x="189" y="39" class="b41"></rect>
+    <text x="189" y="39" class="f0  i">Y</text>
+    <rect x="196" y="39" class="b41"></rect>
+    <text x="196" y="39" class="f0  i">w</text>
+    <rect x="203" y="39" class="b41"></rect>
+    <rect x="210" y="39" class="b41"></rect>
+    <rect x="217" y="39" class="b0"></rect>
+    <rect x="224" y="39" class="b42"></rect>
+    <rect x="231" y="39" class="b42"></rect>
+    <rect x="238" y="39" class="b42"></rect>
+    <text x="238" y="39" class="f0  i">g</text>
+    <rect x="245" y="39" class="b42"></rect>
+    <text x="245" y="39" class="f0  i">Y</text>
+    <rect x="252" y="39" class="b42"></rect>
+    <text x="252" y="39" class="f0  i">w</text>
+    <rect x="259" y="39" class="b42"></rect>
+    <rect x="266" y="39" class="b42"></rect>
+    <rect x="273" y="39" class="b0"></rect>
+    <rect x="280" y="39" class="b43"></rect>
+    <rect x="287" y="39" class="b43"></rect>
+    <rect x="294" y="39" class="b43"></rect>
+    <text x="294" y="39" class="f0  i">g</text>
+    <rect x="301" y="39" class="b43"></rect>
+    <text x="301" y="39" class="f0  i">Y</text>
+    <rect x="308" y="39" class="b43"></rect>
+    <text x="308" y="39" class="f0  i">w</text>
+    <rect x="315" y="39" class="b43"></rect>
+    <rect x="322" y="39" class="b43"></rect>
+    <rect x="329" y="39" class="b0"></rect>
+    <rect x="336" y="39" class="b44"></rect>
+    <rect x="343" y="39" class="b44"></rect>
+    <rect x="350" y="39" class="b44"></rect>
+    <text x="350" y="39" class="f0  i">g</text>
+    <rect x="357" y="39" class="b44"></rect>
+    <text x="357" y="39" class="f0  i">Y</text>
+    <rect x="364" y="39" class="b44"></rect>
+    <text x="364" y="39" class="f0  i">w</text>
+    <rect x="371" y="39" class="b44"></rect>
+    <rect x="378" y="39" class="b44"></rect>
+    <rect x="385" y="39" class="b0"></rect>
+    <rect x="392" y="39" class="b45"></rect>
+    <rect x="399" y="39" class="b45"></rect>
+    <rect x="406" y="39" class="b45"></rect>
+    <text x="406" y="39" class="f0  i">g</text>
+    <rect x="413" y="39" class="b45"></rect>
+    <text x="413" y="39" class="f0  i">Y</text>
+    <rect x="420" y="39" class="b45"></rect>
+    <text x="420" y="39" class="f0  i">w</text>
+    <rect x="427" y="39" class="b45"></rect>
+    <rect x="434" y="39" class="b45"></rect>
+    <rect x="441" y="39" class="b0"></rect>
+    <rect x="448" y="39" class="b46"></rect>
+    <rect x="455" y="39" class="b46"></rect>
+    <rect x="462" y="39" class="b46"></rect>
+    <text x="462" y="39" class="f0  i">g</text>
+    <rect x="469" y="39" class="b46"></rect>
+    <text x="469" y="39" class="f0  i">Y</text>
+    <rect x="476" y="39" class="b46"></rect>
+    <text x="476" y="39" class="f0  i">w</text>
+    <rect x="483" y="39" class="b46"></rect>
+    <rect x="490" y="39" class="b46"></rect>
+    <rect x="497" y="39" class="b0"></rect>
+    <rect x="504" y="39" class="b47"></rect>
+    <rect x="511" y="39" class="b47"></rect>
+    <rect x="518" y="39" class="b47"></rect>
+    <text x="518" y="39" class="f0  i">g</text>
+    <rect x="525" y="39" class="b47"></rect>
+    <text x="525" y="39" class="f0  i">Y</text>
+    <rect x="532" y="39" class="b47"></rect>
+    <text x="532" y="39" class="f0  i">w</text>
+    <rect x="539" y="39" class="b47"></rect>
+    <rect x="546" y="39" class="b47"></rect>
+    <rect x="0" y="52" class="b0"></rect>
+    <rect x="7" y="52" class="b0"></rect>
+    <rect x="14" y="52" class="b0"></rect>
+    <rect x="21" y="52" class="b0"></rect>
+    <rect x="28" y="52" class="b0"></rect>
+    <text x="28" y="52" class="f0  ">3</text>
+    <rect x="35" y="52" class="b0"></rect>
+    <text x="35" y="52" class="f0  ">0</text>
+    <rect x="42" y="52" class="b0"></rect>
+    <text x="42" y="52" class="f0  ">m</text>
+    <rect x="49" y="52" class="b0"></rect>
+    <rect x="56" y="52" class="b0"></rect>
+    <rect x="63" y="52" class="b0"></rect>
+    <rect x="70" y="52" class="b0"></rect>
+    <text x="70" y="52" class="f30  ">g</text>
+    <rect x="77" y="52" class="b0"></rect>
+    <text x="77" y="52" class="f30  ">Y</text>
+    <rect x="84" y="52" class="b0"></rect>
+    <text x="84" y="52" class="f30  ">w</text>
+    <rect x="91" y="52" class="b0"></rect>
+    <rect x="98" y="52" class="b0"></rect>
+    <rect x="105" y="52" class="b0"></rect>
+    <rect x="112" y="52" class="b40"></rect>
+    <rect x="119" y="52" class="b40"></rect>
+    <rect x="126" y="52" class="b40"></rect>
+    <text x="126" y="52" class="f30  ">g</text>
+    <rect x="133" y="52" class="b40"></rect>
+    <text x="133" y="52" class="f30  ">Y</text>
+    <rect x="140" y="52" class="b40"></rect>
+    <text x="140" y="52" class="f30  ">w</text>
+    <rect x="147" y="52" class="b40"></rect>
+    <rect x="154" y="52" class="b40"></rect>
+    <rect x="161" y="52" class="b0"></rect>
+    <rect x="168" y="52" class="b41"></rect>
+    <rect x="175" y="52" class="b41"></rect>
+    <rect x="182" y="52" class="b41"></rect>
+    <text x="182" y="52" class="f30  ">g</text>
+    <rect x="189" y="52" class="b41"></rect>
+    <text x="189" y="52" class="f30  ">Y</text>
+    <rect x="196" y="52" class="b41"></rect>
+    <text x="196" y="52" class="f30  ">w</text>
+    <rect x="203" y="52" class="b41"></rect>
+    <rect x="210" y="52" class="b41"></rect>
+    <rect x="217" y="52" class="b0"></rect>
+    <rect x="224" y="52" class="b42"></rect>
+    <rect x="231" y="52" class="b42"></rect>
+    <rect x="238" y="52" class="b42"></rect>
+    <text x="238" y="52" class="f30  ">g</text>
+    <rect x="245" y="52" class="b42"></rect>
+    <text x="245" y="52" class="f30  ">Y</text>
+    <rect x="252" y="52" class="b42"></rect>
+    <text x="252" y="52" class="f30  ">w</text>
+    <rect x="259" y="52" class="b42"></rect>
+    <rect x="266" y="52" class="b42"></rect>
+    <rect x="273" y="52" class="b0"></rect>
+    <rect x="280" y="52" class="b43"></rect>
+    <rect x="287" y="52" class="b43"></rect>
+    <rect x="294" y="52" class="b43"></rect>
+    <text x="294" y="52" class="f30  ">g</text>
+    <rect x="301" y="52" class="b43"></rect>
+    <text x="301" y="52" class="f30  ">Y</text>
+    <rect x="308" y="52" class="b43"></rect>
+    <text x="308" y="52" class="f30  ">w</text>
+    <rect x="315" y="52" class="b43"></rect>
+    <rect x="322" y="52" class="b43"></rect>
+    <rect x="329" y="52" class="b0"></rect>
+    <rect x="336" y="52" class="b44"></rect>
+    <rect x="343" y="52" class="b44"></rect>
+    <rect x="350" y="52" class="b44"></rect>
+    <text x="350" y="52" class="f30  ">g</text>
+    <rect x="357" y="52" class="b44"></rect>
+    <text x="357" y="52" class="f30  ">Y</text>
+    <rect x="364" y="52" class="b44"></rect>
+    <text x="364" y="52" class="f30  ">w</text>
+    <rect x="371" y="52" class="b44"></rect>
+    <rect x="378" y="52" class="b44"></rect>
+    <rect x="385" y="52" class="b0"></rect>
+    <rect x="392" y="52" class="b45"></rect>
+    <rect x="399" y="52" class="b45"></rect>
+    <rect x="406" y="52" class="b45"></rect>
+    <text x="406" y="52" class="f30  ">g</text>
+    <rect x="413" y="52" class="b45"></rect>
+    <text x="413" y="52" class="f30  ">Y</text>
+    <rect x="420" y="52" class="b45"></rect>
+    <text x="420" y="52" class="f30  ">w</text>
+    <rect x="427" y="52" class="b45"></rect>
+    <rect x="434" y="52" class="b45"></rect>
+    <rect x="441" y="52" class="b0"></rect>
+    <rect x="448" y="52" class="b46"></rect>
+    <rect x="455" y="52" class="b46"></rect>
+    <rect x="462" y="52" class="b46"></rect>
+    <text x="462" y="52" class="f30  ">g</text>
+    <rect x="469" y="52" class="b46"></rect>
+    <text x="469" y="52" class="f30  ">Y</text>
+    <rect x="476" y="52" class="b46"></rect>
+    <text x="476" y="52" class="f30  ">w</text>
+    <rect x="483" y="52" class="b46"></rect>
+    <rect x="490" y="52" class="b46"></rect>
+    <rect x="497" y="52" class="b0"></rect>
+    <rect x="504" y="52" class="b47"></rect>
+    <rect x="511" y="52" class="b47"></rect>
+    <rect x="518" y="52" class="b47"></rect>
+    <text x="518" y="52" class="f30  ">g</text>
+    <rect x="525" y="52" class="b47"></rect>
+    <text x="525" y="52" class="f30  ">Y</text>
+    <rect x="532" y="52" class="b47"></rect>
+    <text x="532" y="52" class="f30  ">w</text>
+    <rect x="539" y="52" class="b47"></rect>
+    <rect x="546" y="52" class="b47"></rect>
+    <rect x="0" y="65" class="b0"></rect>
+    <rect x="7" y="65" class="b0"></rect>
+    <rect x="14" y="65" class="b0"></rect>
+    <text x="14" y="65" class="f0  ">1</text>
+    <rect x="21" y="65" class="b0"></rect>
+    <text x="21" y="65" class="f0  ">;</text>
+    <rect x="28" y="65" class="b0"></rect>
+    <text x="28" y="65" class="f0  ">3</text>
+    <rect x="35" y="65" class="b0"></rect>
+    <text x="35" y="65" class="f0  ">0</text>
+    <rect x="42" y="65" class="b0"></rect>
+    <text x="42" y="65" class="f0  ">m</text>
+    <rect x="49" y="65" class="b0"></rect>
+    <rect x="56" y="65" class="b0"></rect>
+    <rect x="63" y="65" class="b0"></rect>
+    <rect x="70" y="65" class="b0"></rect>
+    <text x="70" y="65" class="f30  i">g</text>
+    <rect x="77" y="65" class="b0"></rect>
+    <text x="77" y="65" class="f30  i">Y</text>
+    <rect x="84" y="65" class="b0"></rect>
+    <text x="84" y="65" class="f30  i">w</text>
+    <rect x="91" y="65" class="b0"></rect>
+    <rect x="98" y="65" class="b0"></rect>
+    <rect x="105" y="65" class="b0"></rect>
+    <rect x="112" y="65" class="b40"></rect>
+    <rect x="119" y="65" class="b40"></rect>
+    <rect x="126" y="65" class="b40"></rect>
+    <text x="126" y="65" class="f30  i">g</text>
+    <rect x="133" y="65" class="b40"></rect>
+    <text x="133" y="65" class="f30  i">Y</text>
+    <rect x="140" y="65" class="b40"></rect>
+    <text x="140" y="65" class="f30  i">w</text>
+    <rect x="147" y="65" class="b40"></rect>
+    <rect x="154" y="65" class="b40"></rect>
+    <rect x="161" y="65" class="b0"></rect>
+    <rect x="168" y="65" class="b41"></rect>
+    <rect x="175" y="65" class="b41"></rect>
+    <rect x="182" y="65" class="b41"></rect>
+    <text x="182" y="65" class="f30  i">g</text>
+    <rect x="189" y="65" class="b41"></rect>
+    <text x="189" y="65" class="f30  i">Y</text>
+    <rect x="196" y="65" class="b41"></rect>
+    <text x="196" y="65" class="f30  i">w</text>
+    <rect x="203" y="65" class="b41"></rect>
+    <rect x="210" y="65" class="b41"></rect>
+    <rect x="217" y="65" class="b0"></rect>
+    <rect x="224" y="65" class="b42"></rect>
+    <rect x="231" y="65" class="b42"></rect>
+    <rect x="238" y="65" class="b42"></rect>
+    <text x="238" y="65" class="f30  i">g</text>
+    <rect x="245" y="65" class="b42"></rect>
+    <text x="245" y="65" class="f30  i">Y</text>
+    <rect x="252" y="65" class="b42"></rect>
+    <text x="252" y="65" class="f30  i">w</text>
+    <rect x="259" y="65" class="b42"></rect>
+    <rect x="266" y="65" class="b42"></rect>
+    <rect x="273" y="65" class="b0"></rect>
+    <rect x="280" y="65" class="b43"></rect>
+    <rect x="287" y="65" class="b43"></rect>
+    <rect x="294" y="65" class="b43"></rect>
+    <text x="294" y="65" class="f30  i">g</text>
+    <rect x="301" y="65" class="b43"></rect>
+    <text x="301" y="65" class="f30  i">Y</text>
+    <rect x="308" y="65" class="b43"></rect>
+    <text x="308" y="65" class="f30  i">w</text>
+    <rect x="315" y="65" class="b43"></rect>
+    <rect x="322" y="65" class="b43"></rect>
+    <rect x="329" y="65" class="b0"></rect>
+    <rect x="336" y="65" class="b44"></rect>
+    <rect x="343" y="65" class="b44"></rect>
+    <rect x="350" y="65" class="b44"></rect>
+    <text x="350" y="65" class="f30  i">g</text>
+    <rect x="357" y="65" class="b44"></rect>
+    <text x="357" y="65" class="f30  i">Y</text>
+    <rect x="364" y="65" class="b44"></rect>
+    <text x="364" y="65" class="f30  i">w</text>
+    <rect x="371" y="65" class="b44"></rect>
+    <rect x="378" y="65" class="b44"></rect>
+    <rect x="385" y="65" class="b0"></rect>
+    <rect x="392" y="65" class="b45"></rect>
+    <rect x="399" y="65" class="b45"></rect>
+    <rect x="406" y="65" class="b45"></rect>
+    <text x="406" y="65" class="f30  i">g</text>
+    <rect x="413" y="65" class="b45"></rect>
+    <text x="413" y="65" class="f30  i">Y</text>
+    <rect x="420" y="65" class="b45"></rect>
+    <text x="420" y="65" class="f30  i">w</text>
+    <rect x="427" y="65" class="b45"></rect>
+    <rect x="434" y="65" class="b45"></rect>
+    <rect x="441" y="65" class="b0"></rect>
+    <rect x="448" y="65" class="b46"></rect>
+    <rect x="455" y="65" class="b46"></rect>
+    <rect x="462" y="65" class="b46"></rect>
+    <text x="462" y="65" class="f30  i">g</text>
+    <rect x="469" y="65" class="b46"></rect>
+    <text x="469" y="65" class="f30  i">Y</text>
+    <rect x="476" y="65" class="b46"></rect>
+    <text x="476" y="65" class="f30  i">w</text>
+    <rect x="483" y="65" class="b46"></rect>
+    <rect x="490" y="65" class="b46"></rect>
+    <rect x="497" y="65" class="b0"></rect>
+    <rect x="504" y="65" class="b47"></rect>
+    <rect x="511" y="65" class="b47"></rect>
+    <rect x="518" y="65" class="b47"></rect>
+    <text x="518" y="65" class="f30  i">g</text>
+    <rect x="525" y="65" class="b47"></rect>
+    <text x="525" y="65" class="f30  i">Y</text>
+    <rect x="532" y="65" class="b47"></rect>
+    <text x="532" y="65" class="f30  i">w</text>
+    <rect x="539" y="65" class="b47"></rect>
+    <rect x="546" y="65" class="b47"></rect>
+    <rect x="0" y="78" class="b0"></rect>
+    <rect x="7" y="78" class="b0"></rect>
+    <rect x="14" y="78" class="b0"></rect>
+    <rect x="21" y="78" class="b0"></rect>
+    <rect x="28" y="78" class="b0"></rect>
+    <text x="28" y="78" class="f0  ">3</text>
+    <rect x="35" y="78" class="b0"></rect>
+    <text x="35" y="78" class="f0  ">1</text>
+    <rect x="42" y="78" class="b0"></rect>
+    <text x="42" y="78" class="f0  ">m</text>
+    <rect x="49" y="78" class="b0"></rect>
+    <rect x="56" y="78" class="b0"></rect>
+    <rect x="63" y="78" class="b0"></rect>
+    <rect x="70" y="78" class="b0"></rect>
+    <text x="70" y="78" class="f31  ">g</text>
+    <rect x="77" y="78" class="b0"></rect>
+    <text x="77" y="78" class="f31  ">Y</text>
+    <rect x="84" y="78" class="b0"></rect>
+    <text x="84" y="78" class="f31  ">w</text>
+    <rect x="91" y="78" class="b0"></rect>
+    <rect x="98" y="78" class="b0"></rect>
+    <rect x="105" y="78" class="b0"></rect>
+    <rect x="112" y="78" class="b40"></rect>
+    <rect x="119" y="78" class="b40"></rect>
+    <rect x="126" y="78" class="b40"></rect>
+    <text x="126" y="78" class="f31  ">g</text>
+    <rect x="133" y="78" class="b40"></rect>
+    <text x="133" y="78" class="f31  ">Y</text>
+    <rect x="140" y="78" class="b40"></rect>
+    <text x="140" y="78" class="f31  ">w</text>
+    <rect x="147" y="78" class="b40"></rect>
+    <rect x="154" y="78" class="b40"></rect>
+    <rect x="161" y="78" class="b0"></rect>
+    <rect x="168" y="78" class="b41"></rect>
+    <rect x="175" y="78" class="b41"></rect>
+    <rect x="182" y="78" class="b41"></rect>
+    <text x="182" y="78" class="f31  ">g</text>
+    <rect x="189" y="78" class="b41"></rect>
+    <text x="189" y="78" class="f31  ">Y</text>
+    <rect x="196" y="78" class="b41"></rect>
+    <text x="196" y="78" class="f31  ">w</text>
+    <rect x="203" y="78" class="b41"></rect>
+    <rect x="210" y="78" class="b41"></rect>
+    <rect x="217" y="78" class="b0"></rect>
+    <rect x="224" y="78" class="b42"></rect>
+    <rect x="231" y="78" class="b42"></rect>
+    <rect x="238" y="78" class="b42"></rect>
+    <text x="238" y="78" class="f31  ">g</text>
+    <rect x="245" y="78" class="b42"></rect>
+    <text x="245" y="78" class="f31  ">Y</text>
+    <rect x="252" y="78" class="b42"></rect>
+    <text x="252" y="78" class="f31  ">w</text>
+    <rect x="259" y="78" class="b42"></rect>
+    <rect x="266" y="78" class="b42"></rect>
+    <rect x="273" y="78" class="b0"></rect>
+    <rect x="280" y="78" class="b43"></rect>
+    <rect x="287" y="78" class="b43"></rect>
+    <rect x="294" y="78" class="b43"></rect>
+    <text x="294" y="78" class="f31  ">g</text>
+    <rect x="301" y="78" class="b43"></rect>
+    <text x="301" y="78" class="f31  ">Y</text>
+    <rect x="308" y="78" class="b43"></rect>
+    <text x="308" y="78" class="f31  ">w</text>
+    <rect x="315" y="78" class="b43"></rect>
+    <rect x="322" y="78" class="b43"></rect>
+    <rect x="329" y="78" class="b0"></rect>
+    <rect x="336" y="78" class="b44"></rect>
+    <rect x="343" y="78" class="b44"></rect>
+    <rect x="350" y="78" class="b44"></rect>
+    <text x="350" y="78" class="f31  ">g</text>
+    <rect x="357" y="78" class="b44"></rect>
+    <text x="357" y="78" class="f31  ">Y</text>
+    <rect x="364" y="78" class="b44"></rect>
+    <text x="364" y="78" class="f31  ">w</text>
+    <rect x="371" y="78" class="b44"></rect>
+    <rect x="378" y="78" class="b44"></rect>
+    <rect x="385" y="78" class="b0"></rect>
+    <rect x="392" y="78" class="b45"></rect>
+    <rect x="399" y="78" class="b45"></rect>
+    <rect x="406" y="78" class="b45"></rect>
+    <text x="406" y="78" class="f31  ">g</text>
+    <rect x="413" y="78" class="b45"></rect>
+    <text x="413" y="78" class="f31  ">Y</text>
+    <rect x="420" y="78" class="b45"></rect>
+    <text x="420" y="78" class="f31  ">w</text>
+    <rect x="427" y="78" class="b45"></rect>
+    <rect x="434" y="78" class="b45"></rect>
+    <rect x="441" y="78" class="b0"></rect>
+    <rect x="448" y="78" class="b46"></rect>
+    <rect x="455" y="78" class="b46"></rect>
+    <rect x="462" y="78" class="b46"></rect>
+    <text x="462" y="78" class="f31  ">g</text>
+    <rect x="469" y="78" class="b46"></rect>
+    <text x="469" y="78" class="f31  ">Y</text>
+    <rect x="476" y="78" class="b46"></rect>
+    <text x="476" y="78" class="f31  ">w</text>
+    <rect x="483" y="78" class="b46"></rect>
+    <rect x="490" y="78" class="b46"></rect>
+    <rect x="497" y="78" class="b0"></rect>
+    <rect x="504" y="78" class="b47"></rect>
+    <rect x="511" y="78" class="b47"></rect>
+    <rect x="518" y="78" class="b47"></rect>
+    <text x="518" y="78" class="f31  ">g</text>
+    <rect x="525" y="78" class="b47"></rect>
+    <text x="525" y="78" class="f31  ">Y</text>
+    <rect x="532" y="78" class="b47"></rect>
+    <text x="532" y="78" class="f31  ">w</text>
+    <rect x="539" y="78" class="b47"></rect>
+    <rect x="546" y="78" class="b47"></rect>
+    <rect x="0" y="91" class="b0"></rect>
+    <rect x="7" y="91" class="b0"></rect>
+    <rect x="14" y="91" class="b0"></rect>
+    <text x="14" y="91" class="f0  ">1</text>
+    <rect x="21" y="91" class="b0"></rect>
+    <text x="21" y="91" class="f0  ">;</text>
+    <rect x="28" y="91" class="b0"></rect>
+    <text x="28" y="91" class="f0  ">3</text>
+    <rect x="35" y="91" class="b0"></rect>
+    <text x="35" y="91" class="f0  ">1</text>
+    <rect x="42" y="91" class="b0"></rect>
+    <text x="42" y="91" class="f0  ">m</text>
+    <rect x="49" y="91" class="b0"></rect>
+    <rect x="56" y="91" class="b0"></rect>
+    <rect x="63" y="91" class="b0"></rect>
+    <rect x="70" y="91" class="b0"></rect>
+    <text x="70" y="91" class="f31  i">g</text>
+    <rect x="77" y="91" class="b0"></rect>
+    <text x="77" y="91" class="f31  i">Y</text>
+    <rect x="84" y="91" class="b0"></rect>
+    <text x="84" y="91" class="f31  i">w</text>
+    <rect x="91" y="91" class="b0"></rect>
+    <rect x="98" y="91" class="b0"></rect>
+    <rect x="105" y="91" class="b0"></rect>
+    <rect x="112" y="91" class="b40"></rect>
+    <rect x="119" y="91" class="b40"></rect>
+    <rect x="126" y="91" class="b40"></rect>
+    <text x="126" y="91" class="f31  i">g</text>
+    <rect x="133" y="91" class="b40"></rect>
+    <text x="133" y="91" class="f31  i">Y</text>
+    <rect x="140" y="91" class="b40"></rect>
+    <text x="140" y="91" class="f31  i">w</text>
+    <rect x="147" y="91" class="b40"></rect>
+    <rect x="154" y="91" class="b40"></rect>
+    <rect x="161" y="91" class="b0"></rect>
+    <rect x="168" y="91" class="b41"></rect>
+    <rect x="175" y="91" class="b41"></rect>
+    <rect x="182" y="91" class="b41"></rect>
+    <text x="182" y="91" class="f31  i">g</text>
+    <rect x="189" y="91" class="b41"></rect>
+    <text x="189" y="91" class="f31  i">Y</text>
+    <rect x="196" y="91" class="b41"></rect>
+    <text x="196" y="91" class="f31  i">w</text>
+    <rect x="203" y="91" class="b41"></rect>
+    <rect x="210" y="91" class="b41"></rect>
+    <rect x="217" y="91" class="b0"></rect>
+    <rect x="224" y="91" class="b42"></rect>
+    <rect x="231" y="91" class="b42"></rect>
+    <rect x="238" y="91" class="b42"></rect>
+    <text x="238" y="91" class="f31  i">g</text>
+    <rect x="245" y="91" class="b42"></rect>
+    <text x="245" y="91" class="f31  i">Y</text>
+    <rect x="252" y="91" class="b42"></rect>
+    <text x="252" y="91" class="f31  i">w</text>
+    <rect x="259" y="91" class="b42"></rect>
+    <rect x="266" y="91" class="b42"></rect>
+    <rect x="273" y="91" class="b0"></rect>
+    <rect x="280" y="91" class="b43"></rect>
+    <rect x="287" y="91" class="b43"></rect>
+    <rect x="294" y="91" class="b43"></rect>
+    <text x="294" y="91" class="f31  i">g</text>
+    <rect x="301" y="91" class="b43"></rect>
+    <text x="301" y="91" class="f31  i">Y</text>
+    <rect x="308" y="91" class="b43"></rect>
+    <text x="308" y="91" class="f31  i">w</text>
+    <rect x="315" y="91" class="b43"></rect>
+    <rect x="322" y="91" class="b43"></rect>
+    <rect x="329" y="91" class="b0"></rect>
+    <rect x="336" y="91" class="b44"></rect>
+    <rect x="343" y="91" class="b44"></rect>
+    <rect x="350" y="91" class="b44"></rect>
+    <text x="350" y="91" class="f31  i">g</text>
+    <rect x="357" y="91" class="b44"></rect>
+    <text x="357" y="91" class="f31  i">Y</text>
+    <rect x="364" y="91" class="b44"></rect>
+    <text x="364" y="91" class="f31  i">w</text>
+    <rect x="371" y="91" class="b44"></rect>
+    <rect x="378" y="91" class="b44"></rect>
+    <rect x="385" y="91" class="b0"></rect>
+    <rect x="392" y="91" class="b45"></rect>
+    <rect x="399" y="91" class="b45"></rect>
+    <rect x="406" y="91" class="b45"></rect>
+    <text x="406" y="91" class="f31  i">g</text>
+    <rect x="413" y="91" class="b45"></rect>
+    <text x="413" y="91" class="f31  i">Y</text>
+    <rect x="420" y="91" class="b45"></rect>
+    <text x="420" y="91" class="f31  i">w</text>
+    <rect x="427" y="91" class="b45"></rect>
+    <rect x="434" y="91" class="b45"></rect>
+    <rect x="441" y="91" class="b0"></rect>
+    <rect x="448" y="91" class="b46"></rect>
+    <rect x="455" y="91" class="b46"></rect>
+    <rect x="462" y="91" class="b46"></rect>
+    <text x="462" y="91" class="f31  i">g</text>
+    <rect x="469" y="91" class="b46"></rect>
+    <text x="469" y="91" class="f31  i">Y</text>
+    <rect x="476" y="91" class="b46"></rect>
+    <text x="476" y="91" class="f31  i">w</text>
+    <rect x="483" y="91" class="b46"></rect>
+    <rect x="490" y="91" class="b46"></rect>
+    <rect x="497" y="91" class="b0"></rect>
+    <rect x="504" y="91" class="b47"></rect>
+    <rect x="511" y="91" class="b47"></rect>
+    <rect x="518" y="91" class="b47"></rect>
+    <text x="518" y="91" class="f31  i">g</text>
+    <rect x="525" y="91" class="b47"></rect>
+    <text x="525" y="91" class="f31  i">Y</text>
+    <rect x="532" y="91" class="b47"></rect>
+    <text x="532" y="91" class="f31  i">w</text>
+    <rect x="539" y="91" class="b47"></rect>
+    <rect x="546" y="91" class="b47"></rect>
+    <rect x="0" y="104" class="b0"></rect>
+    <rect x="7" y="104" class="b0"></rect>
+    <rect x="14" y="104" class="b0"></rect>
+    <rect x="21" y="104" class="b0"></rect>
+    <rect x="28" y="104" class="b0"></rect>
+    <text x="28" y="104" class="f0  ">3</text>
+    <rect x="35" y="104" class="b0"></rect>
+    <text x="35" y="104" class="f0  ">2</text>
+    <rect x="42" y="104" class="b0"></rect>
+    <text x="42" y="104" class="f0  ">m</text>
+    <rect x="49" y="104" class="b0"></rect>
+    <rect x="56" y="104" class="b0"></rect>
+    <rect x="63" y="104" class="b0"></rect>
+    <rect x="70" y="104" class="b0"></rect>
+    <text x="70" y="104" class="f32  ">g</text>
+    <rect x="77" y="104" class="b0"></rect>
+    <text x="77" y="104" class="f32  ">Y</text>
+    <rect x="84" y="104" class="b0"></rect>
+    <text x="84" y="104" class="f32  ">w</text>
+    <rect x="91" y="104" class="b0"></rect>
+    <rect x="98" y="104" class="b0"></rect>
+    <rect x="105" y="104" class="b0"></rect>
+    <rect x="112" y="104" class="b40"></rect>
+    <rect x="119" y="104" class="b40"></rect>
+    <rect x="126" y="104" class="b40"></rect>
+    <text x="126" y="104" class="f32  ">g</text>
+    <rect x="133" y="104" class="b40"></rect>
+    <text x="133" y="104" class="f32  ">Y</text>
+    <rect x="140" y="104" class="b40"></rect>
+    <text x="140" y="104" class="f32  ">w</text>
+    <rect x="147" y="104" class="b40"></rect>
+    <rect x="154" y="104" class="b40"></rect>
+    <rect x="161" y="104" class="b0"></rect>
+    <rect x="168" y="104" class="b41"></rect>
+    <rect x="175" y="104" class="b41"></rect>
+    <rect x="182" y="104" class="b41"></rect>
+    <text x="182" y="104" class="f32  ">g</text>
+    <rect x="189" y="104" class="b41"></rect>
+    <text x="189" y="104" class="f32  ">Y</text>
+    <rect x="196" y="104" class="b41"></rect>
+    <text x="196" y="104" class="f32  ">w</text>
+    <rect x="203" y="104" class="b41"></rect>
+    <rect x="210" y="104" class="b41"></rect>
+    <rect x="217" y="104" class="b0"></rect>
+    <rect x="224" y="104" class="b42"></rect>
+    <rect x="231" y="104" class="b42"></rect>
+    <rect x="238" y="104" class="b42"></rect>
+    <text x="238" y="104" class="f32  ">g</text>
+    <rect x="245" y="104" class="b42"></rect>
+    <text x="245" y="104" class="f32  ">Y</text>
+    <rect x="252" y="104" class="b42"></rect>
+    <text x="252" y="104" class="f32  ">w</text>
+    <rect x="259" y="104" class="b42"></rect>
+    <rect x="266" y="104" class="b42"></rect>
+    <rect x="273" y="104" class="b0"></rect>
+    <rect x="280" y="104" class="b43"></rect>
+    <rect x="287" y="104" class="b43"></rect>
+    <rect x="294" y="104" class="b43"></rect>
+    <text x="294" y="104" class="f32  ">g</text>
+    <rect x="301" y="104" class="b43"></rect>
+    <text x="301" y="104" class="f32  ">Y</text>
+    <rect x="308" y="104" class="b43"></rect>
+    <text x="308" y="104" class="f32  ">w</text>
+    <rect x="315" y="104" class="b43"></rect>
+    <rect x="322" y="104" class="b43"></rect>
+    <rect x="329" y="104" class="b0"></rect>
+    <rect x="336" y="104" class="b44"></rect>
+    <rect x="343" y="104" class="b44"></rect>
+    <rect x="350" y="104" class="b44"></rect>
+    <text x="350" y="104" class="f32  ">g</text>
+    <rect x="357" y="104" class="b44"></rect>
+    <text x="357" y="104" class="f32  ">Y</text>
+    <rect x="364" y="104" class="b44"></rect>
+    <text x="364" y="104" class="f32  ">w</text>
+    <rect x="371" y="104" class="b44"></rect>
+    <rect x="378" y="104" class="b44"></rect>
+    <rect x="385" y="104" class="b0"></rect>
+    <rect x="392" y="104" class="b45"></rect>
+    <rect x="399" y="104" class="b45"></rect>
+    <rect x="406" y="104" class="b45"></rect>
+    <text x="406" y="104" class="f32  ">g</text>
+    <rect x="413" y="104" class="b45"></rect>
+    <text x="413" y="104" class="f32  ">Y</text>
+    <rect x="420" y="104" class="b45"></rect>
+    <text x="420" y="104" class="f32  ">w</text>
+    <rect x="427" y="104" class="b45"></rect>
+    <rect x="434" y="104" class="b45"></rect>
+    <rect x="441" y="104" class="b0"></rect>
+    <rect x="448" y="104" class="b46"></rect>
+    <rect x="455" y="104" class="b46"></rect>
+    <rect x="462" y="104" class="b46"></rect>
+    <text x="462" y="104" class="f32  ">g</text>
+    <rect x="469" y="104" class="b46"></rect>
+    <text x="469" y="104" class="f32  ">Y</text>
+    <rect x="476" y="104" class="b46"></rect>
+    <text x="476" y="104" class="f32  ">w</text>
+    <rect x="483" y="104" class="b46"></rect>
+    <rect x="490" y="104" class="b46"></rect>
+    <rect x="497" y="104" class="b0"></rect>
+    <rect x="504" y="104" class="b47"></rect>
+    <rect x="511" y="104" class="b47"></rect>
+    <rect x="518" y="104" class="b47"></rect>
+    <text x="518" y="104" class="f32  ">g</text>
+    <rect x="525" y="104" class="b47"></rect>
+    <text x="525" y="104" class="f32  ">Y</text>
+    <rect x="532" y="104" class="b47"></rect>
+    <text x="532" y="104" class="f32  ">w</text>
+    <rect x="539" y="104" class="b47"></rect>
+    <rect x="546" y="104" class="b47"></rect>
+    <rect x="0" y="117" class="b0"></rect>
+    <rect x="7" y="117" class="b0"></rect>
+    <rect x="14" y="117" class="b0"></rect>
+    <text x="14" y="117" class="f0  ">1</text>
+    <rect x="21" y="117" class="b0"></rect>
+    <text x="21" y="117" class="f0  ">;</text>
+    <rect x="28" y="117" class="b0"></rect>
+    <text x="28" y="117" class="f0  ">3</text>
+    <rect x="35" y="117" class="b0"></rect>
+    <text x="35" y="117" class="f0  ">2</text>
+    <rect x="42" y="117" class="b0"></rect>
+    <text x="42" y="117" class="f0  ">m</text>
+    <rect x="49" y="117" class="b0"></rect>
+    <rect x="56" y="117" class="b0"></rect>
+    <rect x="63" y="117" class="b0"></rect>
+    <rect x="70" y="117" class="b0"></rect>
+    <text x="70" y="117" class="f32  i">g</text>
+    <rect x="77" y="117" class="b0"></rect>
+    <text x="77" y="117" class="f32  i">Y</text>
+    <rect x="84" y="117" class="b0"></rect>
+    <text x="84" y="117" class="f32  i">w</text>
+    <rect x="91" y="117" class="b0"></rect>
+    <rect x="98" y="117" class="b0"></rect>
+    <rect x="105" y="117" class="b0"></rect>
+    <rect x="112" y="117" class="b40"></rect>
+    <rect x="119" y="117" class="b40"></rect>
+    <rect x="126" y="117" class="b40"></rect>
+    <text x="126" y="117" class="f32  i">g</text>
+    <rect x="133" y="117" class="b40"></rect>
+    <text x="133" y="117" class="f32  i">Y</text>
+    <rect x="140" y="117" class="b40"></rect>
+    <text x="140" y="117" class="f32  i">w</text>
+    <rect x="147" y="117" class="b40"></rect>
+    <rect x="154" y="117" class="b40"></rect>
+    <rect x="161" y="117" class="b0"></rect>
+    <rect x="168" y="117" class="b41"></rect>
+    <rect x="175" y="117" class="b41"></rect>
+    <rect x="182" y="117" class="b41"></rect>
+    <text x="182" y="117" class="f32  i">g</text>
+    <rect x="189" y="117" class="b41"></rect>
+    <text x="189" y="117" class="f32  i">Y</text>
+    <rect x="196" y="117" class="b41"></rect>
+    <text x="196" y="117" class="f32  i">w</text>
+    <rect x="203" y="117" class="b41"></rect>
+    <rect x="210" y="117" class="b41"></rect>
+    <rect x="217" y="117" class="b0"></rect>
+    <rect x="224" y="117" class="b42"></rect>
+    <rect x="231" y="117" class="b42"></rect>
+    <rect x="238" y="117" class="b42"></rect>
+    <text x="238" y="117" class="f32  i">g</text>
+    <rect x="245" y="117" class="b42"></rect>
+    <text x="245" y="117" class="f32  i">Y</text>
+    <rect x="252" y="117" class="b42"></rect>
+    <text x="252" y="117" class="f32  i">w</text>
+    <rect x="259" y="117" class="b42"></rect>
+    <rect x="266" y="117" class="b42"></rect>
+    <rect x="273" y="117" class="b0"></rect>
+    <rect x="280" y="117" class="b43"></rect>
+    <rect x="287" y="117" class="b43"></rect>
+    <rect x="294" y="117" class="b43"></rect>
+    <text x="294" y="117" class="f32  i">g</text>
+    <rect x="301" y="117" class="b43"></rect>
+    <text x="301" y="117" class="f32  i">Y</text>
+    <rect x="308" y="117" class="b43"></rect>
+    <text x="308" y="117" class="f32  i">w</text>
+    <rect x="315" y="117" class="b43"></rect>
+    <rect x="322" y="117" class="b43"></rect>
+    <rect x="329" y="117" class="b0"></rect>
+    <rect x="336" y="117" class="b44"></rect>
+    <rect x="343" y="117" class="b44"></rect>
+    <rect x="350" y="117" class="b44"></rect>
+    <text x="350" y="117" class="f32  i">g</text>
+    <rect x="357" y="117" class="b44"></rect>
+    <text x="357" y="117" class="f32  i">Y</text>
+    <rect x="364" y="117" class="b44"></rect>
+    <text x="364" y="117" class="f32  i">w</text>
+    <rect x="371" y="117" class="b44"></rect>
+    <rect x="378" y="117" class="b44"></rect>
+    <rect x="385" y="117" class="b0"></rect>
+    <rect x="392" y="117" class="b45"></rect>
+    <rect x="399" y="117" class="b45"></rect>
+    <rect x="406" y="117" class="b45"></rect>
+    <text x="406" y="117" class="f32  i">g</text>
+    <rect x="413" y="117" class="b45"></rect>
+    <text x="413" y="117" class="f32  i">Y</text>
+    <rect x="420" y="117" class="b45"></rect>
+    <text x="420" y="117" class="f32  i">w</text>
+    <rect x="427" y="117" class="b45"></rect>
+    <rect x="434" y="117" class="b45"></rect>
+    <rect x="441" y="117" class="b0"></rect>
+    <rect x="448" y="117" class="b46"></rect>
+    <rect x="455" y="117" class="b46"></rect>
+    <rect x="462" y="117" class="b46"></rect>
+    <text x="462" y="117" class="f32  i">g</text>
+    <rect x="469" y="117" class="b46"></rect>
+    <text x="469" y="117" class="f32  i">Y</text>
+    <rect x="476" y="117" class="b46"></rect>
+    <text x="476" y="117" class="f32  i">w</text>
+    <rect x="483" y="117" class="b46"></rect>
+    <rect x="490" y="117" class="b46"></rect>
+    <rect x="497" y="117" class="b0"></rect>
+    <rect x="504" y="117" class="b47"></rect>
+    <rect x="511" y="117" class="b47"></rect>
+    <rect x="518" y="117" class="b47"></rect>
+    <text x="518" y="117" class="f32  i">g</text>
+    <rect x="525" y="117" class="b47"></rect>
+    <text x="525" y="117" class="f32  i">Y</text>
+    <rect x="532" y="117" class="b47"></rect>
+    <text x="532" y="117" class="f32  i">w</text>
+    <rect x="539" y="117" class="b47"></rect>
+    <rect x="546" y="117" class="b47"></rect>
+    <rect x="0" y="130" class="b0"></rect>
+    <rect x="7" y="130" class="b0"></rect>
+    <rect x="14" y="130" class="b0"></rect>
+    <rect x="21" y="130" class="b0"></rect>
+    <rect x="28" y="130" class="b0"></rect>
+    <text x="28" y="130" class="f0  ">3</text>
+    <rect x="35" y="130" class="b0"></rect>
+    <text x="35" y="130" class="f0  ">3</text>
+    <rect x="42" y="130" class="b0"></rect>
+    <text x="42" y="130" class="f0  ">m</text>
+    <rect x="49" y="130" class="b0"></rect>
+    <rect x="56" y="130" class="b0"></rect>
+    <rect x="63" y="130" class="b0"></rect>
+    <rect x="70" y="130" class="b0"></rect>
+    <text x="70" y="130" class="f33  ">g</text>
+    <rect x="77" y="130" class="b0"></rect>
+    <text x="77" y="130" class="f33  ">Y</text>
+    <rect x="84" y="130" class="b0"></rect>
+    <text x="84" y="130" class="f33  ">w</text>
+    <rect x="91" y="130" class="b0"></rect>
+    <rect x="98" y="130" class="b0"></rect>
+    <rect x="105" y="130" class="b0"></rect>
+    <rect x="112" y="130" class="b40"></rect>
+    <rect x="119" y="130" class="b40"></rect>
+    <rect x="126" y="130" class="b40"></rect>
+    <text x="126" y="130" class="f33  ">g</text>
+    <rect x="133" y="130" class="b40"></rect>
+    <text x="133" y="130" class="f33  ">Y</text>
+    <rect x="140" y="130" class="b40"></rect>
+    <text x="140" y="130" class="f33  ">w</text>
+    <rect x="147" y="130" class="b40"></rect>
+    <rect x="154" y="130" class="b40"></rect>
+    <rect x="161" y="130" class="b0"></rect>
+    <rect x="168" y="130" class="b41"></rect>
+    <rect x="175" y="130" class="b41"></rect>
+    <rect x="182" y="130" class="b41"></rect>
+    <text x="182" y="130" class="f33  ">g</text>
+    <rect x="189" y="130" class="b41"></rect>
+    <text x="189" y="130" class="f33  ">Y</text>
+    <rect x="196" y="130" class="b41"></rect>
+    <text x="196" y="130" class="f33  ">w</text>
+    <rect x="203" y="130" class="b41"></rect>
+    <rect x="210" y="130" class="b41"></rect>
+    <rect x="217" y="130" class="b0"></rect>
+    <rect x="224" y="130" class="b42"></rect>
+    <rect x="231" y="130" class="b42"></rect>
+    <rect x="238" y="130" class="b42"></rect>
+    <text x="238" y="130" class="f33  ">g</text>
+    <rect x="245" y="130" class="b42"></rect>
+    <text x="245" y="130" class="f33  ">Y</text>
+    <rect x="252" y="130" class="b42"></rect>
+    <text x="252" y="130" class="f33  ">w</text>
+    <rect x="259" y="130" class="b42"></rect>
+    <rect x="266" y="130" class="b42"></rect>
+    <rect x="273" y="130" class="b0"></rect>
+    <rect x="280" y="130" class="b43"></rect>
+    <rect x="287" y="130" class="b43"></rect>
+    <rect x="294" y="130" class="b43"></rect>
+    <text x="294" y="130" class="f33  ">g</text>
+    <rect x="301" y="130" class="b43"></rect>
+    <text x="301" y="130" class="f33  ">Y</text>
+    <rect x="308" y="130" class="b43"></rect>
+    <text x="308" y="130" class="f33  ">w</text>
+    <rect x="315" y="130" class="b43"></rect>
+    <rect x="322" y="130" class="b43"></rect>
+    <rect x="329" y="130" class="b0"></rect>
+    <rect x="336" y="130" class="b44"></rect>
+    <rect x="343" y="130" class="b44"></rect>
+    <rect x="350" y="130" class="b44"></rect>
+    <text x="350" y="130" class="f33  ">g</text>
+    <rect x="357" y="130" class="b44"></rect>
+    <text x="357" y="130" class="f33  ">Y</text>
+    <rect x="364" y="130" class="b44"></rect>
+    <text x="364" y="130" class="f33  ">w</text>
+    <rect x="371" y="130" class="b44"></rect>
+    <rect x="378" y="130" class="b44"></rect>
+    <rect x="385" y="130" class="b0"></rect>
+    <rect x="392" y="130" class="b45"></rect>
+    <rect x="399" y="130" class="b45"></rect>
+    <rect x="406" y="130" class="b45"></rect>
+    <text x="406" y="130" class="f33  ">g</text>
+    <rect x="413" y="130" class="b45"></rect>
+    <text x="413" y="130" class="f33  ">Y</text>
+    <rect x="420" y="130" class="b45"></rect>
+    <text x="420" y="130" class="f33  ">w</text>
+    <rect x="427" y="130" class="b45"></rect>
+    <rect x="434" y="130" class="b45"></rect>
+    <rect x="441" y="130" class="b0"></rect>
+    <rect x="448" y="130" class="b46"></rect>
+    <rect x="455" y="130" class="b46"></rect>
+    <rect x="462" y="130" class="b46"></rect>
+    <text x="462" y="130" class="f33  ">g</text>
+    <rect x="469" y="130" class="b46"></rect>
+    <text x="469" y="130" class="f33  ">Y</text>
+    <rect x="476" y="130" class="b46"></rect>
+    <text x="476" y="130" class="f33  ">w</text>
+    <rect x="483" y="130" class="b46"></rect>
+    <rect x="490" y="130" class="b46"></rect>
+    <rect x="497" y="130" class="b0"></rect>
+    <rect x="504" y="130" class="b47"></rect>
+    <rect x="511" y="130" class="b47"></rect>
+    <rect x="518" y="130" class="b47"></rect>
+    <text x="518" y="130" class="f33  ">g</text>
+    <rect x="525" y="130" class="b47"></rect>
+    <text x="525" y="130" class="f33  ">Y</text>
+    <rect x="532" y="130" class="b47"></rect>
+    <text x="532" y="130" class="f33  ">w</text>
+    <rect x="539" y="130" class="b47"></rect>
+    <rect x="546" y="130" class="b47"></rect>
+    <rect x="0" y="143" class="b0"></rect>
+    <rect x="7" y="143" class="b0"></rect>
+    <rect x="14" y="143" class="b0"></rect>
+    <text x="14" y="143" class="f0  ">1</text>
+    <rect x="21" y="143" class="b0"></rect>
+    <text x="21" y="143" class="f0  ">;</text>
+    <rect x="28" y="143" class="b0"></rect>
+    <text x="28" y="143" class="f0  ">3</text>
+    <rect x="35" y="143" class="b0"></rect>
+    <text x="35" y="143" class="f0  ">3</text>
+    <rect x="42" y="143" class="b0"></rect>
+    <text x="42" y="143" class="f0  ">m</text>
+    <rect x="49" y="143" class="b0"></rect>
+    <rect x="56" y="143" class="b0"></rect>
+    <rect x="63" y="143" class="b0"></rect>
+    <rect x="70" y="143" class="b0"></rect>
+    <text x="70" y="143" class="f33  i">g</text>
+    <rect x="77" y="143" class="b0"></rect>
+    <text x="77" y="143" class="f33  i">Y</text>
+    <rect x="84" y="143" class="b0"></rect>
+    <text x="84" y="143" class="f33  i">w</text>
+    <rect x="91" y="143" class="b0"></rect>
+    <rect x="98" y="143" class="b0"></rect>
+    <rect x="105" y="143" class="b0"></rect>
+    <rect x="112" y="143" class="b40"></rect>
+    <rect x="119" y="143" class="b40"></rect>
+    <rect x="126" y="143" class="b40"></rect>
+    <text x="126" y="143" class="f33  i">g</text>
+    <rect x="133" y="143" class="b40"></rect>
+    <text x="133" y="143" class="f33  i">Y</text>
+    <rect x="140" y="143" class="b40"></rect>
+    <text x="140" y="143" class="f33  i">w</text>
+    <rect x="147" y="143" class="b40"></rect>
+    <rect x="154" y="143" class="b40"></rect>
+    <rect x="161" y="143" class="b0"></rect>
+    <rect x="168" y="143" class="b41"></rect>
+    <rect x="175" y="143" class="b41"></rect>
+    <rect x="182" y="143" class="b41"></rect>
+    <text x="182" y="143" class="f33  i">g</text>
+    <rect x="189" y="143" class="b41"></rect>
+    <text x="189" y="143" class="f33  i">Y</text>
+    <rect x="196" y="143" class="b41"></rect>
+    <text x="196" y="143" class="f33  i">w</text>
+    <rect x="203" y="143" class="b41"></rect>
+    <rect x="210" y="143" class="b41"></rect>
+    <rect x="217" y="143" class="b0"></rect>
+    <rect x="224" y="143" class="b42"></rect>
+    <rect x="231" y="143" class="b42"></rect>
+    <rect x="238" y="143" class="b42"></rect>
+    <text x="238" y="143" class="f33  i">g</text>
+    <rect x="245" y="143" class="b42"></rect>
+    <text x="245" y="143" class="f33  i">Y</text>
+    <rect x="252" y="143" class="b42"></rect>
+    <text x="252" y="143" class="f33  i">w</text>
+    <rect x="259" y="143" class="b42"></rect>
+    <rect x="266" y="143" class="b42"></rect>
+    <rect x="273" y="143" class="b0"></rect>
+    <rect x="280" y="143" class="b43"></rect>
+    <rect x="287" y="143" class="b43"></rect>
+    <rect x="294" y="143" class="b43"></rect>
+    <text x="294" y="143" class="f33  i">g</text>
+    <rect x="301" y="143" class="b43"></rect>
+    <text x="301" y="143" class="f33  i">Y</text>
+    <rect x="308" y="143" class="b43"></rect>
+    <text x="308" y="143" class="f33  i">w</text>
+    <rect x="315" y="143" class="b43"></rect>
+    <rect x="322" y="143" class="b43"></rect>
+    <rect x="329" y="143" class="b0"></rect>
+    <rect x="336" y="143" class="b44"></rect>
+    <rect x="343" y="143" class="b44"></rect>
+    <rect x="350" y="143" class="b44"></rect>
+    <text x="350" y="143" class="f33  i">g</text>
+    <rect x="357" y="143" class="b44"></rect>
+    <text x="357" y="143" class="f33  i">Y</text>
+    <rect x="364" y="143" class="b44"></rect>
+    <text x="364" y="143" class="f33  i">w</text>
+    <rect x="371" y="143" class="b44"></rect>
+    <rect x="378" y="143" class="b44"></rect>
+    <rect x="385" y="143" class="b0"></rect>
+    <rect x="392" y="143" class="b45"></rect>
+    <rect x="399" y="143" class="b45"></rect>
+    <rect x="406" y="143" class="b45"></rect>
+    <text x="406" y="143" class="f33  i">g</text>
+    <rect x="413" y="143" class="b45"></rect>
+    <text x="413" y="143" class="f33  i">Y</text>
+    <rect x="420" y="143" class="b45"></rect>
+    <text x="420" y="143" class="f33  i">w</text>
+    <rect x="427" y="143" class="b45"></rect>
+    <rect x="434" y="143" class="b45"></rect>
+    <rect x="441" y="143" class="b0"></rect>
+    <rect x="448" y="143" class="b46"></rect>
+    <rect x="455" y="143" class="b46"></rect>
+    <rect x="462" y="143" class="b46"></rect>
+    <text x="462" y="143" class="f33  i">g</text>
+    <rect x="469" y="143" class="b46"></rect>
+    <text x="469" y="143" class="f33  i">Y</text>
+    <rect x="476" y="143" class="b46"></rect>
+    <text x="476" y="143" class="f33  i">w</text>
+    <rect x="483" y="143" class="b46"></rect>
+    <rect x="490" y="143" class="b46"></rect>
+    <rect x="497" y="143" class="b0"></rect>
+    <rect x="504" y="143" class="b47"></rect>
+    <rect x="511" y="143" class="b47"></rect>
+    <rect x="518" y="143" class="b47"></rect>
+    <text x="518" y="143" class="f33  i">g</text>
+    <rect x="525" y="143" class="b47"></rect>
+    <text x="525" y="143" class="f33  i">Y</text>
+    <rect x="532" y="143" class="b47"></rect>
+    <text x="532" y="143" class="f33  i">w</text>
+    <rect x="539" y="143" class="b47"></rect>
+    <rect x="546" y="143" class="b47"></rect>
+    <rect x="0" y="156" class="b0"></rect>
+    <rect x="7" y="156" class="b0"></rect>
+    <rect x="14" y="156" class="b0"></rect>
+    <rect x="21" y="156" class="b0"></rect>
+    <rect x="28" y="156" class="b0"></rect>
+    <text x="28" y="156" class="f0  ">3</text>
+    <rect x="35" y="156" class="b0"></rect>
+    <text x="35" y="156" class="f0  ">4</text>
+    <rect x="42" y="156" class="b0"></rect>
+    <text x="42" y="156" class="f0  ">m</text>
+    <rect x="49" y="156" class="b0"></rect>
+    <rect x="56" y="156" class="b0"></rect>
+    <rect x="63" y="156" class="b0"></rect>
+    <rect x="70" y="156" class="b0"></rect>
+    <text x="70" y="156" class="f34  ">g</text>
+    <rect x="77" y="156" class="b0"></rect>
+    <text x="77" y="156" class="f34  ">Y</text>
+    <rect x="84" y="156" class="b0"></rect>
+    <text x="84" y="156" class="f34  ">w</text>
+    <rect x="91" y="156" class="b0"></rect>
+    <rect x="98" y="156" class="b0"></rect>
+    <rect x="105" y="156" class="b0"></rect>
+    <rect x="112" y="156" class="b40"></rect>
+    <rect x="119" y="156" class="b40"></rect>
+    <rect x="126" y="156" class="b40"></rect>
+    <text x="126" y="156" class="f34  ">g</text>
+    <rect x="133" y="156" class="b40"></rect>
+    <text x="133" y="156" class="f34  ">Y</text>
+    <rect x="140" y="156" class="b40"></rect>
+    <text x="140" y="156" class="f34  ">w</text>
+    <rect x="147" y="156" class="b40"></rect>
+    <rect x="154" y="156" class="b40"></rect>
+    <rect x="161" y="156" class="b0"></rect>
+    <rect x="168" y="156" class="b41"></rect>
+    <rect x="175" y="156" class="b41"></rect>
+    <rect x="182" y="156" class="b41"></rect>
+    <text x="182" y="156" class="f34  ">g</text>
+    <rect x="189" y="156" class="b41"></rect>
+    <text x="189" y="156" class="f34  ">Y</text>
+    <rect x="196" y="156" class="b41"></rect>
+    <text x="196" y="156" class="f34  ">w</text>
+    <rect x="203" y="156" class="b41"></rect>
+    <rect x="210" y="156" class="b41"></rect>
+    <rect x="217" y="156" class="b0"></rect>
+    <rect x="224" y="156" class="b42"></rect>
+    <rect x="231" y="156" class="b42"></rect>
+    <rect x="238" y="156" class="b42"></rect>
+    <text x="238" y="156" class="f34  ">g</text>
+    <rect x="245" y="156" class="b42"></rect>
+    <text x="245" y="156" class="f34  ">Y</text>
+    <rect x="252" y="156" class="b42"></rect>
+    <text x="252" y="156" class="f34  ">w</text>
+    <rect x="259" y="156" class="b42"></rect>
+    <rect x="266" y="156" class="b42"></rect>
+    <rect x="273" y="156" class="b0"></rect>
+    <rect x="280" y="156" class="b43"></rect>
+    <rect x="287" y="156" class="b43"></rect>
+    <rect x="294" y="156" class="b43"></rect>
+    <text x="294" y="156" class="f34  ">g</text>
+    <rect x="301" y="156" class="b43"></rect>
+    <text x="301" y="156" class="f34  ">Y</text>
+    <rect x="308" y="156" class="b43"></rect>
+    <text x="308" y="156" class="f34  ">w</text>
+    <rect x="315" y="156" class="b43"></rect>
+    <rect x="322" y="156" class="b43"></rect>
+    <rect x="329" y="156" class="b0"></rect>
+    <rect x="336" y="156" class="b44"></rect>
+    <rect x="343" y="156" class="b44"></rect>
+    <rect x="350" y="156" class="b44"></rect>
+    <text x="350" y="156" class="f34  ">g</text>
+    <rect x="357" y="156" class="b44"></rect>
+    <text x="357" y="156" class="f34  ">Y</text>
+    <rect x="364" y="156" class="b44"></rect>
+    <text x="364" y="156" class="f34  ">w</text>
+    <rect x="371" y="156" class="b44"></rect>
+    <rect x="378" y="156" class="b44"></rect>
+    <rect x="385" y="156" class="b0"></rect>
+    <rect x="392" y="156" class="b45"></rect>
+    <rect x="399" y="156" class="b45"></rect>
+    <rect x="406" y="156" class="b45"></rect>
+    <text x="406" y="156" class="f34  ">g</text>
+    <rect x="413" y="156" class="b45"></rect>
+    <text x="413" y="156" class="f34  ">Y</text>
+    <rect x="420" y="156" class="b45"></rect>
+    <text x="420" y="156" class="f34  ">w</text>
+    <rect x="427" y="156" class="b45"></rect>
+    <rect x="434" y="156" class="b45"></rect>
+    <rect x="441" y="156" class="b0"></rect>
+    <rect x="448" y="156" class="b46"></rect>
+    <rect x="455" y="156" class="b46"></rect>
+    <rect x="462" y="156" class="b46"></rect>
+    <text x="462" y="156" class="f34  ">g</text>
+    <rect x="469" y="156" class="b46"></rect>
+    <text x="469" y="156" class="f34  ">Y</text>
+    <rect x="476" y="156" class="b46"></rect>
+    <text x="476" y="156" class="f34  ">w</text>
+    <rect x="483" y="156" class="b46"></rect>
+    <rect x="490" y="156" class="b46"></rect>
+    <rect x="497" y="156" class="b0"></rect>
+    <rect x="504" y="156" class="b47"></rect>
+    <rect x="511" y="156" class="b47"></rect>
+    <rect x="518" y="156" class="b47"></rect>
+    <text x="518" y="156" class="f34  ">g</text>
+    <rect x="525" y="156" class="b47"></rect>
+    <text x="525" y="156" class="f34  ">Y</text>
+    <rect x="532" y="156" class="b47"></rect>
+    <text x="532" y="156" class="f34  ">w</text>
+    <rect x="539" y="156" class="b47"></rect>
+    <rect x="546" y="156" class="b47"></rect>
+    <rect x="0" y="169" class="b0"></rect>
+    <rect x="7" y="169" class="b0"></rect>
+    <rect x="14" y="169" class="b0"></rect>
+    <text x="14" y="169" class="f0  ">1</text>
+    <rect x="21" y="169" class="b0"></rect>
+    <text x="21" y="169" class="f0  ">;</text>
+    <rect x="28" y="169" class="b0"></rect>
+    <text x="28" y="169" class="f0  ">3</text>
+    <rect x="35" y="169" class="b0"></rect>
+    <text x="35" y="169" class="f0  ">4</text>
+    <rect x="42" y="169" class="b0"></rect>
+    <text x="42" y="169" class="f0  ">m</text>
+    <rect x="49" y="169" class="b0"></rect>
+    <rect x="56" y="169" class="b0"></rect>
+    <rect x="63" y="169" class="b0"></rect>
+    <rect x="70" y="169" class="b0"></rect>
+    <text x="70" y="169" class="f34  i">g</text>
+    <rect x="77" y="169" class="b0"></rect>
+    <text x="77" y="169" class="f34  i">Y</text>
+    <rect x="84" y="169" class="b0"></rect>
+    <text x="84" y="169" class="f34  i">w</text>
+    <rect x="91" y="169" class="b0"></rect>
+    <rect x="98" y="169" class="b0"></rect>
+    <rect x="105" y="169" class="b0"></rect>
+    <rect x="112" y="169" class="b40"></rect>
+    <rect x="119" y="169" class="b40"></rect>
+    <rect x="126" y="169" class="b40"></rect>
+    <text x="126" y="169" class="f34  i">g</text>
+    <rect x="133" y="169" class="b40"></rect>
+    <text x="133" y="169" class="f34  i">Y</text>
+    <rect x="140" y="169" class="b40"></rect>
+    <text x="140" y="169" class="f34  i">w</text>
+    <rect x="147" y="169" class="b40"></rect>
+    <rect x="154" y="169" class="b40"></rect>
+    <rect x="161" y="169" class="b0"></rect>
+    <rect x="168" y="169" class="b41"></rect>
+    <rect x="175" y="169" class="b41"></rect>
+    <rect x="182" y="169" class="b41"></rect>
+    <text x="182" y="169" class="f34  i">g</text>
+    <rect x="189" y="169" class="b41"></rect>
+    <text x="189" y="169" class="f34  i">Y</text>
+    <rect x="196" y="169" class="b41"></rect>
+    <text x="196" y="169" class="f34  i">w</text>
+    <rect x="203" y="169" class="b41"></rect>
+    <rect x="210" y="169" class="b41"></rect>
+    <rect x="217" y="169" class="b0"></rect>
+    <rect x="224" y="169" class="b42"></rect>
+    <rect x="231" y="169" class="b42"></rect>
+    <rect x="238" y="169" class="b42"></rect>
+    <text x="238" y="169" class="f34  i">g</text>
+    <rect x="245" y="169" class="b42"></rect>
+    <text x="245" y="169" class="f34  i">Y</text>
+    <rect x="252" y="169" class="b42"></rect>
+    <text x="252" y="169" class="f34  i">w</text>
+    <rect x="259" y="169" class="b42"></rect>
+    <rect x="266" y="169" class="b42"></rect>
+    <rect x="273" y="169" class="b0"></rect>
+    <rect x="280" y="169" class="b43"></rect>
+    <rect x="287" y="169" class="b43"></rect>
+    <rect x="294" y="169" class="b43"></rect>
+    <text x="294" y="169" class="f34  i">g</text>
+    <rect x="301" y="169" class="b43"></rect>
+    <text x="301" y="169" class="f34  i">Y</text>
+    <rect x="308" y="169" class="b43"></rect>
+    <text x="308" y="169" class="f34  i">w</text>
+    <rect x="315" y="169" class="b43"></rect>
+    <rect x="322" y="169" class="b43"></rect>
+    <rect x="329" y="169" class="b0"></rect>
+    <rect x="336" y="169" class="b44"></rect>
+    <rect x="343" y="169" class="b44"></rect>
+    <rect x="350" y="169" class="b44"></rect>
+    <text x="350" y="169" class="f34  i">g</text>
+    <rect x="357" y="169" class="b44"></rect>
+    <text x="357" y="169" class="f34  i">Y</text>
+    <rect x="364" y="169" class="b44"></rect>
+    <text x="364" y="169" class="f34  i">w</text>
+    <rect x="371" y="169" class="b44"></rect>
+    <rect x="378" y="169" class="b44"></rect>
+    <rect x="385" y="169" class="b0"></rect>
+    <rect x="392" y="169" class="b45"></rect>
+    <rect x="399" y="169" class="b45"></rect>
+    <rect x="406" y="169" class="b45"></rect>
+    <text x="406" y="169" class="f34  i">g</text>
+    <rect x="413" y="169" class="b45"></rect>
+    <text x="413" y="169" class="f34  i">Y</text>
+    <rect x="420" y="169" class="b45"></rect>
+    <text x="420" y="169" class="f34  i">w</text>
+    <rect x="427" y="169" class="b45"></rect>
+    <rect x="434" y="169" class="b45"></rect>
+    <rect x="441" y="169" class="b0"></rect>
+    <rect x="448" y="169" class="b46"></rect>
+    <rect x="455" y="169" class="b46"></rect>
+    <rect x="462" y="169" class="b46"></rect>
+    <text x="462" y="169" class="f34  i">g</text>
+    <rect x="469" y="169" class="b46"></rect>
+    <text x="469" y="169" class="f34  i">Y</text>
+    <rect x="476" y="169" class="b46"></rect>
+    <text x="476" y="169" class="f34  i">w</text>
+    <rect x="483" y="169" class="b46"></rect>
+    <rect x="490" y="169" class="b46"></rect>
+    <rect x="497" y="169" class="b0"></rect>
+    <rect x="504" y="169" class="b47"></rect>
+    <rect x="511" y="169" class="b47"></rect>
+    <rect x="518" y="169" class="b47"></rect>
+    <text x="518" y="169" class="f34  i">g</text>
+    <rect x="525" y="169" class="b47"></rect>
+    <text x="525" y="169" class="f34  i">Y</text>
+    <rect x="532" y="169" class="b47"></rect>
+    <text x="532" y="169" class="f34  i">w</text>
+    <rect x="539" y="169" class="b47"></rect>
+    <rect x="546" y="169" class="b47"></rect>
+    <rect x="0" y="182" class="b0"></rect>
+    <rect x="7" y="182" class="b0"></rect>
+    <rect x="14" y="182" class="b0"></rect>
+    <rect x="21" y="182" class="b0"></rect>
+    <rect x="28" y="182" class="b0"></rect>
+    <text x="28" y="182" class="f0  ">3</text>
+    <rect x="35" y="182" class="b0"></rect>
+    <text x="35" y="182" class="f0  ">5</text>
+    <rect x="42" y="182" class="b0"></rect>
+    <text x="42" y="182" class="f0  ">m</text>
+    <rect x="49" y="182" class="b0"></rect>
+    <rect x="56" y="182" class="b0"></rect>
+    <rect x="63" y="182" class="b0"></rect>
+    <rect x="70" y="182" class="b0"></rect>
+    <text x="70" y="182" class="f35  ">g</text>
+    <rect x="77" y="182" class="b0"></rect>
+    <text x="77" y="182" class="f35  ">Y</text>
+    <rect x="84" y="182" class="b0"></rect>
+    <text x="84" y="182" class="f35  ">w</text>
+    <rect x="91" y="182" class="b0"></rect>
+    <rect x="98" y="182" class="b0"></rect>
+    <rect x="105" y="182" class="b0"></rect>
+    <rect x="112" y="182" class="b40"></rect>
+    <rect x="119" y="182" class="b40"></rect>
+    <rect x="126" y="182" class="b40"></rect>
+    <text x="126" y="182" class="f35  ">g</text>
+    <rect x="133" y="182" class="b40"></rect>
+    <text x="133" y="182" class="f35  ">Y</text>
+    <rect x="140" y="182" class="b40"></rect>
+    <text x="140" y="182" class="f35  ">w</text>
+    <rect x="147" y="182" class="b40"></rect>
+    <rect x="154" y="182" class="b40"></rect>
+    <rect x="161" y="182" class="b0"></rect>
+    <rect x="168" y="182" class="b41"></rect>
+    <rect x="175" y="182" class="b41"></rect>
+    <rect x="182" y="182" class="b41"></rect>
+    <text x="182" y="182" class="f35  ">g</text>
+    <rect x="189" y="182" class="b41"></rect>
+    <text x="189" y="182" class="f35  ">Y</text>
+    <rect x="196" y="182" class="b41"></rect>
+    <text x="196" y="182" class="f35  ">w</text>
+    <rect x="203" y="182" class="b41"></rect>
+    <rect x="210" y="182" class="b41"></rect>
+    <rect x="217" y="182" class="b0"></rect>
+    <rect x="224" y="182" class="b42"></rect>
+    <rect x="231" y="182" class="b42"></rect>
+    <rect x="238" y="182" class="b42"></rect>
+    <text x="238" y="182" class="f35  ">g</text>
+    <rect x="245" y="182" class="b42"></rect>
+    <text x="245" y="182" class="f35  ">Y</text>
+    <rect x="252" y="182" class="b42"></rect>
+    <text x="252" y="182" class="f35  ">w</text>
+    <rect x="259" y="182" class="b42"></rect>
+    <rect x="266" y="182" class="b42"></rect>
+    <rect x="273" y="182" class="b0"></rect>
+    <rect x="280" y="182" class="b43"></rect>
+    <rect x="287" y="182" class="b43"></rect>
+    <rect x="294" y="182" class="b43"></rect>
+    <text x="294" y="182" class="f35  ">g</text>
+    <rect x="301" y="182" class="b43"></rect>
+    <text x="301" y="182" class="f35  ">Y</text>
+    <rect x="308" y="182" class="b43"></rect>
+    <text x="308" y="182" class="f35  ">w</text>
+    <rect x="315" y="182" class="b43"></rect>
+    <rect x="322" y="182" class="b43"></rect>
+    <rect x="329" y="182" class="b0"></rect>
+    <rect x="336" y="182" class="b44"></rect>
+    <rect x="343" y="182" class="b44"></rect>
+    <rect x="350" y="182" class="b44"></rect>
+    <text x="350" y="182" class="f35  ">g</text>
+    <rect x="357" y="182" class="b44"></rect>
+    <text x="357" y="182" class="f35  ">Y</text>
+    <rect x="364" y="182" class="b44"></rect>
+    <text x="364" y="182" class="f35  ">w</text>
+    <rect x="371" y="182" class="b44"></rect>
+    <rect x="378" y="182" class="b44"></rect>
+    <rect x="385" y="182" class="b0"></rect>
+    <rect x="392" y="182" class="b45"></rect>
+    <rect x="399" y="182" class="b45"></rect>
+    <rect x="406" y="182" class="b45"></rect>
+    <text x="406" y="182" class="f35  ">g</text>
+    <rect x="413" y="182" class="b45"></rect>
+    <text x="413" y="182" class="f35  ">Y</text>
+    <rect x="420" y="182" class="b45"></rect>
+    <text x="420" y="182" class="f35  ">w</text>
+    <rect x="427" y="182" class="b45"></rect>
+    <rect x="434" y="182" class="b45"></rect>
+    <rect x="441" y="182" class="b0"></rect>
+    <rect x="448" y="182" class="b46"></rect>
+    <rect x="455" y="182" class="b46"></rect>
+    <rect x="462" y="182" class="b46"></rect>
+    <text x="462" y="182" class="f35  ">g</text>
+    <rect x="469" y="182" class="b46"></rect>
+    <text x="469" y="182" class="f35  ">Y</text>
+    <rect x="476" y="182" class="b46"></rect>
+    <text x="476" y="182" class="f35  ">w</text>
+    <rect x="483" y="182" class="b46"></rect>
+    <rect x="490" y="182" class="b46"></rect>
+    <rect x="497" y="182" class="b0"></rect>
+    <rect x="504" y="182" class="b47"></rect>
+    <rect x="511" y="182" class="b47"></rect>
+    <rect x="518" y="182" class="b47"></rect>
+    <text x="518" y="182" class="f35  ">g</text>
+    <rect x="525" y="182" class="b47"></rect>
+    <text x="525" y="182" class="f35  ">Y</text>
+    <rect x="532" y="182" class="b47"></rect>
+    <text x="532" y="182" class="f35  ">w</text>
+    <rect x="539" y="182" class="b47"></rect>
+    <rect x="546" y="182" class="b47"></rect>
+    <rect x="0" y="195" class="b0"></rect>
+    <rect x="7" y="195" class="b0"></rect>
+    <rect x="14" y="195" class="b0"></rect>
+    <text x="14" y="195" class="f0  ">1</text>
+    <rect x="21" y="195" class="b0"></rect>
+    <text x="21" y="195" class="f0  ">;</text>
+    <rect x="28" y="195" class="b0"></rect>
+    <text x="28" y="195" class="f0  ">3</text>
+    <rect x="35" y="195" class="b0"></rect>
+    <text x="35" y="195" class="f0  ">5</text>
+    <rect x="42" y="195" class="b0"></rect>
+    <text x="42" y="195" class="f0  ">m</text>
+    <rect x="49" y="195" class="b0"></rect>
+    <rect x="56" y="195" class="b0"></rect>
+    <rect x="63" y="195" class="b0"></rect>
+    <rect x="70" y="195" class="b0"></rect>
+    <text x="70" y="195" class="f35  i">g</text>
+    <rect x="77" y="195" class="b0"></rect>
+    <text x="77" y="195" class="f35  i">Y</text>
+    <rect x="84" y="195" class="b0"></rect>
+    <text x="84" y="195" class="f35  i">w</text>
+    <rect x="91" y="195" class="b0"></rect>
+    <rect x="98" y="195" class="b0"></rect>
+    <rect x="105" y="195" class="b0"></rect>
+    <rect x="112" y="195" class="b40"></rect>
+    <rect x="119" y="195" class="b40"></rect>
+    <rect x="126" y="195" class="b40"></rect>
+    <text x="126" y="195" class="f35  i">g</text>
+    <rect x="133" y="195" class="b40"></rect>
+    <text x="133" y="195" class="f35  i">Y</text>
+    <rect x="140" y="195" class="b40"></rect>
+    <text x="140" y="195" class="f35  i">w</text>
+    <rect x="147" y="195" class="b40"></rect>
+    <rect x="154" y="195" class="b40"></rect>
+    <rect x="161" y="195" class="b0"></rect>
+    <rect x="168" y="195" class="b41"></rect>
+    <rect x="175" y="195" class="b41"></rect>
+    <rect x="182" y="195" class="b41"></rect>
+    <text x="182" y="195" class="f35  i">g</text>
+    <rect x="189" y="195" class="b41"></rect>
+    <text x="189" y="195" class="f35  i">Y</text>
+    <rect x="196" y="195" class="b41"></rect>
+    <text x="196" y="195" class="f35  i">w</text>
+    <rect x="203" y="195" class="b41"></rect>
+    <rect x="210" y="195" class="b41"></rect>
+    <rect x="217" y="195" class="b0"></rect>
+    <rect x="224" y="195" class="b42"></rect>
+    <rect x="231" y="195" class="b42"></rect>
+    <rect x="238" y="195" class="b42"></rect>
+    <text x="238" y="195" class="f35  i">g</text>
+    <rect x="245" y="195" class="b42"></rect>
+    <text x="245" y="195" class="f35  i">Y</text>
+    <rect x="252" y="195" class="b42"></rect>
+    <text x="252" y="195" class="f35  i">w</text>
+    <rect x="259" y="195" class="b42"></rect>
+    <rect x="266" y="195" class="b42"></rect>
+    <rect x="273" y="195" class="b0"></rect>
+    <rect x="280" y="195" class="b43"></rect>
+    <rect x="287" y="195" class="b43"></rect>
+    <rect x="294" y="195" class="b43"></rect>
+    <text x="294" y="195" class="f35  i">g</text>
+    <rect x="301" y="195" class="b43"></rect>
+    <text x="301" y="195" class="f35  i">Y</text>
+    <rect x="308" y="195" class="b43"></rect>
+    <text x="308" y="195" class="f35  i">w</text>
+    <rect x="315" y="195" class="b43"></rect>
+    <rect x="322" y="195" class="b43"></rect>
+    <rect x="329" y="195" class="b0"></rect>
+    <rect x="336" y="195" class="b44"></rect>
+    <rect x="343" y="195" class="b44"></rect>
+    <rect x="350" y="195" class="b44"></rect>
+    <text x="350" y="195" class="f35  i">g</text>
+    <rect x="357" y="195" class="b44"></rect>
+    <text x="357" y="195" class="f35  i">Y</text>
+    <rect x="364" y="195" class="b44"></rect>
+    <text x="364" y="195" class="f35  i">w</text>
+    <rect x="371" y="195" class="b44"></rect>
+    <rect x="378" y="195" class="b44"></rect>
+    <rect x="385" y="195" class="b0"></rect>
+    <rect x="392" y="195" class="b45"></rect>
+    <rect x="399" y="195" class="b45"></rect>
+    <rect x="406" y="195" class="b45"></rect>
+    <text x="406" y="195" class="f35  i">g</text>
+    <rect x="413" y="195" class="b45"></rect>
+    <text x="413" y="195" class="f35  i">Y</text>
+    <rect x="420" y="195" class="b45"></rect>
+    <text x="420" y="195" class="f35  i">w</text>
+    <rect x="427" y="195" class="b45"></rect>
+    <rect x="434" y="195" class="b45"></rect>
+    <rect x="441" y="195" class="b0"></rect>
+    <rect x="448" y="195" class="b46"></rect>
+    <rect x="455" y="195" class="b46"></rect>
+    <rect x="462" y="195" class="b46"></rect>
+    <text x="462" y="195" class="f35  i">g</text>
+    <rect x="469" y="195" class="b46"></rect>
+    <text x="469" y="195" class="f35  i">Y</text>
+    <rect x="476" y="195" class="b46"></rect>
+    <text x="476" y="195" class="f35  i">w</text>
+    <rect x="483" y="195" class="b46"></rect>
+    <rect x="490" y="195" class="b46"></rect>
+    <rect x="497" y="195" class="b0"></rect>
+    <rect x="504" y="195" class="b47"></rect>
+    <rect x="511" y="195" class="b47"></rect>
+    <rect x="518" y="195" class="b47"></rect>
+    <text x="518" y="195" class="f35  i">g</text>
+    <rect x="525" y="195" class="b47"></rect>
+    <text x="525" y="195" class="f35  i">Y</text>
+    <rect x="532" y="195" class="b47"></rect>
+    <text x="532" y="195" class="f35  i">w</text>
+    <rect x="539" y="195" class="b47"></rect>
+    <rect x="546" y="195" class="b47"></rect>
+    <rect x="0" y="208" class="b0"></rect>
+    <rect x="7" y="208" class="b0"></rect>
+    <rect x="14" y="208" class="b0"></rect>
+    <rect x="21" y="208" class="b0"></rect>
+    <rect x="28" y="208" class="b0"></rect>
+    <text x="28" y="208" class="f0  ">3</text>
+    <rect x="35" y="208" class="b0"></rect>
+    <text x="35" y="208" class="f0  ">6</text>
+    <rect x="42" y="208" class="b0"></rect>
+    <text x="42" y="208" class="f0  ">m</text>
+    <rect x="49" y="208" class="b0"></rect>
+    <rect x="56" y="208" class="b0"></rect>
+    <rect x="63" y="208" class="b0"></rect>
+    <rect x="70" y="208" class="b0"></rect>
+    <text x="70" y="208" class="f36  ">g</text>
+    <rect x="77" y="208" class="b0"></rect>
+    <text x="77" y="208" class="f36  ">Y</text>
+    <rect x="84" y="208" class="b0"></rect>
+    <text x="84" y="208" class="f36  ">w</text>
+    <rect x="91" y="208" class="b0"></rect>
+    <rect x="98" y="208" class="b0"></rect>
+    <rect x="105" y="208" class="b0"></rect>
+    <rect x="112" y="208" class="b40"></rect>
+    <rect x="119" y="208" class="b40"></rect>
+    <rect x="126" y="208" class="b40"></rect>
+    <text x="126" y="208" class="f36  ">g</text>
+    <rect x="133" y="208" class="b40"></rect>
+    <text x="133" y="208" class="f36  ">Y</text>
+    <rect x="140" y="208" class="b40"></rect>
+    <text x="140" y="208" class="f36  ">w</text>
+    <rect x="147" y="208" class="b40"></rect>
+    <rect x="154" y="208" class="b40"></rect>
+    <rect x="161" y="208" class="b0"></rect>
+    <rect x="168" y="208" class="b41"></rect>
+    <rect x="175" y="208" class="b41"></rect>
+    <rect x="182" y="208" class="b41"></rect>
+    <text x="182" y="208" class="f36  ">g</text>
+    <rect x="189" y="208" class="b41"></rect>
+    <text x="189" y="208" class="f36  ">Y</text>
+    <rect x="196" y="208" class="b41"></rect>
+    <text x="196" y="208" class="f36  ">w</text>
+    <rect x="203" y="208" class="b41"></rect>
+    <rect x="210" y="208" class="b41"></rect>
+    <rect x="217" y="208" class="b0"></rect>
+    <rect x="224" y="208" class="b42"></rect>
+    <rect x="231" y="208" class="b42"></rect>
+    <rect x="238" y="208" class="b42"></rect>
+    <text x="238" y="208" class="f36  ">g</text>
+    <rect x="245" y="208" class="b42"></rect>
+    <text x="245" y="208" class="f36  ">Y</text>
+    <rect x="252" y="208" class="b42"></rect>
+    <text x="252" y="208" class="f36  ">w</text>
+    <rect x="259" y="208" class="b42"></rect>
+    <rect x="266" y="208" class="b42"></rect>
+    <rect x="273" y="208" class="b0"></rect>
+    <rect x="280" y="208" class="b43"></rect>
+    <rect x="287" y="208" class="b43"></rect>
+    <rect x="294" y="208" class="b43"></rect>
+    <text x="294" y="208" class="f36  ">g</text>
+    <rect x="301" y="208" class="b43"></rect>
+    <text x="301" y="208" class="f36  ">Y</text>
+    <rect x="308" y="208" class="b43"></rect>
+    <text x="308" y="208" class="f36  ">w</text>
+    <rect x="315" y="208" class="b43"></rect>
+    <rect x="322" y="208" class="b43"></rect>
+    <rect x="329" y="208" class="b0"></rect>
+    <rect x="336" y="208" class="b44"></rect>
+    <rect x="343" y="208" class="b44"></rect>
+    <rect x="350" y="208" class="b44"></rect>
+    <text x="350" y="208" class="f36  ">g</text>
+    <rect x="357" y="208" class="b44"></rect>
+    <text x="357" y="208" class="f36  ">Y</text>
+    <rect x="364" y="208" class="b44"></rect>
+    <text x="364" y="208" class="f36  ">w</text>
+    <rect x="371" y="208" class="b44"></rect>
+    <rect x="378" y="208" class="b44"></rect>
+    <rect x="385" y="208" class="b0"></rect>
+    <rect x="392" y="208" class="b45"></rect>
+    <rect x="399" y="208" class="b45"></rect>
+    <rect x="406" y="208" class="b45"></rect>
+    <text x="406" y="208" class="f36  ">g</text>
+    <rect x="413" y="208" class="b45"></rect>
+    <text x="413" y="208" class="f36  ">Y</text>
+    <rect x="420" y="208" class="b45"></rect>
+    <text x="420" y="208" class="f36  ">w</text>
+    <rect x="427" y="208" class="b45"></rect>
+    <rect x="434" y="208" class="b45"></rect>
+    <rect x="441" y="208" class="b0"></rect>
+    <rect x="448" y="208" class="b46"></rect>
+    <rect x="455" y="208" class="b46"></rect>
+    <rect x="462" y="208" class="b46"></rect>
+    <text x="462" y="208" class="f36  ">g</text>
+    <rect x="469" y="208" class="b46"></rect>
+    <text x="469" y="208" class="f36  ">Y</text>
+    <rect x="476" y="208" class="b46"></rect>
+    <text x="476" y="208" class="f36  ">w</text>
+    <rect x="483" y="208" class="b46"></rect>
+    <rect x="490" y="208" class="b46"></rect>
+    <rect x="497" y="208" class="b0"></rect>
+    <rect x="504" y="208" class="b47"></rect>
+    <rect x="511" y="208" class="b47"></rect>
+    <rect x="518" y="208" class="b47"></rect>
+    <text x="518" y="208" class="f36  ">g</text>
+    <rect x="525" y="208" class="b47"></rect>
+    <text x="525" y="208" class="f36  ">Y</text>
+    <rect x="532" y="208" class="b47"></rect>
+    <text x="532" y="208" class="f36  ">w</text>
+    <rect x="539" y="208" class="b47"></rect>
+    <rect x="546" y="208" class="b47"></rect>
+    <rect x="0" y="221" class="b0"></rect>
+    <rect x="7" y="221" class="b0"></rect>
+    <rect x="14" y="221" class="b0"></rect>
+    <text x="14" y="221" class="f0  ">1</text>
+    <rect x="21" y="221" class="b0"></rect>
+    <text x="21" y="221" class="f0  ">;</text>
+    <rect x="28" y="221" class="b0"></rect>
+    <text x="28" y="221" class="f0  ">3</text>
+    <rect x="35" y="221" class="b0"></rect>
+    <text x="35" y="221" class="f0  ">6</text>
+    <rect x="42" y="221" class="b0"></rect>
+    <text x="42" y="221" class="f0  ">m</text>
+    <rect x="49" y="221" class="b0"></rect>
+    <rect x="56" y="221" class="b0"></rect>
+    <rect x="63" y="221" class="b0"></rect>
+    <rect x="70" y="221" class="b0"></rect>
+    <text x="70" y="221" class="f36  i">g</text>
+    <rect x="77" y="221" class="b0"></rect>
+    <text x="77" y="221" class="f36  i">Y</text>
+    <rect x="84" y="221" class="b0"></rect>
+    <text x="84" y="221" class="f36  i">w</text>
+    <rect x="91" y="221" class="b0"></rect>
+    <rect x="98" y="221" class="b0"></rect>
+    <rect x="105" y="221" class="b0"></rect>
+    <rect x="112" y="221" class="b40"></rect>
+    <rect x="119" y="221" class="b40"></rect>
+    <rect x="126" y="221" class="b40"></rect>
+    <text x="126" y="221" class="f36  i">g</text>
+    <rect x="133" y="221" class="b40"></rect>
+    <text x="133" y="221" class="f36  i">Y</text>
+    <rect x="140" y="221" class="b40"></rect>
+    <text x="140" y="221" class="f36  i">w</text>
+    <rect x="147" y="221" class="b40"></rect>
+    <rect x="154" y="221" class="b40"></rect>
+    <rect x="161" y="221" class="b0"></rect>
+    <rect x="168" y="221" class="b41"></rect>
+    <rect x="175" y="221" class="b41"></rect>
+    <rect x="182" y="221" class="b41"></rect>
+    <text x="182" y="221" class="f36  i">g</text>
+    <rect x="189" y="221" class="b41"></rect>
+    <text x="189" y="221" class="f36  i">Y</text>
+    <rect x="196" y="221" class="b41"></rect>
+    <text x="196" y="221" class="f36  i">w</text>
+    <rect x="203" y="221" class="b41"></rect>
+    <rect x="210" y="221" class="b41"></rect>
+    <rect x="217" y="221" class="b0"></rect>
+    <rect x="224" y="221" class="b42"></rect>
+    <rect x="231" y="221" class="b42"></rect>
+    <rect x="238" y="221" class="b42"></rect>
+    <text x="238" y="221" class="f36  i">g</text>
+    <rect x="245" y="221" class="b42"></rect>
+    <text x="245" y="221" class="f36  i">Y</text>
+    <rect x="252" y="221" class="b42"></rect>
+    <text x="252" y="221" class="f36  i">w</text>
+    <rect x="259" y="221" class="b42"></rect>
+    <rect x="266" y="221" class="b42"></rect>
+    <rect x="273" y="221" class="b0"></rect>
+    <rect x="280" y="221" class="b43"></rect>
+    <rect x="287" y="221" class="b43"></rect>
+    <rect x="294" y="221" class="b43"></rect>
+    <text x="294" y="221" class="f36  i">g</text>
+    <rect x="301" y="221" class="b43"></rect>
+    <text x="301" y="221" class="f36  i">Y</text>
+    <rect x="308" y="221" class="b43"></rect>
+    <text x="308" y="221" class="f36  i">w</text>
+    <rect x="315" y="221" class="b43"></rect>
+    <rect x="322" y="221" class="b43"></rect>
+    <rect x="329" y="221" class="b0"></rect>
+    <rect x="336" y="221" class="b44"></rect>
+    <rect x="343" y="221" class="b44"></rect>
+    <rect x="350" y="221" class="b44"></rect>
+    <text x="350" y="221" class="f36  i">g</text>
+    <rect x="357" y="221" class="b44"></rect>
+    <text x="357" y="221" class="f36  i">Y</text>
+    <rect x="364" y="221" class="b44"></rect>
+    <text x="364" y="221" class="f36  i">w</text>
+    <rect x="371" y="221" class="b44"></rect>
+    <rect x="378" y="221" class="b44"></rect>
+    <rect x="385" y="221" class="b0"></rect>
+    <rect x="392" y="221" class="b45"></rect>
+    <rect x="399" y="221" class="b45"></rect>
+    <rect x="406" y="221" class="b45"></rect>
+    <text x="406" y="221" class="f36  i">g</text>
+    <rect x="413" y="221" class="b45"></rect>
+    <text x="413" y="221" class="f36  i">Y</text>
+    <rect x="420" y="221" class="b45"></rect>
+    <text x="420" y="221" class="f36  i">w</text>
+    <rect x="427" y="221" class="b45"></rect>
+    <rect x="434" y="221" class="b45"></rect>
+    <rect x="441" y="221" class="b0"></rect>
+    <rect x="448" y="221" class="b46"></rect>
+    <rect x="455" y="221" class="b46"></rect>
+    <rect x="462" y="221" class="b46"></rect>
+    <text x="462" y="221" class="f36  i">g</text>
+    <rect x="469" y="221" class="b46"></rect>
+    <text x="469" y="221" class="f36  i">Y</text>
+    <rect x="476" y="221" class="b46"></rect>
+    <text x="476" y="221" class="f36  i">w</text>
+    <rect x="483" y="221" class="b46"></rect>
+    <rect x="490" y="221" class="b46"></rect>
+    <rect x="497" y="221" class="b0"></rect>
+    <rect x="504" y="221" class="b47"></rect>
+    <rect x="511" y="221" class="b47"></rect>
+    <rect x="518" y="221" class="b47"></rect>
+    <text x="518" y="221" class="f36  i">g</text>
+    <rect x="525" y="221" class="b47"></rect>
+    <text x="525" y="221" class="f36  i">Y</text>
+    <rect x="532" y="221" class="b47"></rect>
+    <text x="532" y="221" class="f36  i">w</text>
+    <rect x="539" y="221" class="b47"></rect>
+    <rect x="546" y="221" class="b47"></rect>
+    <rect x="0" y="234" class="b0"></rect>
+    <rect x="7" y="234" class="b0"></rect>
+    <rect x="14" y="234" class="b0"></rect>
+    <rect x="21" y="234" class="b0"></rect>
+    <rect x="28" y="234" class="b0"></rect>
+    <text x="28" y="234" class="f0  ">3</text>
+    <rect x="35" y="234" class="b0"></rect>
+    <text x="35" y="234" class="f0  ">7</text>
+    <rect x="42" y="234" class="b0"></rect>
+    <text x="42" y="234" class="f0  ">m</text>
+    <rect x="49" y="234" class="b0"></rect>
+    <rect x="56" y="234" class="b0"></rect>
+    <rect x="63" y="234" class="b0"></rect>
+    <rect x="70" y="234" class="b0"></rect>
+    <text x="70" y="234" class="f37  ">g</text>
+    <rect x="77" y="234" class="b0"></rect>
+    <text x="77" y="234" class="f37  ">Y</text>
+    <rect x="84" y="234" class="b0"></rect>
+    <text x="84" y="234" class="f37  ">w</text>
+    <rect x="91" y="234" class="b0"></rect>
+    <rect x="98" y="234" class="b0"></rect>
+    <rect x="105" y="234" class="b0"></rect>
+    <rect x="112" y="234" class="b40"></rect>
+    <rect x="119" y="234" class="b40"></rect>
+    <rect x="126" y="234" class="b40"></rect>
+    <text x="126" y="234" class="f37  ">g</text>
+    <rect x="133" y="234" class="b40"></rect>
+    <text x="133" y="234" class="f37  ">Y</text>
+    <rect x="140" y="234" class="b40"></rect>
+    <text x="140" y="234" class="f37  ">w</text>
+    <rect x="147" y="234" class="b40"></rect>
+    <rect x="154" y="234" class="b40"></rect>
+    <rect x="161" y="234" class="b0"></rect>
+    <rect x="168" y="234" class="b41"></rect>
+    <rect x="175" y="234" class="b41"></rect>
+    <rect x="182" y="234" class="b41"></rect>
+    <text x="182" y="234" class="f37  ">g</text>
+    <rect x="189" y="234" class="b41"></rect>
+    <text x="189" y="234" class="f37  ">Y</text>
+    <rect x="196" y="234" class="b41"></rect>
+    <text x="196" y="234" class="f37  ">w</text>
+    <rect x="203" y="234" class="b41"></rect>
+    <rect x="210" y="234" class="b41"></rect>
+    <rect x="217" y="234" class="b0"></rect>
+    <rect x="224" y="234" class="b42"></rect>
+    <rect x="231" y="234" class="b42"></rect>
+    <rect x="238" y="234" class="b42"></rect>
+    <text x="238" y="234" class="f37  ">g</text>
+    <rect x="245" y="234" class="b42"></rect>
+    <text x="245" y="234" class="f37  ">Y</text>
+    <rect x="252" y="234" class="b42"></rect>
+    <text x="252" y="234" class="f37  ">w</text>
+    <rect x="259" y="234" class="b42"></rect>
+    <rect x="266" y="234" class="b42"></rect>
+    <rect x="273" y="234" class="b0"></rect>
+    <rect x="280" y="234" class="b43"></rect>
+    <rect x="287" y="234" class="b43"></rect>
+    <rect x="294" y="234" class="b43"></rect>
+    <text x="294" y="234" class="f37  ">g</text>
+    <rect x="301" y="234" class="b43"></rect>
+    <text x="301" y="234" class="f37  ">Y</text>
+    <rect x="308" y="234" class="b43"></rect>
+    <text x="308" y="234" class="f37  ">w</text>
+    <rect x="315" y="234" class="b43"></rect>
+    <rect x="322" y="234" class="b43"></rect>
+    <rect x="329" y="234" class="b0"></rect>
+    <rect x="336" y="234" class="b44"></rect>
+    <rect x="343" y="234" class="b44"></rect>
+    <rect x="350" y="234" class="b44"></rect>
+    <text x="350" y="234" class="f37  ">g</text>
+    <rect x="357" y="234" class="b44"></rect>
+    <text x="357" y="234" class="f37  ">Y</text>
+    <rect x="364" y="234" class="b44"></rect>
+    <text x="364" y="234" class="f37  ">w</text>
+    <rect x="371" y="234" class="b44"></rect>
+    <rect x="378" y="234" class="b44"></rect>
+    <rect x="385" y="234" class="b0"></rect>
+    <rect x="392" y="234" class="b45"></rect>
+    <rect x="399" y="234" class="b45"></rect>
+    <rect x="406" y="234" class="b45"></rect>
+    <text x="406" y="234" class="f37  ">g</text>
+    <rect x="413" y="234" class="b45"></rect>
+    <text x="413" y="234" class="f37  ">Y</text>
+    <rect x="420" y="234" class="b45"></rect>
+    <text x="420" y="234" class="f37  ">w</text>
+    <rect x="427" y="234" class="b45"></rect>
+    <rect x="434" y="234" class="b45"></rect>
+    <rect x="441" y="234" class="b0"></rect>
+    <rect x="448" y="234" class="b46"></rect>
+    <rect x="455" y="234" class="b46"></rect>
+    <rect x="462" y="234" class="b46"></rect>
+    <text x="462" y="234" class="f37  ">g</text>
+    <rect x="469" y="234" class="b46"></rect>
+    <text x="469" y="234" class="f37  ">Y</text>
+    <rect x="476" y="234" class="b46"></rect>
+    <text x="476" y="234" class="f37  ">w</text>
+    <rect x="483" y="234" class="b46"></rect>
+    <rect x="490" y="234" class="b46"></rect>
+    <rect x="497" y="234" class="b0"></rect>
+    <rect x="504" y="234" class="b47"></rect>
+    <rect x="511" y="234" class="b47"></rect>
+    <rect x="518" y="234" class="b47"></rect>
+    <text x="518" y="234" class="f37  ">g</text>
+    <rect x="525" y="234" class="b47"></rect>
+    <text x="525" y="234" class="f37  ">Y</text>
+    <rect x="532" y="234" class="b47"></rect>
+    <text x="532" y="234" class="f37  ">w</text>
+    <rect x="539" y="234" class="b47"></rect>
+    <rect x="546" y="234" class="b47"></rect>
+    <rect x="0" y="247" class="b0"></rect>
+    <rect x="7" y="247" class="b0"></rect>
+    <rect x="14" y="247" class="b0"></rect>
+    <text x="14" y="247" class="f0  ">1</text>
+    <rect x="21" y="247" class="b0"></rect>
+    <text x="21" y="247" class="f0  ">;</text>
+    <rect x="28" y="247" class="b0"></rect>
+    <text x="28" y="247" class="f0  ">3</text>
+    <rect x="35" y="247" class="b0"></rect>
+    <text x="35" y="247" class="f0  ">7</text>
+    <rect x="42" y="247" class="b0"></rect>
+    <text x="42" y="247" class="f0  ">m</text>
+    <rect x="49" y="247" class="b0"></rect>
+    <rect x="56" y="247" class="b0"></rect>
+    <rect x="63" y="247" class="b0"></rect>
+    <rect x="70" y="247" class="b0"></rect>
+    <text x="70" y="247" class="f37  i">g</text>
+    <rect x="77" y="247" class="b0"></rect>
+    <text x="77" y="247" class="f37  i">Y</text>
+    <rect x="84" y="247" class="b0"></rect>
+    <text x="84" y="247" class="f37  i">w</text>
+    <rect x="91" y="247" class="b0"></rect>
+    <rect x="98" y="247" class="b0"></rect>
+    <rect x="105" y="247" class="b0"></rect>
+    <rect x="112" y="247" class="b40"></rect>
+    <rect x="119" y="247" class="b40"></rect>
+    <rect x="126" y="247" class="b40"></rect>
+    <text x="126" y="247" class="f37  i">g</text>
+    <rect x="133" y="247" class="b40"></rect>
+    <text x="133" y="247" class="f37  i">Y</text>
+    <rect x="140" y="247" class="b40"></rect>
+    <text x="140" y="247" class="f37  i">w</text>
+    <rect x="147" y="247" class="b40"></rect>
+    <rect x="154" y="247" class="b40"></rect>
+    <rect x="161" y="247" class="b0"></rect>
+    <rect x="168" y="247" class="b41"></rect>
+    <rect x="175" y="247" class="b41"></rect>
+    <rect x="182" y="247" class="b41"></rect>
+    <text x="182" y="247" class="f37  i">g</text>
+    <rect x="189" y="247" class="b41"></rect>
+    <text x="189" y="247" class="f37  i">Y</text>
+    <rect x="196" y="247" class="b41"></rect>
+    <text x="196" y="247" class="f37  i">w</text>
+    <rect x="203" y="247" class="b41"></rect>
+    <rect x="210" y="247" class="b41"></rect>
+    <rect x="217" y="247" class="b0"></rect>
+    <rect x="224" y="247" class="b42"></rect>
+    <rect x="231" y="247" class="b42"></rect>
+    <rect x="238" y="247" class="b42"></rect>
+    <text x="238" y="247" class="f37  i">g</text>
+    <rect x="245" y="247" class="b42"></rect>
+    <text x="245" y="247" class="f37  i">Y</text>
+    <rect x="252" y="247" class="b42"></rect>
+    <text x="252" y="247" class="f37  i">w</text>
+    <rect x="259" y="247" class="b42"></rect>
+    <rect x="266" y="247" class="b42"></rect>
+    <rect x="273" y="247" class="b0"></rect>
+    <rect x="280" y="247" class="b43"></rect>
+    <rect x="287" y="247" class="b43"></rect>
+    <rect x="294" y="247" class="b43"></rect>
+    <text x="294" y="247" class="f37  i">g</text>
+    <rect x="301" y="247" class="b43"></rect>
+    <text x="301" y="247" class="f37  i">Y</text>
+    <rect x="308" y="247" class="b43"></rect>
+    <text x="308" y="247" class="f37  i">w</text>
+    <rect x="315" y="247" class="b43"></rect>
+    <rect x="322" y="247" class="b43"></rect>
+    <rect x="329" y="247" class="b0"></rect>
+    <rect x="336" y="247" class="b44"></rect>
+    <rect x="343" y="247" class="b44"></rect>
+    <rect x="350" y="247" class="b44"></rect>
+    <text x="350" y="247" class="f37  i">g</text>
+    <rect x="357" y="247" class="b44"></rect>
+    <text x="357" y="247" class="f37  i">Y</text>
+    <rect x="364" y="247" class="b44"></rect>
+    <text x="364" y="247" class="f37  i">w</text>
+    <rect x="371" y="247" class="b44"></rect>
+    <rect x="378" y="247" class="b44"></rect>
+    <rect x="385" y="247" class="b0"></rect>
+    <rect x="392" y="247" class="b45"></rect>
+    <rect x="399" y="247" class="b45"></rect>
+    <rect x="406" y="247" class="b45"></rect>
+    <text x="406" y="247" class="f37  i">g</text>
+    <rect x="413" y="247" class="b45"></rect>
+    <text x="413" y="247" class="f37  i">Y</text>
+    <rect x="420" y="247" class="b45"></rect>
+    <text x="420" y="247" class="f37  i">w</text>
+    <rect x="427" y="247" class="b45"></rect>
+    <rect x="434" y="247" class="b45"></rect>
+    <rect x="441" y="247" class="b0"></rect>
+    <rect x="448" y="247" class="b46"></rect>
+    <rect x="455" y="247" class="b46"></rect>
+    <rect x="462" y="247" class="b46"></rect>
+    <text x="462" y="247" class="f37  i">g</text>
+    <rect x="469" y="247" class="b46"></rect>
+    <text x="469" y="247" class="f37  i">Y</text>
+    <rect x="476" y="247" class="b46"></rect>
+    <text x="476" y="247" class="f37  i">w</text>
+    <rect x="483" y="247" class="b46"></rect>
+    <rect x="490" y="247" class="b46"></rect>
+    <rect x="497" y="247" class="b0"></rect>
+    <rect x="504" y="247" class="b47"></rect>
+    <rect x="511" y="247" class="b47"></rect>
+    <rect x="518" y="247" class="b47"></rect>
+    <text x="518" y="247" class="f37  i">g</text>
+    <rect x="525" y="247" class="b47"></rect>
+    <text x="525" y="247" class="f37  i">Y</text>
+    <rect x="532" y="247" class="b47"></rect>
+    <text x="532" y="247" class="f37  i">w</text>
+    <rect x="539" y="247" class="b47"></rect>
+    <rect x="546" y="247" class="b47"></rect>
+    <rect x="0" y="260" class="b0"></rect>
+    <rect x="0" y="273" class="b0"></rect>
+</svg>
