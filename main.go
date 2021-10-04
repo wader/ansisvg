@@ -1,7 +1,7 @@
 package main
 
 import (
-	"ansisvg/ansidecoder"
+	"github.com/wader/ansisvg/ansidecoder"
 
 	"embed"
 	"encoding/json"
