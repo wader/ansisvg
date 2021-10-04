@@ -3,7 +3,7 @@
 Convert ANSI terminal codes to SVG.
 
 ```sh
-./colortest | ansivg > doc/example.svg
+./colortest | ansisvg > doc/example.svg
  ```
 ![doc/colortest.svg asdad](doc/colortest.svg)
 
