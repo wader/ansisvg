@@ -95,6 +95,8 @@ func main() {
 		r, _, err := a.ReadRune()
 		if err == io.EOF {
 			break
+		} else if err != nil {
+			panic(err)
 		}
 		chars = append(chars, Char{
 			Char:       string([]rune{r}),
