@@ -61,14 +61,14 @@
 {{- if .Background}}
     {{- if hasprefix .Background "#"}}
     <rect x="{{mul .X $.CharBox.Width}}" y="{{mul .Y $.CharBox.Height}}" style="fill: {{.Background}}"></rect>
-    {{- else}}
+    {{- else if ne .Background "0"}}
     <rect x="{{mul .X $.CharBox.Width}}" y="{{mul .Y $.CharBox.Height}}" class="b{{.Background}}"></rect>
     {{- end}}
 {{- end}}
 {{- if or .Underline (not (iswhitespace .Char))}}
     {{- if hasprefix .Foreground "#"}}
     <text x="{{mul .X $.CharBox.Width}}" y="{{mul .Y $.CharBox.Height}}" style="fill: {{.Foreground}}" class="{{if .Underline}}u{{end}} {{if .Intensity}}i{{end}}">{{.Char}}</text>
-    {{- else}}
+    {{- else }}
     <text x="{{mul .X $.CharBox.Width}}" y="{{mul .Y $.CharBox.Height}}" class="f{{.Foreground}} {{if .Underline}}u{{end}} {{if .Intensity}}i{{end}}">{{.Char}}</text>
     {{- end}}
 {{- end}}
