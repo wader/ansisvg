@@ -86,7 +86,7 @@ type vsCodeColorScheme struct {
 	WorkbenchColorCustomizations workbenchColorCustomizations `json:"workbench.colorCustomizations"`
 }
 
-func main() {
+func run() error {
 	flag.Parse()
 
 	a := ansidecoder.NewDecoder(os.Stdin)
@@ -96,7 +96,7 @@ func main() {
 		if err == io.EOF {
 			break
 		} else if err != nil {
-			panic(err)
+			return err
 		}
 		chars = append(chars, Char{
 			Char:       string([]rune{r}),
@@ -113,11 +113,11 @@ func main() {
 
 	f, err := colorSchemas.Open("colorschemas/" + *colorSchemeFlag + ".json")
 	if err != nil {
-		panic(err)
+		return err
 	}
 	defer f.Close()
 	if err := json.NewDecoder(f).Decode(&colorScheme); err != nil {
-		panic(err)
+		return err
 	}
 
 	if *terminalWidthFlag == 0 {
@@ -140,7 +140,7 @@ func main() {
 
 	t, err = t.Parse(svgTemplate)
 	if err != nil {
-		panic(err)
+		return err
 	}
 	if err = t.ExecuteTemplate(os.Stdout, "", struct {
 		ColorScheme   workbenchColorCustomizations
@@ -161,6 +161,15 @@ func main() {
 		Lines:         a.MaxY + 1,
 		Chars:         chars,
 	}); err != nil {
-		panic(err)
+		return err
+	}
+
+	return nil
+}
+
+func main() {
+	if err := run(); err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		os.Exit(1)
 	}
 }
