@@ -2,10 +2,32 @@
 
 Convert ANSI terminal codes to SVG.
 
+## Usage
+
+Run a proram that produces output with color coding and pipe it thru `ansisvg`:
 ```sh
 ./colortest | ansisvg > doc/example.svg
  ```
+Produces [colortest.svg](doc/colortest.svg)
+
 ![doc/colortest.svg asdad](doc/colortest.svg)
+
+```
+$ ansisvg -h
+Usage of ansisvg:
+  -chardimension value
+    	Character box dimension (default 7x13)
+  -colorscheme string
+    	Color scheme (default "Builtin Dark")
+  -font string
+    	Font (default "Monaco, Lucida Console, Courier")
+  -fontsize int
+    	Font size (default 12)
+  -width int
+    	Terminal width (auto)
+```
+
+Color themes are the ones from https://github.com/mbadolato/iTerm2-Color-Schemes
 
 ## Install
 
