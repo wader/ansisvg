@@ -125,14 +125,16 @@ func (d *Decoder) ReadRune() (r rune, size int, err error) {
 			case ESCRune:
 				d.State = StateESC
 			default:
-				d.X++
 				switch r {
 				case '\r':
 					d.X = 0
 				case '\n':
 					d.X = 0
 					d.Y++
-
+				case '\t':
+					d.X += 8 - (d.X % 8)
+				default:
+					d.X++
 				}
 				if d.X > d.MaxX {
 					d.MaxX = d.X
