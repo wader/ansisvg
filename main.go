@@ -1,15 +1,14 @@
 package main
 
 import (
+	"flag"
+	"fmt"
+	"os"
 	"strconv"
 	"strings"
 
 	"github.com/wader/ansisvg/ansisvg"
 	"github.com/wader/ansisvg/colorscheme/schemes"
-
-	"flag"
-	"fmt"
-	"os"
 )
 
 type dimension struct {
