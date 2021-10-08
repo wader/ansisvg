@@ -3,12 +3,10 @@ package svgscreen
 import (
 	_ "embed"
 	"fmt"
+	"html/template"
 	"io"
 	"strconv"
 	"strings"
-	"text/template"
-
-	"github.com/wader/ansisvg/colorscheme"
 )
 
 //go:embed template.svg
@@ -22,6 +20,18 @@ type Char struct {
 	Background string
 	Underline  bool
 	Intensity  bool
+}
+
+type Screen struct {
+	ForegroundColors [256]string
+	BackgroundColors [256]string
+	Font             string
+	FontSize         int
+	CharBox          Dimension
+	TerminalWidth    int
+	Columns          int
+	Lines            int
+	Chars            []Char
 }
 
 type Dimension struct {
@@ -41,17 +51,6 @@ func (d *Dimension) Set(s string) error {
 	d.Width, _ = strconv.Atoi(parts[0])
 	d.Height, _ = strconv.Atoi(parts[1])
 	return nil
-}
-
-type Screen struct {
-	ColorScheme   colorscheme.WorkbenchColorCustomizations
-	Font          string
-	FontSize      int
-	CharBox       Dimension
-	TerminalWidth int
-	Columns       int
-	Lines         int
-	Chars         []Char
 }
 
 func Render(w io.Writer, s Screen) error {

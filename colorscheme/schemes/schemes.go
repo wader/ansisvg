@@ -11,16 +11,16 @@ import (
 //go:embed *.json
 var FS embed.FS
 
-func Load(name string) (colorscheme.VSCodeColorScheme, error) {
-	var c colorscheme.VSCodeColorScheme
+func Load(name string) (colorscheme.WorkbenchColorCustomizations, error) {
+	var vsCS colorscheme.VSCodeColorScheme
 	f, err := FS.Open(name + ".json")
 	if err != nil {
-		return c, fmt.Errorf("scheme not found")
+		return vsCS.WorkbenchColorCustomizations, fmt.Errorf("scheme not found")
 	}
 	defer f.Close()
-	if err := json.NewDecoder(f).Decode(&c); err != nil {
-		return c, err
+	if err := json.NewDecoder(f).Decode(&vsCS); err != nil {
+		return vsCS.WorkbenchColorCustomizations, err
 	}
 
-	return c, nil
+	return vsCS.WorkbenchColorCustomizations, nil
 }

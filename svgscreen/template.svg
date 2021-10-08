@@ -1,75 +1,47 @@
-{{- $ := . -}}
 <svg viewBox="0 0 {{mul $.TerminalWidth .CharBox.Width}} {{mul .Lines .CharBox.Height}}" xmlns="http://www.w3.org/2000/svg">
     <style>
         svg {
-            background-color: {{$.ColorScheme.Background}}
+            background-color: {{index $.BackgroundColors 0}}
         }
-
         rect {
             width: {{$.CharBox.Width}}px;
             height: {{$.CharBox.Height}}px;
             shape-rendering: crispedges;
         }
-
         text {
             dominant-baseline: hanging;
-            font: {{.FontSize}}px {{.Font}};
-            font-weight: normal;
-            white-space: pre;
-            fill: {{$.ColorScheme.Foreground}};
+            white-space: pre;{{/* draw underline even when whitespace */}}
+            font: {{$.FontSize}}px {{$.Font}};
+            fill: {{index $.ForegroundColors 0}};
         }
         .u { text-decoration: underline; }
         .i { filter: brightness(1.5) saturate(150%); }
-
-        .f0  {fill: {{$.ColorScheme.Foreground}};}
-        .f30 {fill: {{$.ColorScheme.ANSIBlack}};}
-        .f31 {fill: {{$.ColorScheme.ANSIRed}};}
-        .f32 {fill: {{$.ColorScheme.ANSIGreen}};}
-        .f33 {fill: {{$.ColorScheme.ANSIYellow}};}
-        .f34 {fill: {{$.ColorScheme.ANSIBlue}};}
-        .f35 {fill: {{$.ColorScheme.ANSIMagenta}};}
-        .f36 {fill: {{$.ColorScheme.ANSICyan}};}
-        .f37 {fill: {{$.ColorScheme.ANSIWhite}};}
-        .b40 {fill: {{$.ColorScheme.ANSIBlack}};}
-        .b41 {fill: {{$.ColorScheme.ANSIRed}};}
-        .b42 {fill: {{$.ColorScheme.ANSIYellow}};}
-        .b43 {fill: {{$.ColorScheme.ANSIYellow}};}
-        .b44 {fill: {{$.ColorScheme.ANSIBlue}};}
-        .b45 {fill: {{$.ColorScheme.ANSIMagenta}};}
-        .b46 {fill: {{$.ColorScheme.ANSICyan}};}
-        .b47 {fill: {{$.ColorScheme.ANSIWhite}};}
-        .f90 {fill: {{$.ColorScheme.ANSIBrightBlack}};}
-        .f91 {fill: {{$.ColorScheme.ANSIBrightRed}};}
-        .f92 {fill: {{$.ColorScheme.ANSIBrightGreen}};}
-        .f93 {fill: {{$.ColorScheme.ANSIBrightYellow}};}
-        .f94 {fill: {{$.ColorScheme.ANSIBrightBlue}};}
-        .f95 {fill: {{$.ColorScheme.ANSIBrightMagenta}};}
-        .f96 {fill: {{$.ColorScheme.ANSIBrightCyan}};}
-        .f97 {fill: {{$.ColorScheme.ANSIBrightWhite}};}
-        .b100 {fill: {{$.ColorScheme.ANSIBrightBlack}};}
-        .b101 {fill: {{$.ColorScheme.ANSIBrightRed}};}
-        .b102 {fill: {{$.ColorScheme.ANSIBrightYellow}};}
-        .b103 {fill: {{$.ColorScheme.ANSIBrightYellow}};}
-        .b104 {fill: {{$.ColorScheme.ANSIBrightBlue}};}
-        .b105 {fill: {{$.ColorScheme.ANSIBrightMagenta}};}
-        .b106 {fill: {{$.ColorScheme.ANSIBrightCyan}};}
-        .b107 {fill: {{$.ColorScheme.ANSIBrightWhite}};}
+{{- range $i, $c := $.ForegroundColors}}
+{{- if ne $c ""}}
+        .f{{$i}} { fill: {{$c}}; }
+{{- end}}
+{{- end}}
+{{- range $i, $c := $.BackgroundColors}}
+{{- if ne $c ""}}
+        .b{{$i}} { fill: {{$c}}; }
+{{- end}}
+{{- end}}
     </style>
 
-{{- range .Chars}}
-{{- if le .X $.TerminalWidth}}
-{{- if .Background}}
-    {{- if hasprefix .Background "#"}}
-    <rect x="{{mul .X $.CharBox.Width}}" y="{{mul .Y $.CharBox.Height}}" style="fill: {{.Background}}"></rect>
-    {{- else if ne .Background "0"}}
-    <rect x="{{mul .X $.CharBox.Width}}" y="{{mul .Y $.CharBox.Height}}" class="b{{.Background}}"></rect>
+{{- range $i, $c := .Chars}}
+{{- if le $c.X $.TerminalWidth}}
+    {{- if hasprefix $c.Background "#"}}
+    <rect x="{{mul $c.X $.CharBox.Width}}" y="{{mul $c.Y $.CharBox.Height}}" style="fill: {{$c.Background}}"></rect>
+    {{- else if ne $c.Background "0"}}
+    <rect x="{{mul $c.X $.CharBox.Width}}" y="{{mul $c.Y $.CharBox.Height}}" class="b{{$c.Background}}"></rect>
     {{- end}}
-{{- end}}
-{{- if or .Underline (not (iswhitespace .Char))}}
-    {{- if hasprefix .Foreground "#"}}
-    <text x="{{mul .X $.CharBox.Width}}" y="{{mul .Y $.CharBox.Height}}" style="fill: {{.Foreground}}" class="{{if .Underline}}u{{end}} {{if .Intensity}}i{{end}}">{{.Char}}</text>
-    {{- else }}
-    <text x="{{mul .X $.CharBox.Width}}" y="{{mul .Y $.CharBox.Height}}" class="f{{.Foreground}} {{if .Underline}}u{{end}} {{if .Intensity}}i{{end}}">{{.Char}}</text>
+{{- if or $c.Underline (not (iswhitespace $c.Char))}}
+    {{- if hasprefix $c.Foreground "#"}}
+    <text x="{{mul $c.X $.CharBox.Width}}" y="{{mul $c.Y $.CharBox.Height}}" style="fill: {{$c.Foreground}}" class="{{if $c.Underline}}u{{end}} {{if $c.Intensity}}i{{end}}">{{$c.Char}}</text>
+    {{- else if or (ne $c.Foreground "0") $c.Underline $c.Intensity}}
+    <text x="{{mul $c.X $.CharBox.Width}}" y="{{mul $c.Y $.CharBox.Height}}" class="f{{$c.Foreground}} {{if $c.Underline}}u{{end}} {{if $c.Intensity}}i{{end}}">{{$c.Char}}</text>
+    {{- else}}
+    <text x="{{mul $c.X $.CharBox.Width}}" y="{{mul $c.Y $.CharBox.Height}}">{{$c.Char}}</text>
     {{- end}}
 {{- end}}
 {{- end}}

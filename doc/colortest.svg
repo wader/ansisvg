@@ -3,167 +3,164 @@
         svg {
             background-color: #000000
         }
-
         rect {
             width: 7px;
             height: 13px;
             shape-rendering: crispedges;
         }
-
         text {
             dominant-baseline: hanging;
-            font: 12px Monaco, Lucida Console, Courier;
-            font-weight: normal;
             white-space: pre;
+            font: 12px Monaco, Lucida Console, Courier;
             fill: #bbbbbb;
         }
         .u { text-decoration: underline; }
         .i { filter: brightness(1.5) saturate(150%); }
-
-        .f0  {fill: #bbbbbb;}
-        .f30 {fill: #000000;}
-        .f31 {fill: #bb0000;}
-        .f32 {fill: #00bb00;}
-        .f33 {fill: #bbbb00;}
-        .f34 {fill: #0000bb;}
-        .f35 {fill: #bb00bb;}
-        .f36 {fill: #00bbbb;}
-        .f37 {fill: #bbbbbb;}
-        .b40 {fill: #000000;}
-        .b41 {fill: #bb0000;}
-        .b42 {fill: #bbbb00;}
-        .b43 {fill: #bbbb00;}
-        .b44 {fill: #0000bb;}
-        .b45 {fill: #bb00bb;}
-        .b46 {fill: #00bbbb;}
-        .b47 {fill: #bbbbbb;}
-        .f90 {fill: #555555;}
-        .f91 {fill: #ff5555;}
-        .f92 {fill: #55ff55;}
-        .f93 {fill: #ffff55;}
-        .f94 {fill: #5555ff;}
-        .f95 {fill: #ff55ff;}
-        .f96 {fill: #55ffff;}
-        .f97 {fill: #ffffff;}
-        .b100 {fill: #555555;}
-        .b101 {fill: #ff5555;}
-        .b102 {fill: #ffff55;}
-        .b103 {fill: #ffff55;}
-        .b104 {fill: #5555ff;}
-        .b105 {fill: #ff55ff;}
-        .b106 {fill: #55ffff;}
-        .b107 {fill: #ffffff;}
+        .f0 { fill: #bbbbbb; }
+        .f30 { fill: #000000; }
+        .f31 { fill: #bb0000; }
+        .f32 { fill: #00bb00; }
+        .f33 { fill: #bbbb00; }
+        .f34 { fill: #0000bb; }
+        .f35 { fill: #bb00bb; }
+        .f36 { fill: #00bbbb; }
+        .f37 { fill: #bbbbbb; }
+        .f90 { fill: #555555; }
+        .f91 { fill: #ff5555; }
+        .f92 { fill: #55ff55; }
+        .f93 { fill: #ffff55; }
+        .f94 { fill: #5555ff; }
+        .f95 { fill: #ff55ff; }
+        .f96 { fill: #55ffff; }
+        .f97 { fill: #ffffff; }
+        .b0 { fill: #000000; }
+        .b40 { fill: #000000; }
+        .b41 { fill: #bb0000; }
+        .b42 { fill: #bbbb00; }
+        .b43 { fill: #bbbb00; }
+        .b44 { fill: #0000bb; }
+        .b45 { fill: #bb00bb; }
+        .b46 { fill: #00bbbb; }
+        .b47 { fill: #bbbbbb; }
+        .b100 { fill: #555555; }
+        .b101 { fill: #ff5555; }
+        .b102 { fill: #ffff55; }
+        .b103 { fill: #ffff55; }
+        .b104 { fill: #5555ff; }
+        .b105 { fill: #ff55ff; }
+        .b106 { fill: #55ffff; }
+        .b107 { fill: #ffffff; }
     </style>
-    <text x="126" y="13" class="f0  ">4</text>
-    <text x="133" y="13" class="f0  ">0</text>
-    <text x="140" y="13" class="f0  ">m</text>
-    <text x="182" y="13" class="f0  ">4</text>
-    <text x="189" y="13" class="f0  ">1</text>
-    <text x="196" y="13" class="f0  ">m</text>
-    <text x="238" y="13" class="f0  ">4</text>
-    <text x="245" y="13" class="f0  ">2</text>
-    <text x="252" y="13" class="f0  ">m</text>
-    <text x="294" y="13" class="f0  ">4</text>
-    <text x="301" y="13" class="f0  ">3</text>
-    <text x="308" y="13" class="f0  ">m</text>
-    <text x="350" y="13" class="f0  ">4</text>
-    <text x="357" y="13" class="f0  ">4</text>
-    <text x="364" y="13" class="f0  ">m</text>
-    <text x="406" y="13" class="f0  ">4</text>
-    <text x="413" y="13" class="f0  ">5</text>
-    <text x="420" y="13" class="f0  ">m</text>
-    <text x="462" y="13" class="f0  ">4</text>
-    <text x="469" y="13" class="f0  ">6</text>
-    <text x="476" y="13" class="f0  ">m</text>
-    <text x="518" y="13" class="f0  ">4</text>
-    <text x="525" y="13" class="f0  ">7</text>
-    <text x="532" y="13" class="f0  ">m</text>
-    <text x="42" y="26" class="f0  ">m</text>
-    <text x="70" y="26" class="f0  ">g</text>
-    <text x="77" y="26" class="f0  ">Y</text>
-    <text x="84" y="26" class="f0  ">w</text>
+    <text x="126" y="13">4</text>
+    <text x="133" y="13">0</text>
+    <text x="140" y="13">m</text>
+    <text x="182" y="13">4</text>
+    <text x="189" y="13">1</text>
+    <text x="196" y="13">m</text>
+    <text x="238" y="13">4</text>
+    <text x="245" y="13">2</text>
+    <text x="252" y="13">m</text>
+    <text x="294" y="13">4</text>
+    <text x="301" y="13">3</text>
+    <text x="308" y="13">m</text>
+    <text x="350" y="13">4</text>
+    <text x="357" y="13">4</text>
+    <text x="364" y="13">m</text>
+    <text x="406" y="13">4</text>
+    <text x="413" y="13">5</text>
+    <text x="420" y="13">m</text>
+    <text x="462" y="13">4</text>
+    <text x="469" y="13">6</text>
+    <text x="476" y="13">m</text>
+    <text x="518" y="13">4</text>
+    <text x="525" y="13">7</text>
+    <text x="532" y="13">m</text>
+    <text x="42" y="26">m</text>
+    <text x="70" y="26">g</text>
+    <text x="77" y="26">Y</text>
+    <text x="84" y="26">w</text>
     <rect x="112" y="26" class="b40"></rect>
     <rect x="119" y="26" class="b40"></rect>
     <rect x="126" y="26" class="b40"></rect>
-    <text x="126" y="26" class="f0  ">g</text>
+    <text x="126" y="26">g</text>
     <rect x="133" y="26" class="b40"></rect>
-    <text x="133" y="26" class="f0  ">Y</text>
+    <text x="133" y="26">Y</text>
     <rect x="140" y="26" class="b40"></rect>
-    <text x="140" y="26" class="f0  ">w</text>
+    <text x="140" y="26">w</text>
     <rect x="147" y="26" class="b40"></rect>
     <rect x="154" y="26" class="b40"></rect>
     <rect x="168" y="26" class="b41"></rect>
     <rect x="175" y="26" class="b41"></rect>
     <rect x="182" y="26" class="b41"></rect>
-    <text x="182" y="26" class="f0  ">g</text>
+    <text x="182" y="26">g</text>
     <rect x="189" y="26" class="b41"></rect>
-    <text x="189" y="26" class="f0  ">Y</text>
+    <text x="189" y="26">Y</text>
     <rect x="196" y="26" class="b41"></rect>
-    <text x="196" y="26" class="f0  ">w</text>
+    <text x="196" y="26">w</text>
     <rect x="203" y="26" class="b41"></rect>
     <rect x="210" y="26" class="b41"></rect>
     <rect x="224" y="26" class="b42"></rect>
     <rect x="231" y="26" class="b42"></rect>
     <rect x="238" y="26" class="b42"></rect>
-    <text x="238" y="26" class="f0  ">g</text>
+    <text x="238" y="26">g</text>
     <rect x="245" y="26" class="b42"></rect>
-    <text x="245" y="26" class="f0  ">Y</text>
+    <text x="245" y="26">Y</text>
     <rect x="252" y="26" class="b42"></rect>
-    <text x="252" y="26" class="f0  ">w</text>
+    <text x="252" y="26">w</text>
     <rect x="259" y="26" class="b42"></rect>
     <rect x="266" y="26" class="b42"></rect>
     <rect x="280" y="26" class="b43"></rect>
     <rect x="287" y="26" class="b43"></rect>
     <rect x="294" y="26" class="b43"></rect>
-    <text x="294" y="26" class="f0  ">g</text>
+    <text x="294" y="26">g</text>
     <rect x="301" y="26" class="b43"></rect>
-    <text x="301" y="26" class="f0  ">Y</text>
+    <text x="301" y="26">Y</text>
     <rect x="308" y="26" class="b43"></rect>
-    <text x="308" y="26" class="f0  ">w</text>
+    <text x="308" y="26">w</text>
     <rect x="315" y="26" class="b43"></rect>
     <rect x="322" y="26" class="b43"></rect>
     <rect x="336" y="26" class="b44"></rect>
     <rect x="343" y="26" class="b44"></rect>
     <rect x="350" y="26" class="b44"></rect>
-    <text x="350" y="26" class="f0  ">g</text>
+    <text x="350" y="26">g</text>
     <rect x="357" y="26" class="b44"></rect>
-    <text x="357" y="26" class="f0  ">Y</text>
+    <text x="357" y="26">Y</text>
     <rect x="364" y="26" class="b44"></rect>
-    <text x="364" y="26" class="f0  ">w</text>
+    <text x="364" y="26">w</text>
     <rect x="371" y="26" class="b44"></rect>
     <rect x="378" y="26" class="b44"></rect>
     <rect x="392" y="26" class="b45"></rect>
     <rect x="399" y="26" class="b45"></rect>
     <rect x="406" y="26" class="b45"></rect>
-    <text x="406" y="26" class="f0  ">g</text>
+    <text x="406" y="26">g</text>
     <rect x="413" y="26" class="b45"></rect>
-    <text x="413" y="26" class="f0  ">Y</text>
+    <text x="413" y="26">Y</text>
     <rect x="420" y="26" class="b45"></rect>
-    <text x="420" y="26" class="f0  ">w</text>
+    <text x="420" y="26">w</text>
     <rect x="427" y="26" class="b45"></rect>
     <rect x="434" y="26" class="b45"></rect>
     <rect x="448" y="26" class="b46"></rect>
     <rect x="455" y="26" class="b46"></rect>
     <rect x="462" y="26" class="b46"></rect>
-    <text x="462" y="26" class="f0  ">g</text>
+    <text x="462" y="26">g</text>
     <rect x="469" y="26" class="b46"></rect>
-    <text x="469" y="26" class="f0  ">Y</text>
+    <text x="469" y="26">Y</text>
     <rect x="476" y="26" class="b46"></rect>
-    <text x="476" y="26" class="f0  ">w</text>
+    <text x="476" y="26">w</text>
     <rect x="483" y="26" class="b46"></rect>
     <rect x="490" y="26" class="b46"></rect>
     <rect x="504" y="26" class="b47"></rect>
     <rect x="511" y="26" class="b47"></rect>
     <rect x="518" y="26" class="b47"></rect>
-    <text x="518" y="26" class="f0  ">g</text>
+    <text x="518" y="26">g</text>
     <rect x="525" y="26" class="b47"></rect>
-    <text x="525" y="26" class="f0  ">Y</text>
+    <text x="525" y="26">Y</text>
     <rect x="532" y="26" class="b47"></rect>
-    <text x="532" y="26" class="f0  ">w</text>
+    <text x="532" y="26">w</text>
     <rect x="539" y="26" class="b47"></rect>
     <rect x="546" y="26" class="b47"></rect>
-    <text x="35" y="39" class="f0  ">1</text>
-    <text x="42" y="39" class="f0  ">m</text>
+    <text x="35" y="39">1</text>
+    <text x="42" y="39">m</text>
     <text x="70" y="39" class="f0  i">g</text>
     <text x="77" y="39" class="f0  i">Y</text>
     <text x="84" y="39" class="f0  i">w</text>
@@ -247,9 +244,9 @@
     <text x="532" y="39" class="f0  i">w</text>
     <rect x="539" y="39" class="b47"></rect>
     <rect x="546" y="39" class="b47"></rect>
-    <text x="28" y="52" class="f0  ">3</text>
-    <text x="35" y="52" class="f0  ">0</text>
-    <text x="42" y="52" class="f0  ">m</text>
+    <text x="28" y="52">3</text>
+    <text x="35" y="52">0</text>
+    <text x="42" y="52">m</text>
     <text x="70" y="52" class="f30  ">g</text>
     <text x="77" y="52" class="f30  ">Y</text>
     <text x="84" y="52" class="f30  ">w</text>
@@ -333,11 +330,11 @@
     <text x="532" y="52" class="f30  ">w</text>
     <rect x="539" y="52" class="b47"></rect>
     <rect x="546" y="52" class="b47"></rect>
-    <text x="14" y="65" class="f0  ">1</text>
-    <text x="21" y="65" class="f0  ">;</text>
-    <text x="28" y="65" class="f0  ">3</text>
-    <text x="35" y="65" class="f0  ">0</text>
-    <text x="42" y="65" class="f0  ">m</text>
+    <text x="14" y="65">1</text>
+    <text x="21" y="65">;</text>
+    <text x="28" y="65">3</text>
+    <text x="35" y="65">0</text>
+    <text x="42" y="65">m</text>
     <text x="70" y="65" class="f30  i">g</text>
     <text x="77" y="65" class="f30  i">Y</text>
     <text x="84" y="65" class="f30  i">w</text>
@@ -421,9 +418,9 @@
     <text x="532" y="65" class="f30  i">w</text>
     <rect x="539" y="65" class="b47"></rect>
     <rect x="546" y="65" class="b47"></rect>
-    <text x="28" y="78" class="f0  ">3</text>
-    <text x="35" y="78" class="f0  ">1</text>
-    <text x="42" y="78" class="f0  ">m</text>
+    <text x="28" y="78">3</text>
+    <text x="35" y="78">1</text>
+    <text x="42" y="78">m</text>
     <text x="70" y="78" class="f31  ">g</text>
     <text x="77" y="78" class="f31  ">Y</text>
     <text x="84" y="78" class="f31  ">w</text>
@@ -507,11 +504,11 @@
     <text x="532" y="78" class="f31  ">w</text>
     <rect x="539" y="78" class="b47"></rect>
     <rect x="546" y="78" class="b47"></rect>
-    <text x="14" y="91" class="f0  ">1</text>
-    <text x="21" y="91" class="f0  ">;</text>
-    <text x="28" y="91" class="f0  ">3</text>
-    <text x="35" y="91" class="f0  ">1</text>
-    <text x="42" y="91" class="f0  ">m</text>
+    <text x="14" y="91">1</text>
+    <text x="21" y="91">;</text>
+    <text x="28" y="91">3</text>
+    <text x="35" y="91">1</text>
+    <text x="42" y="91">m</text>
     <text x="70" y="91" class="f31  i">g</text>
     <text x="77" y="91" class="f31  i">Y</text>
     <text x="84" y="91" class="f31  i">w</text>
@@ -595,9 +592,9 @@
     <text x="532" y="91" class="f31  i">w</text>
     <rect x="539" y="91" class="b47"></rect>
     <rect x="546" y="91" class="b47"></rect>
-    <text x="28" y="104" class="f0  ">3</text>
-    <text x="35" y="104" class="f0  ">2</text>
-    <text x="42" y="104" class="f0  ">m</text>
+    <text x="28" y="104">3</text>
+    <text x="35" y="104">2</text>
+    <text x="42" y="104">m</text>
     <text x="70" y="104" class="f32  ">g</text>
     <text x="77" y="104" class="f32  ">Y</text>
     <text x="84" y="104" class="f32  ">w</text>
@@ -681,11 +678,11 @@
     <text x="532" y="104" class="f32  ">w</text>
     <rect x="539" y="104" class="b47"></rect>
     <rect x="546" y="104" class="b47"></rect>
-    <text x="14" y="117" class="f0  ">1</text>
-    <text x="21" y="117" class="f0  ">;</text>
-    <text x="28" y="117" class="f0  ">3</text>
-    <text x="35" y="117" class="f0  ">2</text>
-    <text x="42" y="117" class="f0  ">m</text>
+    <text x="14" y="117">1</text>
+    <text x="21" y="117">;</text>
+    <text x="28" y="117">3</text>
+    <text x="35" y="117">2</text>
+    <text x="42" y="117">m</text>
     <text x="70" y="117" class="f32  i">g</text>
     <text x="77" y="117" class="f32  i">Y</text>
     <text x="84" y="117" class="f32  i">w</text>
@@ -769,9 +766,9 @@
     <text x="532" y="117" class="f32  i">w</text>
     <rect x="539" y="117" class="b47"></rect>
     <rect x="546" y="117" class="b47"></rect>
-    <text x="28" y="130" class="f0  ">3</text>
-    <text x="35" y="130" class="f0  ">3</text>
-    <text x="42" y="130" class="f0  ">m</text>
+    <text x="28" y="130">3</text>
+    <text x="35" y="130">3</text>
+    <text x="42" y="130">m</text>
     <text x="70" y="130" class="f33  ">g</text>
     <text x="77" y="130" class="f33  ">Y</text>
     <text x="84" y="130" class="f33  ">w</text>
@@ -855,11 +852,11 @@
     <text x="532" y="130" class="f33  ">w</text>
     <rect x="539" y="130" class="b47"></rect>
     <rect x="546" y="130" class="b47"></rect>
-    <text x="14" y="143" class="f0  ">1</text>
-    <text x="21" y="143" class="f0  ">;</text>
-    <text x="28" y="143" class="f0  ">3</text>
-    <text x="35" y="143" class="f0  ">3</text>
-    <text x="42" y="143" class="f0  ">m</text>
+    <text x="14" y="143">1</text>
+    <text x="21" y="143">;</text>
+    <text x="28" y="143">3</text>
+    <text x="35" y="143">3</text>
+    <text x="42" y="143">m</text>
     <text x="70" y="143" class="f33  i">g</text>
     <text x="77" y="143" class="f33  i">Y</text>
     <text x="84" y="143" class="f33  i">w</text>
@@ -943,9 +940,9 @@
     <text x="532" y="143" class="f33  i">w</text>
     <rect x="539" y="143" class="b47"></rect>
     <rect x="546" y="143" class="b47"></rect>
-    <text x="28" y="156" class="f0  ">3</text>
-    <text x="35" y="156" class="f0  ">4</text>
-    <text x="42" y="156" class="f0  ">m</text>
+    <text x="28" y="156">3</text>
+    <text x="35" y="156">4</text>
+    <text x="42" y="156">m</text>
     <text x="70" y="156" class="f34  ">g</text>
     <text x="77" y="156" class="f34  ">Y</text>
     <text x="84" y="156" class="f34  ">w</text>
@@ -1029,11 +1026,11 @@
     <text x="532" y="156" class="f34  ">w</text>
     <rect x="539" y="156" class="b47"></rect>
     <rect x="546" y="156" class="b47"></rect>
-    <text x="14" y="169" class="f0  ">1</text>
-    <text x="21" y="169" class="f0  ">;</text>
-    <text x="28" y="169" class="f0  ">3</text>
-    <text x="35" y="169" class="f0  ">4</text>
-    <text x="42" y="169" class="f0  ">m</text>
+    <text x="14" y="169">1</text>
+    <text x="21" y="169">;</text>
+    <text x="28" y="169">3</text>
+    <text x="35" y="169">4</text>
+    <text x="42" y="169">m</text>
     <text x="70" y="169" class="f34  i">g</text>
     <text x="77" y="169" class="f34  i">Y</text>
     <text x="84" y="169" class="f34  i">w</text>
@@ -1117,9 +1114,9 @@
     <text x="532" y="169" class="f34  i">w</text>
     <rect x="539" y="169" class="b47"></rect>
     <rect x="546" y="169" class="b47"></rect>
-    <text x="28" y="182" class="f0  ">3</text>
-    <text x="35" y="182" class="f0  ">5</text>
-    <text x="42" y="182" class="f0  ">m</text>
+    <text x="28" y="182">3</text>
+    <text x="35" y="182">5</text>
+    <text x="42" y="182">m</text>
     <text x="70" y="182" class="f35  ">g</text>
     <text x="77" y="182" class="f35  ">Y</text>
     <text x="84" y="182" class="f35  ">w</text>
@@ -1203,11 +1200,11 @@
     <text x="532" y="182" class="f35  ">w</text>
     <rect x="539" y="182" class="b47"></rect>
     <rect x="546" y="182" class="b47"></rect>
-    <text x="14" y="195" class="f0  ">1</text>
-    <text x="21" y="195" class="f0  ">;</text>
-    <text x="28" y="195" class="f0  ">3</text>
-    <text x="35" y="195" class="f0  ">5</text>
-    <text x="42" y="195" class="f0  ">m</text>
+    <text x="14" y="195">1</text>
+    <text x="21" y="195">;</text>
+    <text x="28" y="195">3</text>
+    <text x="35" y="195">5</text>
+    <text x="42" y="195">m</text>
     <text x="70" y="195" class="f35  i">g</text>
     <text x="77" y="195" class="f35  i">Y</text>
     <text x="84" y="195" class="f35  i">w</text>
@@ -1291,9 +1288,9 @@
     <text x="532" y="195" class="f35  i">w</text>
     <rect x="539" y="195" class="b47"></rect>
     <rect x="546" y="195" class="b47"></rect>
-    <text x="28" y="208" class="f0  ">3</text>
-    <text x="35" y="208" class="f0  ">6</text>
-    <text x="42" y="208" class="f0  ">m</text>
+    <text x="28" y="208">3</text>
+    <text x="35" y="208">6</text>
+    <text x="42" y="208">m</text>
     <text x="70" y="208" class="f36  ">g</text>
     <text x="77" y="208" class="f36  ">Y</text>
     <text x="84" y="208" class="f36  ">w</text>
@@ -1377,11 +1374,11 @@
     <text x="532" y="208" class="f36  ">w</text>
     <rect x="539" y="208" class="b47"></rect>
     <rect x="546" y="208" class="b47"></rect>
-    <text x="14" y="221" class="f0  ">1</text>
-    <text x="21" y="221" class="f0  ">;</text>
-    <text x="28" y="221" class="f0  ">3</text>
-    <text x="35" y="221" class="f0  ">6</text>
-    <text x="42" y="221" class="f0  ">m</text>
+    <text x="14" y="221">1</text>
+    <text x="21" y="221">;</text>
+    <text x="28" y="221">3</text>
+    <text x="35" y="221">6</text>
+    <text x="42" y="221">m</text>
     <text x="70" y="221" class="f36  i">g</text>
     <text x="77" y="221" class="f36  i">Y</text>
     <text x="84" y="221" class="f36  i">w</text>
@@ -1465,9 +1462,9 @@
     <text x="532" y="221" class="f36  i">w</text>
     <rect x="539" y="221" class="b47"></rect>
     <rect x="546" y="221" class="b47"></rect>
-    <text x="28" y="234" class="f0  ">3</text>
-    <text x="35" y="234" class="f0  ">7</text>
-    <text x="42" y="234" class="f0  ">m</text>
+    <text x="28" y="234">3</text>
+    <text x="35" y="234">7</text>
+    <text x="42" y="234">m</text>
     <text x="70" y="234" class="f37  ">g</text>
     <text x="77" y="234" class="f37  ">Y</text>
     <text x="84" y="234" class="f37  ">w</text>
@@ -1551,11 +1548,11 @@
     <text x="532" y="234" class="f37  ">w</text>
     <rect x="539" y="234" class="b47"></rect>
     <rect x="546" y="234" class="b47"></rect>
-    <text x="14" y="247" class="f0  ">1</text>
-    <text x="21" y="247" class="f0  ">;</text>
-    <text x="28" y="247" class="f0  ">3</text>
-    <text x="35" y="247" class="f0  ">7</text>
-    <text x="42" y="247" class="f0  ">m</text>
+    <text x="14" y="247">1</text>
+    <text x="21" y="247">;</text>
+    <text x="28" y="247">3</text>
+    <text x="35" y="247">7</text>
+    <text x="42" y="247">m</text>
     <text x="70" y="247" class="f37  i">g</text>
     <text x="77" y="247" class="f37  i">Y</text>
     <text x="84" y="247" class="f37  i">w</text>
