@@ -1,11 +1,11 @@
-<svg viewBox="0 0 {{mul $.TerminalWidth .CharBox.Width}} {{mul .Lines .CharBox.Height}}" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 {{mul $.TerminalWidth .CharacterBox.Width}} {{mul .Lines .CharacterBox.Height}}" xmlns="http://www.w3.org/2000/svg">
     <style>
         svg {
             background-color: {{index $.BackgroundColors 0}}
         }
         rect {
-            width: {{$.CharBox.Width}}px;
-            height: {{$.CharBox.Height}}px;
+            width: {{$.CharacterBox.Width}}px;
+            height: {{$.CharacterBox.Height}}px;
             shape-rendering: crispedges;
         }
         text {
@@ -31,17 +31,17 @@
 {{- range $i, $c := .Chars}}
 {{- if le $c.X $.TerminalWidth}}
     {{- if hasprefix $c.Background "#"}}
-    <rect x="{{mul $c.X $.CharBox.Width}}" y="{{mul $c.Y $.CharBox.Height}}" style="fill: {{$c.Background}}"></rect>
+    <rect x="{{mul $c.X $.CharacterBox.Width}}" y="{{mul $c.Y $.CharacterBox.Height}}" style="fill: {{$c.Background}}"></rect>
     {{- else if ne $c.Background "0"}}
-    <rect x="{{mul $c.X $.CharBox.Width}}" y="{{mul $c.Y $.CharBox.Height}}" class="b{{$c.Background}}"></rect>
+    <rect x="{{mul $c.X $.CharacterBox.Width}}" y="{{mul $c.Y $.CharacterBox.Height}}" class="b{{$c.Background}}"></rect>
     {{- end}}
 {{- if or $c.Underline (not (iswhitespace $c.Char))}}
     {{- if hasprefix $c.Foreground "#"}}
-    <text x="{{mul $c.X $.CharBox.Width}}" y="{{mul $c.Y $.CharBox.Height}}" style="fill: {{$c.Foreground}}" class="{{if $c.Underline}}u{{end}} {{if $c.Intensity}}i{{end}}">{{$c.Char}}</text>
+    <text x="{{mul $c.X $.CharacterBox.Width}}" y="{{mul $c.Y $.CharacterBox.Height}}" style="fill: {{$c.Foreground}}" class="{{if $c.Underline}}u{{end}} {{if $c.Intensity}}i{{end}}">{{$c.Char}}</text>
     {{- else if or (ne $c.Foreground "0") $c.Underline $c.Intensity}}
-    <text x="{{mul $c.X $.CharBox.Width}}" y="{{mul $c.Y $.CharBox.Height}}" class="f{{$c.Foreground}} {{if $c.Underline}}u{{end}} {{if $c.Intensity}}i{{end}}">{{$c.Char}}</text>
+    <text x="{{mul $c.X $.CharacterBox.Width}}" y="{{mul $c.Y $.CharacterBox.Height}}" class="f{{$c.Foreground}} {{if $c.Underline}}u{{end}} {{if $c.Intensity}}i{{end}}">{{$c.Char}}</text>
     {{- else}}
-    <text x="{{mul $c.X $.CharBox.Width}}" y="{{mul $c.Y $.CharBox.Height}}">{{$c.Char}}</text>
+    <text x="{{mul $c.X $.CharacterBox.Width}}" y="{{mul $c.Y $.CharacterBox.Height}}">{{$c.Char}}</text>
     {{- end}}
 {{- end}}
 {{- end}}

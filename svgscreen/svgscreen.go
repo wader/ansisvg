@@ -2,10 +2,8 @@ package svgscreen
 
 import (
 	_ "embed"
-	"fmt"
 	"html/template"
 	"io"
-	"strconv"
 	"strings"
 )
 
@@ -22,35 +20,21 @@ type Char struct {
 	Intensity  bool
 }
 
-type Screen struct {
-	ForegroundColors [256]string
-	BackgroundColors [256]string
-	Font             string
-	FontSize         int
-	CharBox          Dimension
-	TerminalWidth    int
-	Columns          int
-	Lines            int
-	Chars            []Char
-}
-
 type Dimension struct {
 	Width  int
 	Height int
 }
 
-func (d *Dimension) String() string {
-	return fmt.Sprintf("%dx%d", d.Width, d.Height)
-}
-
-func (d *Dimension) Set(s string) error {
-	parts := strings.Split(s, "x")
-	if len(parts) != 2 {
-		return fmt.Errorf("must be WxH")
-	}
-	d.Width, _ = strconv.Atoi(parts[0])
-	d.Height, _ = strconv.Atoi(parts[1])
-	return nil
+type Screen struct {
+	ForegroundColors [256]string
+	BackgroundColors [256]string
+	Font             string
+	FontSize         int
+	CharacterBox     Dimension
+	TerminalWidth    int
+	Columns          int
+	Lines            int
+	Chars            []Char
 }
 
 func Render(w io.Writer, s Screen) error {
