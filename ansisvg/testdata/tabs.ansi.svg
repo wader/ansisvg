@@ -1,0 +1,72 @@
+<svg viewBox="0 0 126 130" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        svg {
+            background-color: #000000
+        }
+        rect {
+            width: 7px;
+            height: 13px;
+            shape-rendering: crispedges;
+        }
+        text {
+            dominant-baseline: hanging;
+            white-space: pre;
+            font: 12px Monaco, Lucida Console, Courier;
+            fill: #bbbbbb;
+        }
+        .u { text-decoration: underline; }
+        .i { filter: brightness(1.5) saturate(150%); }
+        .f0 { fill: #bbbbbb; }
+        .f30 { fill: #000000; }
+        .f31 { fill: #bb0000; }
+        .f32 { fill: #00bb00; }
+        .f33 { fill: #bbbb00; }
+        .f34 { fill: #0000bb; }
+        .f35 { fill: #bb00bb; }
+        .f36 { fill: #00bbbb; }
+        .f37 { fill: #bbbbbb; }
+        .f90 { fill: #555555; }
+        .f91 { fill: #ff5555; }
+        .f92 { fill: #55ff55; }
+        .f93 { fill: #ffff55; }
+        .f94 { fill: #5555ff; }
+        .f95 { fill: #ff55ff; }
+        .f96 { fill: #55ffff; }
+        .f97 { fill: #ffffff; }
+        .b0 { fill: #000000; }
+        .b40 { fill: #000000; }
+        .b41 { fill: #bb0000; }
+        .b42 { fill: #bbbb00; }
+        .b43 { fill: #bbbb00; }
+        .b44 { fill: #0000bb; }
+        .b45 { fill: #bb00bb; }
+        .b46 { fill: #00bbbb; }
+        .b47 { fill: #bbbbbb; }
+        .b100 { fill: #555555; }
+        .b101 { fill: #ff5555; }
+        .b102 { fill: #ffff55; }
+        .b103 { fill: #ffff55; }
+        .b104 { fill: #5555ff; }
+        .b105 { fill: #ff55ff; }
+        .b106 { fill: #55ffff; }
+        .b107 { fill: #ffffff; }
+    </style>
+    <text x="7" y="0">0</text>
+    <text x="63" y="0">0</text>
+    <text x="7" y="13">1</text>
+    <text x="63" y="13">1</text>
+    <text x="7" y="26">2</text>
+    <text x="63" y="26">2</text>
+    <text x="7" y="39">3</text>
+    <text x="63" y="39">3</text>
+    <text x="7" y="52">4</text>
+    <text x="63" y="52">4</text>
+    <text x="7" y="65">5</text>
+    <text x="63" y="65">5</text>
+    <text x="7" y="78">6</text>
+    <text x="63" y="78">6</text>
+    <text x="7" y="91">7</text>
+    <text x="63" y="91">7</text>
+    <text x="7" y="104">8</text>
+    <text x="119" y="104">8</text>
+</svg>
