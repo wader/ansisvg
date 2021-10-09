@@ -4,21 +4,28 @@ import (
 	"io"
 
 	"github.com/wader/ansisvg/ansidecoder"
-	"github.com/wader/ansisvg/colorscheme"
+	"github.com/wader/ansisvg/colorscheme/schemes"
 	"github.com/wader/ansisvg/svgscreen"
 )
 
-type Dimension struct {
+type BoxSize struct {
 	Width  int
 	Height int
 }
 
 type Options struct {
-	Font          string
-	FontSize      int
-	TerminalWidth int
-	CharacterBox  Dimension
-	ColorScheme   colorscheme.WorkbenchColorCustomizations
+	Font             string
+	FontSize         int
+	TerminalWidth    int
+	CharacterBoxSize BoxSize
+	ColorScheme      string
+}
+
+var DefaultOptions = Options{
+	Font:             "Monaco, Lucida Console, Courier",
+	FontSize:         12,
+	CharacterBoxSize: BoxSize{Width: 7, Height: 13},
+	ColorScheme:      "Builtin Dark",
 }
 
 func Convert(r io.Reader, w io.Writer, opts Options) error {
@@ -45,8 +52,12 @@ func Convert(r io.Reader, w io.Writer, opts Options) error {
 	if opts.TerminalWidth != 0 {
 		terminalWidth = opts.TerminalWidth
 	}
+	colorScheme, err := schemes.Load(opts.ColorScheme)
+	if err != nil {
+		return err
+	}
 
-	c := opts.ColorScheme
+	c := colorScheme
 	return svgscreen.Render(
 		w,
 		svgscreen.Screen{
@@ -90,9 +101,9 @@ func Convert(r io.Reader, w io.Writer, opts Options) error {
 			},
 			Font:     opts.Font,
 			FontSize: opts.FontSize,
-			CharacterBox: svgscreen.Dimension{
-				Width:  opts.CharacterBox.Width,
-				Height: opts.CharacterBox.Height,
+			CharacterBoxSize: svgscreen.BoxSize{
+				Width:  opts.CharacterBoxSize.Width,
+				Height: opts.CharacterBoxSize.Height,
 			},
 			TerminalWidth: terminalWidth,
 			Columns:       ad.MaxX + 1,

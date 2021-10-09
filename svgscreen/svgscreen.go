@@ -20,7 +20,7 @@ type Char struct {
 	Intensity  bool
 }
 
-type Dimension struct {
+type BoxSize struct {
 	Width  int
 	Height int
 }
@@ -30,7 +30,7 @@ type Screen struct {
 	BackgroundColors [256]string
 	Font             string
 	FontSize         int
-	CharacterBox     Dimension
+	CharacterBoxSize BoxSize
 	TerminalWidth    int
 	Columns          int
 	Lines            int

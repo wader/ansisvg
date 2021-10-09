@@ -15,8 +15,8 @@ Produces [colortest.svg](doc/colortest.svg)
 ```
 $ ansisvg -h
 Usage of ansisvg:
-  -chardimension value
-    	Character box dimension (default 7x13)
+  -charboxsize value
+    	Character box size (default 7x13)
   -colorscheme string
     	Color scheme (default "Builtin Dark")
   -font string

@@ -8,19 +8,18 @@ import (
 	"strings"
 
 	"github.com/wader/ansisvg/ansisvg"
-	"github.com/wader/ansisvg/colorscheme/schemes"
 )
 
-type dimension struct {
+type boxSize struct {
 	Width  int
 	Height int
 }
 
-func (d *dimension) String() string {
+func (d *boxSize) String() string {
 	return fmt.Sprintf("%dx%d", d.Width, d.Height)
 }
 
-func (d *dimension) Set(s string) error {
+func (d *boxSize) Set(s string) error {
 	parts := strings.Split(s, "x")
 	if len(parts) != 2 {
 		return fmt.Errorf("must be WxH")
@@ -30,23 +29,21 @@ func (d *dimension) Set(s string) error {
 	return nil
 }
 
-var fontFlag = flag.String("font", "Monaco, Lucida Console, Courier", "Font")
-var fontSizeFlag = flag.Int("fontsize", 12, "Font size")
+var fontFlag = flag.String("font", ansisvg.DefaultOptions.Font, "Font")
+var fontSizeFlag = flag.Int("fontsize", ansisvg.DefaultOptions.FontSize, "Font size")
 var terminalWidthFlag = flag.Int("width", 0, "Terminal width (auto)")
-var characterBox = dimension{Width: 7, Height: 13}
-var colorSchemeFlag = flag.String("colorscheme", "Builtin Dark", "Color scheme")
+var characterBoxSize = boxSize{
+	Width:  ansisvg.DefaultOptions.CharacterBoxSize.Width,
+	Height: ansisvg.DefaultOptions.CharacterBoxSize.Height,
+}
+var colorSchemeFlag = flag.String("colorscheme", ansisvg.DefaultOptions.ColorScheme, "Color scheme")
 
 func init() {
-	flag.Var(&characterBox, "chardimension", "Character box dimension")
+	flag.Var(&characterBoxSize, "charboxsize", "Character box size")
 }
 
 func run() error {
 	flag.Parse()
-
-	colorScheme, err := schemes.Load(*colorSchemeFlag)
-	if err != nil {
-		return err
-	}
 
 	return ansisvg.Convert(
 		os.Stdin,
@@ -55,11 +52,11 @@ func run() error {
 			Font:          *fontFlag,
 			FontSize:      *fontSizeFlag,
 			TerminalWidth: *terminalWidthFlag,
-			CharacterBox: ansisvg.Dimension{
-				Width:  characterBox.Width,
-				Height: characterBox.Height,
+			CharacterBoxSize: ansisvg.BoxSize{
+				Width:  characterBoxSize.Width,
+				Height: characterBoxSize.Height,
 			},
-			ColorScheme: colorScheme,
+			ColorScheme: *colorSchemeFlag,
 		},
 	)
 }
