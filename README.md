@@ -1,6 +1,6 @@
 # ansisvg
 
-Convert ANSI terminal codes to SVG.
+Convert ANSI output to SVG.
 
 ## Usage
 
