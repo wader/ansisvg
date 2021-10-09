@@ -42,10 +42,10 @@ func init() {
 	flag.Var(&characterBoxSize, "charboxsize", "Character box size")
 }
 
-func run() error {
+func main() {
 	flag.Parse()
 
-	return ansisvg.Convert(
+	if err := ansisvg.Convert(
 		os.Stdin,
 		os.Stdout,
 		ansisvg.Options{
@@ -58,11 +58,7 @@ func run() error {
 			},
 			ColorScheme: *colorSchemeFlag,
 		},
-	)
-}
-
-func main() {
-	if err := run(); err != nil {
+	); err != nil {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
 	}
