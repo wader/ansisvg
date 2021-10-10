@@ -49,8 +49,10 @@ license https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/LICENSE
 
 colortest from https://github.com/pablopunk/colortest
 
-## TODO
+## TODO and ideas
 
+- Background using a rect instead of CSS? Inkscape seems to ignore CSS.
 - Bold
-- Foreground black with intensity
+- Foreground black with intensity. Is currently black, should be grey?
 - More CSI, keep track of cursor?
+- PNG output
