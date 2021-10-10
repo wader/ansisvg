@@ -42,7 +42,7 @@ var sgrUnderlineOff = codeRanges{{24, 24}}
 
 const ESCRune = rune('\x1b')
 const SGRByte = 'm' // Select Graphic Rendition
-const FinalBytes = "@ABCDEFGHIJKLMNOPQRSTUVXYZ[\\]^_`abcdefghijklmnopqrstuvxyz{|}~)"
+const FinalBytes = "@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~)"
 
 type Color struct {
 	N   int
