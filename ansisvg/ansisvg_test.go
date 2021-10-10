@@ -2,47 +2,30 @@ package ansisvg_test
 
 import (
 	"bytes"
-	"io/ioutil"
 	"os"
-	"path/filepath"
 	"testing"
 
 	"github.com/wader/ansisvg/ansisvg"
-	"github.com/wader/ansisvg/internal/deepequal"
+	"github.com/wader/ansisvg/internal/difftest"
 )
 
 func TestCovert(t *testing.T) {
-	err := filepath.Walk("testdata", func(path string, info os.FileInfo, err error) error {
-		if filepath.Ext(path) != ".ansi" {
-			return nil
-		}
-
-		t.Run(path, func(t *testing.T) {
-			ansiInput, err := ioutil.ReadFile(path)
-			if err != nil {
-				t.Fatal(err)
-			}
-			expectedSVG, err := ioutil.ReadFile(path + ".svg")
-			if err != nil {
-				t.Fatal(err)
-			}
-
-			actualSVG := &bytes.Buffer{}
-			err = ansisvg.Convert(
-				bytes.NewReader(ansiInput),
-				actualSVG,
+	difftest.TestWithOptions(t, difftest.Options{
+		Path:        "testdata",
+		Pattern:     "*.ansi",
+		ColorDiff:   os.Getenv("TEST_COLOR") != "",
+		WriteOutput: os.Getenv("WRITE_ACTUAL") != "",
+		Fn: func(t *testing.T, path, input string) (string, string, error) {
+			actual := &bytes.Buffer{}
+			err := ansisvg.Convert(
+				bytes.NewBufferString(input),
+				actual,
 				ansisvg.DefaultOptions,
 			)
 			if err != nil {
-				t.Fatal(err)
+				return "", "", err
 			}
-
-			deepequal.Error(t, "svg", string(expectedSVG), actualSVG.String())
-		})
-
-		return nil
+			return path + ".svg", actual.String(), nil
+		},
 	})
-	if err != nil {
-		t.Fatal(err)
-	}
 }

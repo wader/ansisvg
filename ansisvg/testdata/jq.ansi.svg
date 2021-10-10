@@ -1,0 +1,130 @@
+<svg viewBox="0 0 154 156" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        svg {
+            background-color: #000000
+        }
+        rect {
+            width: 7px;
+            height: 13px;
+            shape-rendering: crispedges;
+        }
+        text {
+            dominant-baseline: hanging;
+            white-space: pre;
+            font: 12px Monaco, Lucida Console, Courier;
+            fill: #bbbbbb;
+        }
+        .u { text-decoration: underline; }
+        .i { filter: brightness(1.5) saturate(150%); }
+        .f0 { fill: #bbbbbb; }
+        .f30 { fill: #000000; }
+        .f31 { fill: #bb0000; }
+        .f32 { fill: #00bb00; }
+        .f33 { fill: #bbbb00; }
+        .f34 { fill: #0000bb; }
+        .f35 { fill: #bb00bb; }
+        .f36 { fill: #00bbbb; }
+        .f37 { fill: #bbbbbb; }
+        .f90 { fill: #555555; }
+        .f91 { fill: #ff5555; }
+        .f92 { fill: #55ff55; }
+        .f93 { fill: #ffff55; }
+        .f94 { fill: #5555ff; }
+        .f95 { fill: #ff55ff; }
+        .f96 { fill: #55ffff; }
+        .f97 { fill: #ffffff; }
+        .b0 { fill: #000000; }
+        .b40 { fill: #000000; }
+        .b41 { fill: #bb0000; }
+        .b42 { fill: #bbbb00; }
+        .b43 { fill: #bbbb00; }
+        .b44 { fill: #0000bb; }
+        .b45 { fill: #bb00bb; }
+        .b46 { fill: #00bbbb; }
+        .b47 { fill: #bbbbbb; }
+        .b100 { fill: #555555; }
+        .b101 { fill: #ff5555; }
+        .b102 { fill: #ffff55; }
+        .b103 { fill: #ffff55; }
+        .b104 { fill: #5555ff; }
+        .b105 { fill: #ff55ff; }
+        .b106 { fill: #55ffff; }
+        .b107 { fill: #ffffff; }
+    </style>
+    <text x="7" y="0" class="f0  i">{</text>
+    <text x="21" y="13" class="f34  i">&#34;</text>
+    <text x="28" y="13" class="f34  i">t</text>
+    <text x="35" y="13" class="f34  i">r</text>
+    <text x="42" y="13" class="f34  i">u</text>
+    <text x="49" y="13" class="f34  i">e</text>
+    <text x="56" y="13" class="f34  i">&#34;</text>
+    <text x="63" y="13" class="f0  i">:</text>
+    <text x="77" y="13">t</text>
+    <text x="84" y="13">r</text>
+    <text x="91" y="13">u</text>
+    <text x="98" y="13">e</text>
+    <text x="105" y="13" class="f0  i">,</text>
+    <text x="21" y="26" class="f34  i">&#34;</text>
+    <text x="28" y="26" class="f34  i">f</text>
+    <text x="35" y="26" class="f34  i">a</text>
+    <text x="42" y="26" class="f34  i">l</text>
+    <text x="49" y="26" class="f34  i">s</text>
+    <text x="56" y="26" class="f34  i">e</text>
+    <text x="63" y="26" class="f34  i">&#34;</text>
+    <text x="70" y="26" class="f0  i">:</text>
+    <text x="84" y="26">f</text>
+    <text x="91" y="26">a</text>
+    <text x="98" y="26">l</text>
+    <text x="105" y="26">s</text>
+    <text x="112" y="26">e</text>
+    <text x="119" y="26" class="f0  i">,</text>
+    <text x="21" y="39" class="f34  i">&#34;</text>
+    <text x="28" y="39" class="f34  i">s</text>
+    <text x="35" y="39" class="f34  i">t</text>
+    <text x="42" y="39" class="f34  i">r</text>
+    <text x="49" y="39" class="f34  i">i</text>
+    <text x="56" y="39" class="f34  i">n</text>
+    <text x="63" y="39" class="f34  i">g</text>
+    <text x="70" y="39" class="f34  i">&#34;</text>
+    <text x="77" y="39" class="f0  i">:</text>
+    <text x="91" y="39" class="f32  ">&#34;</text>
+    <text x="98" y="39" class="f32  ">s</text>
+    <text x="105" y="39" class="f32  ">t</text>
+    <text x="112" y="39" class="f32  ">r</text>
+    <text x="119" y="39" class="f32  ">i</text>
+    <text x="126" y="39" class="f32  ">n</text>
+    <text x="133" y="39" class="f32  ">g</text>
+    <text x="140" y="39" class="f32  ">&#34;</text>
+    <text x="147" y="39" class="f0  i">,</text>
+    <text x="21" y="52" class="f34  i">&#34;</text>
+    <text x="28" y="52" class="f34  i">n</text>
+    <text x="35" y="52" class="f34  i">u</text>
+    <text x="42" y="52" class="f34  i">m</text>
+    <text x="49" y="52" class="f34  i">b</text>
+    <text x="56" y="52" class="f34  i">e</text>
+    <text x="63" y="52" class="f34  i">r</text>
+    <text x="70" y="52" class="f34  i">&#34;</text>
+    <text x="77" y="52" class="f0  i">:</text>
+    <text x="91" y="52">1</text>
+    <text x="98" y="52">2</text>
+    <text x="105" y="52">3</text>
+    <text x="112" y="52">.</text>
+    <text x="119" y="52">1</text>
+    <text x="126" y="52" class="f0  i">,</text>
+    <text x="21" y="65" class="f34  i">&#34;</text>
+    <text x="28" y="65" class="f34  i">a</text>
+    <text x="35" y="65" class="f34  i">r</text>
+    <text x="42" y="65" class="f34  i">r</text>
+    <text x="49" y="65" class="f34  i">a</text>
+    <text x="56" y="65" class="f34  i">y</text>
+    <text x="63" y="65" class="f34  i">&#34;</text>
+    <text x="70" y="65" class="f0  i">:</text>
+    <text x="84" y="65" class="f0  i">[</text>
+    <text x="35" y="78">1</text>
+    <text x="42" y="78" class="f0  i">,</text>
+    <text x="35" y="91">2</text>
+    <text x="42" y="91" class="f0  i">,</text>
+    <text x="35" y="104">3</text>
+    <text x="21" y="117" class="f0  i">]</text>
+    <text x="7" y="130" class="f0  i">}</text>
+</svg>
