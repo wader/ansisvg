@@ -4,7 +4,7 @@ Convert ANSI output to SVG.
 
 ## Usage
 
-Run a proram that produces output with color coding and pipe it thru `ansisvg`:
+Pipe output from program thru ansisvg and it will output a SVG file on stdout.
 ```sh
 ./colortest | ansisvg > doc/example.svg
  ```
