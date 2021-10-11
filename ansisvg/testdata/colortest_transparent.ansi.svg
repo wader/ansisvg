@@ -27,7 +27,6 @@
         <rect id="b46" width="8" height="16" stroke-width="1px" stroke="#00bbbb" style="fill: #00bbbb"/>
         <rect id="b47" width="8" height="16" stroke-width="1px" stroke="#bbbbbb" style="fill: #bbbbbb"/>
     </svg>
-    <rect width="624" height="336" x="0" y="0" style="fill: #000000"/>
     <use xlink:href="#b40" x="120" y="32"/>
     <use xlink:href="#b40" x="128" y="32"/>
     <use xlink:href="#b40" x="136" y="32"/>

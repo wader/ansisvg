@@ -2,6 +2,7 @@ package ansisvg_test
 
 import (
 	"bytes"
+	"encoding/json"
 	"os"
 	"testing"
 
@@ -16,11 +17,20 @@ func TestCovert(t *testing.T) {
 		ColorDiff:   os.Getenv("TEST_COLOR") != "",
 		WriteOutput: os.Getenv("WRITE_ACTUAL") != "",
 		Fn: func(t *testing.T, path, input string) (string, string, error) {
+			opts := ansisvg.DefaultOptions
+			optsPath := path + ".json"
+			if f, err := os.Open(optsPath); err == nil {
+				defer f.Close()
+				if err := json.NewDecoder(f).Decode(&opts); err != nil {
+					t.Fatal(err)
+				}
+			}
+
 			actual := &bytes.Buffer{}
 			err := ansisvg.Convert(
 				bytes.NewBufferString(input),
 				actual,
-				ansisvg.DefaultOptions,
+				opts,
 			)
 			if err != nil {
 				return "", "", err

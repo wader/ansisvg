@@ -57,16 +57,21 @@ func (c Color) String() string {
 }
 
 type Decoder struct {
+	// state of last returned rune
 	X          int
 	Y          int
 	Foreground Color
 	Background Color
 	Underline  bool
 	Intensity  bool
-	MaxX       int
-	MaxY       int
-	State      State
 
+	MaxX  int
+	MaxY  int
+	State State
+
+	// next coordinate
+	nx        int
+	ny        int
 	readBuf   *bufio.Reader
 	paramsBuf *bytes.Buffer
 }
@@ -125,23 +130,27 @@ func (d *Decoder) ReadRune() (r rune, size int, err error) {
 			case ESCRune:
 				d.State = StateESC
 			default:
-				switch r {
-				case '\r':
-					d.X = 0
-				case '\n':
-					d.X = 0
-					d.Y++
-				case '\t':
-					d.X += 8 - (d.X % 8)
-				default:
-					d.X++
-				}
-				if d.X > d.MaxX {
-					d.MaxX = d.X
-				}
+				d.X = d.nx
+				d.Y = d.ny
 				if d.Y > d.MaxY {
 					d.MaxY = d.Y
 				}
+
+				switch r {
+				case '\r':
+					d.nx = 0
+				case '\n':
+					d.nx = 0
+					d.ny++
+				case '\t':
+					d.nx += 8 - (d.nx % 8)
+				default:
+					if d.X > d.MaxX {
+						d.MaxX = d.X
+					}
+					d.nx++
+				}
+
 				return r, n, err
 			}
 		case StateESC:

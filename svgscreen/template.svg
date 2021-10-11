@@ -1,49 +1,59 @@
-<svg viewBox="0 0 {{mul $.TerminalWidth .CharacterBoxSize.Width}} {{mul .Lines .CharacterBoxSize.Height}}" xmlns="http://www.w3.org/2000/svg">
+{{- /*
+Tries to generate SVG code comptible with browers and inkscape.
+For some reason inkscape seesm to not like CSS for rect fill etc that much
+so currently using <use> instead.
+*/ -}}
+{{- $width := mul $.TerminalWidth .CharacterBoxSize.Width -}}
+{{- $height := mul $.Lines .CharacterBoxSize.Height -}}
+<svg viewBox="0 0 {{$width}} {{$height}}" width="{{$width}}" height="{{$height}}" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <style>
-        svg {
-            background-color: {{index $.BackgroundColors 0}}
-        }
-        rect {
-            width: {{$.CharacterBoxSize.Width}}px;
-            height: {{$.CharacterBoxSize.Height}}px;
-            shape-rendering: crispedges;
-        }
         text {
-            dominant-baseline: hanging;
+            dominant-baseline: text-before-edge;
             white-space: pre;{{/* draw underline even when whitespace */}}
-            font: {{$.FontSize}}px {{$.Font}};
-            fill: {{index $.ForegroundColors 0}};
+            font: {{$.FontSize}}px {{$.FontName}};
+            fill: {{index $.ForegroundColors "0"}};
         }
         .u { text-decoration: underline; }
-        .i { filter: brightness(1.5) saturate(150%); }
-{{- range $i, $c := $.ForegroundColors}}
-{{- if ne $c ""}}
-        .f{{$i}} { fill: {{$c}}; }
-{{- end}}
-{{- end}}
+    </style>
+    <svg style="display: none">
 {{- range $i, $c := $.BackgroundColors}}
 {{- if ne $c ""}}
-        .b{{$i}} { fill: {{$c}}; }
+        <rect id="b{{$i}}" width="{{$.CharacterBoxSize.Width}}" height="{{$.CharacterBoxSize.Height}}" stroke-width="1px" stroke="{{$c}}" style="fill: {{$c}}"/>
 {{- end}}
 {{- end}}
-    </style>
-
+    </svg>
+{{- if not .Transparent}}
+    <rect width="{{$width}}" height="{{$height}}" x="0" y="0" style="fill: {{index $.BackgroundColors "0"}}"/>
+{{- end}}
 {{- range $i, $c := .Chars}}
-{{- if le $c.X $.TerminalWidth}}
-    {{- if hasprefix $c.Background "#"}}
-    <rect x="{{mul $c.X $.CharacterBox.Width}}" y="{{mul $c.Y $.CharacterBoxSize.Height}}" style="fill: {{$c.Background}}"></rect>
-    {{- else if ne $c.Background "0"}}
-    <rect x="{{mul $c.X $.CharacterBoxSize.Width}}" y="{{mul $c.Y $.CharacterBoxSize.Height}}" class="b{{$c.Background}}"></rect>
-    {{- end}}
-{{- if or $c.Underline (not (iswhitespace $c.Char))}}
-    {{- if hasprefix $c.Foreground "#"}}
-    <text x="{{mul $c.X $.CharacterBoxSize.Width}}" y="{{mul $c.Y $.CharacterBoxSize.Height}}" style="fill: {{$c.Foreground}}" class="{{if $c.Underline}}u{{end}} {{if $c.Intensity}}i{{end}}">{{$c.Char}}</text>
-    {{- else if or (ne $c.Foreground "0") $c.Underline $c.Intensity}}
-    <text x="{{mul $c.X $.CharacterBoxSize.Width}}" y="{{mul $c.Y $.CharacterBoxSize.Height}}" class="f{{$c.Foreground}} {{if $c.Underline}}u{{end}} {{if $c.Intensity}}i{{end}}">{{$c.Char}}</text>
-    {{- else}}
-    <text x="{{mul $c.X $.CharacterBoxSize.Width}}" y="{{mul $c.Y $.CharacterBoxSize.Height}}">{{$c.Char}}</text>
+    {{- if le $c.X $.TerminalWidth}}
+        {{- if hasprefix $c.Background "#"}}
+    <use xlink:href="#b0" x="{{mul $c.X $.CharacterBox.Width}}" y="{{mul $c.Y $.CharacterBoxSize.Height}}" stroke="{{$c.Background}}" style="fill: {{$c.Background}}"/>
+        {{- else if ne $c.Background "0"}}
+    <use xlink:href="#b{{$c.Background}}" x="{{mul $c.X $.CharacterBoxSize.Width}}" y="{{mul $c.Y $.CharacterBoxSize.Height}}"/>
+        {{- end}}
     {{- end}}
 {{- end}}
-{{- end}}
+{{- range $i, $c := .Chars}}
+    {{- if le $c.X $.TerminalWidth}}
+        {{- if or $c.Underline (not (iswhitespace $c.Char))}}
+            {{- $x := mul $c.X $.CharacterBoxSize.Width}}
+            {{- $y := mul $c.Y $.CharacterBoxSize.Height}}
+            {{- $color := ""}}
+            {{- if hasprefix $c.Foreground "#"}}
+                {{- $color = $c.Foreground}}
+            {{- else if or (ne $c.Foreground "0") $c.Intensity}}
+                {{- $color = index $.ForegroundColors $c.Foreground}}
+            {{- end}}
+            {{- if $c.Intensity}}
+                {{- $color = coloradd $color "#505050"}}
+            {{- end}}
+            {{- if ne $color ""}}
+    <text x="{{$x}}" y="{{$y}}" style="fill: {{$color}}" class="{{if $c.Underline}}u{{end}}">{{$c.Char}}</text>
+            {{- else}}
+    <text x="{{$x}}" y="{{$y}}">{{$c.Char}}</text>
+            {{- end}}
+        {{- end}}
+    {{- end}}
 {{- end}}
 </svg>

@@ -2,8 +2,6 @@
 
 Convert ANSI output to SVG.
 
-## Usage
-
 Pipe output from program thru ansisvg and it will output a SVG file on stdout.
 ```sh
 ./colortest | ansisvg > doc/example.svg
@@ -16,13 +14,15 @@ Produces [colortest.svg](doc/colortest.svg)
 $ ansisvg -h
 Usage of ansisvg:
   -charboxsize value
-    	Character box size (default 7x13)
+    	Character box size (default 8x16)
   -colorscheme string
     	Color scheme (default "Builtin Dark")
-  -font string
-    	Font (default "Monaco, Lucida Console, Courier")
+  -fontname string
+    	Font name (default "Monaco, Lucida Console, Courier")
   -fontsize int
-    	Font size (default 12)
+    	Font size (default 14)
+  -transparent
+    	Transparent background
   -width int
     	Terminal width (auto)
 ```
@@ -41,6 +41,15 @@ go install github.com/wader/ansisvg@master
 cp $(go env GOPATH)/bin/ansisvg /usr/local/bin
 ```
 
+## Tricks to force color output from programs
+
+### script
+`script -q /dev/null <command> | ansisvg`
+### ffmpeg
+`TERM=a AV_LOG_FORCE_COLOR=1 ffmpeg ... 2>&1 | ansisvg`
+### jq
+`jq -C | ansisvg`
+
 ## Licenses and thanks
 
 Color themes from
@@ -50,9 +59,6 @@ license https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/LICENSE
 colortest from https://github.com/pablopunk/colortest
 
 ## TODO and ideas
-
-- Background using a rect instead of CSS? Inkscape seems to ignore CSS.
 - Bold
-- Foreground black with intensity. Is currently black, should be grey?
 - More CSI, keep track of cursor?
 - PNG output

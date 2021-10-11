@@ -14,18 +14,20 @@ type BoxSize struct {
 }
 
 type Options struct {
-	Font             string
+	FontName         string
 	FontSize         int
 	TerminalWidth    int
 	CharacterBoxSize BoxSize
 	ColorScheme      string
+	Transparent      bool
 }
 
 var DefaultOptions = Options{
-	Font:             "Monaco, Lucida Console, Courier",
-	FontSize:         12,
-	CharacterBoxSize: BoxSize{Width: 7, Height: 13},
+	FontName:         "Monaco, Lucida Console, Courier",
+	FontSize:         14,
+	CharacterBoxSize: BoxSize{Width: 8, Height: 16},
 	ColorScheme:      "Builtin Dark",
+	Transparent:      false,
 }
 
 func Convert(r io.Reader, w io.Writer, opts Options) error {
@@ -61,45 +63,46 @@ func Convert(r io.Reader, w io.Writer, opts Options) error {
 	return svgscreen.Render(
 		w,
 		svgscreen.Screen{
-			ForegroundColors: [256]string{
-				0:  c.Foreground,
-				30: c.ANSIBlack,
-				31: c.ANSIRed,
-				32: c.ANSIGreen,
-				33: c.ANSIYellow,
-				34: c.ANSIBlue,
-				35: c.ANSIMagenta,
-				36: c.ANSICyan,
-				37: c.ANSIWhite,
-				90: c.ANSIBrightBlack,
-				91: c.ANSIBrightRed,
-				92: c.ANSIBrightGreen,
-				93: c.ANSIBrightYellow,
-				94: c.ANSIBrightBlue,
-				95: c.ANSIBrightMagenta,
-				96: c.ANSIBrightCyan,
-				97: c.ANSIBrightWhite,
+			Transparent: opts.Transparent,
+			ForegroundColors: map[string]string{
+				"0":  c.Foreground,
+				"30": c.ANSIBlack,
+				"31": c.ANSIRed,
+				"32": c.ANSIGreen,
+				"33": c.ANSIYellow,
+				"34": c.ANSIBlue,
+				"35": c.ANSIMagenta,
+				"36": c.ANSICyan,
+				"37": c.ANSIWhite,
+				"90": c.ANSIBrightBlack,
+				"91": c.ANSIBrightRed,
+				"92": c.ANSIBrightGreen,
+				"93": c.ANSIBrightYellow,
+				"94": c.ANSIBrightBlue,
+				"95": c.ANSIBrightMagenta,
+				"96": c.ANSIBrightCyan,
+				"97": c.ANSIBrightWhite,
 			},
-			BackgroundColors: [256]string{
-				0:   c.Background,
-				40:  c.ANSIBlack,
-				41:  c.ANSIRed,
-				42:  c.ANSIYellow,
-				43:  c.ANSIYellow,
-				44:  c.ANSIBlue,
-				45:  c.ANSIMagenta,
-				46:  c.ANSICyan,
-				47:  c.ANSIWhite,
-				100: c.ANSIBrightBlack,
-				101: c.ANSIBrightRed,
-				102: c.ANSIBrightYellow,
-				103: c.ANSIBrightYellow,
-				104: c.ANSIBrightBlue,
-				105: c.ANSIBrightMagenta,
-				106: c.ANSIBrightCyan,
-				107: c.ANSIBrightWhite,
+			BackgroundColors: map[string]string{
+				"0":   c.Background,
+				"40":  c.ANSIBlack,
+				"41":  c.ANSIRed,
+				"42":  c.ANSIYellow,
+				"43":  c.ANSIYellow,
+				"44":  c.ANSIBlue,
+				"45":  c.ANSIMagenta,
+				"46":  c.ANSICyan,
+				"47":  c.ANSIWhite,
+				"100": c.ANSIBrightBlack,
+				"101": c.ANSIBrightRed,
+				"102": c.ANSIBrightYellow,
+				"103": c.ANSIBrightYellow,
+				"104": c.ANSIBrightBlue,
+				"105": c.ANSIBrightMagenta,
+				"106": c.ANSIBrightCyan,
+				"107": c.ANSIBrightWhite,
 			},
-			Font:     opts.Font,
+			FontName: opts.FontName,
 			FontSize: opts.FontSize,
 			CharacterBoxSize: svgscreen.BoxSize{
 				Width:  opts.CharacterBoxSize.Width,

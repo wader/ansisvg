@@ -29,7 +29,7 @@ func (d *boxSize) Set(s string) error {
 	return nil
 }
 
-var fontFlag = flag.String("font", ansisvg.DefaultOptions.Font, "Font")
+var fontNameFlag = flag.String("fontname", ansisvg.DefaultOptions.FontName, "Font name")
 var fontSizeFlag = flag.Int("fontsize", ansisvg.DefaultOptions.FontSize, "Font size")
 var terminalWidthFlag = flag.Int("width", 0, "Terminal width (auto)")
 var characterBoxSize = boxSize{
@@ -37,6 +37,7 @@ var characterBoxSize = boxSize{
 	Height: ansisvg.DefaultOptions.CharacterBoxSize.Height,
 }
 var colorSchemeFlag = flag.String("colorscheme", ansisvg.DefaultOptions.ColorScheme, "Color scheme")
+var transparentFlag = flag.Bool("transparent", ansisvg.DefaultOptions.Transparent, "Transparent background")
 
 func init() {
 	flag.Var(&characterBoxSize, "charboxsize", "Character box size")
@@ -49,7 +50,7 @@ func main() {
 		os.Stdin,
 		os.Stdout,
 		ansisvg.Options{
-			Font:          *fontFlag,
+			FontName:      *fontNameFlag,
 			FontSize:      *fontSizeFlag,
 			TerminalWidth: *terminalWidthFlag,
 			CharacterBoxSize: ansisvg.BoxSize{
@@ -57,6 +58,7 @@ func main() {
 				Height: characterBoxSize.Height,
 			},
 			ColorScheme: *colorSchemeFlag,
+			Transparent: *transparentFlag,
 		},
 	); err != nil {
 		fmt.Fprintln(os.Stderr, err)
