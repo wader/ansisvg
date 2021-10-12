@@ -1,0 +1,130 @@
+<svg viewBox="0 0 136 144" width="136" height="144" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <style>
+        rect { shape-rendering: crispEdges; }
+        text {
+            dominant-baseline: text-before-edge;
+            white-space: pre;
+            font: 14px Monaco, Lucida Console, Courier;
+            fill: #bbbbbb;
+        }
+        .u { text-decoration: underline; }
+    </style>
+    <svg style="display: none">
+        <rect id="b0" width="8" height="16" stroke-width="1px" stroke="#000000" style="fill: #000000"/>
+        <rect id="b100" width="8" height="16" stroke-width="1px" stroke="#555555" style="fill: #555555"/>
+        <rect id="b101" width="8" height="16" stroke-width="1px" stroke="#ff5555" style="fill: #ff5555"/>
+        <rect id="b102" width="8" height="16" stroke-width="1px" stroke="#ffff55" style="fill: #ffff55"/>
+        <rect id="b103" width="8" height="16" stroke-width="1px" stroke="#ffff55" style="fill: #ffff55"/>
+        <rect id="b104" width="8" height="16" stroke-width="1px" stroke="#5555ff" style="fill: #5555ff"/>
+        <rect id="b105" width="8" height="16" stroke-width="1px" stroke="#ff55ff" style="fill: #ff55ff"/>
+        <rect id="b106" width="8" height="16" stroke-width="1px" stroke="#55ffff" style="fill: #55ffff"/>
+        <rect id="b107" width="8" height="16" stroke-width="1px" stroke="#ffffff" style="fill: #ffffff"/>
+        <rect id="b40" width="8" height="16" stroke-width="1px" stroke="#000000" style="fill: #000000"/>
+        <rect id="b41" width="8" height="16" stroke-width="1px" stroke="#bb0000" style="fill: #bb0000"/>
+        <rect id="b42" width="8" height="16" stroke-width="1px" stroke="#bbbb00" style="fill: #bbbb00"/>
+        <rect id="b43" width="8" height="16" stroke-width="1px" stroke="#bbbb00" style="fill: #bbbb00"/>
+        <rect id="b44" width="8" height="16" stroke-width="1px" stroke="#0000bb" style="fill: #0000bb"/>
+        <rect id="b45" width="8" height="16" stroke-width="1px" stroke="#bb00bb" style="fill: #bb00bb"/>
+        <rect id="b46" width="8" height="16" stroke-width="1px" stroke="#00bbbb" style="fill: #00bbbb"/>
+        <rect id="b47" width="8" height="16" stroke-width="1px" stroke="#bbbbbb" style="fill: #bbbbbb"/>
+    </svg>
+    <rect width="100%" height="100%" x="0" y="0" style="fill: #000000"/>
+    <use xlink:href="#b44" x="0" y="80"/>
+    <use xlink:href="#b44" x="8" y="80"/>
+    <use xlink:href="#b44" x="16" y="80"/>
+    <use xlink:href="#b44" x="24" y="80"/>
+    <use xlink:href="#b44" x="32" y="80"/>
+    <use xlink:href="#b44" x="40" y="80"/>
+    <use xlink:href="#b44" x="48" y="80"/>
+    <use xlink:href="#b44" x="56" y="80"/>
+    <use xlink:href="#b44" x="64" y="80"/>
+    <text x="0" y="0" class="u">0</text>
+    <text x="8" y="0" class="u"> </text>
+    <text x="16" y="0" class="u"> </text>
+    <text x="24" y="0" class="u"> </text>
+    <text x="32" y="0" class="u"> </text>
+    <text x="40" y="0" class="u"> </text>
+    <text x="48" y="0" class="u"> </text>
+    <text x="56" y="0" class="u"> </text>
+    <text x="64" y="0" class="u">0</text>
+    <text x="0" y="16" class="u">1</text>
+    <text x="8" y="16" class="u"> </text>
+    <text x="16" y="16" class="u"> </text>
+    <text x="24" y="16" class="u"> </text>
+    <text x="32" y="16" class="u"> </text>
+    <text x="40" y="16" class="u"> </text>
+    <text x="48" y="16" class="u"> </text>
+    <text x="56" y="16" class="u"> </text>
+    <text x="64" y="16" class="u">1</text>
+    <text x="0" y="32" class="u">2</text>
+    <text x="8" y="32" class="u"> </text>
+    <text x="16" y="32" class="u"> </text>
+    <text x="24" y="32" class="u"> </text>
+    <text x="32" y="32" class="u"> </text>
+    <text x="40" y="32" class="u"> </text>
+    <text x="48" y="32" class="u"> </text>
+    <text x="56" y="32" class="u"> </text>
+    <text x="64" y="32" class="u">2</text>
+    <text x="0" y="48" class="u">3</text>
+    <text x="8" y="48" class="u"> </text>
+    <text x="16" y="48" class="u"> </text>
+    <text x="24" y="48" class="u"> </text>
+    <text x="32" y="48" class="u"> </text>
+    <text x="40" y="48" class="u"> </text>
+    <text x="48" y="48" class="u"> </text>
+    <text x="56" y="48" class="u"> </text>
+    <text x="64" y="48" class="u">3</text>
+    <text x="0" y="64" style="fill: #5555ff" class="u">4</text>
+    <text x="8" y="64" style="fill: #5555ff" class="u"> </text>
+    <text x="16" y="64" style="fill: #5555ff" class="u"> </text>
+    <text x="24" y="64" style="fill: #5555ff" class="u"> </text>
+    <text x="32" y="64" style="fill: #5555ff" class="u"> </text>
+    <text x="40" y="64" style="fill: #5555ff" class="u"> </text>
+    <text x="48" y="64" style="fill: #5555ff" class="u"> </text>
+    <text x="56" y="64" style="fill: #5555ff" class="u"> </text>
+    <text x="64" y="64" style="fill: #5555ff" class="u">4</text>
+    <text x="0" y="80" class="u">5</text>
+    <text x="8" y="80" class="u"> </text>
+    <text x="16" y="80" class="u"> </text>
+    <text x="24" y="80" class="u"> </text>
+    <text x="32" y="80" class="u"> </text>
+    <text x="40" y="80" class="u"> </text>
+    <text x="48" y="80" class="u"> </text>
+    <text x="56" y="80" class="u"> </text>
+    <text x="64" y="80" class="u">5</text>
+    <text x="0" y="96" class="u">6</text>
+    <text x="8" y="96" class="u"> </text>
+    <text x="16" y="96" class="u"> </text>
+    <text x="24" y="96" class="u"> </text>
+    <text x="32" y="96" class="u"> </text>
+    <text x="40" y="96" class="u"> </text>
+    <text x="48" y="96" class="u"> </text>
+    <text x="56" y="96" class="u"> </text>
+    <text x="64" y="96" class="u">6</text>
+    <text x="0" y="112" class="u">7</text>
+    <text x="8" y="112" class="u"> </text>
+    <text x="16" y="112" class="u"> </text>
+    <text x="24" y="112" class="u"> </text>
+    <text x="32" y="112" class="u"> </text>
+    <text x="40" y="112" class="u"> </text>
+    <text x="48" y="112" class="u"> </text>
+    <text x="56" y="112" class="u"> </text>
+    <text x="64" y="112" class="u">7</text>
+    <text x="0" y="128" class="u">8</text>
+    <text x="8" y="128" class="u"> </text>
+    <text x="16" y="128" class="u"> </text>
+    <text x="24" y="128" class="u"> </text>
+    <text x="32" y="128" class="u"> </text>
+    <text x="40" y="128" class="u"> </text>
+    <text x="48" y="128" class="u"> </text>
+    <text x="56" y="128" class="u"> </text>
+    <text x="64" y="128" class="u"> </text>
+    <text x="72" y="128" class="u"> </text>
+    <text x="80" y="128" class="u"> </text>
+    <text x="88" y="128" class="u"> </text>
+    <text x="96" y="128" class="u"> </text>
+    <text x="104" y="128" class="u"> </text>
+    <text x="112" y="128" class="u"> </text>
+    <text x="120" y="128" class="u"> </text>
+    <text x="128" y="128" class="u">8</text>
+</svg>

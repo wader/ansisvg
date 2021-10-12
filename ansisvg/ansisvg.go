@@ -40,15 +40,28 @@ func Convert(r io.Reader, w io.Writer, opts Options) error {
 		} else if err != nil {
 			return err
 		}
-		chars = append(chars, svgscreen.Char{
-			Char:       string([]rune{r}),
-			X:          ad.X,
-			Y:          ad.Y,
-			Foreground: ad.Foreground.String(),
-			Background: ad.Background.String(),
-			Underline:  ad.Underline,
-			Intensity:  ad.Intensity,
-		})
+
+		if r == '\n' {
+			continue
+		}
+
+		n := 1
+		// normalize tab into spaces
+		if r == '\t' {
+			r = ' '
+			n = 8 - (ad.X % 8)
+		}
+		for i := 0; i < n; i++ {
+			chars = append(chars, svgscreen.Char{
+				Char:       string([]rune{r}),
+				X:          ad.X + i,
+				Y:          ad.Y,
+				Foreground: ad.Foreground.String(),
+				Background: ad.Background.String(),
+				Underline:  ad.Underline,
+				Intensity:  ad.Intensity,
+			})
+		}
 	}
 	terminalWidth := ad.MaxX + 1
 	if opts.TerminalWidth != 0 {

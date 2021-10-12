@@ -60,5 +60,7 @@ colortest from https://github.com/pablopunk/colortest
 
 ## TODO and ideas
 - Bold
+- Handle vertical tab and form feed (normalize into spaces?)
+- Handle overdrawing
 - More CSI, keep track of cursor?
 - PNG output
