@@ -1,5 +1,8 @@
 <svg viewBox="0 0 168 176" width="168" height="176" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <style>
+        rect {
+            shape-rendering: crispEdges;
+        }
         text {
             dominant-baseline: text-before-edge;
             white-space: pre;
@@ -27,7 +30,7 @@
         <rect id="b46" width="8" height="16" stroke-width="1px" stroke="#00bbbb" style="fill: #00bbbb"/>
         <rect id="b47" width="8" height="16" stroke-width="1px" stroke="#bbbbbb" style="fill: #bbbbbb"/>
     </svg>
-    <rect width="168" height="176" x="0" y="0" style="fill: #000000"/>
+    <rect width="100%" height="100%" x="0" y="0" style="fill: #000000"/>
     <text x="0" y="0" style="fill: #ffffff" class="">{</text>
     <text x="16" y="16" style="fill: #5050ff" class="">&#34;</text>
     <text x="24" y="16" style="fill: #5050ff" class="">t</text>

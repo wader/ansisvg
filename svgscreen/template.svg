@@ -7,6 +7,9 @@ so currently using <use> instead.
 {{- $height := mul $.Lines .CharacterBoxSize.Height -}}
 <svg viewBox="0 0 {{$width}} {{$height}}" width="{{$width}}" height="{{$height}}" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <style>
+        rect {
+            shape-rendering: crispEdges;
+        }
         text {
             dominant-baseline: text-before-edge;
             white-space: pre;{{/* draw underline even when whitespace */}}
@@ -23,7 +26,7 @@ so currently using <use> instead.
 {{- end}}
     </svg>
 {{- if not .Transparent}}
-    <rect width="{{$width}}" height="{{$height}}" x="0" y="0" style="fill: {{index $.BackgroundColors "0"}}"/>
+    <rect width="100%" height="100%" x="0" y="0" style="fill: {{index $.BackgroundColors "0"}}"/>
 {{- end}}
 {{- range $i, $c := .Chars}}
     {{- if le $c.X $.TerminalWidth}}

@@ -4,11 +4,11 @@ Convert ANSI output to SVG.
 
 Pipe output from program thru ansisvg and it will output a SVG file on stdout.
 ```sh
-./colortest | ansisvg > doc/example.svg
+./colortest | ansisvg > colortest.ansi.svg
  ```
-Produces [colortest.svg](doc/colortest.svg)
+Produces [colortest.ansi.svg](ansisvg/testdata/colortest.ansi.svg)
 
-![doc/colortest.svg asdad](doc/colortest.svg)
+![ansisvg output for colortest](ansisvg/testdata/colortest.ansi.svg)
 
 ```
 $ ansisvg -h
