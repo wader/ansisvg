@@ -7,9 +7,7 @@ so currently using <use> instead.
 {{- $height := mul $.Lines .CharacterBoxSize.Height -}}
 <svg viewBox="0 0 {{$width}} {{$height}}" width="{{$width}}" height="{{$height}}" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <style>
-        rect {
-            shape-rendering: crispEdges;
-        }
+        rect { shape-rendering: crispEdges; }
         text {
             dominant-baseline: text-before-edge;
             white-space: pre;{{/* draw underline even when whitespace */}}
@@ -38,21 +36,19 @@ so currently using <use> instead.
     {{- end}}
 {{- end}}
 {{- range $i, $c := .Chars}}
-    {{- if le $c.X $.TerminalWidth}}
-        {{- if or $c.Underline (not (iswhitespace $c.Char))}}
-            {{- $x := mul $c.X $.CharacterBoxSize.Width}}
-            {{- $y := mul $c.Y $.CharacterBoxSize.Height}}
-            {{- $color := ""}}
-            {{- if hasprefix $c.Foreground "#"}}
-                {{- $color = $c.Foreground}}
-            {{- else if or (ne $c.Foreground "0") $c.Intensity}}
-                {{- $color = index $.ForegroundColors $c.Foreground}}
-            {{- end}}
-            {{- if $c.Intensity}}
-                {{- $color = coloradd $color "#505050"}}
-            {{- end}}
-    <text x="{{$x}}" y="{{$y}}"{{if ne $color ""}} style="fill: {{$color}}"{{end}}{{if $c.Underline}} class="u"{{end}}>{{$c.Char}}</text>
+    {{- if or $c.Underline (not (iswhitespace $c.Char))}}
+        {{- $x := mul $c.X $.CharacterBoxSize.Width}}
+        {{- $y := mul $c.Y $.CharacterBoxSize.Height}}
+        {{- $color := ""}}
+        {{- if hasprefix $c.Foreground "#"}}
+            {{- $color = $c.Foreground}}
+        {{- else if or (ne $c.Foreground "0") $c.Intensity}}
+            {{- $color = index $.ForegroundColors $c.Foreground}}
         {{- end}}
+        {{- if $c.Intensity}}
+            {{- $color = coloradd $color "#505050"}}
+        {{- end}}
+    <text x="{{$x}}" y="{{$y}}"{{if ne $color ""}} style="fill: {{$color}}"{{end}}{{if $c.Underline}} class="u"{{end}}>{{$c.Char}}</text>
     {{- end}}
 {{- end}}
 </svg>

@@ -1,8 +1,6 @@
 <svg viewBox="0 0 32 16" width="32" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <style>
-        rect {
-            shape-rendering: crispEdges;
-        }
+        rect { shape-rendering: crispEdges; }
         text {
             dominant-baseline: text-before-edge;
             white-space: pre;
@@ -36,4 +34,8 @@
     <text x="16" y="0">2</text>
     <text x="24" y="0">3</text>
     <text x="32" y="0">4</text>
+    <text x="40" y="0">5</text>
+    <text x="48" y="0">6</text>
+    <text x="56" y="0">8</text>
+    <text x="64" y="0">9</text>
 </svg>

@@ -1,8 +1,6 @@
 <svg viewBox="0 0 624 336" width="624" height="336" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <style>
-        rect {
-            shape-rendering: crispEdges;
-        }
+        rect { shape-rendering: crispEdges; }
         text {
             dominant-baseline: text-before-edge;
             white-space: pre;
