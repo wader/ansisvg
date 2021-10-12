@@ -51,11 +51,7 @@ so currently using <use> instead.
             {{- if $c.Intensity}}
                 {{- $color = coloradd $color "#505050"}}
             {{- end}}
-            {{- if ne $color ""}}
-    <text x="{{$x}}" y="{{$y}}" style="fill: {{$color}}" class="{{if $c.Underline}}u{{end}}">{{$c.Char}}</text>
-            {{- else}}
-    <text x="{{$x}}" y="{{$y}}">{{$c.Char}}</text>
-            {{- end}}
+    <text x="{{$x}}" y="{{$y}}"{{if ne $color ""}} style="fill: {{$color}}"{{end}}{{if $c.Underline}} class="u"{{end}}>{{$c.Char}}</text>
         {{- end}}
     {{- end}}
 {{- end}}
