@@ -10,15 +10,6 @@
         .u { text-decoration: underline; }
     </style>
     <svg style="display: none">
-        <rect id="b0" width="8" height="16" stroke-width="1px" stroke="#222222" style="fill: #222222"/>
-        <rect id="b100" width="8" height="16" stroke-width="1px" stroke="#ffffff" style="fill: #ffffff"/>
-        <rect id="b101" width="8" height="16" stroke-width="1px" stroke="#ffcdd9" style="fill: #ffcdd9"/>
-        <rect id="b102" width="8" height="16" stroke-width="1px" stroke="#d0ccca" style="fill: #d0ccca"/>
-        <rect id="b103" width="8" height="16" stroke-width="1px" stroke="#d0ccca" style="fill: #d0ccca"/>
-        <rect id="b104" width="8" height="16" stroke-width="1px" stroke="#7ab0d2" style="fill: #7ab0d2"/>
-        <rect id="b105" width="8" height="16" stroke-width="1px" stroke="#c5a7d9" style="fill: #c5a7d9"/>
-        <rect id="b106" width="8" height="16" stroke-width="1px" stroke="#8cdfe0" style="fill: #8cdfe0"/>
-        <rect id="b107" width="8" height="16" stroke-width="1px" stroke="#e0e0e0" style="fill: #e0e0e0"/>
         <rect id="b40" width="8" height="16" stroke-width="1px" stroke="#222222" style="fill: #222222"/>
         <rect id="b41" width="8" height="16" stroke-width="1px" stroke="#e2a8bf" style="fill: #e2a8bf"/>
         <rect id="b42" width="8" height="16" stroke-width="1px" stroke="#c4c9c0" style="fill: #c4c9c0"/>

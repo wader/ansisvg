@@ -10,15 +10,6 @@
         .u { text-decoration: underline; }
     </style>
     <svg style="display: none">
-        <rect id="b0" width="8" height="16" stroke-width="1px" stroke="#000000" style="fill: #000000"/>
-        <rect id="b100" width="8" height="16" stroke-width="1px" stroke="#555555" style="fill: #555555"/>
-        <rect id="b101" width="8" height="16" stroke-width="1px" stroke="#ff5555" style="fill: #ff5555"/>
-        <rect id="b102" width="8" height="16" stroke-width="1px" stroke="#ffff55" style="fill: #ffff55"/>
-        <rect id="b103" width="8" height="16" stroke-width="1px" stroke="#ffff55" style="fill: #ffff55"/>
-        <rect id="b104" width="8" height="16" stroke-width="1px" stroke="#5555ff" style="fill: #5555ff"/>
-        <rect id="b105" width="8" height="16" stroke-width="1px" stroke="#ff55ff" style="fill: #ff55ff"/>
-        <rect id="b106" width="8" height="16" stroke-width="1px" stroke="#55ffff" style="fill: #55ffff"/>
-        <rect id="b107" width="8" height="16" stroke-width="1px" stroke="#ffffff" style="fill: #ffffff"/>
         <rect id="b40" width="8" height="16" stroke-width="1px" stroke="#000000" style="fill: #000000"/>
         <rect id="b41" width="8" height="16" stroke-width="1px" stroke="#bb0000" style="fill: #bb0000"/>
         <rect id="b42" width="8" height="16" stroke-width="1px" stroke="#bbbb00" style="fill: #bbbb00"/>
@@ -1555,33 +1546,33 @@
     <text x="24" y="288">3</text>
     <text x="32" y="288">7</text>
     <text x="40" y="288">m</text>
-    <text x="72" y="288" style="fill: #bbbbbb">g</text>
-    <text x="80" y="288" style="fill: #bbbbbb">Y</text>
-    <text x="88" y="288" style="fill: #bbbbbb">w</text>
-    <text x="136" y="288" style="fill: #bbbbbb">g</text>
-    <text x="144" y="288" style="fill: #bbbbbb">Y</text>
-    <text x="152" y="288" style="fill: #bbbbbb">w</text>
-    <text x="200" y="288" style="fill: #bbbbbb">g</text>
-    <text x="208" y="288" style="fill: #bbbbbb">Y</text>
-    <text x="216" y="288" style="fill: #bbbbbb">w</text>
-    <text x="264" y="288" style="fill: #bbbbbb">g</text>
-    <text x="272" y="288" style="fill: #bbbbbb">Y</text>
-    <text x="280" y="288" style="fill: #bbbbbb">w</text>
-    <text x="328" y="288" style="fill: #bbbbbb">g</text>
-    <text x="336" y="288" style="fill: #bbbbbb">Y</text>
-    <text x="344" y="288" style="fill: #bbbbbb">w</text>
-    <text x="392" y="288" style="fill: #bbbbbb">g</text>
-    <text x="400" y="288" style="fill: #bbbbbb">Y</text>
-    <text x="408" y="288" style="fill: #bbbbbb">w</text>
-    <text x="456" y="288" style="fill: #bbbbbb">g</text>
-    <text x="464" y="288" style="fill: #bbbbbb">Y</text>
-    <text x="472" y="288" style="fill: #bbbbbb">w</text>
-    <text x="520" y="288" style="fill: #bbbbbb">g</text>
-    <text x="528" y="288" style="fill: #bbbbbb">Y</text>
-    <text x="536" y="288" style="fill: #bbbbbb">w</text>
-    <text x="584" y="288" style="fill: #bbbbbb">g</text>
-    <text x="592" y="288" style="fill: #bbbbbb">Y</text>
-    <text x="600" y="288" style="fill: #bbbbbb">w</text>
+    <text x="72" y="288">g</text>
+    <text x="80" y="288">Y</text>
+    <text x="88" y="288">w</text>
+    <text x="136" y="288">g</text>
+    <text x="144" y="288">Y</text>
+    <text x="152" y="288">w</text>
+    <text x="200" y="288">g</text>
+    <text x="208" y="288">Y</text>
+    <text x="216" y="288">w</text>
+    <text x="264" y="288">g</text>
+    <text x="272" y="288">Y</text>
+    <text x="280" y="288">w</text>
+    <text x="328" y="288">g</text>
+    <text x="336" y="288">Y</text>
+    <text x="344" y="288">w</text>
+    <text x="392" y="288">g</text>
+    <text x="400" y="288">Y</text>
+    <text x="408" y="288">w</text>
+    <text x="456" y="288">g</text>
+    <text x="464" y="288">Y</text>
+    <text x="472" y="288">w</text>
+    <text x="520" y="288">g</text>
+    <text x="528" y="288">Y</text>
+    <text x="536" y="288">w</text>
+    <text x="584" y="288">g</text>
+    <text x="592" y="288">Y</text>
+    <text x="600" y="288">w</text>
     <text x="8" y="304">1</text>
     <text x="16" y="304">;</text>
     <text x="24" y="304">3</text>

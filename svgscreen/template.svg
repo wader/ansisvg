@@ -12,25 +12,25 @@ so currently using <use> instead.
             dominant-baseline: text-before-edge;
             white-space: pre;{{/* draw underline even when whitespace */}}
             font: {{$.FontSize}}px {{$.FontName}};
-            fill: {{index $.ForegroundColors "0"}};
+            fill: {{$.ForegroundColor}};
         }
         .u { text-decoration: underline; }
     </style>
+{{- if gt (len $.BackgroundColors) 0}}
     <svg style="display: none">
 {{- range $i, $c := $.BackgroundColors}}
-{{- if ne $c ""}}
         <rect id="b{{$i}}" width="{{$.CharacterBoxSize.Width}}" height="{{$.CharacterBoxSize.Height}}" stroke-width="1px" stroke="{{$c}}" style="fill: {{$c}}"/>
 {{- end}}
-{{- end}}
     </svg>
+{{- end}}
 {{- if not .Transparent}}
-    <rect width="100%" height="100%" x="0" y="0" style="fill: {{index $.BackgroundColors "0"}}"/>
+    <rect width="100%" height="100%" x="0" y="0" style="fill: {{$.BackgroundColor}}"/>
 {{- end}}
 {{- range $i, $c := .Chars}}
     {{- if le $c.X $.TerminalWidth}}
         {{- if hasprefix $c.Background "#"}}
     <use xlink:href="#b0" x="{{mul $c.X $.CharacterBox.Width}}" y="{{mul $c.Y $.CharacterBoxSize.Height}}" stroke="{{$c.Background}}" style="fill: {{$c.Background}}"/>
-        {{- else if ne $c.Background "0"}}
+        {{- else if ne $c.Background ""}}
     <use xlink:href="#b{{$c.Background}}" x="{{mul $c.X $.CharacterBoxSize.Width}}" y="{{mul $c.Y $.CharacterBoxSize.Height}}"/>
         {{- end}}
     {{- end}}
@@ -39,16 +39,16 @@ so currently using <use> instead.
     {{- if or $c.Underline (not (iswhitespace $c.Char))}}
         {{- $x := mul $c.X $.CharacterBoxSize.Width}}
         {{- $y := mul $c.Y $.CharacterBoxSize.Height}}
-        {{- $color := ""}}
+        {{- $color := $.ForegroundColor}}
         {{- if hasprefix $c.Foreground "#"}}
             {{- $color = $c.Foreground}}
-        {{- else if or (ne $c.Foreground "0") $c.Intensity}}
+        {{- else if ne $c.Foreground ""}}
             {{- $color = index $.ForegroundColors $c.Foreground}}
         {{- end}}
         {{- if $c.Intensity}}
             {{- $color = coloradd $color "#505050"}}
         {{- end}}
-    <text x="{{$x}}" y="{{$y}}"{{if ne $color ""}} style="fill: {{$color}}"{{end}}{{if $c.Underline}} class="u"{{end}}>{{$c.Char}}</text>
+    <text x="{{$x}}" y="{{$y}}"{{if ne $color $.ForegroundColor}} style="fill: {{$color}}"{{end}}{{if $c.Underline}} class="u"{{end}}>{{$c.Char}}</text>
     {{- end}}
 {{- end}}
 </svg>

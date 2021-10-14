@@ -78,9 +78,9 @@ func Convert(r io.Reader, w io.Writer, opts Options) error {
 	return svgscreen.Render(
 		w,
 		svgscreen.Screen{
-			Transparent: opts.Transparent,
+			Transparent:     opts.Transparent,
+			ForegroundColor: c.Foreground,
 			ForegroundColors: map[string]string{
-				"0":  c.Foreground,
 				"30": c.ANSIBlack,
 				"31": c.ANSIRed,
 				"32": c.ANSIGreen,
@@ -98,8 +98,8 @@ func Convert(r io.Reader, w io.Writer, opts Options) error {
 				"96": c.ANSIBrightCyan,
 				"97": c.ANSIBrightWhite,
 			},
+			BackgroundColor: c.Background,
 			BackgroundColors: map[string]string{
-				"0":   c.Background,
 				"40":  c.ANSIBlack,
 				"41":  c.ANSIRed,
 				"42":  c.ANSIYellow,

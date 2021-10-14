@@ -55,7 +55,10 @@ func (c Color) String() string {
 	if len(c.RGB) != 0 {
 		return fmt.Sprintf("#%2x%2x%2x", c.RGB[0], c.RGB[1], c.RGB[2])
 	}
-	return fmt.Sprintf("%d", c.N)
+	if c.N != 0 {
+		return fmt.Sprintf("%d", c.N)
+	}
+	return ""
 }
 
 type Decoder struct {

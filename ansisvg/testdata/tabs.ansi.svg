@@ -9,25 +9,6 @@
         }
         .u { text-decoration: underline; }
     </style>
-    <svg style="display: none">
-        <rect id="b0" width="8" height="16" stroke-width="1px" stroke="#000000" style="fill: #000000"/>
-        <rect id="b100" width="8" height="16" stroke-width="1px" stroke="#555555" style="fill: #555555"/>
-        <rect id="b101" width="8" height="16" stroke-width="1px" stroke="#ff5555" style="fill: #ff5555"/>
-        <rect id="b102" width="8" height="16" stroke-width="1px" stroke="#ffff55" style="fill: #ffff55"/>
-        <rect id="b103" width="8" height="16" stroke-width="1px" stroke="#ffff55" style="fill: #ffff55"/>
-        <rect id="b104" width="8" height="16" stroke-width="1px" stroke="#5555ff" style="fill: #5555ff"/>
-        <rect id="b105" width="8" height="16" stroke-width="1px" stroke="#ff55ff" style="fill: #ff55ff"/>
-        <rect id="b106" width="8" height="16" stroke-width="1px" stroke="#55ffff" style="fill: #55ffff"/>
-        <rect id="b107" width="8" height="16" stroke-width="1px" stroke="#ffffff" style="fill: #ffffff"/>
-        <rect id="b40" width="8" height="16" stroke-width="1px" stroke="#000000" style="fill: #000000"/>
-        <rect id="b41" width="8" height="16" stroke-width="1px" stroke="#bb0000" style="fill: #bb0000"/>
-        <rect id="b42" width="8" height="16" stroke-width="1px" stroke="#bbbb00" style="fill: #bbbb00"/>
-        <rect id="b43" width="8" height="16" stroke-width="1px" stroke="#bbbb00" style="fill: #bbbb00"/>
-        <rect id="b44" width="8" height="16" stroke-width="1px" stroke="#0000bb" style="fill: #0000bb"/>
-        <rect id="b45" width="8" height="16" stroke-width="1px" stroke="#bb00bb" style="fill: #bb00bb"/>
-        <rect id="b46" width="8" height="16" stroke-width="1px" stroke="#00bbbb" style="fill: #00bbbb"/>
-        <rect id="b47" width="8" height="16" stroke-width="1px" stroke="#bbbbbb" style="fill: #bbbbbb"/>
-    </svg>
     <rect width="100%" height="100%" x="0" y="0" style="fill: #000000"/>
     <text x="0" y="0">0</text>
     <text x="64" y="0">0</text>

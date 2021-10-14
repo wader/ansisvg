@@ -31,7 +31,9 @@ type BoxSize struct {
 
 type Screen struct {
 	Transparent      bool
+	ForegroundColor  string
 	ForegroundColors map[string]string
+	BackgroundColor  string
 	BackgroundColors map[string]string
 	FontName         string
 	FontSize         int
@@ -96,6 +98,16 @@ func Render(w io.Writer, s Screen) error {
 			return newColorFromHex(a).add(newColorFromHex(b)).hex()
 		},
 	})
+
+	// remove unused background colors
+	backgroundColorsUsed := map[string]string{}
+	for _, c := range s.Chars {
+		if c.Background == "" || strings.HasPrefix("#", c.Background) {
+			continue
+		}
+		backgroundColorsUsed[c.Background] = s.BackgroundColors[c.Background]
+	}
+	s.BackgroundColors = backgroundColorsUsed
 
 	t, err := t.Parse(templateSVG)
 	if err != nil {
