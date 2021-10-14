@@ -1,3 +1,4 @@
+// Package colorscheme has defintions for a VSCode color scheme
 package colorscheme
 
 type WorkbenchColorCustomizations struct {

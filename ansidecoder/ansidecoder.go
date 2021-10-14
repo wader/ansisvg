@@ -1,3 +1,5 @@
+// Package ansidecoder implements a ANSI decoder that returns runes and
+// keeps track of cursor position and styling.
 package ansidecoder
 
 import (
@@ -76,6 +78,7 @@ type Decoder struct {
 	paramsBuf *bytes.Buffer
 }
 
+// NewDecoder returns new ANSI decoder that is a io.RuneReader. See ReadRune for details.
 func NewDecoder(r io.Reader) *Decoder {
 	return &Decoder{
 		readBuf:   bufio.NewReader(r),
@@ -118,6 +121,7 @@ func intsToColor(cs []int) (Color, int) {
 	return Color{}, 0
 }
 
+// ReadRune returns next rune. The decoder struct has state for last returned rune, .X, .Y, .Foreground etc.
 func (d *Decoder) ReadRune() (r rune, size int, err error) {
 	for {
 		r, n, err := d.readBuf.ReadRune()

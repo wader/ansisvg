@@ -1,3 +1,4 @@
+// Package schemes embeds a database of color schemes from https://github.com/mbadolato/iTerm2-Color-Schemes
 package schemes
 
 import (

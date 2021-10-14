@@ -1,6 +1,6 @@
 {{- /*
 Tries to generate SVG code comptible with browers and inkscape.
-For some reason inkscape seesm to not like CSS for rect fill etc that much
+For some reason inkscape seems to not like CSS for rect fill etc that much
 so currently using <use> instead.
 */ -}}
 {{- $width := mul $.TerminalWidth .CharacterBoxSize.Width -}}

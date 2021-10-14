@@ -35,6 +35,7 @@ func TestCovert(t *testing.T) {
 			if err != nil {
 				return "", "", err
 			}
+
 			return path + ".svg", actual.String(), nil
 		},
 	})

@@ -1,3 +1,4 @@
+// Package svgscreen implements a fixed font terminal screen using SVG
 package svgscreen
 
 import (
@@ -87,16 +88,10 @@ func (c color) hex() string {
 func Render(w io.Writer, s Screen) error {
 	t := template.New("")
 	t.Funcs(template.FuncMap{
-		"add": func(a int, b int) int {
-			return a + b
-		},
-		"mul": func(a int, b int) int {
-			return a * b
-		},
-		"hasprefix": strings.HasPrefix,
-		"iswhitespace": func(a string) bool {
-			return strings.TrimSpace(a) == ""
-		},
+		"add":          func(a int, b int) int { return a + b },
+		"mul":          func(a int, b int) int { return a * b },
+		"hasprefix":    strings.HasPrefix,
+		"iswhitespace": func(a string) bool { return strings.TrimSpace(a) == "" },
 		"coloradd": func(a string, b string) string {
 			return newColorFromHex(a).add(newColorFromHex(b)).hex()
 		},

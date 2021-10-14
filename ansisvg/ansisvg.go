@@ -1,3 +1,4 @@
+// Package ansisvg converts ANSI to SVG
 package ansisvg
 
 import (
@@ -30,6 +31,7 @@ var DefaultOptions = Options{
 	Transparent:      false,
 }
 
+// Convert reads ANSI input from r and writes SVG to w
 func Convert(r io.Reader, w io.Writer, opts Options) error {
 	ad := ansidecoder.NewDecoder(r)
 	var chars []svgscreen.Char
