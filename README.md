@@ -1,8 +1,10 @@
 # ansisvg
 
-Convert ANSI output to SVG.
+Convert ANSI to SVG.
 
-Pipe output from program thru ansisvg and it will output a SVG file on stdout.
+Pipe output from a program thru ansisvg and it will output a SVG file on stdout. Can be used to
+produce nice looking example output for presentations, include in markdown files etc.
+
 ```sh
 ./colortest | ansisvg > colortest.ansi.svg
  ```
@@ -41,12 +43,17 @@ go install github.com/wader/ansisvg@master
 cp $(go env GOPATH)/bin/ansisvg /usr/local/bin
 ```
 
-## Tricks to force color output from programs
+## Tricks
 
-### script
+### Use `bat` to produce source code highlighting
+`bat --color=always -p main.go | ansisvg`
+
+### Use `script` to run with a pty
 `script -q /dev/null <command> | ansisvg`
+
 ### ffmpeg
 `TERM=a AV_LOG_FORCE_COLOR=1 ffmpeg ... 2>&1 | ansisvg`
+
 ### jq
 `jq -C | ansisvg`
 
@@ -60,7 +67,9 @@ colortest from https://github.com/pablopunk/colortest
 
 ## TODO and ideas
 - Bold
+- Somehow use `<tspan>`/`textLength` to produce smaller output. Maybe `em/ch` CSS units for background rects,
+but seems inkscape do not like `ch`. Would also make it nicer to copy text from SVG.
 - Handle vertical tab and form feed (normalize into spaces?)
 - Handle overdrawing
 - More CSI, keep track of cursor?
-- PNG output
+- PNG output (embed nice fonts?)
