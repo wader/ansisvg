@@ -67,6 +67,7 @@ colortest from https://github.com/pablopunk/colortest
 
 ## TODO and ideas
 - Bold
+- Underline overlaps a bit, sometimes causing weird blending
 - Somehow use `<tspan>`/`textLength` to produce smaller output. Maybe `em/ch` CSS units for background rects,
 but seems inkscape do not like `ch`. Would also make it nicer to copy text from SVG.
 - Handle vertical tab and form feed (normalize into spaces?)
