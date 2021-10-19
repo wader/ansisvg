@@ -1,9 +1,9 @@
 # ansisvg
 
-Convert ANSI to SVG.
+Convert [ANSI](https://en.wikipedia.org/wiki/ANSI_escape_code) to [SVG](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics).
 
 Pipe output from a program thru ansisvg and it will output a SVG file on stdout. Can be used to
-produce nice looking example output for presentations, include in markdown files etc.
+produce nice looking example output for presentations, markdown files etc.
 
 ```sh
 ./colortest | ansisvg > colortest.ansi.svg
