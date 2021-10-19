@@ -41,7 +41,7 @@ type Options struct {
 	Fn          Fn
 }
 
-func testDeepEqual(t tf, color bool, fn func(format string, args ...interface{}), expected string, actual string) {
+func testDeepEqual(t tf, color bool, printfFn func(format string, args ...interface{}), expected string, actual string) {
 	t.Helper()
 
 	diff := difflib.UnifiedDiff{
@@ -88,7 +88,7 @@ func testDeepEqual(t tf, color bool, fn func(format string, args ...interface{})
 		uDiff = strings.Join(coloredLines, "\n")
 	}
 
-	fn("\n" + uDiff)
+	printfFn("%s", "\n"+uDiff)
 }
 
 func ErrorEx(t tf, color bool, expected string, actual string) {
