@@ -33,14 +33,22 @@ Color themes are the ones from https://github.com/mbadolato/iTerm2-Color-Schemes
 
 ## Install
 
+Install latest master and copy it to `/usr/local/bin`:
 ```sh
-# build from cloned repo
-go build -o ansisvg main.go
-
-# install directly
 go install github.com/wader/ansisvg@master
-# copy binary to $PATH
 cp $(go env GOPATH)/bin/ansisvg /usr/local/bin
+```
+
+## Development
+
+Build from cloned repo:
+```
+go build -o ansisvg main.go
+```
+
+Run tests:
+```
+go test ./...
 ```
 
 ## Tricks
