@@ -165,9 +165,8 @@ func (d *Decoder) ReadRune() (r rune, size int, err error) {
 			case '[':
 				d.State = StateCSI
 			default:
-				if _, err := d.paramsBuf.WriteRune(r); err != nil {
-					return 0, 0, err
-				}
+				d.State = StateCopy
+				return r, n, err
 			}
 		case StateCSI:
 			switch {
