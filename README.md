@@ -20,7 +20,7 @@ Usage of ansisvg:
   -colorscheme string
     	Color scheme (default "Builtin Dark")
   -fontname string
-    	Font name (default "Monaco, Lucida Console, Courier")
+    	Font name
   -fontsize int
     	Font size (default 14)
   -transparent
@@ -46,11 +46,6 @@ Build from cloned repo:
 go build -o ansisvg main.go
 ```
 
-Run tests:
-```
-go test ./...
-```
-
 ## Tricks
 
 ### Use `bat` to produce source code highlighting
@@ -64,6 +59,24 @@ go test ./...
 
 ### jq
 `jq -C | ansisvg`
+
+## Development
+
+Run all tests and write new difftest outputs
+```
+WRITE_ACTUAL=1 go test ./...
+```
+
+Visual inspect outputs in browser:
+```
+for i in ansisvg/testdata/*.ansi.svg; do echo "$i<br><img src=\"$i\"/><br>" ; done  > all.html
+open all.html
+```
+
+Using [ffcat](https://github.com/wader/ffcat):
+```
+for i in ansisvg/testdata/*.ansi; do echo $i ; cat $i | go run main.go | inkscape --pipe --export-type=png -o - 2>/dev/null | ffcat ; done
+```
 
 ## Licenses and thanks
 
