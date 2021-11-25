@@ -1,14 +1,17 @@
-<svg viewBox="0 0 8 16" width="8" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg viewBox="0 0 32 16" width="32" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <style>
         rect { shape-rendering: crispEdges; }
         text {
             dominant-baseline: text-before-edge;
             white-space: pre;
-            font: 14px monospace;
+            font: 14px Monaco, monospace;
             fill: #bbbbbb;
         }
         .u { text-decoration: underline; }
     </style>
     <rect width="100%" height="100%" x="0" y="0" style="fill: #000000"/>
-    <text x="0" y="0">a</text>
+    <text x="0" y="0">t</text>
+    <text x="8" y="0">e</text>
+    <text x="16" y="0">s</text>
+    <text x="24" y="0">t</text>
 </svg>

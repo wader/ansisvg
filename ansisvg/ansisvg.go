@@ -24,7 +24,7 @@ type Options struct {
 }
 
 var DefaultOptions = Options{
-	FontName:         "Monaco, Lucida Console, Courier",
+	FontName:         "",
 	FontSize:         14,
 	CharacterBoxSize: BoxSize{Width: 8, Height: 16},
 	ColorScheme:      "Builtin Dark",

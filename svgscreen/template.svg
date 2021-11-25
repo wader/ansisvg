@@ -11,7 +11,7 @@ so currently using <use> instead.
         text {
             dominant-baseline: text-before-edge;
             white-space: pre;{{/* draw underline even when whitespace */}}
-            font: {{$.FontSize}}px {{$.FontName}};
+            font: {{$.FontSize}}px {{if $.FontName}}{{$.FontName}}, {{end}}monospace;
             fill: {{$.ForegroundColor}};
         }
         .u { text-decoration: underline; }
