@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/wader/ansisvg/ansisvg"
+	"github.com/wader/ansisvg/ansitosvg"
 )
 
 type boxSize struct {
@@ -29,15 +29,15 @@ func (d *boxSize) Set(s string) error {
 	return nil
 }
 
-var fontNameFlag = flag.String("fontname", ansisvg.DefaultOptions.FontName, "Font name")
-var fontSizeFlag = flag.Int("fontsize", ansisvg.DefaultOptions.FontSize, "Font size")
+var fontNameFlag = flag.String("fontname", ansitosvg.DefaultOptions.FontName, "Font name")
+var fontSizeFlag = flag.Int("fontsize", ansitosvg.DefaultOptions.FontSize, "Font size")
 var terminalWidthFlag = flag.Int("width", 0, "Terminal width (auto)")
 var characterBoxSize = boxSize{
-	Width:  ansisvg.DefaultOptions.CharacterBoxSize.Width,
-	Height: ansisvg.DefaultOptions.CharacterBoxSize.Height,
+	Width:  ansitosvg.DefaultOptions.CharacterBoxSize.Width,
+	Height: ansitosvg.DefaultOptions.CharacterBoxSize.Height,
 }
-var colorSchemeFlag = flag.String("colorscheme", ansisvg.DefaultOptions.ColorScheme, "Color scheme")
-var transparentFlag = flag.Bool("transparent", ansisvg.DefaultOptions.Transparent, "Transparent background")
+var colorSchemeFlag = flag.String("colorscheme", ansitosvg.DefaultOptions.ColorScheme, "Color scheme")
+var transparentFlag = flag.Bool("transparent", ansitosvg.DefaultOptions.Transparent, "Transparent background")
 
 func init() {
 	flag.Var(&characterBoxSize, "charboxsize", "Character box size")
@@ -46,14 +46,14 @@ func init() {
 func main() {
 	flag.Parse()
 
-	if err := ansisvg.Convert(
+	if err := ansitosvg.Convert(
 		os.Stdin,
 		os.Stdout,
-		ansisvg.Options{
+		ansitosvg.Options{
 			FontName:      *fontNameFlag,
 			FontSize:      *fontSizeFlag,
 			TerminalWidth: *terminalWidthFlag,
-			CharacterBoxSize: ansisvg.BoxSize{
+			CharacterBoxSize: ansitosvg.BoxSize{
 				Width:  characterBoxSize.Width,
 				Height: characterBoxSize.Height,
 			},

@@ -29,7 +29,7 @@ so currently using <use> instead.
 {{- range $i, $c := .Chars}}
     {{- if le $c.X $.TerminalWidth}}
         {{- if hasprefix $c.Background "#"}}
-    <use xlink:href="#b0" x="{{mul $c.X $.CharacterBox.Width}}" y="{{mul $c.Y $.CharacterBoxSize.Height}}" stroke="{{$c.Background}}" style="fill: {{$c.Background}}"/>
+    <use xlink:href="#b0" x="{{mul $c.X $.CharacterBoxSize.Width}}" y="{{mul $c.Y $.CharacterBoxSize.Height}}" stroke="{{$c.Background}}" style="fill: {{$c.Background}}"/>
         {{- else if ne $c.Background ""}}
     <use xlink:href="#b{{$c.Background}}" x="{{mul $c.X $.CharacterBoxSize.Width}}" y="{{mul $c.Y $.CharacterBoxSize.Height}}"/>
         {{- end}}

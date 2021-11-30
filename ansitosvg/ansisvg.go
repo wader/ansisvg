@@ -1,5 +1,5 @@
-// Package ansisvg converts ANSI to SVG
-package ansisvg
+// Package ansitosvg converts ANSI to SVG
+package ansitosvg
 
 import (
 	"io"
