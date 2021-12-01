@@ -102,10 +102,14 @@ func Render(w io.Writer, s Screen) error {
 	// remove unused background colors
 	backgroundColorsUsed := map[string]string{}
 	for _, c := range s.Chars {
-		if c.Background == "" || strings.HasPrefix("#", c.Background) {
+		if c.Background == "" {
 			continue
 		}
-		backgroundColorsUsed[c.Background] = s.BackgroundColors[c.Background]
+		if strings.HasPrefix(c.Background, "#") {
+			backgroundColorsUsed[c.Background] = c.Background
+		} else {
+			backgroundColorsUsed[c.Background] = s.BackgroundColors[c.Background]
+		}
 	}
 	s.BackgroundColors = backgroundColorsUsed
 

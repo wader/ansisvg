@@ -12,7 +12,7 @@
     <svg style="display: none">
         <rect id="b40" width="8" height="16" stroke-width="1px" stroke="#000000" style="fill: #000000"/>
         <rect id="b41" width="8" height="16" stroke-width="1px" stroke="#bb0000" style="fill: #bb0000"/>
-        <rect id="b42" width="8" height="16" stroke-width="1px" stroke="#bbbb00" style="fill: #bbbb00"/>
+        <rect id="b42" width="8" height="16" stroke-width="1px" stroke="#00bb00" style="fill: #00bb00"/>
         <rect id="b43" width="8" height="16" stroke-width="1px" stroke="#bbbb00" style="fill: #bbbb00"/>
         <rect id="b44" width="8" height="16" stroke-width="1px" stroke="#0000bb" style="fill: #0000bb"/>
         <rect id="b45" width="8" height="16" stroke-width="1px" stroke="#bb00bb" style="fill: #bb00bb"/>

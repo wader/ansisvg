@@ -102,7 +102,7 @@ func Convert(r io.Reader, w io.Writer, opts Options) error {
 			BackgroundColors: map[string]string{
 				"40":  c.ANSIBlack,
 				"41":  c.ANSIRed,
-				"42":  c.ANSIYellow,
+				"42":  c.ANSIGreen,
 				"43":  c.ANSIYellow,
 				"44":  c.ANSIBlue,
 				"45":  c.ANSIMagenta,

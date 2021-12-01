@@ -8,9 +8,9 @@ produce nice looking example output for presentations, markdown files etc.
 ```sh
 ./colortest | ansisvg > colortest.ansi.svg
  ```
-Produces [colortest.ansi.svg](ansisvg/testdata/colortest.ansi.svg)
+Produces [colortest.ansi.svg](ansitosvg/testdata/colortest.ansi.svg)
 
-![ansisvg output for colortest](ansisvg/testdata/colortest.ansi.svg)
+![ansisvg output for colortest](ansitosvg/testdata/colortest.ansi.svg)
 
 ```
 $ ansisvg -h
@@ -84,7 +84,7 @@ Color themes from
 https://github.com/mbadolato/iTerm2-Color-Schemes,
 license https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/LICENSE
 
-colortest from https://github.com/pablopunk/colortest
+Uses colortest from https://github.com/pablopunk/colortest and terminal-colors from https://github.com/eikenb/terminal-colors.
 
 ## TODO and ideas
 - Bold
