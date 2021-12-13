@@ -33,6 +33,8 @@ Color themes are the ones from https://github.com/mbadolato/iTerm2-Color-Schemes
 
 ## Install
 
+To build you will need at least go 1.16 or later.
+
 Install latest master and copy it to `/usr/local/bin`:
 ```sh
 go install github.com/wader/ansisvg@master
