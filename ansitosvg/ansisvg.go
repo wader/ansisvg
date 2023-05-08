@@ -24,7 +24,7 @@ type Options struct {
 }
 
 var DefaultOptions = Options{
-	FontName:         "",
+	FontName:         "Courier",
 	FontSize:         14,
 	CharacterBoxSize: BoxSize{Width: 8, Height: 16},
 	ColorScheme:      "Builtin Dark",
