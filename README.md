@@ -22,7 +22,7 @@ Usage of ansisvg:
   -colorscheme string
     	Color scheme (default "Builtin Dark")
   -fontname string
-    	Font name
+    	Font name (default "Courier")
   -fontsize int
     	Font size (default 14)
   -transparent
