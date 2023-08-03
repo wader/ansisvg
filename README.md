@@ -25,6 +25,8 @@ Usage of ansisvg:
     	Font name (default "Courier")
   -fontsize int
     	Font size (default 14)
+  -listcolorschemes
+    	List color schemes
   -transparent
     	Transparent background
   -width int

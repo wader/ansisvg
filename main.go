@@ -8,6 +8,7 @@ import (
 	"strings"
 
 	"github.com/wader/ansisvg/ansitosvg"
+	"github.com/wader/ansisvg/colorscheme/schemes"
 )
 
 type boxSize struct {
@@ -37,6 +38,7 @@ var characterBoxSize = boxSize{
 	Height: ansitosvg.DefaultOptions.CharacterBoxSize.Height,
 }
 var colorSchemeFlag = flag.String("colorscheme", ansitosvg.DefaultOptions.ColorScheme, "Color scheme")
+var listColorSchemesFlag = flag.Bool("listcolorschemes", false, "List color schemes")
 var transparentFlag = flag.Bool("transparent", ansitosvg.DefaultOptions.Transparent, "Transparent background")
 
 func init() {
@@ -45,6 +47,13 @@ func init() {
 
 func main() {
 	flag.Parse()
+
+	if *listColorSchemesFlag {
+		for _, n := range schemes.Names() {
+			fmt.Fprintln(os.Stdout, n)
+		}
+		os.Exit(0)
+	}
 
 	if err := ansitosvg.Convert(
 		os.Stdin,

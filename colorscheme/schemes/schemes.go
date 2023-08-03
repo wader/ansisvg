@@ -5,16 +5,19 @@ import (
 	"embed"
 	"encoding/json"
 	"fmt"
+	"sort"
 
 	"github.com/wader/ansisvg/colorscheme"
 )
 
 //go:embed *.json
-var FS embed.FS
+var fs embed.FS
+
+const jsonExt = ".json"
 
 func Load(name string) (colorscheme.WorkbenchColorCustomizations, error) {
 	var vsCS colorscheme.VSCodeColorScheme
-	f, err := FS.Open(name + ".json")
+	f, err := fs.Open(name + jsonExt)
 	if err != nil {
 		return vsCS.WorkbenchColorCustomizations, fmt.Errorf("scheme not found")
 	}
@@ -24,4 +27,21 @@ func Load(name string) (colorscheme.WorkbenchColorCustomizations, error) {
 	}
 
 	return vsCS.WorkbenchColorCustomizations, nil
+}
+
+func Names() []string {
+	es, err := fs.ReadDir(".")
+	if err != nil {
+		// should not happen
+		panic(err)
+	}
+
+	var ns []string
+	for _, e := range es {
+		n := e.Name()
+		ns = append(ns, e.Name()[0:len(n)-len(jsonExt)])
+	}
+	sort.Strings(ns)
+
+	return ns
 }
