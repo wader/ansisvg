@@ -46,7 +46,11 @@ so currently using <use> instead.
         {{- if $c.Intensity}}
             {{- $color = coloradd $color "#505050"}}
         {{- end}}
-    <text x="{{$x}}" y="{{$y}}"{{if ne $color $.ForegroundColor}} style="fill: {{$color}}"{{end}}{{if $c.Underline}} class="u"{{end}}>{{$c.Char}}</text>
+        {{- $char := $c.Char}}
+        {{- if iswhitespace $char }}
+            {{- $char = " "}}
+        {{- end}}
+    <text x="{{$x}}" y="{{$y}}"{{if ne $color $.ForegroundColor}} style="fill: {{$color}}"{{end}}{{if $c.Underline}} class="u"{{end}}>{{$char}}</text>
     {{- end}}
 {{- end}}
 </svg>

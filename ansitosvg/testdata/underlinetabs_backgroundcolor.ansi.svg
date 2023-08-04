@@ -5,14 +5,14 @@
             dominant-baseline: text-before-edge;
             white-space: pre;
             font: 14px Courier, monospace;
-            fill: #bbbbbb;
+            fill: #657b83;
         }
         .u { text-decoration: underline; }
     </style>
     <svg style="display: none">
-        <rect id="b44" width="8" height="16" stroke-width="1px" stroke="#0000bb" style="fill: #0000bb"/>
+        <rect id="b44" width="8" height="16" stroke-width="1px" stroke="#268bd2" style="fill: #268bd2"/>
     </svg>
-    <rect width="100%" height="100%" x="0" y="0" style="fill: #000000"/>
+    <rect width="100%" height="100%" x="0" y="0" style="fill: #fdf6e3"/>
     <use xlink:href="#b44" x="0" y="80"/>
     <use xlink:href="#b44" x="8" y="80"/>
     <use xlink:href="#b44" x="16" y="80"/>
@@ -58,15 +58,15 @@
     <text x="48" y="48" class="u"> </text>
     <text x="56" y="48" class="u"> </text>
     <text x="64" y="48" class="u">3</text>
-    <text x="0" y="64" style="fill: #5555ff" class="u">4</text>
-    <text x="8" y="64" style="fill: #5555ff" class="u"> </text>
-    <text x="16" y="64" style="fill: #5555ff" class="u"> </text>
-    <text x="24" y="64" style="fill: #5555ff" class="u"> </text>
-    <text x="32" y="64" style="fill: #5555ff" class="u"> </text>
-    <text x="40" y="64" style="fill: #5555ff" class="u"> </text>
-    <text x="48" y="64" style="fill: #5555ff" class="u"> </text>
-    <text x="56" y="64" style="fill: #5555ff" class="u"> </text>
-    <text x="64" y="64" style="fill: #5555ff" class="u">4</text>
+    <text x="0" y="64" style="fill: #839496" class="u">4</text>
+    <text x="8" y="64" style="fill: #839496" class="u"> </text>
+    <text x="16" y="64" style="fill: #839496" class="u"> </text>
+    <text x="24" y="64" style="fill: #839496" class="u"> </text>
+    <text x="32" y="64" style="fill: #839496" class="u"> </text>
+    <text x="40" y="64" style="fill: #839496" class="u"> </text>
+    <text x="48" y="64" style="fill: #839496" class="u"> </text>
+    <text x="56" y="64" style="fill: #839496" class="u"> </text>
+    <text x="64" y="64" style="fill: #839496" class="u">4</text>
     <text x="0" y="80" class="u">5</text>
     <text x="8" y="80" class="u"> </text>
     <text x="16" y="80" class="u"> </text>
