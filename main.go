@@ -40,6 +40,7 @@ var characterBoxSize = boxSize{
 var colorSchemeFlag = flag.String("colorscheme", ansitosvg.DefaultOptions.ColorScheme, "Color scheme")
 var listColorSchemesFlag = flag.Bool("listcolorschemes", false, "List color schemes")
 var transparentFlag = flag.Bool("transparent", ansitosvg.DefaultOptions.Transparent, "Transparent background")
+var compactByStyleFlag = flag.Bool("compactbystyle", ansitosvg.DefaultOptions.CompactByStyle, "Compact text by style")
 
 func init() {
 	flag.Var(&characterBoxSize, "charboxsize", "Character box size")
@@ -66,8 +67,9 @@ func main() {
 				Width:  characterBoxSize.Width,
 				Height: characterBoxSize.Height,
 			},
-			ColorScheme: *colorSchemeFlag,
-			Transparent: *transparentFlag,
+			ColorScheme:    *colorSchemeFlag,
+			Transparent:    *transparentFlag,
+			CompactByStyle: *compactByStyleFlag,
 		},
 	); err != nil {
 		fmt.Fprintln(os.Stderr, err)

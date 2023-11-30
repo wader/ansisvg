@@ -24,6 +24,13 @@ type Char struct {
 	Intensity  bool
 }
 
+func (c Char) HasSameStyle(o Char) bool {
+	return c.Foreground == o.Foreground &&
+		c.Background == o.Background &&
+		c.Underline == o.Underline &&
+		c.Intensity == o.Intensity
+}
+
 type BoxSize struct {
 	Width  int
 	Height int

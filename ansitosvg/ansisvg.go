@@ -21,6 +21,7 @@ type Options struct {
 	CharacterBoxSize BoxSize
 	ColorScheme      string
 	Transparent      bool
+	CompactByStyle   bool
 }
 
 var DefaultOptions = Options{
@@ -29,6 +30,7 @@ var DefaultOptions = Options{
 	CharacterBoxSize: BoxSize{Width: 8, Height: 16},
 	ColorScheme:      "Builtin Dark",
 	Transparent:      false,
+	CompactByStyle:   false,
 }
 
 // Convert reads ANSI input from r and writes SVG to w
@@ -65,6 +67,43 @@ func Convert(r io.Reader, w io.Writer, opts Options) error {
 			})
 		}
 	}
+
+	if opts.CompactByStyle {
+
+		// log.Println("chars:")
+		// for _, c := range chars {
+		// 	log.Printf("c: %#+v\n", c)
+		// }
+
+		// TODO: check len
+		var compactedChars []svgscreen.Char
+		var p svgscreen.Char
+		hasP := false
+		for i, c := range chars {
+			if i == 0 {
+				p = c
+				hasP = true
+			} else if p.Y == c.Y && p.HasSameStyle(c) {
+				p.Char += c.Char
+				hasP = true
+			} else {
+				if hasP {
+					compactedChars = append(compactedChars, p)
+				}
+				p = c
+			}
+		}
+		compactedChars = append(compactedChars, p)
+
+		chars = compactedChars
+
+		// log.Println("compactedChars:")
+		// for _, c := range compactedChars {
+		// 	log.Printf("c: %#+v\n", c)
+		// }
+
+	}
+
 	terminalWidth := ad.MaxX + 1
 	if opts.TerminalWidth != 0 {
 		terminalWidth = opts.TerminalWidth
