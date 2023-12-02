@@ -34,7 +34,13 @@ var DefaultOptions = Options{
 // Convert reads ANSI input from r and writes SVG to w
 func Convert(r io.Reader, w io.Writer, opts Options) error {
 	ad := ansidecoder.NewDecoder(r)
-	var chars []svgscreen.Char
+
+	lineNr := 0
+	var lines []svgscreen.Line
+	line := svgscreen.Line{
+		Y: lineNr,
+	}
+
 	for {
 		r, _, err := ad.ReadRune()
 		if err == io.EOF {
@@ -44,6 +50,11 @@ func Convert(r io.Reader, w io.Writer, opts Options) error {
 		}
 
 		if r == '\n' {
+			lines = append(lines, line)
+			lineNr++
+			line = svgscreen.Line{
+				Y: lineNr,
+			}
 			continue
 		}
 
@@ -54,16 +65,18 @@ func Convert(r io.Reader, w io.Writer, opts Options) error {
 			n = 8 - (ad.X % 8)
 		}
 		for i := 0; i < n; i++ {
-			chars = append(chars, svgscreen.Char{
+			line.Chars = append(line.Chars, svgscreen.Char{
 				Char:       string([]rune{r}),
 				X:          ad.X + i,
-				Y:          ad.Y,
 				Foreground: ad.Foreground.String(),
 				Background: ad.Background.String(),
 				Underline:  ad.Underline,
 				Intensity:  ad.Intensity,
 			})
 		}
+	}
+	if len(line.Chars) > 0 {
+		lines = append(lines, line)
 	}
 	terminalWidth := ad.MaxX + 1
 	if opts.TerminalWidth != 0 {
@@ -125,8 +138,8 @@ func Convert(r io.Reader, w io.Writer, opts Options) error {
 			},
 			TerminalWidth: terminalWidth,
 			Columns:       ad.MaxX + 1,
-			Lines:         ad.MaxY + 1,
-			Chars:         chars,
+			NrLines:       ad.MaxY + 1,
+			Lines:         lines,
 		},
 	)
 }
