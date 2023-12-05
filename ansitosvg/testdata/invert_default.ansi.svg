@@ -1,0 +1,23 @@
+<svg viewBox="0 0 152 16" width="152" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+    <style>
+        rect { shape-rendering: crispEdges; }
+        tspan, text {
+            dominant-baseline: text-before-edge;
+            alignment-baseline: text-before-edge;
+            white-space: pre;
+            font: 14px Courier, monospace;
+            fill: #bbbbbb;
+        }
+        .u { text-decoration: underline; }
+    </style>
+    <svg style="display: none">
+        <rect id="b#bbbbbb" width="8" height="16" stroke-width="1px" stroke="#bbbbbb" style="fill: #bbbbbb"/>
+    </svg>
+    <rect width="100%" height="100%" x="0" y="0" style="fill: #000000"/>
+    <use xlink:href="#b%23bbbbbb" x="56" y="0"/>
+    <use xlink:href="#b%23bbbbbb" x="64" y="0"/>
+    <use xlink:href="#b%23bbbbbb" x="72" y="0"/>
+    <use xlink:href="#b%23bbbbbb" x="80" y="0"/>
+    <use xlink:href="#b%23bbbbbb" x="88" y="0"/>
+    <text x="0" y="0"><tspan x="0" y="0"> </tspan><tspan x="8" y="0">b</tspan><tspan x="16" y="0">l</tspan><tspan x="24" y="0">a</tspan><tspan x="32" y="0">c</tspan><tspan x="40" y="0">k</tspan><tspan x="48" y="0"> </tspan><tspan x="56" y="0" style="fill: #000000">w</tspan><tspan x="64" y="0" style="fill: #000000">r</tspan><tspan x="72" y="0" style="fill: #000000">i</tspan><tspan x="80" y="0" style="fill: #000000">t</tspan><tspan x="88" y="0" style="fill: #000000">e</tspan><tspan x="96" y="0"> </tspan><tspan x="104" y="0">b</tspan><tspan x="112" y="0">l</tspan><tspan x="120" y="0">a</tspan><tspan x="128" y="0">c</tspan><tspan x="136" y="0">k</tspan><tspan x="144" y="0"> </tspan></text>
+</svg>

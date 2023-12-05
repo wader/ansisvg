@@ -21,6 +21,7 @@ type Char struct {
 	Background string
 	Underline  bool
 	Intensity  bool
+	Invert     bool
 }
 
 type Line struct {
@@ -106,7 +107,18 @@ func Render(w io.Writer, s Screen) error {
 	// remove unused background colors
 	backgroundColorsUsed := map[string]string{}
 	for _, l := range s.Lines {
-		for _, c := range l.Chars {
+		for i, c := range l.Chars {
+			if c.Invert {
+				c.Background, c.Foreground = c.Foreground, c.Background
+				if c.Background == "" {
+					c.Background = s.ForegroundColor
+				}
+				if c.Foreground == "" {
+					c.Foreground = s.BackgroundColor
+				}
+				l.Chars[i] = c
+			}
+
 			if c.Background == "" {
 				continue
 			}

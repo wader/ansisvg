@@ -11,18 +11,18 @@
         .u { text-decoration: underline; }
     </style>
     <svg style="display: none">
-        <rect id="b44" width="8" height="16" stroke-width="1px" stroke="#268bd2" style="fill: #268bd2"/>
+        <rect id="b4" width="8" height="16" stroke-width="1px" stroke="#268bd2" style="fill: #268bd2"/>
     </svg>
     <rect width="100%" height="100%" x="0" y="0" style="fill: #fdf6e3"/>
-    <use xlink:href="#b44" x="0" y="80"/>
-    <use xlink:href="#b44" x="8" y="80"/>
-    <use xlink:href="#b44" x="16" y="80"/>
-    <use xlink:href="#b44" x="24" y="80"/>
-    <use xlink:href="#b44" x="32" y="80"/>
-    <use xlink:href="#b44" x="40" y="80"/>
-    <use xlink:href="#b44" x="48" y="80"/>
-    <use xlink:href="#b44" x="56" y="80"/>
-    <use xlink:href="#b44" x="64" y="80"/>
+    <use xlink:href="#b4" x="0" y="80"/>
+    <use xlink:href="#b4" x="8" y="80"/>
+    <use xlink:href="#b4" x="16" y="80"/>
+    <use xlink:href="#b4" x="24" y="80"/>
+    <use xlink:href="#b4" x="32" y="80"/>
+    <use xlink:href="#b4" x="40" y="80"/>
+    <use xlink:href="#b4" x="48" y="80"/>
+    <use xlink:href="#b4" x="56" y="80"/>
+    <use xlink:href="#b4" x="64" y="80"/>
     <text x="0" y="0"><tspan x="0" y="0" class="u">0</tspan><tspan x="8" y="0" class="u"> </tspan><tspan x="16" y="0" class="u"> </tspan><tspan x="24" y="0" class="u"> </tspan><tspan x="32" y="0" class="u"> </tspan><tspan x="40" y="0" class="u"> </tspan><tspan x="48" y="0" class="u"> </tspan><tspan x="56" y="0" class="u"> </tspan><tspan x="64" y="0" class="u">0</tspan></text>
     <text x="0" y="16"><tspan x="0" y="16" class="u">1</tspan><tspan x="8" y="16" class="u"> </tspan><tspan x="16" y="16" class="u"> </tspan><tspan x="24" y="16" class="u"> </tspan><tspan x="32" y="16" class="u"> </tspan><tspan x="40" y="16" class="u"> </tspan><tspan x="48" y="16" class="u"> </tspan><tspan x="56" y="16" class="u"> </tspan><tspan x="64" y="16" class="u">1</tspan></text>
     <text x="0" y="32"><tspan x="0" y="32" class="u">2</tspan><tspan x="8" y="32" class="u"> </tspan><tspan x="16" y="32" class="u"> </tspan><tspan x="24" y="32" class="u"> </tspan><tspan x="32" y="32" class="u"> </tspan><tspan x="40" y="32" class="u"> </tspan><tspan x="48" y="32" class="u"> </tspan><tspan x="56" y="32" class="u"> </tspan><tspan x="64" y="32" class="u">2</tspan></text>
