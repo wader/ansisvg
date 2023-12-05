@@ -1,8 +1,9 @@
-<svg viewBox="0 0 32 16" width="32" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg viewBox="0 0 32 16" width="32" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
     <style>
         rect { shape-rendering: crispEdges; }
-        text {
+        tspan, text {
             dominant-baseline: text-before-edge;
+            alignment-baseline: text-before-edge;
             white-space: pre;
             font: 14px Courier, monospace;
             fill: #bbbbbb;
@@ -10,13 +11,5 @@
         .u { text-decoration: underline; }
     </style>
     <rect width="100%" height="100%" x="0" y="0" style="fill: #000000"/>
-    <text x="0" y="0">0</text>
-    <text x="8" y="0">1</text>
-    <text x="16" y="0">2</text>
-    <text x="24" y="0">3</text>
-    <text x="32" y="0">4</text>
-    <text x="40" y="0">5</text>
-    <text x="48" y="0">6</text>
-    <text x="56" y="0">8</text>
-    <text x="64" y="0">9</text>
+    <text x="0" y="0"><tspan x="0" y="0">0</tspan><tspan x="8" y="0">1</tspan><tspan x="16" y="0">2</tspan><tspan x="24" y="0">3</tspan><tspan x="32" y="0">4</tspan><tspan x="40" y="0">5</tspan><tspan x="48" y="0">6</tspan><tspan x="56" y="0">8</tspan><tspan x="64" y="0">9</tspan></text>
 </svg>

@@ -1,8 +1,9 @@
-<svg viewBox="0 0 168 176" width="168" height="176" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg viewBox="0 0 168 176" width="168" height="176" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
     <style>
         rect { shape-rendering: crispEdges; }
-        text {
+        tspan, text {
             dominant-baseline: text-before-edge;
+            alignment-baseline: text-before-edge;
             white-space: pre;
             font: 14px Courier, monospace;
             fill: #bbbbbb;
@@ -10,80 +11,15 @@
         .u { text-decoration: underline; }
     </style>
     <rect width="100%" height="100%" x="0" y="0" style="fill: #000000"/>
-    <text x="0" y="0" style="fill: #ffffff">{</text>
-    <text x="16" y="16" style="fill: #5050ff">&#34;</text>
-    <text x="24" y="16" style="fill: #5050ff">t</text>
-    <text x="32" y="16" style="fill: #5050ff">r</text>
-    <text x="40" y="16" style="fill: #5050ff">u</text>
-    <text x="48" y="16" style="fill: #5050ff">e</text>
-    <text x="56" y="16" style="fill: #5050ff">&#34;</text>
-    <text x="64" y="16" style="fill: #ffffff">:</text>
-    <text x="80" y="16">t</text>
-    <text x="88" y="16">r</text>
-    <text x="96" y="16">u</text>
-    <text x="104" y="16">e</text>
-    <text x="112" y="16" style="fill: #ffffff">,</text>
-    <text x="16" y="32" style="fill: #5050ff">&#34;</text>
-    <text x="24" y="32" style="fill: #5050ff">f</text>
-    <text x="32" y="32" style="fill: #5050ff">a</text>
-    <text x="40" y="32" style="fill: #5050ff">l</text>
-    <text x="48" y="32" style="fill: #5050ff">s</text>
-    <text x="56" y="32" style="fill: #5050ff">e</text>
-    <text x="64" y="32" style="fill: #5050ff">&#34;</text>
-    <text x="72" y="32" style="fill: #ffffff">:</text>
-    <text x="88" y="32">f</text>
-    <text x="96" y="32">a</text>
-    <text x="104" y="32">l</text>
-    <text x="112" y="32">s</text>
-    <text x="120" y="32">e</text>
-    <text x="128" y="32" style="fill: #ffffff">,</text>
-    <text x="16" y="48" style="fill: #5050ff">&#34;</text>
-    <text x="24" y="48" style="fill: #5050ff">s</text>
-    <text x="32" y="48" style="fill: #5050ff">t</text>
-    <text x="40" y="48" style="fill: #5050ff">r</text>
-    <text x="48" y="48" style="fill: #5050ff">i</text>
-    <text x="56" y="48" style="fill: #5050ff">n</text>
-    <text x="64" y="48" style="fill: #5050ff">g</text>
-    <text x="72" y="48" style="fill: #5050ff">&#34;</text>
-    <text x="80" y="48" style="fill: #ffffff">:</text>
-    <text x="96" y="48" style="fill: #00bb00">&#34;</text>
-    <text x="104" y="48" style="fill: #00bb00">s</text>
-    <text x="112" y="48" style="fill: #00bb00">t</text>
-    <text x="120" y="48" style="fill: #00bb00">r</text>
-    <text x="128" y="48" style="fill: #00bb00">i</text>
-    <text x="136" y="48" style="fill: #00bb00">n</text>
-    <text x="144" y="48" style="fill: #00bb00">g</text>
-    <text x="152" y="48" style="fill: #00bb00">&#34;</text>
-    <text x="160" y="48" style="fill: #ffffff">,</text>
-    <text x="16" y="64" style="fill: #5050ff">&#34;</text>
-    <text x="24" y="64" style="fill: #5050ff">n</text>
-    <text x="32" y="64" style="fill: #5050ff">u</text>
-    <text x="40" y="64" style="fill: #5050ff">m</text>
-    <text x="48" y="64" style="fill: #5050ff">b</text>
-    <text x="56" y="64" style="fill: #5050ff">e</text>
-    <text x="64" y="64" style="fill: #5050ff">r</text>
-    <text x="72" y="64" style="fill: #5050ff">&#34;</text>
-    <text x="80" y="64" style="fill: #ffffff">:</text>
-    <text x="96" y="64">1</text>
-    <text x="104" y="64">2</text>
-    <text x="112" y="64">3</text>
-    <text x="120" y="64">.</text>
-    <text x="128" y="64">1</text>
-    <text x="136" y="64" style="fill: #ffffff">,</text>
-    <text x="16" y="80" style="fill: #5050ff">&#34;</text>
-    <text x="24" y="80" style="fill: #5050ff">a</text>
-    <text x="32" y="80" style="fill: #5050ff">r</text>
-    <text x="40" y="80" style="fill: #5050ff">r</text>
-    <text x="48" y="80" style="fill: #5050ff">a</text>
-    <text x="56" y="80" style="fill: #5050ff">y</text>
-    <text x="64" y="80" style="fill: #5050ff">&#34;</text>
-    <text x="72" y="80" style="fill: #ffffff">:</text>
-    <text x="88" y="80" style="fill: #ffffff">[</text>
-    <text x="32" y="96">1</text>
-    <text x="40" y="96" style="fill: #ffffff">,</text>
-    <text x="32" y="112">2</text>
-    <text x="40" y="112" style="fill: #ffffff">,</text>
-    <text x="32" y="128">3</text>
-    <text x="16" y="144" style="fill: #ffffff">]</text>
-    <text x="0" y="160" style="fill: #ffffff">}</text>
+    <text x="0" y="0"><tspan x="0" y="0" style="fill: #ffffff">{</tspan></text>
+    <text x="0" y="16"><tspan x="0" y="16" style="fill: #ffffff"> </tspan><tspan x="8" y="16" style="fill: #ffffff"> </tspan><tspan x="16" y="16" style="fill: #5050ff">&#34;</tspan><tspan x="24" y="16" style="fill: #5050ff">t</tspan><tspan x="32" y="16" style="fill: #5050ff">r</tspan><tspan x="40" y="16" style="fill: #5050ff">u</tspan><tspan x="48" y="16" style="fill: #5050ff">e</tspan><tspan x="56" y="16" style="fill: #5050ff">&#34;</tspan><tspan x="64" y="16" style="fill: #ffffff">:</tspan><tspan x="72" y="16" style="fill: #ffffff"> </tspan><tspan x="80" y="16">t</tspan><tspan x="88" y="16">r</tspan><tspan x="96" y="16">u</tspan><tspan x="104" y="16">e</tspan><tspan x="112" y="16" style="fill: #ffffff">,</tspan></text>
+    <text x="0" y="32"><tspan x="0" y="32" style="fill: #ffffff"> </tspan><tspan x="8" y="32" style="fill: #ffffff"> </tspan><tspan x="16" y="32" style="fill: #5050ff">&#34;</tspan><tspan x="24" y="32" style="fill: #5050ff">f</tspan><tspan x="32" y="32" style="fill: #5050ff">a</tspan><tspan x="40" y="32" style="fill: #5050ff">l</tspan><tspan x="48" y="32" style="fill: #5050ff">s</tspan><tspan x="56" y="32" style="fill: #5050ff">e</tspan><tspan x="64" y="32" style="fill: #5050ff">&#34;</tspan><tspan x="72" y="32" style="fill: #ffffff">:</tspan><tspan x="80" y="32" style="fill: #ffffff"> </tspan><tspan x="88" y="32">f</tspan><tspan x="96" y="32">a</tspan><tspan x="104" y="32">l</tspan><tspan x="112" y="32">s</tspan><tspan x="120" y="32">e</tspan><tspan x="128" y="32" style="fill: #ffffff">,</tspan></text>
+    <text x="0" y="48"><tspan x="0" y="48" style="fill: #ffffff"> </tspan><tspan x="8" y="48" style="fill: #ffffff"> </tspan><tspan x="16" y="48" style="fill: #5050ff">&#34;</tspan><tspan x="24" y="48" style="fill: #5050ff">s</tspan><tspan x="32" y="48" style="fill: #5050ff">t</tspan><tspan x="40" y="48" style="fill: #5050ff">r</tspan><tspan x="48" y="48" style="fill: #5050ff">i</tspan><tspan x="56" y="48" style="fill: #5050ff">n</tspan><tspan x="64" y="48" style="fill: #5050ff">g</tspan><tspan x="72" y="48" style="fill: #5050ff">&#34;</tspan><tspan x="80" y="48" style="fill: #ffffff">:</tspan><tspan x="88" y="48" style="fill: #ffffff"> </tspan><tspan x="96" y="48" style="fill: #00bb00">&#34;</tspan><tspan x="104" y="48" style="fill: #00bb00">s</tspan><tspan x="112" y="48" style="fill: #00bb00">t</tspan><tspan x="120" y="48" style="fill: #00bb00">r</tspan><tspan x="128" y="48" style="fill: #00bb00">i</tspan><tspan x="136" y="48" style="fill: #00bb00">n</tspan><tspan x="144" y="48" style="fill: #00bb00">g</tspan><tspan x="152" y="48" style="fill: #00bb00">&#34;</tspan><tspan x="160" y="48" style="fill: #ffffff">,</tspan></text>
+    <text x="0" y="64"><tspan x="0" y="64" style="fill: #ffffff"> </tspan><tspan x="8" y="64" style="fill: #ffffff"> </tspan><tspan x="16" y="64" style="fill: #5050ff">&#34;</tspan><tspan x="24" y="64" style="fill: #5050ff">n</tspan><tspan x="32" y="64" style="fill: #5050ff">u</tspan><tspan x="40" y="64" style="fill: #5050ff">m</tspan><tspan x="48" y="64" style="fill: #5050ff">b</tspan><tspan x="56" y="64" style="fill: #5050ff">e</tspan><tspan x="64" y="64" style="fill: #5050ff">r</tspan><tspan x="72" y="64" style="fill: #5050ff">&#34;</tspan><tspan x="80" y="64" style="fill: #ffffff">:</tspan><tspan x="88" y="64" style="fill: #ffffff"> </tspan><tspan x="96" y="64">1</tspan><tspan x="104" y="64">2</tspan><tspan x="112" y="64">3</tspan><tspan x="120" y="64">.</tspan><tspan x="128" y="64">1</tspan><tspan x="136" y="64" style="fill: #ffffff">,</tspan></text>
+    <text x="0" y="80"><tspan x="0" y="80" style="fill: #ffffff"> </tspan><tspan x="8" y="80" style="fill: #ffffff"> </tspan><tspan x="16" y="80" style="fill: #5050ff">&#34;</tspan><tspan x="24" y="80" style="fill: #5050ff">a</tspan><tspan x="32" y="80" style="fill: #5050ff">r</tspan><tspan x="40" y="80" style="fill: #5050ff">r</tspan><tspan x="48" y="80" style="fill: #5050ff">a</tspan><tspan x="56" y="80" style="fill: #5050ff">y</tspan><tspan x="64" y="80" style="fill: #5050ff">&#34;</tspan><tspan x="72" y="80" style="fill: #ffffff">:</tspan><tspan x="80" y="80" style="fill: #ffffff"> </tspan><tspan x="88" y="80" style="fill: #ffffff">[</tspan></text>
+    <text x="0" y="96"><tspan x="0" y="96" style="fill: #ffffff"> </tspan><tspan x="8" y="96" style="fill: #ffffff"> </tspan><tspan x="16" y="96" style="fill: #ffffff"> </tspan><tspan x="24" y="96" style="fill: #ffffff"> </tspan><tspan x="32" y="96">1</tspan><tspan x="40" y="96" style="fill: #ffffff">,</tspan></text>
+    <text x="0" y="112"><tspan x="0" y="112" style="fill: #ffffff"> </tspan><tspan x="8" y="112" style="fill: #ffffff"> </tspan><tspan x="16" y="112" style="fill: #ffffff"> </tspan><tspan x="24" y="112" style="fill: #ffffff"> </tspan><tspan x="32" y="112">2</tspan><tspan x="40" y="112" style="fill: #ffffff">,</tspan></text>
+    <text x="0" y="128"><tspan x="0" y="128" style="fill: #ffffff"> </tspan><tspan x="8" y="128" style="fill: #ffffff"> </tspan><tspan x="16" y="128" style="fill: #ffffff"> </tspan><tspan x="24" y="128" style="fill: #ffffff"> </tspan><tspan x="32" y="128">3</tspan></text>
+    <text x="0" y="144"><tspan x="0" y="144" style="fill: #ffffff"> </tspan><tspan x="8" y="144" style="fill: #ffffff"> </tspan><tspan x="16" y="144" style="fill: #ffffff">]</tspan></text>
+    <text x="0" y="160"><tspan x="0" y="160" style="fill: #ffffff">}</tspan></text>
 </svg>

@@ -17,11 +17,15 @@ var templateSVG string
 type Char struct {
 	Char       string
 	X          int
-	Y          int
 	Foreground string
 	Background string
 	Underline  bool
 	Intensity  bool
+}
+
+type Line struct {
+	Y     int
+	Chars []Char
 }
 
 type BoxSize struct {
@@ -40,8 +44,8 @@ type Screen struct {
 	CharacterBoxSize BoxSize
 	TerminalWidth    int
 	Columns          int
-	Lines            int
-	Chars            []Char
+	NrLines          int
+	Lines            []Line
 }
 
 type color struct {
@@ -101,14 +105,16 @@ func Render(w io.Writer, s Screen) error {
 
 	// remove unused background colors
 	backgroundColorsUsed := map[string]string{}
-	for _, c := range s.Chars {
-		if c.Background == "" {
-			continue
-		}
-		if strings.HasPrefix(c.Background, "#") {
-			backgroundColorsUsed[c.Background] = c.Background
-		} else {
-			backgroundColorsUsed[c.Background] = s.BackgroundColors[c.Background]
+	for _, l := range s.Lines {
+		for _, c := range l.Chars {
+			if c.Background == "" {
+				continue
+			}
+			if strings.HasPrefix(c.Background, "#") {
+				backgroundColorsUsed[c.Background] = c.Background
+			} else {
+				backgroundColorsUsed[c.Background] = s.BackgroundColors[c.Background]
+			}
 		}
 	}
 	s.BackgroundColors = backgroundColorsUsed
