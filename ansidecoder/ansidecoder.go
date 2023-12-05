@@ -14,9 +14,11 @@ import (
 type State int
 
 const (
-	StateCopy State = iota
-	StateESC        // Seen ESC
-	StateCSI        // Control Sequence Inducer
+	StateCopy       State = iota
+	StateSeenESC          // Seen ESC
+	StateCSI              // Control Sequence Inducer ESC [
+	StateOSC              // Operating System Command ESC ]
+	StateOSCSeenESC       // Operating System Command ESC ] ... ESC
 )
 
 type codeRanges [][2]int
@@ -43,6 +45,7 @@ var sgrUnderlineOn = codeRanges{{4, 4}}
 var sgrUnderlineOff = codeRanges{{24, 24}}
 
 const ESCRune = rune('\x1b')
+const BELRune = rune('\x07')
 const SGRByte = 'm' // Select Graphic Rendition
 const FinalBytes = "@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~)"
 
@@ -139,7 +142,7 @@ func (d *Decoder) ReadRune() (r rune, size int, err error) {
 		case StateCopy:
 			switch r {
 			case ESCRune:
-				d.State = StateESC
+				d.State = StateSeenESC
 			default:
 				d.X = d.nx
 				d.Y = d.ny
@@ -164,10 +167,12 @@ func (d *Decoder) ReadRune() (r rune, size int, err error) {
 
 				return r, n, err
 			}
-		case StateESC:
+		case StateSeenESC:
 			switch r {
 			case '[':
 				d.State = StateCSI
+			case ']':
+				d.State = StateOSC
 			default:
 				d.State = StateCopy
 				return r, n, err
@@ -175,9 +180,15 @@ func (d *Decoder) ReadRune() (r rune, size int, err error) {
 		case StateCSI:
 			switch {
 			case bytes.ContainsAny([]byte(string([]rune{r})), FinalBytes):
-				ps := strings.Split(d.paramsBuf.String(), ";")
+				s := d.paramsBuf.String()
+				var ss []string
+				if strings.Contains(s, ";") {
+					ss = strings.Split(d.paramsBuf.String(), ";")
+				} else {
+					ss = strings.Split(d.paramsBuf.String(), ":")
+				}
 				var pn []int
-				for _, p := range ps {
+				for _, p := range ss {
 					// will treat empty as 0
 					n, _ := strconv.Atoi(p)
 					pn = append(pn, n)
@@ -225,6 +236,22 @@ func (d *Decoder) ReadRune() (r rune, size int, err error) {
 				if _, err := d.paramsBuf.WriteRune(r); err != nil {
 					return 0, 0, err
 				}
+			}
+		case StateOSC:
+			switch r {
+			case BELRune:
+				d.State = StateCopy
+			case ESCRune:
+				d.State = StateOSCSeenESC
+			default:
+				// nop, skip
+			}
+		case StateOSCSeenESC:
+			switch r {
+			case '\\':
+				d.State = StateCopy
+			default:
+				// nop, skip
 			}
 		default:
 			panic("unreachable")
