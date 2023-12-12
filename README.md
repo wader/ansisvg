@@ -21,8 +21,12 @@ Usage of ansisvg:
     	Character box size (default 8x16)
   -colorscheme string
     	Color scheme (default "Builtin Dark")
+  -fontfile string
+    	Font file to use and embed
   -fontname string
     	Font name (default "Courier")
+  -fontref string
+    	External font file to reference
   -fontsize int
     	Font size (default 14)
   -listcolorschemes
@@ -44,6 +48,10 @@ Install latest master and copy it to `/usr/local/bin`:
 go install github.com/wader/ansisvg@master
 cp $(go env GOPATH)/bin/ansisvg /usr/local/bin
 ```
+
+## Fonts
+
+Note that embedded fonts might not be supported by some SVG viewers. At time of writing this is not supported by Inkscape (see https://gitlab.com/inkscape/inbox/-/issues/301).
 
 ## Development
 

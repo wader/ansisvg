@@ -7,6 +7,17 @@ so currently using <use> instead.
 {{- $height := mul $.NrLines .CharacterBoxSize.Height -}}
 <svg viewBox="0 0 {{$width}} {{$height}}" width="{{$width}}" height="{{$height}}" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
     <style>
+        {{- if gt (len $.FontEmbedded) 0}}
+        @font-face {
+            font-family: {{$.FontName}};
+            src: url(data:;base64,{{- base64 $.FontEmbedded}});
+        }
+        {{- else if ne $.FontRef ""}}
+        @font-face {
+            font-family: {{$.FontName}};
+            src: url({{$.FontRef}});
+        }
+        {{- end}}
         rect { shape-rendering: crispEdges; }
         tspan, text {
             dominant-baseline: text-before-edge;

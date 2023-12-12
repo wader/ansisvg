@@ -31,6 +31,8 @@ func (d *boxSize) Set(s string) error {
 }
 
 var fontNameFlag = flag.String("fontname", ansitosvg.DefaultOptions.FontName, "Font name")
+var fontFileFlag = flag.String("fontfile", "", "Font file to use and embed")
+var fontRefFlag = flag.String("fontref", "", "External font file to reference")
 var fontSizeFlag = flag.Int("fontsize", ansitosvg.DefaultOptions.FontSize, "Font size")
 var terminalWidthFlag = flag.Int("width", 0, "Terminal width (auto)")
 var characterBoxSize = boxSize{
@@ -55,11 +57,23 @@ func main() {
 		os.Exit(0)
 	}
 
+	var fontEmbedded []byte
+	if *fontFileFlag != "" {
+		var err error
+		fontEmbedded, err = os.ReadFile(*fontFileFlag)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "%s\n", err)
+			os.Exit(1)
+		}
+	}
+
 	if err := ansitosvg.Convert(
 		os.Stdin,
 		os.Stdout,
 		ansitosvg.Options{
 			FontName:      *fontNameFlag,
+			FontEmbedded:  fontEmbedded,
+			FontRef:       *fontRefFlag,
 			FontSize:      *fontSizeFlag,
 			TerminalWidth: *terminalWidthFlag,
 			CharacterBoxSize: ansitosvg.BoxSize{
