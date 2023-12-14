@@ -7,8 +7,8 @@ import (
 	"bytes"
 	"fmt"
 	"io"
+	"regexp"
 	"strconv"
-	"strings"
 )
 
 type State int
@@ -134,6 +134,8 @@ func intsToColor(fo int, bo int, cs []int) (Color, int) {
 	return Color{N: -1}, 0
 }
 
+var paramSplitRE = regexp.MustCompile(`[:;]`)
+
 // ReadRune returns next rune. The decoder struct has state for last returned rune, .X, .Y, .Foreground etc.
 func (d *Decoder) ReadRune() (r rune, size int, err error) {
 	for {
@@ -184,12 +186,7 @@ func (d *Decoder) ReadRune() (r rune, size int, err error) {
 			switch {
 			case bytes.ContainsAny([]byte(string([]rune{r})), FinalBytes):
 				s := d.paramsBuf.String()
-				var ss []string
-				if strings.Contains(s, ";") {
-					ss = strings.Split(d.paramsBuf.String(), ";")
-				} else {
-					ss = strings.Split(d.paramsBuf.String(), ":")
-				}
+				ss := paramSplitRE.Split(s, -1)
 				var pn []int
 				for _, p := range ss {
 					// will treat empty as 0
