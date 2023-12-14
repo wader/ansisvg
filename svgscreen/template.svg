@@ -20,7 +20,7 @@ so currently using <use> instead.
 {{- if gt (len $.BackgroundColors) 0}}
     <svg style="display: none">
 {{- range $i, $c := $.BackgroundColors}}
-        <rect id="b{{$i}}" width="{{$.CharacterBoxSize.Width}}" height="{{$.CharacterBoxSize.Height}}" stroke-width="1px" stroke="{{$c}}" style="fill: {{$c}}"/>
+        <rect id="b{{$i}}" width="{{$.CharacterBoxSize.Width}}" height="{{$.CharacterBoxSize.Height}}" stroke-width="0px" style="fill: {{$c}}"/>
 {{- end}}
     </svg>
 {{- end}}
