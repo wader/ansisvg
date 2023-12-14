@@ -120,11 +120,17 @@ func intsToColor(fo int, bo int, cs []int) (Color, int) {
 			g := n / 6
 			n %= 6
 			b := n
-			return Color{RGB: []int{
-				int(float32(r) / 6 * 256),
-				int(float32(g) / 6 * 256),
-				int(float32(b) / 6 * 256),
-			}}, 2
+
+			// iterm2 mapping of 0-5 -> 0-255 is 0 -> 0, 1-5 -> n*40+55
+			// https://github.com/gnachman/iTerm2/blob/5fc45c349417b8483dfe8426432fcbadc32cb6d9/sources/NSColor%2BiTerm.m#L335
+			// Is this documented somewhere?
+			f := func(c int) int {
+				if c == 0 {
+					return 0
+				}
+				return c*40 + 55
+			}
+			return Color{RGB: []int{f(r), f(g), f(b)}}, 2
 		case n >= 232 && n <= 255:
 			// 232-255:  grayscale from black to white in 24 steps
 			g := int(255 * ((float32(n) - 232.0) / 23))
