@@ -11,14 +11,14 @@
         .u { text-decoration: underline; }
     </style>
     <svg style="display: none">
-        <rect id="b0" width="8" height="16" stroke-width="1px" stroke="#000000" style="fill: #000000"/>
-        <rect id="b1" width="8" height="16" stroke-width="1px" stroke="#bb0000" style="fill: #bb0000"/>
-        <rect id="b2" width="8" height="16" stroke-width="1px" stroke="#00bb00" style="fill: #00bb00"/>
-        <rect id="b3" width="8" height="16" stroke-width="1px" stroke="#bbbb00" style="fill: #bbbb00"/>
-        <rect id="b4" width="8" height="16" stroke-width="1px" stroke="#0000bb" style="fill: #0000bb"/>
-        <rect id="b5" width="8" height="16" stroke-width="1px" stroke="#bb00bb" style="fill: #bb00bb"/>
-        <rect id="b6" width="8" height="16" stroke-width="1px" stroke="#00bbbb" style="fill: #00bbbb"/>
-        <rect id="b7" width="8" height="16" stroke-width="1px" stroke="#bbbbbb" style="fill: #bbbbbb"/>
+        <rect id="b0" width="8" height="16" stroke-width="0px" style="fill: #000000"/>
+        <rect id="b1" width="8" height="16" stroke-width="0px" style="fill: #bb0000"/>
+        <rect id="b2" width="8" height="16" stroke-width="0px" style="fill: #00bb00"/>
+        <rect id="b3" width="8" height="16" stroke-width="0px" style="fill: #bbbb00"/>
+        <rect id="b4" width="8" height="16" stroke-width="0px" style="fill: #0000bb"/>
+        <rect id="b5" width="8" height="16" stroke-width="0px" style="fill: #bb00bb"/>
+        <rect id="b6" width="8" height="16" stroke-width="0px" style="fill: #00bbbb"/>
+        <rect id="b7" width="8" height="16" stroke-width="0px" style="fill: #bbbbbb"/>
     </svg>
     <rect width="100%" height="100%" x="0" y="0" style="fill: #000000"/>
     <use xlink:href="#b0" x="120" y="32"/>
