@@ -11,7 +11,7 @@
         .u { text-decoration: underline; }
     </style>
     <svg style="display: none">
-        <rect id="b4" width="8" height="16" stroke-width="1px" stroke="#268bd2" style="fill: #268bd2"/>
+        <rect id="b4" width="8" height="16" stroke-width="0px" style="fill: #268bd2"/>
     </svg>
     <rect width="100%" height="100%" x="0" y="0" style="fill: #fdf6e3"/>
     <use xlink:href="#b4" x="0" y="80"/>
