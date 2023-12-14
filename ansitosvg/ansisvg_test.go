@@ -3,6 +3,7 @@ package ansitosvg_test
 import (
 	"bytes"
 	"encoding/json"
+	"flag"
 	"os"
 	"testing"
 
@@ -10,12 +11,14 @@ import (
 	"github.com/wader/ansisvg/internal/difftest"
 )
 
+var update = flag.Bool("update", false, "Update tests")
+
 func TestCovert(t *testing.T) {
 	difftest.TestWithOptions(t, difftest.Options{
 		Path:        "testdata",
 		Pattern:     "*.ansi",
 		ColorDiff:   os.Getenv("TEST_COLOR") != "",
-		WriteOutput: os.Getenv("WRITE_ACTUAL") != "",
+		WriteOutput: *update || os.Getenv("WRITE_ACTUAL") != "",
 		Fn: func(t *testing.T, path, input string) (string, string, error) {
 			opts := ansitosvg.DefaultOptions
 			optsPath := path + ".json"
