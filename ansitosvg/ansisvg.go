@@ -16,6 +16,8 @@ type BoxSize struct {
 
 type Options struct {
 	FontName         string
+	FontEmbedded     []byte
+	FontRef          string
 	FontSize         int
 	TerminalWidth    int
 	CharacterBoxSize BoxSize
@@ -89,6 +91,13 @@ func Convert(r io.Reader, w io.Writer, opts Options) error {
 		return err
 	}
 
+	fontName := opts.FontName
+	if len(opts.FontEmbedded) > 0 {
+		fontName = "Embedded"
+	} else if opts.FontRef != "" {
+		fontName = "ExternalRef"
+	}
+
 	c := colorScheme
 	return svgscreen.Render(
 		w,
@@ -132,8 +141,10 @@ func Convert(r io.Reader, w io.Writer, opts Options) error {
 				"14": c.ANSIBrightCyan,
 				"15": c.ANSIBrightWhite,
 			},
-			FontName: opts.FontName,
-			FontSize: opts.FontSize,
+			FontName:     fontName,
+			FontEmbedded: opts.FontEmbedded,
+			FontRef:      opts.FontRef,
+			FontSize:     opts.FontSize,
 			CharacterBoxSize: svgscreen.BoxSize{
 				Width:  opts.CharacterBoxSize.Width,
 				Height: opts.CharacterBoxSize.Height,

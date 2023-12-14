@@ -3,6 +3,7 @@ package svgscreen
 
 import (
 	_ "embed"
+	"encoding/base64"
 	"fmt"
 	"html/template"
 	"io"
@@ -41,6 +42,8 @@ type Screen struct {
 	BackgroundColor  string
 	BackgroundColors map[string]string
 	FontName         string
+	FontEmbedded     []byte
+	FontRef          string
 	FontSize         int
 	CharacterBoxSize BoxSize
 	TerminalWidth    int
@@ -102,6 +105,7 @@ func Render(w io.Writer, s Screen) error {
 		"coloradd": func(a string, b string) string {
 			return newColorFromHex(a).add(newColorFromHex(b)).hex()
 		},
+		"base64": func(bs []byte) string { return base64.RawStdEncoding.EncodeToString(bs) },
 	})
 
 	// remove unused background colors
