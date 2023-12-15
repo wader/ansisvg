@@ -51,8 +51,16 @@ func main() {
 	flag.Parse()
 
 	if *listColorSchemesFlag {
+		maxNameLen := 0
 		for _, n := range schemes.Names() {
-			fmt.Fprintln(os.Stdout, n)
+			if len(n) > maxNameLen {
+				maxNameLen = len(n)
+			}
+		}
+		for _, n := range schemes.Names() {
+			s, _ := schemes.Load(n)
+			pad := strings.Repeat(" ", maxNameLen+1-len(n))
+			fmt.Fprintf(os.Stdout, "%s\n", s.ANSIDemo(n+pad))
 		}
 		os.Exit(0)
 	}
