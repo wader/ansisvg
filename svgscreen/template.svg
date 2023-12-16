@@ -32,43 +32,12 @@ whitespace only tspan:s preventing underline to be properly rendered.
         }
         .u { text-decoration: underline; }
     </style>
-{{- if gt (len $.BackgroundColors) 0}}
-    <svg style="display: none">
-{{- range $i, $c := $.BackgroundColors}}
-        <rect id="b{{$i}}" width="{{$.CharacterBoxSize.Width}}" height="{{$.CharacterBoxSize.Height}}" stroke-width="0px" style="fill: {{$c}}"/>
-{{- end}}
-    </svg>
-{{- end}}
 {{- if not .Transparent}}
     <rect width="100%" height="100%" x="0" y="0" style="fill: {{$.BackgroundColor}}"/>
 {{- end}}
-{{- range $i, $l := .Lines}}
-    {{- range $ci, $c := $l.Chars}}
-        {{- if le $c.X $.TerminalWidth}}
-            {{- if ne $c.Background ""}}
-    <use xlink:href="#b{{$c.Background}}" x="{{mul $c.X $.CharacterBoxSize.Width}}" y="{{mul $l.Y $.CharacterBoxSize.Height}}"/>
-            {{- end}}
-        {{- end}}
-    {{- end}}
-{{- end}}
-{{- range $li, $l := .Lines}}
-    {{- $y := mul $l.Y $.CharacterBoxSize.Height}}
-    <text x="0" y="{{$y}}">
-    {{- range $ci, $c := $l.Chars}}
-        {{- $x := mul $c.X $.CharacterBoxSize.Width}}
-        {{- $color := $.ForegroundColor}}
-        {{- if hasprefix $c.Foreground "#"}}
-            {{- $color = $c.Foreground}}
-        {{- else if ne $c.Foreground ""}}
-            {{- $color = index $.ForegroundColors $c.Foreground}}
-        {{- end}}
-        {{- if $c.Intensity}}
-            {{- $color = coloradd $color "#505050"}}
-        {{- end}}
-        {{- /* no new line */ -}}
-        <tspan x="{{$x}}" y="{{$y}}"{{if ne $color $.ForegroundColor}} style="fill: {{$color}}"{{end}}{{if $c.Underline}} class="u"{{end}}>{{$c.Char}}</tspan>
-        {{- /* no new line */ -}}
-    {{- end -}}
+{{- range $li, $l := .TextElements}}
+    <text x="0" y="{{$l.Y}}">
+    {{- range $si, $s := $l.TextSpans}}<tspan{{if ne $s.ForegroundColor ""}} style="fill: {{$s.ForegroundColor}}"{{end}}>{{$s.Content}}</tspan>{{- /* no new line */ -}}{{- end}}
     </text>
 {{- end}}
 </svg>

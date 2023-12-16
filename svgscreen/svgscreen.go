@@ -34,6 +34,16 @@ type BoxSize struct {
 	Height int
 }
 
+type TextSpan struct {
+	ForegroundColor string
+	Content         string
+}
+
+type TextElement struct {
+	Y         int
+	TextSpans []TextSpan
+}
+
 type Screen struct {
 	Transparent      bool
 	ForegroundColor  string
@@ -49,6 +59,45 @@ type Screen struct {
 	Columns          int
 	NrLines          int
 	Lines            []Line
+	TextElements     []TextElement
+}
+
+// Resolve color from string (either # prefixed hex value or index into lookup table)
+func ResolveColor(c string, lookup map[string]string) string {
+	if strings.HasPrefix(c, "#") {
+		return c
+	}
+	return lookup[c]
+}
+
+// Convert a line into a <text> element
+// fc gives (foregroundcolor, content) of a char
+func LineToTextElement(s Screen, l Line, fc func(Char) (string, string)) TextElement {
+	result := TextElement{
+		Y: l.Y * s.CharacterBoxSize.Height,
+	}
+	currentColor := ""
+	currentContent := ""
+	appendSpan := func() {
+		if currentContent == "" {
+			return
+		}
+		result.TextSpans = append(result.TextSpans, TextSpan{
+			ForegroundColor: currentColor,
+			Content:         currentContent,
+		})
+		currentContent = ""
+	}
+	for _, c := range l.Chars {
+		charColor, charContent := fc(c)
+		if charColor != currentColor {
+			appendSpan()
+		}
+		currentColor = charColor
+		currentContent += charContent
+	}
+	appendSpan()
+	return result
 }
 
 func Render(w io.Writer, s Screen) error {
@@ -64,8 +113,6 @@ func Render(w io.Writer, s Screen) error {
 		"base64": func(bs []byte) string { return base64.RawStdEncoding.EncodeToString(bs) },
 	})
 
-	// remove unused background colors
-	backgroundColorsUsed := map[string]string{}
 	for _, l := range s.Lines {
 		for i, c := range l.Chars {
 			if c.Invert {
@@ -78,18 +125,18 @@ func Render(w io.Writer, s Screen) error {
 				}
 				l.Chars[i] = c
 			}
-
-			if c.Background == "" {
-				continue
-			}
-			if strings.HasPrefix(c.Background, "#") {
-				backgroundColorsUsed[c.Background] = c.Background
-			} else {
-				backgroundColorsUsed[c.Background] = s.BackgroundColors[c.Background]
-			}
 		}
+		s.TextElements = append(s.TextElements, LineToTextElement(s, l, func(c Char) (string, string) {
+			if c.Background == "" {
+				return "", " "
+			} else {
+				return ResolveColor(c.Background, s.BackgroundColors), "█"
+			}
+		}))
+		s.TextElements = append(s.TextElements, LineToTextElement(s, l, func(c Char) (string, string) {
+			return ResolveColor(c.Foreground, s.ForegroundColors), c.Char
+		}))
 	}
-	s.BackgroundColors = backgroundColorsUsed
 
 	t, err := t.Parse(templateSVG)
 	if err != nil {
