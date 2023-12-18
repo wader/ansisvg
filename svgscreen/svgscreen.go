@@ -134,7 +134,10 @@ func Render(w io.Writer, s Screen) error {
 				l.Chars[i] = c
 			}
 		}
+	}
 
+	// Render the whole background first. Then it will not be selected when copy/pasting from rendered SVG
+	for _, l := range s.Lines {
 		bg := LineToTextElement(s, l, func(c Char) (string, string) {
 			if c.Background == "" {
 				return "", " "
@@ -145,7 +148,10 @@ func Render(w io.Writer, s Screen) error {
 		if len(bg.TextSpans) > 0 {
 			s.TextElements = append(s.TextElements, bg)
 		}
+	}
 
+	// Then render the foreground
+	for _, l := range s.Lines {
 		fg := LineToTextElement(s, l, func(c Char) (string, string) {
 			return ResolveColor(c.Foreground, s.ForegroundColors), c.Char
 		})
