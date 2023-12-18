@@ -73,16 +73,14 @@ func ResolveColor(c string, lookup map[string]string) string {
 // Convert a line into a <text> element
 // fc gives (foregroundcolor, content) of a char
 func LineToTextElement(s Screen, l Line, fc func(Char) (string, string)) TextElement {
-	result := TextElement{
-		Y: l.Y * s.CharacterBoxSize.Height,
-	}
+	var t []TextSpan
 	currentColor := ""
 	currentContent := ""
 	appendSpan := func() {
 		if currentContent == "" {
 			return
 		}
-		result.TextSpans = append(result.TextSpans, TextSpan{
+		t = append(t, TextSpan{
 			ForegroundColor: currentColor,
 			Content:         currentContent,
 		})
@@ -97,7 +95,17 @@ func LineToTextElement(s Screen, l Line, fc func(Char) (string, string)) TextEle
 		currentContent += charContent
 	}
 	appendSpan()
-	return result
+
+	// remove trailing whitespace
+	for len(t) > 0 && strings.TrimSpace(t[len(t)-1].Content) == "" {
+		t = t[:len(t)-1]
+	}
+
+	return TextElement{
+		Y:         l.Y * s.CharacterBoxSize.Height,
+		TextSpans: t,
+	}
+
 }
 
 func Render(w io.Writer, s Screen) error {
@@ -126,16 +134,24 @@ func Render(w io.Writer, s Screen) error {
 				l.Chars[i] = c
 			}
 		}
-		s.TextElements = append(s.TextElements, LineToTextElement(s, l, func(c Char) (string, string) {
+
+		bg := LineToTextElement(s, l, func(c Char) (string, string) {
 			if c.Background == "" {
 				return "", " "
 			} else {
 				return ResolveColor(c.Background, s.BackgroundColors), "█"
 			}
-		}))
-		s.TextElements = append(s.TextElements, LineToTextElement(s, l, func(c Char) (string, string) {
+		})
+		if len(bg.TextSpans) > 0 {
+			s.TextElements = append(s.TextElements, bg)
+		}
+
+		fg := LineToTextElement(s, l, func(c Char) (string, string) {
 			return ResolveColor(c.Foreground, s.ForegroundColors), c.Char
-		}))
+		})
+		if len(fg.TextSpans) > 0 {
+			s.TextElements = append(s.TextElements, fg)
+		}
 	}
 
 	t, err := t.Parse(templateSVG)
