@@ -3,13 +3,11 @@ Tries to generate SVG code comptible with browers and inkscape.
 For some reason inkscape seems to not like CSS for rect fill etc that much
 so currently using <use> instead.
 */ -}}
-{{- $width := mul $.TerminalWidth .CharacterBoxSize.Width -}}
-{{- $height := mul $.NrLines .CharacterBoxSize.Height -}}
 {{- /*
 xml:space="preserve" is used to forces some svg readers (ex inkscape) to not collapse
 whitespace only tspan:s preventing underline to be properly rendered.
 */ -}}
-<svg viewBox="0 0 {{$width}} {{$height}}" width="{{$width}}" height="{{$height}}" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+<svg width="{{$.TerminalWidth}}ch" height="{{$.NrLines}}em" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
     <style>
         {{- if gt (len $.FontEmbedded) 0}}
         @font-face {
@@ -22,20 +20,21 @@ whitespace only tspan:s preventing underline to be properly rendered.
             src: url({{$.FontRef}});
         }
         {{- end}}
-        rect { shape-rendering: crispEdges; }
+        * {
+            font-family: {{if $.FontName}}{{$.FontName}}, {{end}}monospace;
+            font-size: {{$.FontSize}}px;
+        }
         tspan, text {
             dominant-baseline: text-before-edge;
             alignment-baseline: text-before-edge;
             white-space: pre;{{/* draw underline even when whitespace */}}
-            font: {{$.FontSize}}px {{if $.FontName}}{{$.FontName}}, {{end}}monospace;
             fill: {{$.ForegroundColor}};
         }
-        .u { text-decoration: underline; }
     </style>
 {{- if not .Transparent}}
     <rect width="100%" height="100%" x="0" y="0" style="fill: {{$.BackgroundColor}}"/>
 {{- end}}
 {{- range $li, $l := .TextElements}}
-<text x="0" y="{{$l.Y}}">{{- range $si, $s := $l.TextSpans}}<tspan{{if ne $s.Style ""}} style="{{ $s.Style }}"{{end}}{{if ne $s.Decoration ""}} text-decoration="{{ $s.Decoration }}"{{end}}>{{$s.Content}}</tspan>{{- /* no new line */ -}}{{- end}}</text>
+<text x="0ch" y="{{$l.Y}}em">{{- range $si, $s := $l.TextSpans}}<tspan{{if ne $s.Style ""}} style="{{ $s.Style }}"{{end}}{{if ne $s.Decoration ""}} text-decoration="{{ $s.Decoration }}"{{end}}>{{$s.Content}}</tspan>{{- /* no new line */ -}}{{- end}}</text>
 {{- end}}
 </svg>

@@ -7,8 +7,6 @@ import (
 	"html/template"
 	"io"
 	"strings"
-
-	"github.com/wader/ansisvg/color"
 )
 
 //go:embed template.svg
@@ -106,7 +104,7 @@ func LineToTextElement(s Screen, l Line, fc func(Char) TextSpan) TextElement {
 	}
 
 	return TextElement{
-		Y:         l.Y * s.CharacterBoxSize.Height,
+		Y:         l.Y,
 		TextSpans: t,
 	}
 }
@@ -114,13 +112,6 @@ func LineToTextElement(s Screen, l Line, fc func(Char) TextSpan) TextElement {
 func Render(w io.Writer, s Screen) error {
 	t := template.New("")
 	t.Funcs(template.FuncMap{
-		"add":          func(a int, b int) int { return a + b },
-		"mul":          func(a int, b int) int { return a * b },
-		"hasprefix":    strings.HasPrefix,
-		"iswhitespace": func(a string) bool { return strings.TrimSpace(a) == "" },
-		"coloradd": func(a string, b string) string {
-			return color.NewFromHex(a).Add(color.NewFromHex(b)).Hex()
-		},
 		"base64": func(bs []byte) string { return base64.RawStdEncoding.EncodeToString(bs) },
 	})
 
