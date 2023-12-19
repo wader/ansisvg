@@ -1,15 +1,16 @@
-<svg viewBox="0 0 32 16" width="32" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+<svg width="4ch" height="1em" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
     <style>
-        rect { shape-rendering: crispEdges; }
+        * {
+            font-family: Monaco, monospace;
+            font-size: 14px;
+        }
         tspan, text {
-            dominant-baseline: text-before-edge;
-            alignment-baseline: text-before-edge;
+            font-variant-ligatures: none;
+            dominant-baseline: central;
             white-space: pre;
-            font: 14px Monaco, monospace;
             fill: #bbbbbb;
         }
-        .u { text-decoration: underline; }
     </style>
     <rect width="100%" height="100%" x="0" y="0" style="fill: #000000"/>
-    <text x="0" y="0"><tspan x="0" y="0">t</tspan><tspan x="8" y="0">e</tspan><tspan x="16" y="0">s</tspan><tspan x="24" y="0">t</tspan></text>
+<text x="0" y="0.5em"><tspan>test</tspan></text>
 </svg>

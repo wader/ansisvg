@@ -1,16 +1,17 @@
-<svg viewBox="0 0 250 100" width="250" height="100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+<svg width="250px" height="100px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
     <style>
-        rect { shape-rendering: crispEdges; }
+        * {
+            font-family: Arial, monospace;
+            font-size: 40px;
+        }
         tspan, text {
-            dominant-baseline: text-before-edge;
-            alignment-baseline: text-before-edge;
+            font-variant-ligatures: none;
+            dominant-baseline: central;
             white-space: pre;
-            font: 40px Arial, monospace;
             fill: #bbbbbb;
         }
-        .u { text-decoration: underline; }
     </style>
     <rect width="100%" height="100%" x="0" y="0" style="fill: #000000"/>
-    <text x="0" y="0"><tspan x="0" y="0">h</tspan><tspan x="50" y="0">e</tspan><tspan x="100" y="0">l</tspan><tspan x="150" y="0">l</tspan><tspan x="200" y="0">o</tspan></text>
-    <text x="0" y="50"><tspan x="0" y="50">w</tspan><tspan x="50" y="50">o</tspan><tspan x="100" y="50">r</tspan><tspan x="150" y="50">l</tspan><tspan x="200" y="50">d</tspan></text>
+<text x="0" y="25px"><tspan x="0px">h</tspan><tspan x="50px">e</tspan><tspan x="100px">l</tspan><tspan x="150px">l</tspan><tspan x="200px">o</tspan></text>
+<text x="0" y="75px"><tspan x="0px">w</tspan><tspan x="50px">o</tspan><tspan x="100px">r</tspan><tspan x="150px">l</tspan><tspan x="200px">d</tspan></text>
 </svg>

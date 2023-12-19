@@ -1,58 +1,17 @@
-<svg viewBox="0 0 320 16" width="320" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+<svg width="40ch" height="1em" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
     <style>
-        rect { shape-rendering: crispEdges; }
+        * {
+            font-family: Courier, monospace;
+            font-size: 14px;
+        }
         tspan, text {
-            dominant-baseline: text-before-edge;
-            alignment-baseline: text-before-edge;
+            font-variant-ligatures: none;
+            dominant-baseline: central;
             white-space: pre;
-            font: 14px Courier, monospace;
             fill: #bbbbbb;
         }
-        .u { text-decoration: underline; }
     </style>
-    <svg style="display: none">
-        <rect id="b#870000" width="8" height="16" stroke-width="0px" style="fill: #870000"/>
-    </svg>
     <rect width="100%" height="100%" x="0" y="0" style="fill: #000000"/>
-    <use xlink:href="#b%23870000" x="0" y="0"/>
-    <use xlink:href="#b%23870000" x="8" y="0"/>
-    <use xlink:href="#b%23870000" x="16" y="0"/>
-    <use xlink:href="#b%23870000" x="24" y="0"/>
-    <use xlink:href="#b%23870000" x="32" y="0"/>
-    <use xlink:href="#b%23870000" x="40" y="0"/>
-    <use xlink:href="#b%23870000" x="48" y="0"/>
-    <use xlink:href="#b%23870000" x="56" y="0"/>
-    <use xlink:href="#b%23870000" x="64" y="0"/>
-    <use xlink:href="#b%23870000" x="72" y="0"/>
-    <use xlink:href="#b%23870000" x="80" y="0"/>
-    <use xlink:href="#b%23870000" x="88" y="0"/>
-    <use xlink:href="#b%23870000" x="96" y="0"/>
-    <use xlink:href="#b%23870000" x="104" y="0"/>
-    <use xlink:href="#b%23870000" x="112" y="0"/>
-    <use xlink:href="#b%23870000" x="120" y="0"/>
-    <use xlink:href="#b%23870000" x="128" y="0"/>
-    <use xlink:href="#b%23870000" x="136" y="0"/>
-    <use xlink:href="#b%23870000" x="144" y="0"/>
-    <use xlink:href="#b%23870000" x="152" y="0"/>
-    <use xlink:href="#b%23870000" x="160" y="0"/>
-    <use xlink:href="#b%23870000" x="168" y="0"/>
-    <use xlink:href="#b%23870000" x="176" y="0"/>
-    <use xlink:href="#b%23870000" x="184" y="0"/>
-    <use xlink:href="#b%23870000" x="192" y="0"/>
-    <use xlink:href="#b%23870000" x="200" y="0"/>
-    <use xlink:href="#b%23870000" x="208" y="0"/>
-    <use xlink:href="#b%23870000" x="216" y="0"/>
-    <use xlink:href="#b%23870000" x="224" y="0"/>
-    <use xlink:href="#b%23870000" x="232" y="0"/>
-    <use xlink:href="#b%23870000" x="240" y="0"/>
-    <use xlink:href="#b%23870000" x="248" y="0"/>
-    <use xlink:href="#b%23870000" x="256" y="0"/>
-    <use xlink:href="#b%23870000" x="264" y="0"/>
-    <use xlink:href="#b%23870000" x="272" y="0"/>
-    <use xlink:href="#b%23870000" x="280" y="0"/>
-    <use xlink:href="#b%23870000" x="288" y="0"/>
-    <use xlink:href="#b%23870000" x="296" y="0"/>
-    <use xlink:href="#b%23870000" x="304" y="0"/>
-    <use xlink:href="#b%23870000" x="312" y="0"/>
-    <text x="0" y="0"><tspan x="0" y="0" style="fill: #ffffff"> </tspan><tspan x="8" y="0" style="fill: #ffffff">p</tspan><tspan x="16" y="0" style="fill: #ffffff">a</tspan><tspan x="24" y="0" style="fill: #ffffff">r</tspan><tspan x="32" y="0" style="fill: #ffffff">a</tspan><tspan x="40" y="0" style="fill: #ffffff">m</tspan><tspan x="48" y="0" style="fill: #ffffff">s</tspan><tspan x="56" y="0" style="fill: #ffffff"> </tspan><tspan x="64" y="0" style="fill: #ffffff">w</tspan><tspan x="72" y="0" style="fill: #ffffff">i</tspan><tspan x="80" y="0" style="fill: #ffffff">t</tspan><tspan x="88" y="0" style="fill: #ffffff">h</tspan><tspan x="96" y="0" style="fill: #ffffff"> </tspan><tspan x="104" y="0" style="fill: #ffffff">m</tspan><tspan x="112" y="0" style="fill: #ffffff">i</tspan><tspan x="120" y="0" style="fill: #ffffff">x</tspan><tspan x="128" y="0" style="fill: #ffffff"> </tspan><tspan x="136" y="0" style="fill: #ffffff">c</tspan><tspan x="144" y="0" style="fill: #ffffff">o</tspan><tspan x="152" y="0" style="fill: #ffffff">l</tspan><tspan x="160" y="0" style="fill: #ffffff">o</tspan><tspan x="168" y="0" style="fill: #ffffff">n</tspan><tspan x="176" y="0" style="fill: #ffffff"> </tspan><tspan x="184" y="0" style="fill: #ffffff">s</tspan><tspan x="192" y="0" style="fill: #ffffff">e</tspan><tspan x="200" y="0" style="fill: #ffffff">m</tspan><tspan x="208" y="0" style="fill: #ffffff">i</tspan><tspan x="216" y="0" style="fill: #ffffff">c</tspan><tspan x="224" y="0" style="fill: #ffffff">o</tspan><tspan x="232" y="0" style="fill: #ffffff">l</tspan><tspan x="240" y="0" style="fill: #ffffff">o</tspan><tspan x="248" y="0" style="fill: #ffffff">n</tspan><tspan x="256" y="0" style="fill: #ffffff"> </tspan><tspan x="264" y="0" style="fill: #ffffff">r</tspan><tspan x="272" y="0" style="fill: #ffffff">e</tspan><tspan x="280" y="0" style="fill: #ffffff">d</tspan><tspan x="288" y="0" style="fill: #ffffff"> </tspan><tspan x="296" y="0" style="fill: #ffffff">b</tspan><tspan x="304" y="0" style="fill: #ffffff">g</tspan><tspan x="312" y="0" style="fill: #ffffff"> </tspan></text>
+<rect x="0ch" y="0em" width="40ch" height="1em" stroke-width="0.5px" stroke="#870000" style="fill:#870000"/>
+<text x="0" y="0.5em"><tspan style="fill:#ffffff"> params with mix colon semicolon red bg </tspan></text>
 </svg>
