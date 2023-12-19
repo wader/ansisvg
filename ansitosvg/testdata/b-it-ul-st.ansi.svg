@@ -1,0 +1,20 @@
+<svg viewBox="0 0 104 96" width="104" height="96" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+    <style>
+        rect { shape-rendering: crispEdges; }
+        tspan, text {
+            dominant-baseline: text-before-edge;
+            alignment-baseline: text-before-edge;
+            white-space: pre;
+            font: 14px Courier, monospace;
+            fill: #bbbbbb;
+        }
+        .u { text-decoration: underline; }
+    </style>
+    <rect width="100%" height="100%" x="0" y="0" style="fill: #000000"/>
+<text x="0" y="0"><tspan>regular</tspan></text>
+<text x="0" y="16"><tspan style="font-weight:bold">bold</tspan></text>
+<text x="0" y="32"><tspan style="font-style:italic">italic</tspan></text>
+<text x="0" y="48"><tspan style="font-weight:bold; font-style:italic">bold italic</tspan></text>
+<text x="0" y="64"><tspan text-decoration="underline">underline</tspan></text>
+<text x="0" y="80"><tspan text-decoration="line-through">strikethrough</tspan></text>
+</svg>

@@ -69,13 +69,15 @@ func Convert(r io.Reader, w io.Writer, opts Options) error {
 
 		for i := 0; i < n; i++ {
 			line.Chars = append(line.Chars, svgscreen.Char{
-				Char:       string([]rune{r}),
-				X:          ad.X + i,
-				Foreground: ad.Foreground.String(),
-				Background: ad.Background.String(),
-				Underline:  ad.Underline,
-				Intensity:  ad.Intensity,
-				Invert:     ad.Invert,
+				Char:          string([]rune{r}),
+				X:             ad.X + i,
+				Foreground:    ad.Foreground.String(),
+				Background:    ad.Background.String(),
+				Underline:     ad.Underline,
+				Intensity:     ad.Intensity,
+				Invert:        ad.Invert,
+				Italic:        ad.Italic,
+				Strikethrough: ad.Strikethrough,
 			})
 		}
 	}

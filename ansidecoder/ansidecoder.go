@@ -41,10 +41,14 @@ var sgrBackground = codeRanges{40, 47}
 var sgrBackgroundBright = codeRanges{100, 107}
 var sgrBackgroundRGB = codeRanges{48, 48}
 var sgrBackgroundDefault = codeRanges{49, 49}
+var sgrItalicOn = codeRanges{3, 3}
+var sgrItalicOff = codeRanges{23, 23}
 var sgrUnderlineOn = codeRanges{4, 4}
 var sgrUnderlineOff = codeRanges{24, 24}
 var sgrInvertOn = codeRanges{7, 7}
 var sgrInvertOff = codeRanges{27, 27}
+var sgrStrikethroughOn = codeRanges{9, 9}
+var sgrStrikethroughOff = codeRanges{29, 29}
 
 const ESCRune = rune('\x1b')
 const BELRune = rune('\x07')
@@ -68,13 +72,15 @@ func (c Color) String() string {
 
 type Decoder struct {
 	// state of last returned rune
-	X          int
-	Y          int
-	Foreground Color
-	Background Color
-	Underline  bool
-	Intensity  bool
-	Invert     bool
+	X             int
+	Y             int
+	Foreground    Color
+	Background    Color
+	Underline     bool
+	Intensity     bool
+	Invert        bool
+	Italic        bool
+	Strikethrough bool
 
 	MaxX  int
 	MaxY  int
@@ -213,6 +219,8 @@ func (d *Decoder) ReadRune() (r rune, size int, err error) {
 							d.Underline = false
 							d.Intensity = false
 							d.Invert = false
+							d.Italic = false
+							d.Strikethrough = false
 						case sgrIncreaseIntensity.Is(n):
 							d.Intensity = true
 						case sgrNormal.Is(n):
@@ -243,6 +251,14 @@ func (d *Decoder) ReadRune() (r rune, size int, err error) {
 							d.Invert = true
 						case sgrInvertOff.Is(n):
 							d.Invert = false
+						case sgrItalicOn.Is(n):
+							d.Italic = true
+						case sgrItalicOff.Is(n):
+							d.Italic = false
+						case sgrStrikethroughOn.Is(n):
+							d.Strikethrough = true
+						case sgrStrikethroughOff.Is(n):
+							d.Strikethrough = false
 						}
 					}
 				}

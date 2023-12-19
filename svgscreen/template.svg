@@ -36,6 +36,6 @@ whitespace only tspan:s preventing underline to be properly rendered.
     <rect width="100%" height="100%" x="0" y="0" style="fill: {{$.BackgroundColor}}"/>
 {{- end}}
 {{- range $li, $l := .TextElements}}
-<text x="0" y="{{$l.Y}}">{{- range $si, $s := $l.TextSpans}}<tspan{{if ne $s.Style ""}} style="{{ $s.Style }}"{{end}}>{{$s.Content}}</tspan>{{- /* no new line */ -}}{{- end}}</text>
+<text x="0" y="{{$l.Y}}">{{- range $si, $s := $l.TextSpans}}<tspan{{if ne $s.Style ""}} style="{{ $s.Style }}"{{end}}{{if ne $s.Decoration ""}} text-decoration="{{ $s.Decoration }}"{{end}}>{{$s.Content}}</tspan>{{- /* no new line */ -}}{{- end}}</text>
 {{- end}}
 </svg>

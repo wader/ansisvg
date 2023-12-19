@@ -15,13 +15,15 @@ import (
 var templateSVG string
 
 type Char struct {
-	Char       string
-	X          int
-	Foreground string
-	Background string
-	Underline  bool
-	Intensity  bool
-	Invert     bool
+	Char          string
+	X             int
+	Foreground    string
+	Background    string
+	Underline     bool
+	Intensity     bool
+	Invert        bool
+	Italic        bool
+	Strikethrough bool
 }
 
 type Line struct {
@@ -35,8 +37,9 @@ type BoxSize struct {
 }
 
 type TextSpan struct {
-	Style   template.CSS
-	Content string
+	Style      template.CSS
+	Decoration template.CSS
+	Content    string
 }
 
 type TextElement struct {
@@ -75,8 +78,9 @@ func ResolveColor(c string, lookup map[string]string) string {
 func LineToTextElement(s Screen, l Line, fc func(Char) TextSpan) TextElement {
 	var t []TextSpan
 	currentSpan := TextSpan{
-		Style:   "",
-		Content: "",
+		Style:      "",
+		Decoration: "",
+		Content:    "",
 	}
 
 	appendSpan := func() {
@@ -87,7 +91,7 @@ func LineToTextElement(s Screen, l Line, fc func(Char) TextSpan) TextElement {
 	}
 	for _, c := range l.Chars {
 		tempSpan := fc(c)
-		if tempSpan.Style != currentSpan.Style {
+		if tempSpan.Style != currentSpan.Style || tempSpan.Decoration != currentSpan.Decoration {
 			appendSpan()
 			currentSpan = tempSpan
 			continue
@@ -159,15 +163,27 @@ func Render(w io.Writer, s Screen) error {
 	for _, l := range s.Lines {
 		fg := LineToTextElement(s, l, func(c Char) TextSpan {
 			var styles []string
+			deco := ""
+
 			if c.Foreground != "" {
 				styles = append(styles, "fill:"+ResolveColor(c.Foreground, s.ForegroundColors))
 			}
 			if c.Intensity {
 				styles = append(styles, "font-weight:bold")
 			}
+			if c.Italic {
+				styles = append(styles, "font-style:italic")
+			}
+			if c.Underline {
+				deco = "underline"
+			} else if c.Strikethrough {
+				deco = "line-through"
+			}
+
 			return TextSpan{
-				Style:   template.CSS(strings.Join(styles, "; ")),
-				Content: c.Char,
+				Style:      template.CSS(strings.Join(styles, "; ")),
+				Decoration: template.CSS(deco),
+				Content:    c.Char,
 			}
 		})
 		if len(fg.TextSpans) > 0 {
