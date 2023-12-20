@@ -25,6 +25,7 @@ whitespace only tspan:s preventing underline to be properly rendered.
             font-size: {{$.FontSize}}px;
         }
         tspan, text {
+            font-variant-ligatures: none;
             dominant-baseline: text-before-edge;
             alignment-baseline: text-before-edge;
             white-space: pre;{{/* draw underline even when whitespace */}}
