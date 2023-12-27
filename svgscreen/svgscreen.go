@@ -34,15 +34,15 @@ type BoxSize struct {
 	Height int
 }
 
-type TextSpan struct {
+type textSpan struct {
 	Style      template.CSS
 	Decoration template.CSS
 	Content    string
 }
 
-type TextElement struct {
+type textElement struct {
 	Y         int
-	TextSpans []TextSpan
+	TextSpans []textSpan
 }
 
 type Screen struct {
@@ -60,11 +60,11 @@ type Screen struct {
 	Columns          int
 	NrLines          int
 	Lines            []Line
-	TextElements     []TextElement
+	TextElements     []textElement
 }
 
 // Resolve color from string (either # prefixed hex value or index into lookup table)
-func ResolveColor(c string, lookup map[string]string) string {
+func resolveColor(c string, lookup map[string]string) string {
 	if strings.HasPrefix(c, "#") {
 		return c
 	}
@@ -73,9 +73,9 @@ func ResolveColor(c string, lookup map[string]string) string {
 
 // Convert a line into a <text> element
 // fc gives (foregroundcolor, content) of a char
-func LineToTextElement(s Screen, l Line, fc func(Char) TextSpan) TextElement {
-	var t []TextSpan
-	currentSpan := TextSpan{
+func lineToTextElement(s Screen, l Line, fc func(Char) textSpan) textElement {
+	var t []textSpan
+	currentSpan := textSpan{
 		Style:      "",
 		Decoration: "",
 		Content:    "",
@@ -103,7 +103,7 @@ func LineToTextElement(s Screen, l Line, fc func(Char) TextSpan) TextElement {
 		t = t[:len(t)-1]
 	}
 
-	return TextElement{
+	return textElement{
 		Y:         l.Y,
 		TextSpans: t,
 	}
@@ -132,15 +132,15 @@ func Render(w io.Writer, s Screen) error {
 
 	// Render the whole background first. Then it will not be selected when copy/pasting from rendered SVG
 	for _, l := range s.Lines {
-		bg := LineToTextElement(s, l, func(c Char) TextSpan {
+		bg := lineToTextElement(s, l, func(c Char) textSpan {
 			if c.Background == "" {
-				return TextSpan{
+				return textSpan{
 					Style:   "",
 					Content: " ",
 				}
 			} else {
-				return TextSpan{
-					Style:   template.CSS("fill: " + ResolveColor(c.Background, s.BackgroundColors)),
+				return textSpan{
+					Style:   template.CSS("fill: " + resolveColor(c.Background, s.BackgroundColors)),
 					Content: "█",
 				}
 			}
@@ -152,12 +152,12 @@ func Render(w io.Writer, s Screen) error {
 
 	// Then render the foreground
 	for _, l := range s.Lines {
-		fg := LineToTextElement(s, l, func(c Char) TextSpan {
+		fg := lineToTextElement(s, l, func(c Char) textSpan {
 			var styles []string
 			deco := ""
 
 			if c.Foreground != "" {
-				styles = append(styles, "fill:"+ResolveColor(c.Foreground, s.ForegroundColors))
+				styles = append(styles, "fill:"+resolveColor(c.Foreground, s.ForegroundColors))
 			}
 			if c.Intensity {
 				styles = append(styles, "font-weight:bold")
@@ -171,7 +171,7 @@ func Render(w io.Writer, s Screen) error {
 				deco = "line-through"
 			}
 
-			return TextSpan{
+			return textSpan{
 				Style:      template.CSS(strings.Join(styles, "; ")),
 				Decoration: template.CSS(deco),
 				Content:    c.Char,
