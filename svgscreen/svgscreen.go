@@ -71,9 +71,9 @@ func resolveColor(c string, lookup map[string]string) string {
 	return lookup[c]
 }
 
-// Convert a line into a <text> element
-// fc gives (foregroundcolor, content) of a char
-func lineToTextElement(s Screen, l Line, fc func(Char) textSpan) textElement {
+// Convert a line into a textElement
+// fc gives textSpan for a single char
+func (s *Screen) lineToTextElement(l Line, fc func(Char) textSpan) textElement {
 	var t []textSpan
 	currentSpan := textSpan{
 		Style:      "",
@@ -109,12 +109,7 @@ func lineToTextElement(s Screen, l Line, fc func(Char) textSpan) textElement {
 	}
 }
 
-func Render(w io.Writer, s Screen) error {
-	t := template.New("")
-	t.Funcs(template.FuncMap{
-		"base64": func(bs []byte) string { return base64.RawStdEncoding.EncodeToString(bs) },
-	})
-
+func (s *Screen) handleColorInversion() {
 	for _, l := range s.Lines {
 		for i, c := range l.Chars {
 			if c.Invert {
@@ -126,25 +121,63 @@ func Render(w io.Writer, s Screen) error {
 					c.Foreground = s.BackgroundColor
 				}
 				l.Chars[i] = c
+				c.Invert = false
 			}
 		}
 	}
+}
+
+func (s *Screen) charToBgText(c Char) textSpan {
+	if c.Background == "" {
+		return textSpan{
+			Style:   "",
+			Content: " ",
+		}
+	} else {
+		return textSpan{
+			Style:   template.CSS("fill:" + resolveColor(c.Background, s.BackgroundColors)),
+			Content: "█",
+		}
+	}
+}
+
+func (s *Screen) charToFgText(c Char) textSpan {
+	var styles []string
+	deco := ""
+
+	if c.Foreground != "" {
+		styles = append(styles, "fill:"+resolveColor(c.Foreground, s.ForegroundColors))
+	}
+	if c.Intensity {
+		styles = append(styles, "font-weight:bold")
+	}
+	if c.Italic {
+		styles = append(styles, "font-style:italic")
+	}
+	if c.Underline {
+		deco = "underline"
+	} else if c.Strikethrough {
+		deco = "line-through"
+	}
+
+	return textSpan{
+		Style:      template.CSS(strings.Join(styles, ";")),
+		Decoration: template.CSS(deco),
+		Content:    c.Char,
+	}
+}
+
+func (s *Screen) Render(w io.Writer) error {
+	t := template.New("")
+	t.Funcs(template.FuncMap{
+		"base64": func(bs []byte) string { return base64.RawStdEncoding.EncodeToString(bs) },
+	})
+
+	s.handleColorInversion()
 
 	// Render the whole background first. Then it will not be selected when copy/pasting from rendered SVG
 	for _, l := range s.Lines {
-		bg := lineToTextElement(s, l, func(c Char) textSpan {
-			if c.Background == "" {
-				return textSpan{
-					Style:   "",
-					Content: " ",
-				}
-			} else {
-				return textSpan{
-					Style:   template.CSS("fill: " + resolveColor(c.Background, s.BackgroundColors)),
-					Content: "█",
-				}
-			}
-		})
+		bg := s.lineToTextElement(l, s.charToBgText)
 		if len(bg.TextSpans) > 0 {
 			s.TextElements = append(s.TextElements, bg)
 		}
@@ -152,36 +185,13 @@ func Render(w io.Writer, s Screen) error {
 
 	// Then render the foreground
 	for _, l := range s.Lines {
-		fg := lineToTextElement(s, l, func(c Char) textSpan {
-			var styles []string
-			deco := ""
-
-			if c.Foreground != "" {
-				styles = append(styles, "fill:"+resolveColor(c.Foreground, s.ForegroundColors))
-			}
-			if c.Intensity {
-				styles = append(styles, "font-weight:bold")
-			}
-			if c.Italic {
-				styles = append(styles, "font-style:italic")
-			}
-			if c.Underline {
-				deco = "underline"
-			} else if c.Strikethrough {
-				deco = "line-through"
-			}
-
-			return textSpan{
-				Style:      template.CSS(strings.Join(styles, "; ")),
-				Decoration: template.CSS(deco),
-				Content:    c.Char,
-			}
-		})
+		fg := s.lineToTextElement(l, s.charToFgText)
 		if len(fg.TextSpans) > 0 {
 			s.TextElements = append(s.TextElements, fg)
 		}
 	}
 
+	// Create SVG from template
 	t, err := t.Parse(templateSVG)
 	if err != nil {
 		return err

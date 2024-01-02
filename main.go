@@ -9,6 +9,7 @@ import (
 
 	"github.com/wader/ansisvg/ansitosvg"
 	"github.com/wader/ansisvg/colorscheme/schemes"
+	"github.com/wader/ansisvg/svgscreen"
 )
 
 type boxSize struct {
@@ -84,7 +85,7 @@ func main() {
 			FontRef:       *fontRefFlag,
 			FontSize:      *fontSizeFlag,
 			TerminalWidth: *terminalWidthFlag,
-			CharacterBoxSize: ansitosvg.BoxSize{
+			CharacterBoxSize: svgscreen.BoxSize{
 				Width:  characterBoxSize.Width,
 				Height: characterBoxSize.Height,
 			},

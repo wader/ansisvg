@@ -9,18 +9,13 @@ import (
 	"github.com/wader/ansisvg/svgscreen"
 )
 
-type BoxSize struct {
-	Width  int
-	Height int
-}
-
 type Options struct {
 	FontName         string
 	FontEmbedded     []byte
 	FontRef          string
 	FontSize         int
 	TerminalWidth    int
-	CharacterBoxSize BoxSize
+	CharacterBoxSize svgscreen.BoxSize
 	ColorScheme      string
 	Transparent      bool
 }
@@ -28,7 +23,7 @@ type Options struct {
 var DefaultOptions = Options{
 	FontName:         "Courier",
 	FontSize:         14,
-	CharacterBoxSize: BoxSize{Width: 8, Height: 16},
+	CharacterBoxSize: svgscreen.BoxSize{Width: 8, Height: 16},
 	ColorScheme:      "Builtin Dark",
 	Transparent:      false,
 }
@@ -101,60 +96,58 @@ func Convert(r io.Reader, w io.Writer, opts Options) error {
 	}
 
 	c := colorScheme
-	return svgscreen.Render(
-		w,
-		svgscreen.Screen{
-			Transparent:     opts.Transparent,
-			ForegroundColor: c.Foreground,
-			ForegroundColors: map[string]string{
-				"0":  c.ANSIBlack,
-				"1":  c.ANSIRed,
-				"2":  c.ANSIGreen,
-				"3":  c.ANSIYellow,
-				"4":  c.ANSIBlue,
-				"5":  c.ANSIMagenta,
-				"6":  c.ANSICyan,
-				"7":  c.ANSIWhite,
-				"8":  c.ANSIBrightBlack,
-				"9":  c.ANSIBrightRed,
-				"10": c.ANSIBrightGreen,
-				"11": c.ANSIBrightYellow,
-				"12": c.ANSIBrightBlue,
-				"13": c.ANSIBrightMagenta,
-				"14": c.ANSIBrightCyan,
-				"15": c.ANSIBrightWhite,
-			},
-			BackgroundColor: c.Background,
-			BackgroundColors: map[string]string{
-				"0":  c.ANSIBlack,
-				"1":  c.ANSIRed,
-				"2":  c.ANSIGreen,
-				"3":  c.ANSIYellow,
-				"4":  c.ANSIBlue,
-				"5":  c.ANSIMagenta,
-				"6":  c.ANSICyan,
-				"7":  c.ANSIWhite,
-				"8":  c.ANSIBrightBlack,
-				"9":  c.ANSIBrightRed,
-				"10": c.ANSIBrightYellow,
-				"11": c.ANSIBrightYellow,
-				"12": c.ANSIBrightBlue,
-				"13": c.ANSIBrightMagenta,
-				"14": c.ANSIBrightCyan,
-				"15": c.ANSIBrightWhite,
-			},
-			FontName:     fontName,
-			FontEmbedded: opts.FontEmbedded,
-			FontRef:      opts.FontRef,
-			FontSize:     opts.FontSize,
-			CharacterBoxSize: svgscreen.BoxSize{
-				Width:  opts.CharacterBoxSize.Width,
-				Height: opts.CharacterBoxSize.Height,
-			},
-			TerminalWidth: terminalWidth,
-			Columns:       ad.MaxX + 1,
-			NrLines:       ad.MaxY + 1,
-			Lines:         lines,
+	s := svgscreen.Screen{
+		Transparent:     opts.Transparent,
+		ForegroundColor: c.Foreground,
+		ForegroundColors: map[string]string{
+			"0":  c.ANSIBlack,
+			"1":  c.ANSIRed,
+			"2":  c.ANSIGreen,
+			"3":  c.ANSIYellow,
+			"4":  c.ANSIBlue,
+			"5":  c.ANSIMagenta,
+			"6":  c.ANSICyan,
+			"7":  c.ANSIWhite,
+			"8":  c.ANSIBrightBlack,
+			"9":  c.ANSIBrightRed,
+			"10": c.ANSIBrightGreen,
+			"11": c.ANSIBrightYellow,
+			"12": c.ANSIBrightBlue,
+			"13": c.ANSIBrightMagenta,
+			"14": c.ANSIBrightCyan,
+			"15": c.ANSIBrightWhite,
 		},
-	)
+		BackgroundColor: c.Background,
+		BackgroundColors: map[string]string{
+			"0":  c.ANSIBlack,
+			"1":  c.ANSIRed,
+			"2":  c.ANSIGreen,
+			"3":  c.ANSIYellow,
+			"4":  c.ANSIBlue,
+			"5":  c.ANSIMagenta,
+			"6":  c.ANSICyan,
+			"7":  c.ANSIWhite,
+			"8":  c.ANSIBrightBlack,
+			"9":  c.ANSIBrightRed,
+			"10": c.ANSIBrightYellow,
+			"11": c.ANSIBrightYellow,
+			"12": c.ANSIBrightBlue,
+			"13": c.ANSIBrightMagenta,
+			"14": c.ANSIBrightCyan,
+			"15": c.ANSIBrightWhite,
+		},
+		FontName:     fontName,
+		FontEmbedded: opts.FontEmbedded,
+		FontRef:      opts.FontRef,
+		FontSize:     opts.FontSize,
+		CharacterBoxSize: svgscreen.BoxSize{
+			Width:  opts.CharacterBoxSize.Width,
+			Height: opts.CharacterBoxSize.Height,
+		},
+		TerminalWidth: terminalWidth,
+		Columns:       ad.MaxX + 1,
+		NrLines:       ad.MaxY + 1,
+		Lines:         lines,
+	}
+	return s.Render(w)
 }
