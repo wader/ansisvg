@@ -6,6 +6,7 @@ import (
 	"encoding/base64"
 	"html/template"
 	"io"
+	"strconv"
 	"strings"
 )
 
@@ -41,7 +42,7 @@ type textSpan struct {
 }
 
 type textElement struct {
-	Y         int
+	Y         string
 	TextSpans []textSpan
 }
 
@@ -61,6 +62,26 @@ type Screen struct {
 	NrLines          int
 	Lines            []Line
 	TextElements     []textElement
+	SvgWidth         string
+	SvgHeight        string
+}
+
+func (s *Screen) columnCoordinate(col int) string {
+	unit := "ch"
+	if s.CharacterBoxSize.Width > 0 {
+		unit = "px"
+		col *= s.CharacterBoxSize.Width
+	}
+	return strconv.Itoa(col) + unit
+}
+
+func (s *Screen) rowCoordinate(row int) string {
+	unit := "em"
+	if s.CharacterBoxSize.Height > 0 {
+		unit = "px"
+		row *= s.CharacterBoxSize.Height
+	}
+	return strconv.Itoa(row) + unit
 }
 
 // Resolve color from string (either # prefixed hex value or index into lookup table)
@@ -104,7 +125,7 @@ func (s *Screen) lineToTextElement(l Line, fc func(Char) textSpan) textElement {
 	}
 
 	return textElement{
-		Y:         l.Y,
+		Y:         s.rowCoordinate(l.Y),
 		TextSpans: t,
 	}
 }
@@ -172,6 +193,10 @@ func (s *Screen) Render(w io.Writer) error {
 	t.Funcs(template.FuncMap{
 		"base64": func(bs []byte) string { return base64.RawStdEncoding.EncodeToString(bs) },
 	})
+
+	// Set SVG size
+	s.SvgWidth = s.columnCoordinate(s.TerminalWidth)
+	s.SvgHeight = s.rowCoordinate(s.NrLines)
 
 	s.handleColorInversion()
 

@@ -23,7 +23,7 @@ type Options struct {
 var DefaultOptions = Options{
 	FontName:         "Courier",
 	FontSize:         14,
-	CharacterBoxSize: svgscreen.BoxSize{Width: 8, Height: 16},
+	CharacterBoxSize: svgscreen.BoxSize{Width: 0, Height: 0},
 	ColorScheme:      "Builtin Dark",
 	Transparent:      false,
 }

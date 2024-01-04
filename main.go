@@ -45,7 +45,7 @@ var listColorSchemesFlag = flag.Bool("listcolorschemes", false, "List color sche
 var transparentFlag = flag.Bool("transparent", ansitosvg.DefaultOptions.Transparent, "Transparent background")
 
 func init() {
-	flag.Var(&characterBoxSize, "charboxsize", "Character box size")
+	flag.Var(&characterBoxSize, "charboxsize", "Character box size (forces pixel units instead of font-relative units)")
 }
 
 func main() {
