@@ -4,5 +4,6 @@
     "CharacterBoxSize": {
         "Width": 50,
         "Height": 50
-    }
+    },
+    "GridMode": true
 }

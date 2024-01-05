@@ -36,6 +36,7 @@ type BoxSize struct {
 }
 
 type textSpan struct {
+	X          string
 	Style      template.CSS
 	Decoration template.CSS
 	Content    string
@@ -62,6 +63,7 @@ type Screen struct {
 	NrLines          int
 	Lines            []Line
 	TextElements     []textElement
+	GridMode         bool
 	SvgWidth         string
 	SvgHeight        string
 }
@@ -108,9 +110,14 @@ func (s *Screen) lineToTextElement(l Line, fc func(Char) textSpan) textElement {
 		}
 		t = append(t, currentSpan)
 	}
-	for _, c := range l.Chars {
+	for col, c := range l.Chars {
 		tempSpan := fc(c)
-		if tempSpan.Style != currentSpan.Style || tempSpan.Decoration != currentSpan.Decoration {
+		if s.GridMode {
+			// If in grid mode, set X coordinate for each text span
+			tempSpan.X = s.columnCoordinate(col)
+		}
+		// Consolidate tempSpan to currentSpan only if not in grid mode and both spans have same style
+		if s.GridMode || tempSpan.Style != currentSpan.Style || tempSpan.Decoration != currentSpan.Decoration {
 			appendSpan()
 			currentSpan = tempSpan
 			continue

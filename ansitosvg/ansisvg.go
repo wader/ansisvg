@@ -18,6 +18,7 @@ type Options struct {
 	CharacterBoxSize svgscreen.BoxSize
 	ColorScheme      string
 	Transparent      bool
+	GridMode         bool
 }
 
 var DefaultOptions = Options{
@@ -148,6 +149,7 @@ func Convert(r io.Reader, w io.Writer, opts Options) error {
 		Columns:       ad.MaxX + 1,
 		NrLines:       ad.MaxY + 1,
 		Lines:         lines,
+		GridMode:      opts.GridMode,
 	}
 	return s.Render(w)
 }
