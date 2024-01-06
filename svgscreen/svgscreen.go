@@ -4,6 +4,7 @@ package svgscreen
 import (
 	_ "embed"
 	"encoding/base64"
+	"fmt"
 	"html/template"
 	"io"
 	"strconv"
@@ -77,13 +78,13 @@ func (s *Screen) columnCoordinate(col int) string {
 	return strconv.Itoa(col) + unit
 }
 
-func (s *Screen) rowCoordinate(row int) string {
+func (s *Screen) rowCoordinate(row float32) string {
 	unit := "em"
 	if s.CharacterBoxSize.Height > 0 {
 		unit = "px"
-		row *= s.CharacterBoxSize.Height
+		row *= float32(s.CharacterBoxSize.Height)
 	}
-	return strconv.Itoa(row) + unit
+	return fmt.Sprintf("%g%s", row, unit)
 }
 
 // Resolve color from string (either # prefixed hex value or index into lookup table)
@@ -132,7 +133,7 @@ func (s *Screen) lineToTextElement(l Line, fc func(Char) textSpan) textElement {
 	}
 
 	return textElement{
-		Y:         s.rowCoordinate(l.Y),
+		Y:         s.rowCoordinate(float32(l.Y) + 0.5),
 		TextSpans: t,
 	}
 }
@@ -203,7 +204,7 @@ func (s *Screen) Render(w io.Writer) error {
 
 	// Set SVG size
 	s.SvgWidth = s.columnCoordinate(s.TerminalWidth)
-	s.SvgHeight = s.rowCoordinate(s.NrLines)
+	s.SvgHeight = s.rowCoordinate(float32(s.NrLines))
 
 	s.handleColorInversion()
 
