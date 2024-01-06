@@ -48,6 +48,14 @@ type textElement struct {
 	TextSpans []textSpan
 }
 
+type bgRect struct {
+	X      string
+	Y      string
+	Width  string
+	Height string
+	Color  string
+}
+
 type Screen struct {
 	Transparent      bool
 	ForegroundColor  string
@@ -64,6 +72,7 @@ type Screen struct {
 	NrLines          int
 	Lines            []Line
 	TextElements     []textElement
+	BgRects          []bgRect
 	GridMode         bool
 	SvgWidth         string
 	SvgHeight        string
@@ -156,20 +165,6 @@ func (s *Screen) handleColorInversion() {
 	}
 }
 
-func (s *Screen) charToBgText(c Char) textSpan {
-	if c.Background == "" {
-		return textSpan{
-			Style:   "",
-			Content: " ",
-		}
-	} else {
-		return textSpan{
-			Style:   template.CSS("fill:" + resolveColor(c.Background, s.BackgroundColors)),
-			Content: "█",
-		}
-	}
-}
-
 func (s *Screen) charToFgText(c Char) textSpan {
 	var styles []string
 	deco := ""
@@ -208,15 +203,22 @@ func (s *Screen) Render(w io.Writer) error {
 
 	s.handleColorInversion()
 
-	// Render the whole background first. Then it will not be selected when copy/pasting from rendered SVG
-	for _, l := range s.Lines {
-		bg := s.lineToTextElement(l, s.charToBgText)
-		if len(bg.TextSpans) > 0 {
-			s.TextElements = append(s.TextElements, bg)
+	// Set up background rects
+	for y, l := range s.Lines {
+		for x, c := range l.Chars {
+			if c.Background != "" && c.Background != s.BackgroundColor {
+				s.BgRects = append(s.BgRects, bgRect{
+					X:      s.columnCoordinate(x),
+					Y:      s.rowCoordinate(float32(y)),
+					Width:  s.columnCoordinate(1),
+					Height: s.rowCoordinate(1),
+					Color:  resolveColor(c.Background, s.BackgroundColors),
+				})
+			}
 		}
 	}
 
-	// Then render the foreground
+	// Set up text elements
 	for _, l := range s.Lines {
 		fg := s.lineToTextElement(l, s.charToFgText)
 		if len(fg.TextSpans) > 0 {
