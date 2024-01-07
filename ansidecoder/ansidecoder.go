@@ -21,34 +21,34 @@ const (
 	StateOSCSeenESC       // Operating System Command ESC ] ... ESC
 )
 
-type codeRanges [2]int
+type codeRange [2]int
 
-func (cr codeRanges) Is(c int) bool {
+func (cr codeRange) Is(c int) bool {
 	if c >= cr[0] && c <= cr[1] {
 		return true
 	}
 	return false
 }
 
-var sgrReset = codeRanges{0, 0}
-var sgrIncreaseIntensity = codeRanges{1, 1}
-var sgrNormal = codeRanges{22, 22}
-var sgrForeground = codeRanges{30, 37}
-var sgrForegroundBright = codeRanges{90, 97}
-var sgrForegroundRGB = codeRanges{38, 38}
-var sgrForegroundDefault = codeRanges{39, 39}
-var sgrBackground = codeRanges{40, 47}
-var sgrBackgroundBright = codeRanges{100, 107}
-var sgrBackgroundRGB = codeRanges{48, 48}
-var sgrBackgroundDefault = codeRanges{49, 49}
-var sgrItalicOn = codeRanges{3, 3}
-var sgrItalicOff = codeRanges{23, 23}
-var sgrUnderlineOn = codeRanges{4, 4}
-var sgrUnderlineOff = codeRanges{24, 24}
-var sgrInvertOn = codeRanges{7, 7}
-var sgrInvertOff = codeRanges{27, 27}
-var sgrStrikethroughOn = codeRanges{9, 9}
-var sgrStrikethroughOff = codeRanges{29, 29}
+var sgrReset = codeRange{0, 0}
+var sgrIncreaseIntensity = codeRange{1, 1}
+var sgrNormal = codeRange{22, 22}
+var sgrForeground = codeRange{30, 37}
+var sgrForegroundBright = codeRange{90, 97}
+var sgrForegroundRGB = codeRange{38, 38}
+var sgrForegroundDefault = codeRange{39, 39}
+var sgrBackground = codeRange{40, 47}
+var sgrBackgroundBright = codeRange{100, 107}
+var sgrBackgroundRGB = codeRange{48, 48}
+var sgrBackgroundDefault = codeRange{49, 49}
+var sgrItalicOn = codeRange{3, 3}
+var sgrItalicOff = codeRange{23, 23}
+var sgrUnderlineOn = codeRange{4, 4}
+var sgrUnderlineOff = codeRange{24, 24}
+var sgrInvertOn = codeRange{7, 7}
+var sgrInvertOff = codeRange{27, 27}
+var sgrStrikethroughOn = codeRange{9, 9}
+var sgrStrikethroughOff = codeRange{29, 29}
 
 const ESCRune = rune('\x1b')
 const BELRune = rune('\x07')
