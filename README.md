@@ -18,7 +18,7 @@ Produces [colortest.ansi.svg](ansitosvg/testdata/colortest.ansi.svg):
 $ ansisvg -h
 Usage of ansisvg:
   -charboxsize value
-    	Character box size (default 8x16)
+    	Character box size (forces pixel units instead of font-relative units)
   -colorscheme string
     	Color scheme (default "Builtin Dark")
   -fontfile string
@@ -29,6 +29,8 @@ Usage of ansisvg:
     	External font file to reference
   -fontsize int
     	Font size (default 14)
+  -grid
+    	Enable grid mode (sets position for each character)
   -listcolorschemes
     	List color schemes
   -transparent
@@ -111,6 +113,10 @@ Using [ffcat](https://github.com/wader/ffcat):
 for i in ansitosvg/testdata/*.ansi; do echo $i ; cat $i | go run main.go | ffcat ; done
 ```
 
+## Thanks
+
+- Patrick Huesmann @patrislav1 for better ANSI support and lots SVG output improvements.
+
 ## Licenses and thanks
 
 Color themes from
@@ -120,10 +126,7 @@ license https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/LICENSE
 Uses colortest from https://github.com/pablopunk/colortest and terminal-colors from https://github.com/eikenb/terminal-colors.
 
 ## TODO and ideas
-- Bold
 - Underline overlaps a bit, sometimes causing weird blending
-- Somehow use `<tspan>`/`textLength` to produce smaller output. Maybe `em/ch` CSS units for background rects,
-but seems inkscape do not like `ch`. Would also make it nicer to copy text from SVG.
 - Handle vertical tab and form feed (normalize into spaces?)
 - Handle overdrawing
 - More CSI, keep track of cursor?
