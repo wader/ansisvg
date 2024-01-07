@@ -9,6 +9,7 @@ import (
 
 	"github.com/wader/ansisvg/ansitosvg"
 	"github.com/wader/ansisvg/colorscheme/schemes"
+	"github.com/wader/ansisvg/svgscreen"
 )
 
 type boxSize struct {
@@ -42,9 +43,10 @@ var characterBoxSize = boxSize{
 var colorSchemeFlag = flag.String("colorscheme", ansitosvg.DefaultOptions.ColorScheme, "Color scheme")
 var listColorSchemesFlag = flag.Bool("listcolorschemes", false, "List color schemes")
 var transparentFlag = flag.Bool("transparent", ansitosvg.DefaultOptions.Transparent, "Transparent background")
+var gridModeFlag = flag.Bool("grid", false, "Enable grid mode (sets position for each character)")
 
 func init() {
-	flag.Var(&characterBoxSize, "charboxsize", "Character box size")
+	flag.Var(&characterBoxSize, "charboxsize", "Character box size (forces pixel units instead of font-relative units)")
 }
 
 func main() {
@@ -84,12 +86,13 @@ func main() {
 			FontRef:       *fontRefFlag,
 			FontSize:      *fontSizeFlag,
 			TerminalWidth: *terminalWidthFlag,
-			CharacterBoxSize: ansitosvg.BoxSize{
+			CharacterBoxSize: svgscreen.BoxSize{
 				Width:  characterBoxSize.Width,
 				Height: characterBoxSize.Height,
 			},
 			ColorScheme: *colorSchemeFlag,
 			Transparent: *transparentFlag,
+			GridMode:    *gridModeFlag,
 		},
 	); err != nil {
 		fmt.Fprintln(os.Stderr, err)

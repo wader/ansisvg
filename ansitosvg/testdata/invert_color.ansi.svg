@@ -1,35 +1,19 @@
-<svg viewBox="0 0 128 16" width="128" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+<svg width="16ch" height="1em" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
     <style>
-        rect { shape-rendering: crispEdges; }
+        * {
+            font-family: Courier, monospace;
+            font-size: 14px;
+        }
         tspan, text {
-            dominant-baseline: text-before-edge;
-            alignment-baseline: text-before-edge;
+            font-variant-ligatures: none;
+            dominant-baseline: central;
             white-space: pre;
-            font: 14px Courier, monospace;
             fill: #bbbbbb;
         }
-        .u { text-decoration: underline; }
     </style>
-    <svg style="display: none">
-        <rect id="b1" width="8" height="16" stroke-width="0px" style="fill: #bb0000"/>
-        <rect id="b3" width="8" height="16" stroke-width="0px" style="fill: #bbbb00"/>
-    </svg>
     <rect width="100%" height="100%" x="0" y="0" style="fill: #000000"/>
-    <use xlink:href="#b1" x="0" y="0"/>
-    <use xlink:href="#b1" x="8" y="0"/>
-    <use xlink:href="#b1" x="16" y="0"/>
-    <use xlink:href="#b1" x="24" y="0"/>
-    <use xlink:href="#b1" x="32" y="0"/>
-    <use xlink:href="#b3" x="40" y="0"/>
-    <use xlink:href="#b3" x="48" y="0"/>
-    <use xlink:href="#b3" x="56" y="0"/>
-    <use xlink:href="#b3" x="64" y="0"/>
-    <use xlink:href="#b3" x="72" y="0"/>
-    <use xlink:href="#b3" x="80" y="0"/>
-    <use xlink:href="#b1" x="88" y="0"/>
-    <use xlink:href="#b1" x="96" y="0"/>
-    <use xlink:href="#b1" x="104" y="0"/>
-    <use xlink:href="#b1" x="112" y="0"/>
-    <use xlink:href="#b1" x="120" y="0"/>
-    <text x="0" y="0"><tspan x="0" y="0" style="fill: #bbbb00"> </tspan><tspan x="8" y="0" style="fill: #bbbb00">r</tspan><tspan x="16" y="0" style="fill: #bbbb00">e</tspan><tspan x="24" y="0" style="fill: #bbbb00">d</tspan><tspan x="32" y="0" style="fill: #bbbb00"> </tspan><tspan x="40" y="0" style="fill: #bb0000">y</tspan><tspan x="48" y="0" style="fill: #bb0000">e</tspan><tspan x="56" y="0" style="fill: #bb0000">l</tspan><tspan x="64" y="0" style="fill: #bb0000">l</tspan><tspan x="72" y="0" style="fill: #bb0000">o</tspan><tspan x="80" y="0" style="fill: #bb0000">w</tspan><tspan x="88" y="0" style="fill: #bbbb00"> </tspan><tspan x="96" y="0" style="fill: #bbbb00">r</tspan><tspan x="104" y="0" style="fill: #bbbb00">e</tspan><tspan x="112" y="0" style="fill: #bbbb00">d</tspan><tspan x="120" y="0" style="fill: #bbbb00"> </tspan></text>
+<rect x="0ch" y="0em" width="5ch" height="1em" stroke-width="0.5px" stroke="#bb0000" style="fill:#bb0000"/>
+<rect x="5ch" y="0em" width="6ch" height="1em" stroke-width="0.5px" stroke="#bbbb00" style="fill:#bbbb00"/>
+<rect x="11ch" y="0em" width="5ch" height="1em" stroke-width="0.5px" stroke="#bb0000" style="fill:#bb0000"/>
+<text x="0" y="0.5em"><tspan style="fill:#bbbb00"> red </tspan><tspan style="fill:#bb0000">yellow</tspan><tspan style="fill:#bbbb00"> red </tspan></text>
 </svg>

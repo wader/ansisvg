@@ -3,13 +3,11 @@ Tries to generate SVG code comptible with browers and inkscape.
 For some reason inkscape seems to not like CSS for rect fill etc that much
 so currently using <use> instead.
 */ -}}
-{{- $width := mul $.TerminalWidth .CharacterBoxSize.Width -}}
-{{- $height := mul $.NrLines .CharacterBoxSize.Height -}}
 {{- /*
 xml:space="preserve" is used to forces some svg readers (ex inkscape) to not collapse
 whitespace only tspan:s preventing underline to be properly rendered.
 */ -}}
-<svg viewBox="0 0 {{$width}} {{$height}}" width="{{$width}}" height="{{$height}}" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+<svg width="{{$.SvgWidth}}" height="{{$.SvgHeight}}" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
     <style>
         {{- if gt (len $.FontEmbedded) 0}}
         @font-face {
@@ -22,53 +20,24 @@ whitespace only tspan:s preventing underline to be properly rendered.
             src: url({{$.FontRef}});
         }
         {{- end}}
-        rect { shape-rendering: crispEdges; }
+        * {
+            font-family: {{if $.FontName}}{{$.FontName}}, {{end}}monospace;
+            font-size: {{$.FontSize}}px;
+        }
         tspan, text {
-            dominant-baseline: text-before-edge;
-            alignment-baseline: text-before-edge;
+            font-variant-ligatures: none;
+            dominant-baseline: central;
             white-space: pre;{{/* draw underline even when whitespace */}}
-            font: {{$.FontSize}}px {{if $.FontName}}{{$.FontName}}, {{end}}monospace;
             fill: {{$.ForegroundColor}};
         }
-        .u { text-decoration: underline; }
     </style>
-{{- if gt (len $.BackgroundColors) 0}}
-    <svg style="display: none">
-{{- range $i, $c := $.BackgroundColors}}
-        <rect id="b{{$i}}" width="{{$.CharacterBoxSize.Width}}" height="{{$.CharacterBoxSize.Height}}" stroke-width="0px" style="fill: {{$c}}"/>
-{{- end}}
-    </svg>
-{{- end}}
 {{- if not .Transparent}}
     <rect width="100%" height="100%" x="0" y="0" style="fill: {{$.BackgroundColor}}"/>
 {{- end}}
-{{- range $i, $l := .Lines}}
-    {{- range $ci, $c := $l.Chars}}
-        {{- if le $c.X $.TerminalWidth}}
-            {{- if ne $c.Background ""}}
-    <use xlink:href="#b{{$c.Background}}" x="{{mul $c.X $.CharacterBoxSize.Width}}" y="{{mul $l.Y $.CharacterBoxSize.Height}}"/>
-            {{- end}}
-        {{- end}}
-    {{- end}}
+{{- range $ri, $r := .BgRects}}
+<rect x="{{$r.X}}" y="{{$r.Y}}" width="{{$r.Width}}" height="{{$r.Height}}" stroke-width="0.5px" stroke="{{$r.Color}}" style="fill:{{$r.Color}}"/>
 {{- end}}
-{{- range $li, $l := .Lines}}
-    {{- $y := mul $l.Y $.CharacterBoxSize.Height}}
-    <text x="0" y="{{$y}}">
-    {{- range $ci, $c := $l.Chars}}
-        {{- $x := mul $c.X $.CharacterBoxSize.Width}}
-        {{- $color := $.ForegroundColor}}
-        {{- if hasprefix $c.Foreground "#"}}
-            {{- $color = $c.Foreground}}
-        {{- else if ne $c.Foreground ""}}
-            {{- $color = index $.ForegroundColors $c.Foreground}}
-        {{- end}}
-        {{- if $c.Intensity}}
-            {{- $color = coloradd $color "#505050"}}
-        {{- end}}
-        {{- /* no new line */ -}}
-        <tspan x="{{$x}}" y="{{$y}}"{{if ne $color $.ForegroundColor}} style="fill: {{$color}}"{{end}}{{if $c.Underline}} class="u"{{end}}>{{$c.Char}}</tspan>
-        {{- /* no new line */ -}}
-    {{- end -}}
-    </text>
+{{- range $li, $l := .TextElements}}
+<text x="0" y="{{$l.Y}}">{{- range $si, $s := $l.TextSpans}}<tspan{{if ne $s.X ""}} x="{{ $s.X }}"{{end}}{{if ne $s.Style ""}} style="{{ $s.Style }}"{{end}}{{if ne $s.Decoration ""}} text-decoration="{{ $s.Decoration }}"{{end}}>{{$s.Content}}</tspan>{{- /* no new line */ -}}{{- end}}</text>
 {{- end}}
 </svg>

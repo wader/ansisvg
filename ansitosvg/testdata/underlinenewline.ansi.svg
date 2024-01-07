@@ -1,16 +1,17 @@
-<svg viewBox="0 0 40 32" width="40" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+<svg width="5ch" height="2em" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
     <style>
-        rect { shape-rendering: crispEdges; }
+        * {
+            font-family: Courier, monospace;
+            font-size: 14px;
+        }
         tspan, text {
-            dominant-baseline: text-before-edge;
-            alignment-baseline: text-before-edge;
+            font-variant-ligatures: none;
+            dominant-baseline: central;
             white-space: pre;
-            font: 14px Courier, monospace;
             fill: #bbbbbb;
         }
-        .u { text-decoration: underline; }
     </style>
     <rect width="100%" height="100%" x="0" y="0" style="fill: #000000"/>
-    <text x="0" y="0"><tspan x="0" y="0" class="u">u</tspan><tspan x="8" y="0" class="u">n</tspan><tspan x="16" y="0" class="u">d</tspan><tspan x="24" y="0" class="u">e</tspan><tspan x="32" y="0" class="u">r</tspan></text>
-    <text x="0" y="16"><tspan x="0" y="16" class="u">l</tspan><tspan x="8" y="16" class="u">i</tspan><tspan x="16" y="16" class="u">n</tspan><tspan x="24" y="16" class="u">e</tspan></text>
+<text x="0" y="0.5em"><tspan text-decoration="underline">under</tspan></text>
+<text x="0" y="1.5em"><tspan text-decoration="underline">line</tspan></text>
 </svg>

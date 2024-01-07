@@ -1,35 +1,25 @@
-<svg viewBox="0 0 136 144" width="136" height="144" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+<svg width="17ch" height="9em" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
     <style>
-        rect { shape-rendering: crispEdges; }
+        * {
+            font-family: Courier, monospace;
+            font-size: 14px;
+        }
         tspan, text {
-            dominant-baseline: text-before-edge;
-            alignment-baseline: text-before-edge;
+            font-variant-ligatures: none;
+            dominant-baseline: central;
             white-space: pre;
-            font: 14px Courier, monospace;
             fill: #bbbbbb;
         }
-        .u { text-decoration: underline; }
     </style>
-    <svg style="display: none">
-        <rect id="b4" width="8" height="16" stroke-width="0px" style="fill: #0000bb"/>
-    </svg>
     <rect width="100%" height="100%" x="0" y="0" style="fill: #000000"/>
-    <use xlink:href="#b4" x="0" y="80"/>
-    <use xlink:href="#b4" x="8" y="80"/>
-    <use xlink:href="#b4" x="16" y="80"/>
-    <use xlink:href="#b4" x="24" y="80"/>
-    <use xlink:href="#b4" x="32" y="80"/>
-    <use xlink:href="#b4" x="40" y="80"/>
-    <use xlink:href="#b4" x="48" y="80"/>
-    <use xlink:href="#b4" x="56" y="80"/>
-    <use xlink:href="#b4" x="64" y="80"/>
-    <text x="0" y="0"><tspan x="0" y="0" class="u">0</tspan><tspan x="8" y="0" class="u"> </tspan><tspan x="16" y="0" class="u"> </tspan><tspan x="24" y="0" class="u"> </tspan><tspan x="32" y="0" class="u"> </tspan><tspan x="40" y="0" class="u"> </tspan><tspan x="48" y="0" class="u"> </tspan><tspan x="56" y="0" class="u"> </tspan><tspan x="64" y="0" class="u">0</tspan></text>
-    <text x="0" y="16"><tspan x="0" y="16" class="u">1</tspan><tspan x="8" y="16" class="u"> </tspan><tspan x="16" y="16" class="u"> </tspan><tspan x="24" y="16" class="u"> </tspan><tspan x="32" y="16" class="u"> </tspan><tspan x="40" y="16" class="u"> </tspan><tspan x="48" y="16" class="u"> </tspan><tspan x="56" y="16" class="u"> </tspan><tspan x="64" y="16" class="u">1</tspan></text>
-    <text x="0" y="32"><tspan x="0" y="32" class="u">2</tspan><tspan x="8" y="32" class="u"> </tspan><tspan x="16" y="32" class="u"> </tspan><tspan x="24" y="32" class="u"> </tspan><tspan x="32" y="32" class="u"> </tspan><tspan x="40" y="32" class="u"> </tspan><tspan x="48" y="32" class="u"> </tspan><tspan x="56" y="32" class="u"> </tspan><tspan x="64" y="32" class="u">2</tspan></text>
-    <text x="0" y="48"><tspan x="0" y="48" class="u">3</tspan><tspan x="8" y="48" class="u"> </tspan><tspan x="16" y="48" class="u"> </tspan><tspan x="24" y="48" class="u"> </tspan><tspan x="32" y="48" class="u"> </tspan><tspan x="40" y="48" class="u"> </tspan><tspan x="48" y="48" class="u"> </tspan><tspan x="56" y="48" class="u"> </tspan><tspan x="64" y="48" class="u">3</tspan></text>
-    <text x="0" y="64"><tspan x="0" y="64" style="fill: #5555ff" class="u">4</tspan><tspan x="8" y="64" style="fill: #5555ff" class="u"> </tspan><tspan x="16" y="64" style="fill: #5555ff" class="u"> </tspan><tspan x="24" y="64" style="fill: #5555ff" class="u"> </tspan><tspan x="32" y="64" style="fill: #5555ff" class="u"> </tspan><tspan x="40" y="64" style="fill: #5555ff" class="u"> </tspan><tspan x="48" y="64" style="fill: #5555ff" class="u"> </tspan><tspan x="56" y="64" style="fill: #5555ff" class="u"> </tspan><tspan x="64" y="64" style="fill: #5555ff" class="u">4</tspan></text>
-    <text x="0" y="80"><tspan x="0" y="80" class="u">5</tspan><tspan x="8" y="80" class="u"> </tspan><tspan x="16" y="80" class="u"> </tspan><tspan x="24" y="80" class="u"> </tspan><tspan x="32" y="80" class="u"> </tspan><tspan x="40" y="80" class="u"> </tspan><tspan x="48" y="80" class="u"> </tspan><tspan x="56" y="80" class="u"> </tspan><tspan x="64" y="80" class="u">5</tspan></text>
-    <text x="0" y="96"><tspan x="0" y="96" class="u">6</tspan><tspan x="8" y="96" class="u"> </tspan><tspan x="16" y="96" class="u"> </tspan><tspan x="24" y="96" class="u"> </tspan><tspan x="32" y="96" class="u"> </tspan><tspan x="40" y="96" class="u"> </tspan><tspan x="48" y="96" class="u"> </tspan><tspan x="56" y="96" class="u"> </tspan><tspan x="64" y="96" class="u">6</tspan></text>
-    <text x="0" y="112"><tspan x="0" y="112" class="u">7</tspan><tspan x="8" y="112" class="u"> </tspan><tspan x="16" y="112" class="u"> </tspan><tspan x="24" y="112" class="u"> </tspan><tspan x="32" y="112" class="u"> </tspan><tspan x="40" y="112" class="u"> </tspan><tspan x="48" y="112" class="u"> </tspan><tspan x="56" y="112" class="u"> </tspan><tspan x="64" y="112" class="u">7</tspan></text>
-    <text x="0" y="128"><tspan x="0" y="128" class="u">8</tspan><tspan x="8" y="128" class="u"> </tspan><tspan x="16" y="128" class="u"> </tspan><tspan x="24" y="128" class="u"> </tspan><tspan x="32" y="128" class="u"> </tspan><tspan x="40" y="128" class="u"> </tspan><tspan x="48" y="128" class="u"> </tspan><tspan x="56" y="128" class="u"> </tspan><tspan x="64" y="128" class="u"> </tspan><tspan x="72" y="128" class="u"> </tspan><tspan x="80" y="128" class="u"> </tspan><tspan x="88" y="128" class="u"> </tspan><tspan x="96" y="128" class="u"> </tspan><tspan x="104" y="128" class="u"> </tspan><tspan x="112" y="128" class="u"> </tspan><tspan x="120" y="128" class="u"> </tspan><tspan x="128" y="128" class="u">8</tspan></text>
+<rect x="0ch" y="5em" width="9ch" height="1em" stroke-width="0.5px" stroke="#0000bb" style="fill:#0000bb"/>
+<text x="0" y="0.5em"><tspan text-decoration="underline">0       0</tspan></text>
+<text x="0" y="1.5em"><tspan text-decoration="underline">1       1</tspan></text>
+<text x="0" y="2.5em"><tspan text-decoration="underline">2       2</tspan></text>
+<text x="0" y="3.5em"><tspan text-decoration="underline">3       3</tspan></text>
+<text x="0" y="4.5em"><tspan style="fill:#5555ff" text-decoration="underline">4       4</tspan></text>
+<text x="0" y="5.5em"><tspan text-decoration="underline">5       5</tspan></text>
+<text x="0" y="6.5em"><tspan text-decoration="underline">6       6</tspan></text>
+<text x="0" y="7.5em"><tspan text-decoration="underline">7       7</tspan></text>
+<text x="0" y="8.5em"><tspan text-decoration="underline">8               8</tspan></text>
 </svg>
