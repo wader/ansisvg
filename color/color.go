@@ -25,30 +25,6 @@ func NewFromHex(s string) Color {
 	}
 }
 
-func (c Color) Add(o Color) Color {
-	clamp := func(n float32) float32 {
-		if n <= 0 {
-			return 0
-		} else if n > 1 {
-			return 1
-		}
-		return n
-	}
-	return Color{
-		R: clamp(c.R + o.R),
-		G: clamp(c.G + o.G),
-		B: clamp(c.B + o.B),
-	}
-}
-
-func (c Color) Hex() string {
-	return fmt.Sprintf("#%.2x%.2x%.2x",
-		int(c.R*255),
-		int(c.G*255),
-		int(c.B*255),
-	)
-}
-
 func (c Color) ANSITriple() string {
 	return fmt.Sprintf("%d:%d:%d",
 		int(c.R*255),
