@@ -104,9 +104,35 @@ func resolveColor(c string, lookup map[string]string) string {
 	return lookup[c]
 }
 
+func (s *Screen) charToFgText(c Char) textSpan {
+	var styles []string
+	deco := ""
+
+	if c.Foreground != "" {
+		styles = append(styles, "fill:"+resolveColor(c.Foreground, s.ForegroundColors))
+	}
+	if c.Intensity {
+		styles = append(styles, "font-weight:bold")
+	}
+	if c.Italic {
+		styles = append(styles, "font-style:italic")
+	}
+	if c.Underline {
+		deco = "underline"
+	} else if c.Strikethrough {
+		deco = "line-through"
+	}
+
+	return textSpan{
+		Style:      template.CSS(strings.Join(styles, ";")),
+		Decoration: template.CSS(deco),
+		Content:    c.Char,
+	}
+}
+
 // Convert a line into a textElement
 // fc gives textSpan for a single char
-func (s *Screen) lineToTextElement(l Line, fc func(Char) textSpan) textElement {
+func (s *Screen) lineToTextElement(l Line) textElement {
 	var t []textSpan
 	currentSpan := textSpan{
 		Style:      "",
@@ -121,7 +147,7 @@ func (s *Screen) lineToTextElement(l Line, fc func(Char) textSpan) textElement {
 		t = append(t, currentSpan)
 	}
 	for col, c := range l.Chars {
-		tempSpan := fc(c)
+		tempSpan := s.charToFgText(c)
 		if s.GridMode {
 			// If in grid mode, set X coordinate for each text span
 			tempSpan.X = s.columnCoordinate(col)
@@ -165,29 +191,43 @@ func (s *Screen) handleColorInversion() {
 	}
 }
 
-func (s *Screen) charToFgText(c Char) textSpan {
-	var styles []string
-	deco := ""
+func (s *Screen) setupBgRects() {
+	// Set up background rects
+	for y, l := range s.Lines {
+		type tmpRect struct {
+			x     int
+			w     int
+			color string
+		}
+		currentRect := tmpRect{x: 0, w: 0, color: ""}
 
-	if c.Foreground != "" {
-		styles = append(styles, "fill:"+resolveColor(c.Foreground, s.ForegroundColors))
-	}
-	if c.Intensity {
-		styles = append(styles, "font-weight:bold")
-	}
-	if c.Italic {
-		styles = append(styles, "font-style:italic")
-	}
-	if c.Underline {
-		deco = "underline"
-	} else if c.Strikethrough {
-		deco = "line-through"
-	}
+		appendRect := func() {
+			if currentRect.color == "" {
+				return
+			}
+			s.BgRects = append(s.BgRects, bgRect{
+				X:      s.columnCoordinate(currentRect.x),
+				Y:      s.rowCoordinate(float32(y)),
+				Width:  s.columnCoordinate(currentRect.w),
+				Height: s.rowCoordinate(1),
+				Color:  currentRect.color,
+			})
+		}
+		for x, c := range l.Chars {
+			if c.Background == "" || c.Background == s.BackgroundColor {
+				continue
+			}
+			newRect := tmpRect{x: x, w: 1, color: resolveColor(c.Background, s.BackgroundColors)}
 
-	return textSpan{
-		Style:      template.CSS(strings.Join(styles, ";")),
-		Decoration: template.CSS(deco),
-		Content:    c.Char,
+			if newRect.x != (currentRect.x+currentRect.w) || newRect.color != currentRect.color {
+				appendRect()
+				currentRect = newRect
+				continue
+			}
+
+			currentRect.w += 1
+		}
+		appendRect()
 	}
 }
 
@@ -202,25 +242,11 @@ func (s *Screen) Render(w io.Writer) error {
 	s.SvgHeight = s.rowCoordinate(float32(s.NrLines))
 
 	s.handleColorInversion()
-
-	// Set up background rects
-	for y, l := range s.Lines {
-		for x, c := range l.Chars {
-			if c.Background != "" && c.Background != s.BackgroundColor {
-				s.BgRects = append(s.BgRects, bgRect{
-					X:      s.columnCoordinate(x),
-					Y:      s.rowCoordinate(float32(y)),
-					Width:  s.columnCoordinate(1),
-					Height: s.rowCoordinate(1),
-					Color:  resolveColor(c.Background, s.BackgroundColors),
-				})
-			}
-		}
-	}
+	s.setupBgRects()
 
 	// Set up text elements
 	for _, l := range s.Lines {
-		fg := s.lineToTextElement(l, s.charToFgText)
+		fg := s.lineToTextElement(l)
 		if len(fg.TextSpans) > 0 {
 			s.TextElements = append(s.TextElements, fg)
 		}
