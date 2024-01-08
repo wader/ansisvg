@@ -41,25 +41,77 @@ type Env struct {
 }
 
 func Main(env Env) error {
-	fs := flag.NewFlagSet("ansisvg", flag.ExitOnError)
-	var versionFlag = fs.Bool("version", false, "Show version")
+	fs := flag.NewFlagSet("ansisvg", flag.ContinueOnError)
+	var versionFlag bool
+	fs.BoolVar(&versionFlag, "v", false, "")
+	fs.BoolVar(&versionFlag, "version", false, "Show version")
 	var fontNameFlag = fs.String("fontname", ansitosvg.DefaultOptions.FontName, "Font name")
 	var fontFileFlag = fs.String("fontfile", "", "Font file to use and embed")
-	var fontRefFlag = fs.String("fontref", "", "External font file to reference")
+	var fontRefFlag = fs.String("fontref", "", "External font URL to use")
 	var fontSizeFlag = fs.Int("fontsize", ansitosvg.DefaultOptions.FontSize, "Font size")
-	var terminalWidthFlag = fs.Int("width", 0, "Terminal width (auto)")
+	var terminalWidthFlag int
+	fs.IntVar(&terminalWidthFlag, "w", 0, "")
+	fs.IntVar(&terminalWidthFlag, "width", 0, "Terminal width (auto if not set)")
 	var colorSchemeFlag = fs.String("colorscheme", ansitosvg.DefaultOptions.ColorScheme, "Color scheme")
 	var listColorSchemesFlag = fs.Bool("listcolorschemes", false, "List color schemes")
 	var transparentFlag = fs.Bool("transparent", ansitosvg.DefaultOptions.Transparent, "Transparent background")
-	var gridModeFlag = fs.Bool("grid", false, "Enable grid mode (sets position for each character)")
-	var characterBoxSize = boxSize{
-		Width:  ansitosvg.DefaultOptions.CharacterBoxSize.Width,
-		Height: ansitosvg.DefaultOptions.CharacterBoxSize.Height,
+	var gridModeFlag = fs.Bool("grid", false, "Grid mode (sets position for each character)")
+	var helpFlag bool
+	fs.BoolVar(&helpFlag, "h", false, "")
+	fs.BoolVar(&helpFlag, "help", false, "Show help")
+	var charBoxSize = boxSize{
+		Width:  ansitosvg.DefaultOptions.CharBoxSize.Width,
+		Height: ansitosvg.DefaultOptions.CharBoxSize.Height,
 	}
-	fs.Var(&characterBoxSize, "charboxsize", "Character box size (forces pixel units instead of font-relative units)")
-	_ = fs.Parse(env.Args[1:])
+	fs.Var(&charBoxSize, "charboxsize", "Character box size (use pixel units instead of font units)")
+	// handle error and usage output ourself
+	fs.Usage = func() {}
+	fs.SetOutput(io.Discard)
+	longToShort := map[string]string{
+		"help":    "h",
+		"version": "v",
+		"width":   "w",
+	}
+	usage := func() {
+		maxNameLen := 0
+		fs.VisitAll(func(f *flag.Flag) {
+			if len(f.Name) > maxNameLen {
+				maxNameLen = len(f.Name)
+			}
+		})
 
-	if *versionFlag {
+		fmt.Fprintf(env.Stdout, `
+%[1]s - Convert ANSI to SVG
+Usage: %[1]s [FLAGS]
+
+Example usage:
+  program | %[1]s > file.svg
+
+`[1:], fs.Name())
+		fs.VisitAll(func(f *flag.Flag) {
+			if len(f.Name) == 1 {
+				return
+			}
+
+			short := ""
+			if s, ok := longToShort[f.Name]; ok {
+				short = ", -" + s
+			}
+
+			flagNames := f.Name + short
+			pad := strings.Repeat(" ", maxNameLen-len(flagNames))
+			fmt.Fprintf(env.Stdout, "--%s%s%s  %s\n", f.Name, short, pad, f.Usage)
+		})
+	}
+	if err := fs.Parse(env.Args[1:]); err != nil {
+		return err
+	}
+	if helpFlag {
+		usage()
+		return nil
+	}
+
+	if versionFlag {
 		fmt.Fprintln(env.Stdout, env.Version)
 		return nil
 	}
@@ -96,10 +148,10 @@ func Main(env Env) error {
 			FontEmbedded:  fontEmbedded,
 			FontRef:       *fontRefFlag,
 			FontSize:      *fontSizeFlag,
-			TerminalWidth: *terminalWidthFlag,
-			CharacterBoxSize: svgscreen.BoxSize{
-				Width:  characterBoxSize.Width,
-				Height: characterBoxSize.Height,
+			TerminalWidth: terminalWidthFlag,
+			CharBoxSize: svgscreen.BoxSize{
+				Width:  charBoxSize.Width,
+				Height: charBoxSize.Height,
 			},
 			ColorScheme: *colorSchemeFlag,
 			Transparent: *transparentFlag,
