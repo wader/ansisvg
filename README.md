@@ -104,13 +104,13 @@ WRITE_ACTUAL=1 go test ./...
 
 Visual inspect outputs in browser:
 ```
-for i in ansitosvg/testdata/*.ansi.svg; do echo "$i<br><img src=\"$i\"/><br>" ; done  > all.html
+for i in cli/testdata/*.ansi.svg; do echo "$i<br><img src=\"$i\"/><br>" ; done  > all.html
 open all.html
 ```
 
 Using [ffcat](https://github.com/wader/ffcat):
 ```
-for i in ansitosvg/testdata/*.ansi; do echo $i ; cat $i | go run main.go | ffcat ; done
+for i in cli/testdata/*.ansi; do echo $i ; cat $i | go run main.go | ffcat ; done
 ```
 
 ## Thanks

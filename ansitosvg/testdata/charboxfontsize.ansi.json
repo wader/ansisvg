@@ -1,9 +1,0 @@
-{
-    "FontSize": 40,
-    "FontName": "Arial",
-    "CharacterBoxSize": {
-        "Width": 50,
-        "Height": 50
-    },
-    "GridMode": true
-}
