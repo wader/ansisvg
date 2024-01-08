@@ -56,26 +56,30 @@ type bgRect struct {
 	Color  string
 }
 
+type SvgDom struct {
+	Width        string
+	Height       string
+	FontName     string
+	FontEmbedded []byte
+	FontRef      string
+	FontSize     int
+	BgRects      []bgRect
+	TextElements []textElement
+}
+
 type Screen struct {
 	Transparent      bool
 	ForegroundColor  string
 	ForegroundColors map[string]string
 	BackgroundColor  string
 	BackgroundColors map[string]string
-	FontName         string
-	FontEmbedded     []byte
-	FontRef          string
-	FontSize         int
 	CharacterBoxSize BoxSize
 	TerminalWidth    int
 	Columns          int
 	NrLines          int
 	Lines            []Line
-	TextElements     []textElement
-	BgRects          []bgRect
 	GridMode         bool
-	SvgWidth         string
-	SvgHeight        string
+	Dom              SvgDom
 }
 
 func (s *Screen) columnCoordinate(col int) string {
@@ -205,7 +209,7 @@ func (s *Screen) setupBgRects() {
 			if currentRect.color == "" {
 				return
 			}
-			s.BgRects = append(s.BgRects, bgRect{
+			s.Dom.BgRects = append(s.Dom.BgRects, bgRect{
 				X:      s.columnCoordinate(currentRect.x),
 				Y:      s.rowCoordinate(float32(y)),
 				Width:  s.columnCoordinate(currentRect.w),
@@ -238,8 +242,8 @@ func (s *Screen) Render(w io.Writer) error {
 	})
 
 	// Set SVG size
-	s.SvgWidth = s.columnCoordinate(s.TerminalWidth)
-	s.SvgHeight = s.rowCoordinate(float32(s.NrLines))
+	s.Dom.Width = s.columnCoordinate(s.TerminalWidth)
+	s.Dom.Height = s.rowCoordinate(float32(s.NrLines))
 
 	s.handleColorInversion()
 	s.setupBgRects()
@@ -248,7 +252,7 @@ func (s *Screen) Render(w io.Writer) error {
 	for _, l := range s.Lines {
 		fg := s.lineToTextElement(l)
 		if len(fg.TextSpans) > 0 {
-			s.TextElements = append(s.TextElements, fg)
+			s.Dom.TextElements = append(s.Dom.TextElements, fg)
 		}
 	}
 

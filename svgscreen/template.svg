@@ -7,22 +7,22 @@ so currently using <use> instead.
 xml:space="preserve" is used to forces some svg readers (ex inkscape) to not collapse
 whitespace only tspan:s preventing underline to be properly rendered.
 */ -}}
-<svg width="{{$.SvgWidth}}" height="{{$.SvgHeight}}" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+<svg width="{{$.Dom.Width}}" height="{{$.Dom.Height}}" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
     <style>
-        {{- if gt (len $.FontEmbedded) 0}}
+        {{- if gt (len $.Dom.FontEmbedded) 0}}
         @font-face {
-            font-family: {{$.FontName}};
-            src: url(data:;base64,{{- base64 $.FontEmbedded}});
+            font-family: {{$.Dom.FontName}};
+            src: url(data:;base64,{{- base64 $.Dom.FontEmbedded}});
         }
-        {{- else if ne $.FontRef ""}}
+        {{- else if ne $.Dom.FontRef ""}}
         @font-face {
-            font-family: {{$.FontName}};
-            src: url({{$.FontRef}});
+            font-family: {{$.Dom.FontName}};
+            src: url({{$.Dom.FontRef}});
         }
         {{- end}}
         * {
-            font-family: {{if $.FontName}}{{$.FontName}}, {{end}}monospace;
-            font-size: {{$.FontSize}}px;
+            font-family: {{if $.Dom.FontName}}{{$.Dom.FontName}}, {{end}}monospace;
+            font-size: {{$.Dom.FontSize}}px;
         }
         tspan, text {
             font-variant-ligatures: none;
@@ -34,10 +34,10 @@ whitespace only tspan:s preventing underline to be properly rendered.
 {{- if not .Transparent}}
     <rect width="100%" height="100%" x="0" y="0" style="fill: {{$.BackgroundColor}}"/>
 {{- end}}
-{{- range $ri, $r := .BgRects}}
+{{- range $ri, $r := .Dom.BgRects}}
 <rect x="{{$r.X}}" y="{{$r.Y}}" width="{{$r.Width}}" height="{{$r.Height}}" stroke-width="0.5px" stroke="{{$r.Color}}" style="fill:{{$r.Color}}"/>
 {{- end}}
-{{- range $li, $l := .TextElements}}
+{{- range $li, $l := .Dom.TextElements}}
 <text x="0" y="{{$l.Y}}">{{- range $si, $s := $l.TextSpans}}<tspan{{if ne $s.X ""}} x="{{ $s.X }}"{{end}}{{if ne $s.Style ""}} style="{{ $s.Style }}"{{end}}{{if ne $s.Decoration ""}} text-decoration="{{ $s.Decoration }}"{{end}}>{{$s.Content}}</tspan>{{- /* no new line */ -}}{{- end}}</text>
 {{- end}}
 </svg>

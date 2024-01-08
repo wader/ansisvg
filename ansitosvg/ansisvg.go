@@ -137,10 +137,12 @@ func Convert(r io.Reader, w io.Writer, opts Options) error {
 			"14": c.ANSIBrightCyan,
 			"15": c.ANSIBrightWhite,
 		},
-		FontName:     fontName,
-		FontEmbedded: opts.FontEmbedded,
-		FontRef:      opts.FontRef,
-		FontSize:     opts.FontSize,
+		Dom: svgscreen.SvgDom{
+			FontName:     fontName,
+			FontEmbedded: opts.FontEmbedded,
+			FontRef:      opts.FontRef,
+			FontSize:     opts.FontSize,
+		},
 		CharacterBoxSize: svgscreen.BoxSize{
 			Width:  opts.CharacterBoxSize.Width,
 			Height: opts.CharacterBoxSize.Height,
