@@ -10,10 +10,19 @@
             white-space: pre;
             fill: #bbbbbb;
         }
+        .bg {
+            stroke-width: "0.5px";
+        }
+        <!-- Background ANSI colors -->
+        .ba1 { stroke: #bb0000; fill: #bb0000; }
+        .ba3 { stroke: #bbbb00; fill: #bbbb00; }
+        <!-- Foreground ANSI colors -->
+        .fa1 { fill: #bb0000; }
+        .fa3 { fill: #bbbb00; }
     </style>
     <rect width="100%" height="100%" x="0" y="0" style="fill: #000000"/>
-<rect x="0ch" y="0em" width="5ch" height="1em" stroke-width="0.5px" stroke="#bb0000" style="fill:#bb0000"/>
-<rect x="5ch" y="0em" width="6ch" height="1em" stroke-width="0.5px" stroke="#bbbb00" style="fill:#bbbb00"/>
-<rect x="11ch" y="0em" width="5ch" height="1em" stroke-width="0.5px" stroke="#bb0000" style="fill:#bb0000"/>
-<text x="0" y="0.5em"><tspan style="fill:#bbbb00"> red </tspan><tspan style="fill:#bb0000">yellow</tspan><tspan style="fill:#bbbb00"> red </tspan></text>
+<rect x="0ch" y="0em" width="5ch" height="1em" class="bg ba1"/>
+<rect x="5ch" y="0em" width="6ch" height="1em" class="bg ba3"/>
+<rect x="11ch" y="0em" width="5ch" height="1em" class="bg ba1"/>
+<text x="0" y="0.5em"><tspan class="fa3"> red </tspan><tspan class="fa1">yellow</tspan><tspan class="fa3"> red </tspan></text>
 </svg>

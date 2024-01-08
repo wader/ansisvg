@@ -40,6 +40,7 @@ type textSpan struct {
 	X          string
 	Style      template.CSS
 	Decoration template.CSS
+	Color      string
 	Content    string
 }
 
@@ -57,22 +58,31 @@ type bgRect struct {
 }
 
 type SvgDom struct {
-	Width        string
-	Height       string
-	FontName     string
-	FontEmbedded []byte
-	FontRef      string
-	FontSize     int
-	BgRects      []bgRect
-	TextElements []textElement
+	Width          string
+	Height         string
+	FontName       string
+	FontEmbedded   []byte
+	FontRef        string
+	FontSize       int
+	FgCustomColors []string
+	BgCustomColors []string
+	BgRects        []bgRect
+	TextElements   []textElement
+}
+
+type ColorMap struct {
+	Default   string
+	Custom    map[string]int
+	ANSIUsed  [16]bool
+	DomPrefix string
 }
 
 type Screen struct {
-	Transparent      bool
-	ForegroundColor  string
-	ForegroundColors map[string]string
-	BackgroundColor  string
-	BackgroundColors map[string]string
+	Transparent bool
+	Foreground  ColorMap
+	Background  ColorMap
+	ANSIColors  [16]string
+
 	CharacterBoxSize BoxSize
 	TerminalWidth    int
 	Columns          int
@@ -101,20 +111,31 @@ func (s *Screen) rowCoordinate(row float32) string {
 }
 
 // Resolve color from string (either # prefixed hex value or index into lookup table)
-func resolveColor(c string, lookup map[string]string) string {
-	if strings.HasPrefix(c, "#") {
-		return c
+func (s *Screen) resolveColor(c string, cmap *ColorMap) string {
+	if c == "" || c == cmap.Default {
+		return ""
 	}
-	return lookup[c]
+
+	if !strings.HasPrefix(c, "#") {
+		// standard ANSI color
+		idx, _ := strconv.Atoi(c)
+		cmap.ANSIUsed[idx] = true
+		return cmap.DomPrefix + "a" + c
+	}
+	// custom color. update lookup table if necessary
+	colIdx, present := cmap.Custom[c]
+	if present {
+		return cmap.DomPrefix + "c" + strconv.Itoa(colIdx)
+	}
+	colIdx = len(cmap.Custom)
+	cmap.Custom[c] = colIdx
+	return cmap.DomPrefix + "c" + strconv.Itoa(colIdx)
 }
 
 func (s *Screen) charToFgText(c Char) textSpan {
 	var styles []string
 	deco := ""
 
-	if c.Foreground != "" {
-		styles = append(styles, "fill:"+resolveColor(c.Foreground, s.ForegroundColors))
-	}
 	if c.Intensity {
 		styles = append(styles, "font-weight:bold")
 	}
@@ -130,6 +151,7 @@ func (s *Screen) charToFgText(c Char) textSpan {
 	return textSpan{
 		Style:      template.CSS(strings.Join(styles, ";")),
 		Decoration: template.CSS(deco),
+		Color:      s.resolveColor(c.Foreground, &s.Foreground),
 		Content:    c.Char,
 	}
 }
@@ -157,7 +179,7 @@ func (s *Screen) lineToTextElement(l Line) textElement {
 			tempSpan.X = s.columnCoordinate(col)
 		}
 		// Consolidate tempSpan to currentSpan only if not in grid mode and both spans have same style
-		if s.GridMode || tempSpan.Style != currentSpan.Style || tempSpan.Decoration != currentSpan.Decoration {
+		if s.GridMode || tempSpan.Color != currentSpan.Color || tempSpan.Style != currentSpan.Style || tempSpan.Decoration != currentSpan.Decoration {
 			appendSpan()
 			currentSpan = tempSpan
 			continue
@@ -183,10 +205,10 @@ func (s *Screen) handleColorInversion() {
 			if c.Invert {
 				c.Background, c.Foreground = c.Foreground, c.Background
 				if c.Background == "" {
-					c.Background = s.ForegroundColor
+					c.Background = s.Foreground.Default
 				}
 				if c.Foreground == "" {
-					c.Foreground = s.BackgroundColor
+					c.Foreground = s.Background.Default
 				}
 				l.Chars[i] = c
 				c.Invert = false
@@ -218,10 +240,10 @@ func (s *Screen) setupBgRects() {
 			})
 		}
 		for x, c := range l.Chars {
-			if c.Background == "" || c.Background == s.BackgroundColor {
+			if c.Background == "" || c.Background == s.Background.Default {
 				continue
 			}
-			newRect := tmpRect{x: x, w: 1, color: resolveColor(c.Background, s.BackgroundColors)}
+			newRect := tmpRect{x: x, w: 1, color: s.resolveColor(c.Background, &s.Background)}
 
 			if newRect.x != (currentRect.x+currentRect.w) || newRect.color != currentRect.color {
 				appendRect()
@@ -235,11 +257,32 @@ func (s *Screen) setupBgRects() {
 	}
 }
 
+func setupCustomColors(revLookup map[string]int, clsTable *[]string) {
+	result := make([]string, len(revLookup))
+	for k, v := range revLookup {
+		result[v] = k
+	}
+	*clsTable = result
+}
+
 func (s *Screen) Render(w io.Writer) error {
 	t := template.New("")
 	t.Funcs(template.FuncMap{
 		"base64": func(bs []byte) string { return base64.RawStdEncoding.EncodeToString(bs) },
+		"anyColorUsed": func(arr [16]bool) bool {
+			for _, value := range arr {
+				if value {
+					return true
+				}
+			}
+			return false
+		},
 	})
+
+	s.Foreground.DomPrefix = "f"
+	s.Background.DomPrefix = "b"
+	s.Foreground.Custom = map[string]int{}
+	s.Background.Custom = map[string]int{}
 
 	// Set SVG size
 	s.Dom.Width = s.columnCoordinate(s.TerminalWidth)
@@ -255,6 +298,9 @@ func (s *Screen) Render(w io.Writer) error {
 			s.Dom.TextElements = append(s.Dom.TextElements, fg)
 		}
 	}
+
+	setupCustomColors(s.Foreground.Custom, &s.Dom.FgCustomColors)
+	setupCustomColors(s.Background.Custom, &s.Dom.BgCustomColors)
 
 	// Create SVG from template
 	t, err := t.Parse(templateSVG)

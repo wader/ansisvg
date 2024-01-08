@@ -28,16 +28,47 @@ whitespace only tspan:s preventing underline to be properly rendered.
             font-variant-ligatures: none;
             dominant-baseline: central;
             white-space: pre;{{/* draw underline even when whitespace */}}
-            fill: {{$.ForegroundColor}};
+            fill: {{$.Foreground.Default}};
         }
+        .bg {
+            stroke-width: "0.5px";
+        }
+{{- if anyColorUsed $.Background.ANSIUsed}}
+        <!-- Background ANSI colors -->
+{{- end}}
+{{- range $k, $v := $.ANSIColors -}}
+        {{- if index $.Background.ANSIUsed $k}}
+        .ba{{$k}} { stroke: {{$v}}; fill: {{$v}}; }
+        {{- end}}
+{{- end}}
+{{- if anyColorUsed $.Foreground.ANSIUsed}}
+        <!-- Foreground ANSI colors -->
+{{- end}}
+{{- range $k, $v := $.ANSIColors -}}
+        {{- if index $.Foreground.ANSIUsed $k}}
+        .fa{{$k}} { fill: {{$v}}; }
+        {{- end}}
+{{- end}}
+{{- if len $.Dom.BgCustomColors}}
+        <!-- Background custom colors -->
+{{- end}}
+{{- range $k, $v := $.Dom.BgCustomColors}}
+        .bc{{$k}} { stroke: {{$v}}; fill: {{$v}}; }
+{{- end}}
+{{- if len $.Dom.FgCustomColors }}
+        <!-- Foreground custom colors -->
+{{- end}}
+{{- range $k, $v := $.Dom.FgCustomColors}}
+        .fc{{$k}} { fill: {{$v}}; }
+{{- end}}
     </style>
 {{- if not .Transparent}}
-    <rect width="100%" height="100%" x="0" y="0" style="fill: {{$.BackgroundColor}}"/>
+    <rect width="100%" height="100%" x="0" y="0" style="fill: {{$.Background.Default}}"/>
 {{- end}}
 {{- range $ri, $r := .Dom.BgRects}}
-<rect x="{{$r.X}}" y="{{$r.Y}}" width="{{$r.Width}}" height="{{$r.Height}}" stroke-width="0.5px" stroke="{{$r.Color}}" style="fill:{{$r.Color}}"/>
+<rect x="{{$r.X}}" y="{{$r.Y}}" width="{{$r.Width}}" height="{{$r.Height}}" class="bg {{$r.Color}}"/>
 {{- end}}
 {{- range $li, $l := .Dom.TextElements}}
-<text x="0" y="{{$l.Y}}">{{- range $si, $s := $l.TextSpans}}<tspan{{if ne $s.X ""}} x="{{ $s.X }}"{{end}}{{if ne $s.Style ""}} style="{{ $s.Style }}"{{end}}{{if ne $s.Decoration ""}} text-decoration="{{ $s.Decoration }}"{{end}}>{{$s.Content}}</tspan>{{- /* no new line */ -}}{{- end}}</text>
+<text x="0" y="{{$l.Y}}">{{- range $si, $s := $l.TextSpans}}<tspan{{if ne $s.X ""}} x="{{ $s.X }}"{{end}}{{if ne $s.Color ""}} class="{{$s.Color}}"{{end}}{{if ne $s.Style ""}} style="{{ $s.Style }}"{{end}}{{if ne $s.Decoration ""}} text-decoration="{{ $s.Decoration }}"{{end}}>{{$s.Content}}</tspan>{{- /* no new line */ -}}{{- end}}</text>
 {{- end}}
 </svg>

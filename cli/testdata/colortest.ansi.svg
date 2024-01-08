@@ -10,169 +10,190 @@
             white-space: pre;
             fill: #bbbbbb;
         }
+        .bg {
+            stroke-width: "0.5px";
+        }
+        <!-- Background ANSI colors -->
+        .ba0 { stroke: #000000; fill: #000000; }
+        .ba1 { stroke: #bb0000; fill: #bb0000; }
+        .ba2 { stroke: #00bb00; fill: #00bb00; }
+        .ba3 { stroke: #bbbb00; fill: #bbbb00; }
+        .ba4 { stroke: #0000bb; fill: #0000bb; }
+        .ba5 { stroke: #bb00bb; fill: #bb00bb; }
+        .ba6 { stroke: #00bbbb; fill: #00bbbb; }
+        .ba7 { stroke: #bbbbbb; fill: #bbbbbb; }
+        <!-- Foreground ANSI colors -->
+        .fa0 { fill: #000000; }
+        .fa1 { fill: #bb0000; }
+        .fa2 { fill: #00bb00; }
+        .fa3 { fill: #bbbb00; }
+        .fa4 { fill: #0000bb; }
+        .fa5 { fill: #bb00bb; }
+        .fa6 { fill: #00bbbb; }
+        .fa7 { fill: #bbbbbb; }
     </style>
     <rect width="100%" height="100%" x="0" y="0" style="fill: #000000"/>
-<rect x="15ch" y="2em" width="7ch" height="1em" stroke-width="0.5px" stroke="#000000" style="fill:#000000"/>
-<rect x="23ch" y="2em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb0000" style="fill:#bb0000"/>
-<rect x="31ch" y="2em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bb00" style="fill:#00bb00"/>
-<rect x="39ch" y="2em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbb00" style="fill:#bbbb00"/>
-<rect x="47ch" y="2em" width="7ch" height="1em" stroke-width="0.5px" stroke="#0000bb" style="fill:#0000bb"/>
-<rect x="55ch" y="2em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb00bb" style="fill:#bb00bb"/>
-<rect x="63ch" y="2em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bbbb" style="fill:#00bbbb"/>
-<rect x="71ch" y="2em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbbbb" style="fill:#bbbbbb"/>
-<rect x="15ch" y="3em" width="7ch" height="1em" stroke-width="0.5px" stroke="#000000" style="fill:#000000"/>
-<rect x="23ch" y="3em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb0000" style="fill:#bb0000"/>
-<rect x="31ch" y="3em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bb00" style="fill:#00bb00"/>
-<rect x="39ch" y="3em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbb00" style="fill:#bbbb00"/>
-<rect x="47ch" y="3em" width="7ch" height="1em" stroke-width="0.5px" stroke="#0000bb" style="fill:#0000bb"/>
-<rect x="55ch" y="3em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb00bb" style="fill:#bb00bb"/>
-<rect x="63ch" y="3em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bbbb" style="fill:#00bbbb"/>
-<rect x="71ch" y="3em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbbbb" style="fill:#bbbbbb"/>
-<rect x="15ch" y="4em" width="7ch" height="1em" stroke-width="0.5px" stroke="#000000" style="fill:#000000"/>
-<rect x="23ch" y="4em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb0000" style="fill:#bb0000"/>
-<rect x="31ch" y="4em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bb00" style="fill:#00bb00"/>
-<rect x="39ch" y="4em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbb00" style="fill:#bbbb00"/>
-<rect x="47ch" y="4em" width="7ch" height="1em" stroke-width="0.5px" stroke="#0000bb" style="fill:#0000bb"/>
-<rect x="55ch" y="4em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb00bb" style="fill:#bb00bb"/>
-<rect x="63ch" y="4em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bbbb" style="fill:#00bbbb"/>
-<rect x="71ch" y="4em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbbbb" style="fill:#bbbbbb"/>
-<rect x="15ch" y="5em" width="7ch" height="1em" stroke-width="0.5px" stroke="#000000" style="fill:#000000"/>
-<rect x="23ch" y="5em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb0000" style="fill:#bb0000"/>
-<rect x="31ch" y="5em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bb00" style="fill:#00bb00"/>
-<rect x="39ch" y="5em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbb00" style="fill:#bbbb00"/>
-<rect x="47ch" y="5em" width="7ch" height="1em" stroke-width="0.5px" stroke="#0000bb" style="fill:#0000bb"/>
-<rect x="55ch" y="5em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb00bb" style="fill:#bb00bb"/>
-<rect x="63ch" y="5em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bbbb" style="fill:#00bbbb"/>
-<rect x="71ch" y="5em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbbbb" style="fill:#bbbbbb"/>
-<rect x="15ch" y="6em" width="7ch" height="1em" stroke-width="0.5px" stroke="#000000" style="fill:#000000"/>
-<rect x="23ch" y="6em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb0000" style="fill:#bb0000"/>
-<rect x="31ch" y="6em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bb00" style="fill:#00bb00"/>
-<rect x="39ch" y="6em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbb00" style="fill:#bbbb00"/>
-<rect x="47ch" y="6em" width="7ch" height="1em" stroke-width="0.5px" stroke="#0000bb" style="fill:#0000bb"/>
-<rect x="55ch" y="6em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb00bb" style="fill:#bb00bb"/>
-<rect x="63ch" y="6em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bbbb" style="fill:#00bbbb"/>
-<rect x="71ch" y="6em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbbbb" style="fill:#bbbbbb"/>
-<rect x="15ch" y="7em" width="7ch" height="1em" stroke-width="0.5px" stroke="#000000" style="fill:#000000"/>
-<rect x="23ch" y="7em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb0000" style="fill:#bb0000"/>
-<rect x="31ch" y="7em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bb00" style="fill:#00bb00"/>
-<rect x="39ch" y="7em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbb00" style="fill:#bbbb00"/>
-<rect x="47ch" y="7em" width="7ch" height="1em" stroke-width="0.5px" stroke="#0000bb" style="fill:#0000bb"/>
-<rect x="55ch" y="7em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb00bb" style="fill:#bb00bb"/>
-<rect x="63ch" y="7em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bbbb" style="fill:#00bbbb"/>
-<rect x="71ch" y="7em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbbbb" style="fill:#bbbbbb"/>
-<rect x="15ch" y="8em" width="7ch" height="1em" stroke-width="0.5px" stroke="#000000" style="fill:#000000"/>
-<rect x="23ch" y="8em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb0000" style="fill:#bb0000"/>
-<rect x="31ch" y="8em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bb00" style="fill:#00bb00"/>
-<rect x="39ch" y="8em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbb00" style="fill:#bbbb00"/>
-<rect x="47ch" y="8em" width="7ch" height="1em" stroke-width="0.5px" stroke="#0000bb" style="fill:#0000bb"/>
-<rect x="55ch" y="8em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb00bb" style="fill:#bb00bb"/>
-<rect x="63ch" y="8em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bbbb" style="fill:#00bbbb"/>
-<rect x="71ch" y="8em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbbbb" style="fill:#bbbbbb"/>
-<rect x="15ch" y="9em" width="7ch" height="1em" stroke-width="0.5px" stroke="#000000" style="fill:#000000"/>
-<rect x="23ch" y="9em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb0000" style="fill:#bb0000"/>
-<rect x="31ch" y="9em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bb00" style="fill:#00bb00"/>
-<rect x="39ch" y="9em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbb00" style="fill:#bbbb00"/>
-<rect x="47ch" y="9em" width="7ch" height="1em" stroke-width="0.5px" stroke="#0000bb" style="fill:#0000bb"/>
-<rect x="55ch" y="9em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb00bb" style="fill:#bb00bb"/>
-<rect x="63ch" y="9em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bbbb" style="fill:#00bbbb"/>
-<rect x="71ch" y="9em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbbbb" style="fill:#bbbbbb"/>
-<rect x="15ch" y="10em" width="7ch" height="1em" stroke-width="0.5px" stroke="#000000" style="fill:#000000"/>
-<rect x="23ch" y="10em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb0000" style="fill:#bb0000"/>
-<rect x="31ch" y="10em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bb00" style="fill:#00bb00"/>
-<rect x="39ch" y="10em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbb00" style="fill:#bbbb00"/>
-<rect x="47ch" y="10em" width="7ch" height="1em" stroke-width="0.5px" stroke="#0000bb" style="fill:#0000bb"/>
-<rect x="55ch" y="10em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb00bb" style="fill:#bb00bb"/>
-<rect x="63ch" y="10em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bbbb" style="fill:#00bbbb"/>
-<rect x="71ch" y="10em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbbbb" style="fill:#bbbbbb"/>
-<rect x="15ch" y="11em" width="7ch" height="1em" stroke-width="0.5px" stroke="#000000" style="fill:#000000"/>
-<rect x="23ch" y="11em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb0000" style="fill:#bb0000"/>
-<rect x="31ch" y="11em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bb00" style="fill:#00bb00"/>
-<rect x="39ch" y="11em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbb00" style="fill:#bbbb00"/>
-<rect x="47ch" y="11em" width="7ch" height="1em" stroke-width="0.5px" stroke="#0000bb" style="fill:#0000bb"/>
-<rect x="55ch" y="11em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb00bb" style="fill:#bb00bb"/>
-<rect x="63ch" y="11em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bbbb" style="fill:#00bbbb"/>
-<rect x="71ch" y="11em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbbbb" style="fill:#bbbbbb"/>
-<rect x="15ch" y="12em" width="7ch" height="1em" stroke-width="0.5px" stroke="#000000" style="fill:#000000"/>
-<rect x="23ch" y="12em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb0000" style="fill:#bb0000"/>
-<rect x="31ch" y="12em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bb00" style="fill:#00bb00"/>
-<rect x="39ch" y="12em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbb00" style="fill:#bbbb00"/>
-<rect x="47ch" y="12em" width="7ch" height="1em" stroke-width="0.5px" stroke="#0000bb" style="fill:#0000bb"/>
-<rect x="55ch" y="12em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb00bb" style="fill:#bb00bb"/>
-<rect x="63ch" y="12em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bbbb" style="fill:#00bbbb"/>
-<rect x="71ch" y="12em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbbbb" style="fill:#bbbbbb"/>
-<rect x="15ch" y="13em" width="7ch" height="1em" stroke-width="0.5px" stroke="#000000" style="fill:#000000"/>
-<rect x="23ch" y="13em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb0000" style="fill:#bb0000"/>
-<rect x="31ch" y="13em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bb00" style="fill:#00bb00"/>
-<rect x="39ch" y="13em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbb00" style="fill:#bbbb00"/>
-<rect x="47ch" y="13em" width="7ch" height="1em" stroke-width="0.5px" stroke="#0000bb" style="fill:#0000bb"/>
-<rect x="55ch" y="13em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb00bb" style="fill:#bb00bb"/>
-<rect x="63ch" y="13em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bbbb" style="fill:#00bbbb"/>
-<rect x="71ch" y="13em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbbbb" style="fill:#bbbbbb"/>
-<rect x="15ch" y="14em" width="7ch" height="1em" stroke-width="0.5px" stroke="#000000" style="fill:#000000"/>
-<rect x="23ch" y="14em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb0000" style="fill:#bb0000"/>
-<rect x="31ch" y="14em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bb00" style="fill:#00bb00"/>
-<rect x="39ch" y="14em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbb00" style="fill:#bbbb00"/>
-<rect x="47ch" y="14em" width="7ch" height="1em" stroke-width="0.5px" stroke="#0000bb" style="fill:#0000bb"/>
-<rect x="55ch" y="14em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb00bb" style="fill:#bb00bb"/>
-<rect x="63ch" y="14em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bbbb" style="fill:#00bbbb"/>
-<rect x="71ch" y="14em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbbbb" style="fill:#bbbbbb"/>
-<rect x="15ch" y="15em" width="7ch" height="1em" stroke-width="0.5px" stroke="#000000" style="fill:#000000"/>
-<rect x="23ch" y="15em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb0000" style="fill:#bb0000"/>
-<rect x="31ch" y="15em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bb00" style="fill:#00bb00"/>
-<rect x="39ch" y="15em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbb00" style="fill:#bbbb00"/>
-<rect x="47ch" y="15em" width="7ch" height="1em" stroke-width="0.5px" stroke="#0000bb" style="fill:#0000bb"/>
-<rect x="55ch" y="15em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb00bb" style="fill:#bb00bb"/>
-<rect x="63ch" y="15em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bbbb" style="fill:#00bbbb"/>
-<rect x="71ch" y="15em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbbbb" style="fill:#bbbbbb"/>
-<rect x="15ch" y="16em" width="7ch" height="1em" stroke-width="0.5px" stroke="#000000" style="fill:#000000"/>
-<rect x="23ch" y="16em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb0000" style="fill:#bb0000"/>
-<rect x="31ch" y="16em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bb00" style="fill:#00bb00"/>
-<rect x="39ch" y="16em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbb00" style="fill:#bbbb00"/>
-<rect x="47ch" y="16em" width="7ch" height="1em" stroke-width="0.5px" stroke="#0000bb" style="fill:#0000bb"/>
-<rect x="55ch" y="16em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb00bb" style="fill:#bb00bb"/>
-<rect x="63ch" y="16em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bbbb" style="fill:#00bbbb"/>
-<rect x="71ch" y="16em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbbbb" style="fill:#bbbbbb"/>
-<rect x="15ch" y="17em" width="7ch" height="1em" stroke-width="0.5px" stroke="#000000" style="fill:#000000"/>
-<rect x="23ch" y="17em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb0000" style="fill:#bb0000"/>
-<rect x="31ch" y="17em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bb00" style="fill:#00bb00"/>
-<rect x="39ch" y="17em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbb00" style="fill:#bbbb00"/>
-<rect x="47ch" y="17em" width="7ch" height="1em" stroke-width="0.5px" stroke="#0000bb" style="fill:#0000bb"/>
-<rect x="55ch" y="17em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb00bb" style="fill:#bb00bb"/>
-<rect x="63ch" y="17em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bbbb" style="fill:#00bbbb"/>
-<rect x="71ch" y="17em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbbbb" style="fill:#bbbbbb"/>
-<rect x="15ch" y="18em" width="7ch" height="1em" stroke-width="0.5px" stroke="#000000" style="fill:#000000"/>
-<rect x="23ch" y="18em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb0000" style="fill:#bb0000"/>
-<rect x="31ch" y="18em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bb00" style="fill:#00bb00"/>
-<rect x="39ch" y="18em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbb00" style="fill:#bbbb00"/>
-<rect x="47ch" y="18em" width="7ch" height="1em" stroke-width="0.5px" stroke="#0000bb" style="fill:#0000bb"/>
-<rect x="55ch" y="18em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb00bb" style="fill:#bb00bb"/>
-<rect x="63ch" y="18em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bbbb" style="fill:#00bbbb"/>
-<rect x="71ch" y="18em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbbbb" style="fill:#bbbbbb"/>
-<rect x="15ch" y="19em" width="7ch" height="1em" stroke-width="0.5px" stroke="#000000" style="fill:#000000"/>
-<rect x="23ch" y="19em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb0000" style="fill:#bb0000"/>
-<rect x="31ch" y="19em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bb00" style="fill:#00bb00"/>
-<rect x="39ch" y="19em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbb00" style="fill:#bbbb00"/>
-<rect x="47ch" y="19em" width="7ch" height="1em" stroke-width="0.5px" stroke="#0000bb" style="fill:#0000bb"/>
-<rect x="55ch" y="19em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bb00bb" style="fill:#bb00bb"/>
-<rect x="63ch" y="19em" width="7ch" height="1em" stroke-width="0.5px" stroke="#00bbbb" style="fill:#00bbbb"/>
-<rect x="71ch" y="19em" width="7ch" height="1em" stroke-width="0.5px" stroke="#bbbbbb" style="fill:#bbbbbb"/>
+<rect x="15ch" y="2em" width="7ch" height="1em" class="bg ba0"/>
+<rect x="23ch" y="2em" width="7ch" height="1em" class="bg ba1"/>
+<rect x="31ch" y="2em" width="7ch" height="1em" class="bg ba2"/>
+<rect x="39ch" y="2em" width="7ch" height="1em" class="bg ba3"/>
+<rect x="47ch" y="2em" width="7ch" height="1em" class="bg ba4"/>
+<rect x="55ch" y="2em" width="7ch" height="1em" class="bg ba5"/>
+<rect x="63ch" y="2em" width="7ch" height="1em" class="bg ba6"/>
+<rect x="71ch" y="2em" width="7ch" height="1em" class="bg ba7"/>
+<rect x="15ch" y="3em" width="7ch" height="1em" class="bg ba0"/>
+<rect x="23ch" y="3em" width="7ch" height="1em" class="bg ba1"/>
+<rect x="31ch" y="3em" width="7ch" height="1em" class="bg ba2"/>
+<rect x="39ch" y="3em" width="7ch" height="1em" class="bg ba3"/>
+<rect x="47ch" y="3em" width="7ch" height="1em" class="bg ba4"/>
+<rect x="55ch" y="3em" width="7ch" height="1em" class="bg ba5"/>
+<rect x="63ch" y="3em" width="7ch" height="1em" class="bg ba6"/>
+<rect x="71ch" y="3em" width="7ch" height="1em" class="bg ba7"/>
+<rect x="15ch" y="4em" width="7ch" height="1em" class="bg ba0"/>
+<rect x="23ch" y="4em" width="7ch" height="1em" class="bg ba1"/>
+<rect x="31ch" y="4em" width="7ch" height="1em" class="bg ba2"/>
+<rect x="39ch" y="4em" width="7ch" height="1em" class="bg ba3"/>
+<rect x="47ch" y="4em" width="7ch" height="1em" class="bg ba4"/>
+<rect x="55ch" y="4em" width="7ch" height="1em" class="bg ba5"/>
+<rect x="63ch" y="4em" width="7ch" height="1em" class="bg ba6"/>
+<rect x="71ch" y="4em" width="7ch" height="1em" class="bg ba7"/>
+<rect x="15ch" y="5em" width="7ch" height="1em" class="bg ba0"/>
+<rect x="23ch" y="5em" width="7ch" height="1em" class="bg ba1"/>
+<rect x="31ch" y="5em" width="7ch" height="1em" class="bg ba2"/>
+<rect x="39ch" y="5em" width="7ch" height="1em" class="bg ba3"/>
+<rect x="47ch" y="5em" width="7ch" height="1em" class="bg ba4"/>
+<rect x="55ch" y="5em" width="7ch" height="1em" class="bg ba5"/>
+<rect x="63ch" y="5em" width="7ch" height="1em" class="bg ba6"/>
+<rect x="71ch" y="5em" width="7ch" height="1em" class="bg ba7"/>
+<rect x="15ch" y="6em" width="7ch" height="1em" class="bg ba0"/>
+<rect x="23ch" y="6em" width="7ch" height="1em" class="bg ba1"/>
+<rect x="31ch" y="6em" width="7ch" height="1em" class="bg ba2"/>
+<rect x="39ch" y="6em" width="7ch" height="1em" class="bg ba3"/>
+<rect x="47ch" y="6em" width="7ch" height="1em" class="bg ba4"/>
+<rect x="55ch" y="6em" width="7ch" height="1em" class="bg ba5"/>
+<rect x="63ch" y="6em" width="7ch" height="1em" class="bg ba6"/>
+<rect x="71ch" y="6em" width="7ch" height="1em" class="bg ba7"/>
+<rect x="15ch" y="7em" width="7ch" height="1em" class="bg ba0"/>
+<rect x="23ch" y="7em" width="7ch" height="1em" class="bg ba1"/>
+<rect x="31ch" y="7em" width="7ch" height="1em" class="bg ba2"/>
+<rect x="39ch" y="7em" width="7ch" height="1em" class="bg ba3"/>
+<rect x="47ch" y="7em" width="7ch" height="1em" class="bg ba4"/>
+<rect x="55ch" y="7em" width="7ch" height="1em" class="bg ba5"/>
+<rect x="63ch" y="7em" width="7ch" height="1em" class="bg ba6"/>
+<rect x="71ch" y="7em" width="7ch" height="1em" class="bg ba7"/>
+<rect x="15ch" y="8em" width="7ch" height="1em" class="bg ba0"/>
+<rect x="23ch" y="8em" width="7ch" height="1em" class="bg ba1"/>
+<rect x="31ch" y="8em" width="7ch" height="1em" class="bg ba2"/>
+<rect x="39ch" y="8em" width="7ch" height="1em" class="bg ba3"/>
+<rect x="47ch" y="8em" width="7ch" height="1em" class="bg ba4"/>
+<rect x="55ch" y="8em" width="7ch" height="1em" class="bg ba5"/>
+<rect x="63ch" y="8em" width="7ch" height="1em" class="bg ba6"/>
+<rect x="71ch" y="8em" width="7ch" height="1em" class="bg ba7"/>
+<rect x="15ch" y="9em" width="7ch" height="1em" class="bg ba0"/>
+<rect x="23ch" y="9em" width="7ch" height="1em" class="bg ba1"/>
+<rect x="31ch" y="9em" width="7ch" height="1em" class="bg ba2"/>
+<rect x="39ch" y="9em" width="7ch" height="1em" class="bg ba3"/>
+<rect x="47ch" y="9em" width="7ch" height="1em" class="bg ba4"/>
+<rect x="55ch" y="9em" width="7ch" height="1em" class="bg ba5"/>
+<rect x="63ch" y="9em" width="7ch" height="1em" class="bg ba6"/>
+<rect x="71ch" y="9em" width="7ch" height="1em" class="bg ba7"/>
+<rect x="15ch" y="10em" width="7ch" height="1em" class="bg ba0"/>
+<rect x="23ch" y="10em" width="7ch" height="1em" class="bg ba1"/>
+<rect x="31ch" y="10em" width="7ch" height="1em" class="bg ba2"/>
+<rect x="39ch" y="10em" width="7ch" height="1em" class="bg ba3"/>
+<rect x="47ch" y="10em" width="7ch" height="1em" class="bg ba4"/>
+<rect x="55ch" y="10em" width="7ch" height="1em" class="bg ba5"/>
+<rect x="63ch" y="10em" width="7ch" height="1em" class="bg ba6"/>
+<rect x="71ch" y="10em" width="7ch" height="1em" class="bg ba7"/>
+<rect x="15ch" y="11em" width="7ch" height="1em" class="bg ba0"/>
+<rect x="23ch" y="11em" width="7ch" height="1em" class="bg ba1"/>
+<rect x="31ch" y="11em" width="7ch" height="1em" class="bg ba2"/>
+<rect x="39ch" y="11em" width="7ch" height="1em" class="bg ba3"/>
+<rect x="47ch" y="11em" width="7ch" height="1em" class="bg ba4"/>
+<rect x="55ch" y="11em" width="7ch" height="1em" class="bg ba5"/>
+<rect x="63ch" y="11em" width="7ch" height="1em" class="bg ba6"/>
+<rect x="71ch" y="11em" width="7ch" height="1em" class="bg ba7"/>
+<rect x="15ch" y="12em" width="7ch" height="1em" class="bg ba0"/>
+<rect x="23ch" y="12em" width="7ch" height="1em" class="bg ba1"/>
+<rect x="31ch" y="12em" width="7ch" height="1em" class="bg ba2"/>
+<rect x="39ch" y="12em" width="7ch" height="1em" class="bg ba3"/>
+<rect x="47ch" y="12em" width="7ch" height="1em" class="bg ba4"/>
+<rect x="55ch" y="12em" width="7ch" height="1em" class="bg ba5"/>
+<rect x="63ch" y="12em" width="7ch" height="1em" class="bg ba6"/>
+<rect x="71ch" y="12em" width="7ch" height="1em" class="bg ba7"/>
+<rect x="15ch" y="13em" width="7ch" height="1em" class="bg ba0"/>
+<rect x="23ch" y="13em" width="7ch" height="1em" class="bg ba1"/>
+<rect x="31ch" y="13em" width="7ch" height="1em" class="bg ba2"/>
+<rect x="39ch" y="13em" width="7ch" height="1em" class="bg ba3"/>
+<rect x="47ch" y="13em" width="7ch" height="1em" class="bg ba4"/>
+<rect x="55ch" y="13em" width="7ch" height="1em" class="bg ba5"/>
+<rect x="63ch" y="13em" width="7ch" height="1em" class="bg ba6"/>
+<rect x="71ch" y="13em" width="7ch" height="1em" class="bg ba7"/>
+<rect x="15ch" y="14em" width="7ch" height="1em" class="bg ba0"/>
+<rect x="23ch" y="14em" width="7ch" height="1em" class="bg ba1"/>
+<rect x="31ch" y="14em" width="7ch" height="1em" class="bg ba2"/>
+<rect x="39ch" y="14em" width="7ch" height="1em" class="bg ba3"/>
+<rect x="47ch" y="14em" width="7ch" height="1em" class="bg ba4"/>
+<rect x="55ch" y="14em" width="7ch" height="1em" class="bg ba5"/>
+<rect x="63ch" y="14em" width="7ch" height="1em" class="bg ba6"/>
+<rect x="71ch" y="14em" width="7ch" height="1em" class="bg ba7"/>
+<rect x="15ch" y="15em" width="7ch" height="1em" class="bg ba0"/>
+<rect x="23ch" y="15em" width="7ch" height="1em" class="bg ba1"/>
+<rect x="31ch" y="15em" width="7ch" height="1em" class="bg ba2"/>
+<rect x="39ch" y="15em" width="7ch" height="1em" class="bg ba3"/>
+<rect x="47ch" y="15em" width="7ch" height="1em" class="bg ba4"/>
+<rect x="55ch" y="15em" width="7ch" height="1em" class="bg ba5"/>
+<rect x="63ch" y="15em" width="7ch" height="1em" class="bg ba6"/>
+<rect x="71ch" y="15em" width="7ch" height="1em" class="bg ba7"/>
+<rect x="15ch" y="16em" width="7ch" height="1em" class="bg ba0"/>
+<rect x="23ch" y="16em" width="7ch" height="1em" class="bg ba1"/>
+<rect x="31ch" y="16em" width="7ch" height="1em" class="bg ba2"/>
+<rect x="39ch" y="16em" width="7ch" height="1em" class="bg ba3"/>
+<rect x="47ch" y="16em" width="7ch" height="1em" class="bg ba4"/>
+<rect x="55ch" y="16em" width="7ch" height="1em" class="bg ba5"/>
+<rect x="63ch" y="16em" width="7ch" height="1em" class="bg ba6"/>
+<rect x="71ch" y="16em" width="7ch" height="1em" class="bg ba7"/>
+<rect x="15ch" y="17em" width="7ch" height="1em" class="bg ba0"/>
+<rect x="23ch" y="17em" width="7ch" height="1em" class="bg ba1"/>
+<rect x="31ch" y="17em" width="7ch" height="1em" class="bg ba2"/>
+<rect x="39ch" y="17em" width="7ch" height="1em" class="bg ba3"/>
+<rect x="47ch" y="17em" width="7ch" height="1em" class="bg ba4"/>
+<rect x="55ch" y="17em" width="7ch" height="1em" class="bg ba5"/>
+<rect x="63ch" y="17em" width="7ch" height="1em" class="bg ba6"/>
+<rect x="71ch" y="17em" width="7ch" height="1em" class="bg ba7"/>
+<rect x="15ch" y="18em" width="7ch" height="1em" class="bg ba0"/>
+<rect x="23ch" y="18em" width="7ch" height="1em" class="bg ba1"/>
+<rect x="31ch" y="18em" width="7ch" height="1em" class="bg ba2"/>
+<rect x="39ch" y="18em" width="7ch" height="1em" class="bg ba3"/>
+<rect x="47ch" y="18em" width="7ch" height="1em" class="bg ba4"/>
+<rect x="55ch" y="18em" width="7ch" height="1em" class="bg ba5"/>
+<rect x="63ch" y="18em" width="7ch" height="1em" class="bg ba6"/>
+<rect x="71ch" y="18em" width="7ch" height="1em" class="bg ba7"/>
+<rect x="15ch" y="19em" width="7ch" height="1em" class="bg ba0"/>
+<rect x="23ch" y="19em" width="7ch" height="1em" class="bg ba1"/>
+<rect x="31ch" y="19em" width="7ch" height="1em" class="bg ba2"/>
+<rect x="39ch" y="19em" width="7ch" height="1em" class="bg ba3"/>
+<rect x="47ch" y="19em" width="7ch" height="1em" class="bg ba4"/>
+<rect x="55ch" y="19em" width="7ch" height="1em" class="bg ba5"/>
+<rect x="63ch" y="19em" width="7ch" height="1em" class="bg ba6"/>
+<rect x="71ch" y="19em" width="7ch" height="1em" class="bg ba7"/>
 <text x="0" y="1.5em"><tspan>                 40m     41m     42m     43m     44m     45m     46m     47m</tspan></text>
 <text x="0" y="2.5em"><tspan>     m   gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
 <text x="0" y="3.5em"><tspan>    1m </tspan><tspan style="font-weight:bold">  gYw     gYw  </tspan><tspan> </tspan><tspan style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="font-weight:bold">  gYw  </tspan></text>
-<text x="0" y="4.5em"><tspan>   30m </tspan><tspan style="fill:#000000">  gYw     gYw  </tspan><tspan> </tspan><tspan style="fill:#000000">  gYw  </tspan><tspan> </tspan><tspan style="fill:#000000">  gYw  </tspan><tspan> </tspan><tspan style="fill:#000000">  gYw  </tspan><tspan> </tspan><tspan style="fill:#000000">  gYw  </tspan><tspan> </tspan><tspan style="fill:#000000">  gYw  </tspan><tspan> </tspan><tspan style="fill:#000000">  gYw  </tspan><tspan> </tspan><tspan style="fill:#000000">  gYw  </tspan></text>
-<text x="0" y="5.5em"><tspan> 1;30m </tspan><tspan style="fill:#000000;font-weight:bold">  gYw     gYw  </tspan><tspan> </tspan><tspan style="fill:#000000;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#000000;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#000000;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#000000;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#000000;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#000000;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#000000;font-weight:bold">  gYw  </tspan></text>
-<text x="0" y="6.5em"><tspan>   31m </tspan><tspan style="fill:#bb0000">  gYw     gYw  </tspan><tspan> </tspan><tspan style="fill:#bb0000">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bb0000">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bb0000">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bb0000">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bb0000">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bb0000">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bb0000">  gYw  </tspan></text>
-<text x="0" y="7.5em"><tspan> 1;31m </tspan><tspan style="fill:#bb0000;font-weight:bold">  gYw     gYw  </tspan><tspan> </tspan><tspan style="fill:#bb0000;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bb0000;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bb0000;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bb0000;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bb0000;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bb0000;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bb0000;font-weight:bold">  gYw  </tspan></text>
-<text x="0" y="8.5em"><tspan>   32m </tspan><tspan style="fill:#00bb00">  gYw     gYw  </tspan><tspan> </tspan><tspan style="fill:#00bb00">  gYw  </tspan><tspan> </tspan><tspan style="fill:#00bb00">  gYw  </tspan><tspan> </tspan><tspan style="fill:#00bb00">  gYw  </tspan><tspan> </tspan><tspan style="fill:#00bb00">  gYw  </tspan><tspan> </tspan><tspan style="fill:#00bb00">  gYw  </tspan><tspan> </tspan><tspan style="fill:#00bb00">  gYw  </tspan><tspan> </tspan><tspan style="fill:#00bb00">  gYw  </tspan></text>
-<text x="0" y="9.5em"><tspan> 1;32m </tspan><tspan style="fill:#00bb00;font-weight:bold">  gYw     gYw  </tspan><tspan> </tspan><tspan style="fill:#00bb00;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#00bb00;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#00bb00;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#00bb00;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#00bb00;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#00bb00;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#00bb00;font-weight:bold">  gYw  </tspan></text>
-<text x="0" y="10.5em"><tspan>   33m </tspan><tspan style="fill:#bbbb00">  gYw     gYw  </tspan><tspan> </tspan><tspan style="fill:#bbbb00">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bbbb00">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bbbb00">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bbbb00">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bbbb00">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bbbb00">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bbbb00">  gYw  </tspan></text>
-<text x="0" y="11.5em"><tspan> 1;33m </tspan><tspan style="fill:#bbbb00;font-weight:bold">  gYw     gYw  </tspan><tspan> </tspan><tspan style="fill:#bbbb00;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bbbb00;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bbbb00;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bbbb00;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bbbb00;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bbbb00;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bbbb00;font-weight:bold">  gYw  </tspan></text>
-<text x="0" y="12.5em"><tspan>   34m </tspan><tspan style="fill:#0000bb">  gYw     gYw  </tspan><tspan> </tspan><tspan style="fill:#0000bb">  gYw  </tspan><tspan> </tspan><tspan style="fill:#0000bb">  gYw  </tspan><tspan> </tspan><tspan style="fill:#0000bb">  gYw  </tspan><tspan> </tspan><tspan style="fill:#0000bb">  gYw  </tspan><tspan> </tspan><tspan style="fill:#0000bb">  gYw  </tspan><tspan> </tspan><tspan style="fill:#0000bb">  gYw  </tspan><tspan> </tspan><tspan style="fill:#0000bb">  gYw  </tspan></text>
-<text x="0" y="13.5em"><tspan> 1;34m </tspan><tspan style="fill:#0000bb;font-weight:bold">  gYw     gYw  </tspan><tspan> </tspan><tspan style="fill:#0000bb;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#0000bb;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#0000bb;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#0000bb;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#0000bb;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#0000bb;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#0000bb;font-weight:bold">  gYw  </tspan></text>
-<text x="0" y="14.5em"><tspan>   35m </tspan><tspan style="fill:#bb00bb">  gYw     gYw  </tspan><tspan> </tspan><tspan style="fill:#bb00bb">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bb00bb">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bb00bb">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bb00bb">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bb00bb">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bb00bb">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bb00bb">  gYw  </tspan></text>
-<text x="0" y="15.5em"><tspan> 1;35m </tspan><tspan style="fill:#bb00bb;font-weight:bold">  gYw     gYw  </tspan><tspan> </tspan><tspan style="fill:#bb00bb;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bb00bb;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bb00bb;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bb00bb;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bb00bb;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bb00bb;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bb00bb;font-weight:bold">  gYw  </tspan></text>
-<text x="0" y="16.5em"><tspan>   36m </tspan><tspan style="fill:#00bbbb">  gYw     gYw  </tspan><tspan> </tspan><tspan style="fill:#00bbbb">  gYw  </tspan><tspan> </tspan><tspan style="fill:#00bbbb">  gYw  </tspan><tspan> </tspan><tspan style="fill:#00bbbb">  gYw  </tspan><tspan> </tspan><tspan style="fill:#00bbbb">  gYw  </tspan><tspan> </tspan><tspan style="fill:#00bbbb">  gYw  </tspan><tspan> </tspan><tspan style="fill:#00bbbb">  gYw  </tspan><tspan> </tspan><tspan style="fill:#00bbbb">  gYw  </tspan></text>
-<text x="0" y="17.5em"><tspan> 1;36m </tspan><tspan style="fill:#00bbbb;font-weight:bold">  gYw     gYw  </tspan><tspan> </tspan><tspan style="fill:#00bbbb;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#00bbbb;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#00bbbb;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#00bbbb;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#00bbbb;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#00bbbb;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#00bbbb;font-weight:bold">  gYw  </tspan></text>
-<text x="0" y="18.5em"><tspan>   37m </tspan><tspan style="fill:#bbbbbb">  gYw     gYw  </tspan><tspan> </tspan><tspan style="fill:#bbbbbb">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bbbbbb">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bbbbbb">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bbbbbb">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bbbbbb">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bbbbbb">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bbbbbb">  gYw  </tspan></text>
-<text x="0" y="19.5em"><tspan> 1;37m </tspan><tspan style="fill:#bbbbbb;font-weight:bold">  gYw     gYw  </tspan><tspan> </tspan><tspan style="fill:#bbbbbb;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bbbbbb;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bbbbbb;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bbbbbb;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bbbbbb;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bbbbbb;font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan style="fill:#bbbbbb;font-weight:bold">  gYw  </tspan></text>
+<text x="0" y="4.5em"><tspan>   30m </tspan><tspan class="fa0">  gYw     gYw  </tspan><tspan> </tspan><tspan class="fa0">  gYw  </tspan><tspan> </tspan><tspan class="fa0">  gYw  </tspan><tspan> </tspan><tspan class="fa0">  gYw  </tspan><tspan> </tspan><tspan class="fa0">  gYw  </tspan><tspan> </tspan><tspan class="fa0">  gYw  </tspan><tspan> </tspan><tspan class="fa0">  gYw  </tspan><tspan> </tspan><tspan class="fa0">  gYw  </tspan></text>
+<text x="0" y="5.5em"><tspan> 1;30m </tspan><tspan class="fa0" style="font-weight:bold">  gYw     gYw  </tspan><tspan> </tspan><tspan class="fa0" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa0" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa0" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa0" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa0" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa0" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa0" style="font-weight:bold">  gYw  </tspan></text>
+<text x="0" y="6.5em"><tspan>   31m </tspan><tspan class="fa1">  gYw     gYw  </tspan><tspan> </tspan><tspan class="fa1">  gYw  </tspan><tspan> </tspan><tspan class="fa1">  gYw  </tspan><tspan> </tspan><tspan class="fa1">  gYw  </tspan><tspan> </tspan><tspan class="fa1">  gYw  </tspan><tspan> </tspan><tspan class="fa1">  gYw  </tspan><tspan> </tspan><tspan class="fa1">  gYw  </tspan><tspan> </tspan><tspan class="fa1">  gYw  </tspan></text>
+<text x="0" y="7.5em"><tspan> 1;31m </tspan><tspan class="fa1" style="font-weight:bold">  gYw     gYw  </tspan><tspan> </tspan><tspan class="fa1" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa1" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa1" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa1" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa1" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa1" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa1" style="font-weight:bold">  gYw  </tspan></text>
+<text x="0" y="8.5em"><tspan>   32m </tspan><tspan class="fa2">  gYw     gYw  </tspan><tspan> </tspan><tspan class="fa2">  gYw  </tspan><tspan> </tspan><tspan class="fa2">  gYw  </tspan><tspan> </tspan><tspan class="fa2">  gYw  </tspan><tspan> </tspan><tspan class="fa2">  gYw  </tspan><tspan> </tspan><tspan class="fa2">  gYw  </tspan><tspan> </tspan><tspan class="fa2">  gYw  </tspan><tspan> </tspan><tspan class="fa2">  gYw  </tspan></text>
+<text x="0" y="9.5em"><tspan> 1;32m </tspan><tspan class="fa2" style="font-weight:bold">  gYw     gYw  </tspan><tspan> </tspan><tspan class="fa2" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa2" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa2" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa2" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa2" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa2" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa2" style="font-weight:bold">  gYw  </tspan></text>
+<text x="0" y="10.5em"><tspan>   33m </tspan><tspan class="fa3">  gYw     gYw  </tspan><tspan> </tspan><tspan class="fa3">  gYw  </tspan><tspan> </tspan><tspan class="fa3">  gYw  </tspan><tspan> </tspan><tspan class="fa3">  gYw  </tspan><tspan> </tspan><tspan class="fa3">  gYw  </tspan><tspan> </tspan><tspan class="fa3">  gYw  </tspan><tspan> </tspan><tspan class="fa3">  gYw  </tspan><tspan> </tspan><tspan class="fa3">  gYw  </tspan></text>
+<text x="0" y="11.5em"><tspan> 1;33m </tspan><tspan class="fa3" style="font-weight:bold">  gYw     gYw  </tspan><tspan> </tspan><tspan class="fa3" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa3" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa3" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa3" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa3" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa3" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa3" style="font-weight:bold">  gYw  </tspan></text>
+<text x="0" y="12.5em"><tspan>   34m </tspan><tspan class="fa4">  gYw     gYw  </tspan><tspan> </tspan><tspan class="fa4">  gYw  </tspan><tspan> </tspan><tspan class="fa4">  gYw  </tspan><tspan> </tspan><tspan class="fa4">  gYw  </tspan><tspan> </tspan><tspan class="fa4">  gYw  </tspan><tspan> </tspan><tspan class="fa4">  gYw  </tspan><tspan> </tspan><tspan class="fa4">  gYw  </tspan><tspan> </tspan><tspan class="fa4">  gYw  </tspan></text>
+<text x="0" y="13.5em"><tspan> 1;34m </tspan><tspan class="fa4" style="font-weight:bold">  gYw     gYw  </tspan><tspan> </tspan><tspan class="fa4" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa4" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa4" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa4" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa4" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa4" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa4" style="font-weight:bold">  gYw  </tspan></text>
+<text x="0" y="14.5em"><tspan>   35m </tspan><tspan class="fa5">  gYw     gYw  </tspan><tspan> </tspan><tspan class="fa5">  gYw  </tspan><tspan> </tspan><tspan class="fa5">  gYw  </tspan><tspan> </tspan><tspan class="fa5">  gYw  </tspan><tspan> </tspan><tspan class="fa5">  gYw  </tspan><tspan> </tspan><tspan class="fa5">  gYw  </tspan><tspan> </tspan><tspan class="fa5">  gYw  </tspan><tspan> </tspan><tspan class="fa5">  gYw  </tspan></text>
+<text x="0" y="15.5em"><tspan> 1;35m </tspan><tspan class="fa5" style="font-weight:bold">  gYw     gYw  </tspan><tspan> </tspan><tspan class="fa5" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa5" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa5" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa5" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa5" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa5" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa5" style="font-weight:bold">  gYw  </tspan></text>
+<text x="0" y="16.5em"><tspan>   36m </tspan><tspan class="fa6">  gYw     gYw  </tspan><tspan> </tspan><tspan class="fa6">  gYw  </tspan><tspan> </tspan><tspan class="fa6">  gYw  </tspan><tspan> </tspan><tspan class="fa6">  gYw  </tspan><tspan> </tspan><tspan class="fa6">  gYw  </tspan><tspan> </tspan><tspan class="fa6">  gYw  </tspan><tspan> </tspan><tspan class="fa6">  gYw  </tspan><tspan> </tspan><tspan class="fa6">  gYw  </tspan></text>
+<text x="0" y="17.5em"><tspan> 1;36m </tspan><tspan class="fa6" style="font-weight:bold">  gYw     gYw  </tspan><tspan> </tspan><tspan class="fa6" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa6" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa6" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa6" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa6" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa6" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa6" style="font-weight:bold">  gYw  </tspan></text>
+<text x="0" y="18.5em"><tspan>   37m </tspan><tspan class="fa7">  gYw     gYw  </tspan><tspan> </tspan><tspan class="fa7">  gYw  </tspan><tspan> </tspan><tspan class="fa7">  gYw  </tspan><tspan> </tspan><tspan class="fa7">  gYw  </tspan><tspan> </tspan><tspan class="fa7">  gYw  </tspan><tspan> </tspan><tspan class="fa7">  gYw  </tspan><tspan> </tspan><tspan class="fa7">  gYw  </tspan><tspan> </tspan><tspan class="fa7">  gYw  </tspan></text>
+<text x="0" y="19.5em"><tspan> 1;37m </tspan><tspan class="fa7" style="font-weight:bold">  gYw     gYw  </tspan><tspan> </tspan><tspan class="fa7" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa7" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa7" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa7" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa7" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa7" style="font-weight:bold">  gYw  </tspan><tspan> </tspan><tspan class="fa7" style="font-weight:bold">  gYw  </tspan></text>
 </svg>
