@@ -10,9 +10,9 @@ does not support programs that do cursor movements like ncurses programs etc.
 ```sh
 ./colortest | ansisvg > colortest.ansi.svg
  ```
-Produces [colortest.ansi.svg](ansitosvg/testdata/colortest.ansi.svg):
+Produces [colortest.ansi.svg](cli/testdata/colortest.ansi.svg):
 
-![ansisvg output for colortest](ansitosvg/testdata/colortest.ansi.svg)
+![ansisvg output for colortest](cli/testdata/colortest.ansi.svg)
 
 ```
 $ ansisvg -h
@@ -115,7 +115,7 @@ for i in cli/testdata/*.ansi; do echo $i ; cat $i | go run main.go | ffcat ; don
 
 ## Thanks
 
-- Patrick Huesmann @patrislav1 for better ANSI support and lots SVG output improvements.
+- Patrick Huesmann [@patrislav1](https://github.com/patrislav1) for better ANSI support and lots SVG output improvements.
 
 ## Licenses and thanks
 
