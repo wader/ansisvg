@@ -125,6 +125,8 @@ license https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/LICENSE
 
 Uses colortest from https://github.com/pablopunk/colortest and terminal-colors from https://github.com/eikenb/terminal-colors.
 
+ UbuntuMonoNerdFontMono-Regular.woff2 from https://github.com/ryanoasis/nerd-fonts license https://github.com/ryanoasis/nerd-fonts/blob/master/LICENSE
+
 ## TODO and ideas
 - Underline overlaps a bit, sometimes causing weird blending
 - Handle vertical tab and form feed (normalize into spaces?)
