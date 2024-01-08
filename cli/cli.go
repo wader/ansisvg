@@ -9,6 +9,7 @@ import (
 
 	"github.com/wader/ansisvg/ansitosvg"
 	"github.com/wader/ansisvg/colorscheme/schemes"
+	"github.com/wader/ansisvg/getopt"
 	"github.com/wader/ansisvg/svgscreen"
 )
 
@@ -40,7 +41,7 @@ type Env struct {
 }
 
 func Main(env Env) error {
-	fs := flag.NewFlagSet("ansisvg", flag.ExitOnError)
+	fs := getopt.NewFlagSet("ansisvg", flag.ContinueOnError)
 	var fontNameFlag = fs.String("fontname", ansitosvg.DefaultOptions.FontName, "Font name")
 	var fontFileFlag = fs.String("fontfile", "", "Font file to use and embed")
 	var fontRefFlag = fs.String("fontref", "", "External font file to reference")
@@ -50,12 +51,53 @@ func Main(env Env) error {
 	var listColorSchemesFlag = fs.Bool("listcolorschemes", false, "List color schemes")
 	var transparentFlag = fs.Bool("transparent", ansitosvg.DefaultOptions.Transparent, "Transparent background")
 	var gridModeFlag = fs.Bool("grid", false, "Enable grid mode (sets position for each character)")
-	var characterBoxSize = boxSize{
-		Width:  ansitosvg.DefaultOptions.CharacterBoxSize.Width,
-		Height: ansitosvg.DefaultOptions.CharacterBoxSize.Height,
+	var helpFlag = fs.Bool("help", false, "Show help")
+	var charBoxSize = boxSize{
+		Width:  ansitosvg.DefaultOptions.CharBoxSize.Width,
+		Height: ansitosvg.DefaultOptions.CharBoxSize.Height,
 	}
-	fs.Var(&characterBoxSize, "charboxsize", "Character box size (forces pixel units instead of font-relative units)")
-	_ = fs.Parse(env.Args[1:])
+	fs.Var(&charBoxSize, "charboxsize", "Character box size (forces pixel units instead of font-relative units)")
+	// handle error and usage output ourself
+	fs.Usage = func() {}
+	fs.SetOutput(io.Discard)
+	usage := func() {
+		maxNameLen := 0
+		fs.VisitAll(func(f *flag.Flag) {
+			if len(f.Name) > maxNameLen {
+				maxNameLen = len(f.Name)
+			}
+		})
+
+		fmt.Fprintf(env.Stdout, `
+%[1]s - Convert ANSI to SVG
+Usage: %[1]s [FLAGS]
+`[1:], fs.Name())
+		fs.VisitAll(func(f *flag.Flag) {
+			def := ""
+			valueStr := f.Value.String()
+			if valueStr != "" && valueStr != "true" && valueStr != "false" && valueStr != "0" {
+				def = " (" + valueStr + ")"
+			}
+			short := ""
+			if s := fs.LookupShort(f.Name); s != "" {
+				short = ", -" + s
+			}
+
+			flagNames := f.Name + short
+			pad := strings.Repeat(" ", maxNameLen-len(flagNames))
+			fmt.Fprintf(env.Stdout, "--%s%s%s  %s%s\n", f.Name, short, pad, f.Usage, def)
+		})
+	}
+	fs.Aliases(
+		"h", "help",
+	)
+	if err := fs.Parse(env.Args[1:]); err != nil {
+		return err
+	}
+	if *helpFlag {
+		usage()
+		return nil
+	}
 
 	if *listColorSchemesFlag {
 		maxNameLen := 0
@@ -90,9 +132,9 @@ func Main(env Env) error {
 			FontRef:       *fontRefFlag,
 			FontSize:      *fontSizeFlag,
 			TerminalWidth: *terminalWidthFlag,
-			CharacterBoxSize: svgscreen.BoxSize{
-				Width:  characterBoxSize.Width,
-				Height: characterBoxSize.Height,
+			CharBoxSize: svgscreen.BoxSize{
+				Width:  charBoxSize.Width,
+				Height: charBoxSize.Height,
 			},
 			ColorScheme: *colorSchemeFlag,
 			Transparent: *transparentFlag,

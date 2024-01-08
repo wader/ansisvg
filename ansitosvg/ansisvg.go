@@ -10,23 +10,23 @@ import (
 )
 
 type Options struct {
-	FontName         string
-	FontEmbedded     []byte
-	FontRef          string
-	FontSize         int
-	TerminalWidth    int
-	CharacterBoxSize svgscreen.BoxSize
-	ColorScheme      string
-	Transparent      bool
-	GridMode         bool
+	FontName      string
+	FontEmbedded  []byte
+	FontRef       string
+	FontSize      int
+	TerminalWidth int
+	CharBoxSize   svgscreen.BoxSize
+	ColorScheme   string
+	Transparent   bool
+	GridMode      bool
 }
 
 var DefaultOptions = Options{
-	FontName:         "Courier",
-	FontSize:         14,
-	CharacterBoxSize: svgscreen.BoxSize{Width: 0, Height: 0},
-	ColorScheme:      "Builtin Dark",
-	Transparent:      false,
+	FontName:    "Courier",
+	FontSize:    14,
+	CharBoxSize: svgscreen.BoxSize{Width: 0, Height: 0},
+	ColorScheme: "Builtin Dark",
+	Transparent: false,
 }
 
 // Convert reads ANSI input from r and writes SVG to w
@@ -142,8 +142,8 @@ func Convert(r io.Reader, w io.Writer, opts Options) error {
 		FontRef:      opts.FontRef,
 		FontSize:     opts.FontSize,
 		CharacterBoxSize: svgscreen.BoxSize{
-			Width:  opts.CharacterBoxSize.Width,
-			Height: opts.CharacterBoxSize.Height,
+			Width:  opts.CharBoxSize.Width,
+			Height: opts.CharBoxSize.Height,
 		},
 		TerminalWidth: terminalWidth,
 		Columns:       ad.MaxX + 1,
