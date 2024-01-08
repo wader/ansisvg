@@ -1,101 +1,21 @@
 package main
 
 import (
-	"flag"
 	"fmt"
 	"os"
-	"strconv"
-	"strings"
 
-	"github.com/wader/ansisvg/ansitosvg"
-	"github.com/wader/ansisvg/colorscheme/schemes"
-	"github.com/wader/ansisvg/svgscreen"
+	"github.com/wader/ansisvg/cli"
 )
 
-type boxSize struct {
-	Width  int
-	Height int
-}
-
-func (d *boxSize) String() string {
-	return fmt.Sprintf("%dx%d", d.Width, d.Height)
-}
-
-func (d *boxSize) Set(s string) error {
-	parts := strings.Split(s, "x")
-	if len(parts) != 2 {
-		return fmt.Errorf("must be WxH")
-	}
-	d.Width, _ = strconv.Atoi(parts[0])
-	d.Height, _ = strconv.Atoi(parts[1])
-	return nil
-}
-
-var fontNameFlag = flag.String("fontname", ansitosvg.DefaultOptions.FontName, "Font name")
-var fontFileFlag = flag.String("fontfile", "", "Font file to use and embed")
-var fontRefFlag = flag.String("fontref", "", "External font file to reference")
-var fontSizeFlag = flag.Int("fontsize", ansitosvg.DefaultOptions.FontSize, "Font size")
-var terminalWidthFlag = flag.Int("width", 0, "Terminal width (auto)")
-var characterBoxSize = boxSize{
-	Width:  ansitosvg.DefaultOptions.CharacterBoxSize.Width,
-	Height: ansitosvg.DefaultOptions.CharacterBoxSize.Height,
-}
-var colorSchemeFlag = flag.String("colorscheme", ansitosvg.DefaultOptions.ColorScheme, "Color scheme")
-var listColorSchemesFlag = flag.Bool("listcolorschemes", false, "List color schemes")
-var transparentFlag = flag.Bool("transparent", ansitosvg.DefaultOptions.Transparent, "Transparent background")
-var gridModeFlag = flag.Bool("grid", false, "Enable grid mode (sets position for each character)")
-
-func init() {
-	flag.Var(&characterBoxSize, "charboxsize", "Character box size (forces pixel units instead of font-relative units)")
-}
-
 func main() {
-	flag.Parse()
-
-	if *listColorSchemesFlag {
-		maxNameLen := 0
-		for _, n := range schemes.Names() {
-			if len(n) > maxNameLen {
-				maxNameLen = len(n)
-			}
-		}
-		for _, n := range schemes.Names() {
-			s, _ := schemes.Load(n)
-			pad := strings.Repeat(" ", maxNameLen+1-len(n))
-			fmt.Fprintf(os.Stdout, "%s\n", s.ANSIDemo(n+pad))
-		}
-		os.Exit(0)
-	}
-
-	var fontEmbedded []byte
-	if *fontFileFlag != "" {
-		var err error
-		fontEmbedded, err = os.ReadFile(*fontFileFlag)
-		if err != nil {
-			fmt.Fprintf(os.Stderr, "%s\n", err)
-			os.Exit(1)
-		}
-	}
-
-	if err := ansitosvg.Convert(
-		os.Stdin,
-		os.Stdout,
-		ansitosvg.Options{
-			FontName:      *fontNameFlag,
-			FontEmbedded:  fontEmbedded,
-			FontRef:       *fontRefFlag,
-			FontSize:      *fontSizeFlag,
-			TerminalWidth: *terminalWidthFlag,
-			CharacterBoxSize: svgscreen.BoxSize{
-				Width:  characterBoxSize.Width,
-				Height: characterBoxSize.Height,
-			},
-			ColorScheme: *colorSchemeFlag,
-			Transparent: *transparentFlag,
-			GridMode:    *gridModeFlag,
-		},
-	); err != nil {
-		fmt.Fprintln(os.Stderr, err)
+	if err := cli.Main(cli.Env{
+		ReadFile: os.ReadFile,
+		Stdin:    os.Stdin,
+		Stdout:   os.Stdout,
+		Stderr:   os.Stderr,
+		Args:     os.Args,
+	}); err != nil {
+		fmt.Fprintf(os.Stderr, "%s\n", err)
 		os.Exit(1)
 	}
 }
