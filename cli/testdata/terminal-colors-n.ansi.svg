@@ -276,276 +276,280 @@
         .fc1 { fill: #000000; }
     </style>
     <rect width="100%" height="100%" x="0" y="0" style="fill: #000000"/>
-<rect x="0ch" y="1em" width="4ch" height="1em" class="bg ba0"/>
-<rect x="4ch" y="1em" width="4ch" height="1em" class="bg ba1"/>
-<rect x="8ch" y="1em" width="4ch" height="1em" class="bg ba2"/>
-<rect x="12ch" y="1em" width="4ch" height="1em" class="bg ba3"/>
-<rect x="16ch" y="1em" width="4ch" height="1em" class="bg ba4"/>
-<rect x="20ch" y="1em" width="4ch" height="1em" class="bg ba5"/>
-<rect x="24ch" y="1em" width="4ch" height="1em" class="bg ba6"/>
-<rect x="28ch" y="1em" width="4ch" height="1em" class="bg ba7"/>
-<rect x="0ch" y="2em" width="4ch" height="1em" class="bg ba8"/>
-<rect x="4ch" y="2em" width="4ch" height="1em" class="bg ba9"/>
-<rect x="8ch" y="2em" width="4ch" height="1em" class="bg ba10"/>
-<rect x="12ch" y="2em" width="4ch" height="1em" class="bg ba11"/>
-<rect x="16ch" y="2em" width="4ch" height="1em" class="bg ba12"/>
-<rect x="20ch" y="2em" width="4ch" height="1em" class="bg ba13"/>
-<rect x="24ch" y="2em" width="4ch" height="1em" class="bg ba14"/>
-<rect x="28ch" y="2em" width="4ch" height="1em" class="bg ba15"/>
-<rect x="4ch" y="5em" width="4ch" height="1em" class="bg bc0"/>
-<rect x="8ch" y="5em" width="4ch" height="1em" class="bg bc1"/>
-<rect x="12ch" y="5em" width="4ch" height="1em" class="bg bc2"/>
-<rect x="16ch" y="5em" width="4ch" height="1em" class="bg bc3"/>
-<rect x="20ch" y="5em" width="4ch" height="1em" class="bg bc4"/>
-<rect x="25ch" y="5em" width="4ch" height="1em" class="bg bc5"/>
-<rect x="29ch" y="5em" width="4ch" height="1em" class="bg bc6"/>
-<rect x="33ch" y="5em" width="4ch" height="1em" class="bg bc7"/>
-<rect x="37ch" y="5em" width="4ch" height="1em" class="bg bc8"/>
-<rect x="41ch" y="5em" width="4ch" height="1em" class="bg bc9"/>
-<rect x="45ch" y="5em" width="4ch" height="1em" class="bg bc10"/>
-<rect x="50ch" y="5em" width="4ch" height="1em" class="bg bc11"/>
-<rect x="54ch" y="5em" width="4ch" height="1em" class="bg bc12"/>
-<rect x="58ch" y="5em" width="4ch" height="1em" class="bg bc13"/>
-<rect x="62ch" y="5em" width="4ch" height="1em" class="bg bc14"/>
-<rect x="66ch" y="5em" width="4ch" height="1em" class="bg bc15"/>
-<rect x="70ch" y="5em" width="4ch" height="1em" class="bg bc16"/>
-<rect x="0ch" y="6em" width="4ch" height="1em" class="bg bc17"/>
-<rect x="4ch" y="6em" width="4ch" height="1em" class="bg bc18"/>
-<rect x="8ch" y="6em" width="4ch" height="1em" class="bg bc19"/>
-<rect x="12ch" y="6em" width="4ch" height="1em" class="bg bc20"/>
-<rect x="16ch" y="6em" width="4ch" height="1em" class="bg bc21"/>
-<rect x="20ch" y="6em" width="4ch" height="1em" class="bg bc22"/>
-<rect x="25ch" y="6em" width="4ch" height="1em" class="bg bc23"/>
-<rect x="29ch" y="6em" width="4ch" height="1em" class="bg bc24"/>
-<rect x="33ch" y="6em" width="4ch" height="1em" class="bg bc25"/>
-<rect x="37ch" y="6em" width="4ch" height="1em" class="bg bc26"/>
-<rect x="41ch" y="6em" width="4ch" height="1em" class="bg bc27"/>
-<rect x="45ch" y="6em" width="4ch" height="1em" class="bg bc28"/>
-<rect x="50ch" y="6em" width="4ch" height="1em" class="bg bc29"/>
-<rect x="54ch" y="6em" width="4ch" height="1em" class="bg bc30"/>
-<rect x="58ch" y="6em" width="4ch" height="1em" class="bg bc31"/>
-<rect x="62ch" y="6em" width="4ch" height="1em" class="bg bc32"/>
-<rect x="66ch" y="6em" width="4ch" height="1em" class="bg bc33"/>
-<rect x="70ch" y="6em" width="4ch" height="1em" class="bg bc34"/>
-<rect x="0ch" y="7em" width="4ch" height="1em" class="bg bc35"/>
-<rect x="4ch" y="7em" width="4ch" height="1em" class="bg bc36"/>
-<rect x="8ch" y="7em" width="4ch" height="1em" class="bg bc37"/>
-<rect x="12ch" y="7em" width="4ch" height="1em" class="bg bc38"/>
-<rect x="16ch" y="7em" width="4ch" height="1em" class="bg bc39"/>
-<rect x="20ch" y="7em" width="4ch" height="1em" class="bg bc40"/>
-<rect x="25ch" y="7em" width="4ch" height="1em" class="bg bc41"/>
-<rect x="29ch" y="7em" width="4ch" height="1em" class="bg bc42"/>
-<rect x="33ch" y="7em" width="4ch" height="1em" class="bg bc43"/>
-<rect x="37ch" y="7em" width="4ch" height="1em" class="bg bc44"/>
-<rect x="41ch" y="7em" width="4ch" height="1em" class="bg bc45"/>
-<rect x="45ch" y="7em" width="4ch" height="1em" class="bg bc46"/>
-<rect x="50ch" y="7em" width="4ch" height="1em" class="bg bc47"/>
-<rect x="54ch" y="7em" width="4ch" height="1em" class="bg bc48"/>
-<rect x="58ch" y="7em" width="4ch" height="1em" class="bg bc49"/>
-<rect x="62ch" y="7em" width="4ch" height="1em" class="bg bc50"/>
-<rect x="66ch" y="7em" width="4ch" height="1em" class="bg bc51"/>
-<rect x="70ch" y="7em" width="4ch" height="1em" class="bg bc52"/>
-<rect x="0ch" y="8em" width="4ch" height="1em" class="bg bc53"/>
-<rect x="4ch" y="8em" width="4ch" height="1em" class="bg bc54"/>
-<rect x="8ch" y="8em" width="4ch" height="1em" class="bg bc55"/>
-<rect x="12ch" y="8em" width="4ch" height="1em" class="bg bc56"/>
-<rect x="16ch" y="8em" width="4ch" height="1em" class="bg bc57"/>
-<rect x="20ch" y="8em" width="4ch" height="1em" class="bg bc58"/>
-<rect x="25ch" y="8em" width="4ch" height="1em" class="bg bc59"/>
-<rect x="29ch" y="8em" width="4ch" height="1em" class="bg bc60"/>
-<rect x="33ch" y="8em" width="4ch" height="1em" class="bg bc61"/>
-<rect x="37ch" y="8em" width="4ch" height="1em" class="bg bc62"/>
-<rect x="41ch" y="8em" width="4ch" height="1em" class="bg bc63"/>
-<rect x="45ch" y="8em" width="4ch" height="1em" class="bg bc64"/>
-<rect x="50ch" y="8em" width="4ch" height="1em" class="bg bc65"/>
-<rect x="54ch" y="8em" width="4ch" height="1em" class="bg bc66"/>
-<rect x="58ch" y="8em" width="4ch" height="1em" class="bg bc67"/>
-<rect x="62ch" y="8em" width="4ch" height="1em" class="bg bc68"/>
-<rect x="66ch" y="8em" width="4ch" height="1em" class="bg bc69"/>
-<rect x="70ch" y="8em" width="4ch" height="1em" class="bg bc70"/>
-<rect x="0ch" y="9em" width="4ch" height="1em" class="bg bc71"/>
-<rect x="4ch" y="9em" width="4ch" height="1em" class="bg bc72"/>
-<rect x="8ch" y="9em" width="4ch" height="1em" class="bg bc73"/>
-<rect x="12ch" y="9em" width="4ch" height="1em" class="bg bc74"/>
-<rect x="16ch" y="9em" width="4ch" height="1em" class="bg bc75"/>
-<rect x="20ch" y="9em" width="4ch" height="1em" class="bg bc76"/>
-<rect x="25ch" y="9em" width="4ch" height="1em" class="bg bc77"/>
-<rect x="29ch" y="9em" width="4ch" height="1em" class="bg bc78"/>
-<rect x="33ch" y="9em" width="4ch" height="1em" class="bg bc79"/>
-<rect x="37ch" y="9em" width="4ch" height="1em" class="bg bc80"/>
-<rect x="41ch" y="9em" width="4ch" height="1em" class="bg bc81"/>
-<rect x="45ch" y="9em" width="4ch" height="1em" class="bg bc82"/>
-<rect x="50ch" y="9em" width="4ch" height="1em" class="bg bc83"/>
-<rect x="54ch" y="9em" width="4ch" height="1em" class="bg bc84"/>
-<rect x="58ch" y="9em" width="4ch" height="1em" class="bg bc85"/>
-<rect x="62ch" y="9em" width="4ch" height="1em" class="bg bc86"/>
-<rect x="66ch" y="9em" width="4ch" height="1em" class="bg bc87"/>
-<rect x="70ch" y="9em" width="4ch" height="1em" class="bg bc88"/>
-<rect x="0ch" y="10em" width="4ch" height="1em" class="bg bc89"/>
-<rect x="4ch" y="10em" width="4ch" height="1em" class="bg bc90"/>
-<rect x="8ch" y="10em" width="4ch" height="1em" class="bg bc91"/>
-<rect x="12ch" y="10em" width="4ch" height="1em" class="bg bc92"/>
-<rect x="16ch" y="10em" width="4ch" height="1em" class="bg bc93"/>
-<rect x="20ch" y="10em" width="4ch" height="1em" class="bg bc94"/>
-<rect x="25ch" y="10em" width="4ch" height="1em" class="bg bc95"/>
-<rect x="29ch" y="10em" width="4ch" height="1em" class="bg bc96"/>
-<rect x="33ch" y="10em" width="4ch" height="1em" class="bg bc97"/>
-<rect x="37ch" y="10em" width="4ch" height="1em" class="bg bc98"/>
-<rect x="41ch" y="10em" width="4ch" height="1em" class="bg bc99"/>
-<rect x="45ch" y="10em" width="4ch" height="1em" class="bg bc100"/>
-<rect x="50ch" y="10em" width="4ch" height="1em" class="bg bc101"/>
-<rect x="54ch" y="10em" width="4ch" height="1em" class="bg bc102"/>
-<rect x="58ch" y="10em" width="4ch" height="1em" class="bg bc103"/>
-<rect x="62ch" y="10em" width="4ch" height="1em" class="bg bc104"/>
-<rect x="66ch" y="10em" width="4ch" height="1em" class="bg bc105"/>
-<rect x="70ch" y="10em" width="4ch" height="1em" class="bg bc106"/>
-<rect x="0ch" y="12em" width="4ch" height="1em" class="bg bc107"/>
-<rect x="4ch" y="12em" width="4ch" height="1em" class="bg bc108"/>
-<rect x="8ch" y="12em" width="4ch" height="1em" class="bg bc109"/>
-<rect x="12ch" y="12em" width="4ch" height="1em" class="bg bc110"/>
-<rect x="16ch" y="12em" width="4ch" height="1em" class="bg bc111"/>
-<rect x="20ch" y="12em" width="4ch" height="1em" class="bg bc112"/>
-<rect x="25ch" y="12em" width="4ch" height="1em" class="bg bc113"/>
-<rect x="29ch" y="12em" width="4ch" height="1em" class="bg bc114"/>
-<rect x="33ch" y="12em" width="4ch" height="1em" class="bg bc115"/>
-<rect x="37ch" y="12em" width="4ch" height="1em" class="bg bc116"/>
-<rect x="41ch" y="12em" width="4ch" height="1em" class="bg bc117"/>
-<rect x="45ch" y="12em" width="4ch" height="1em" class="bg bc118"/>
-<rect x="50ch" y="12em" width="4ch" height="1em" class="bg bc119"/>
-<rect x="54ch" y="12em" width="4ch" height="1em" class="bg bc120"/>
-<rect x="58ch" y="12em" width="4ch" height="1em" class="bg bc121"/>
-<rect x="62ch" y="12em" width="4ch" height="1em" class="bg bc122"/>
-<rect x="66ch" y="12em" width="4ch" height="1em" class="bg bc123"/>
-<rect x="70ch" y="12em" width="4ch" height="1em" class="bg bc124"/>
-<rect x="0ch" y="13em" width="4ch" height="1em" class="bg bc125"/>
-<rect x="4ch" y="13em" width="4ch" height="1em" class="bg bc126"/>
-<rect x="8ch" y="13em" width="4ch" height="1em" class="bg bc127"/>
-<rect x="12ch" y="13em" width="4ch" height="1em" class="bg bc128"/>
-<rect x="16ch" y="13em" width="4ch" height="1em" class="bg bc129"/>
-<rect x="20ch" y="13em" width="4ch" height="1em" class="bg bc130"/>
-<rect x="25ch" y="13em" width="4ch" height="1em" class="bg bc131"/>
-<rect x="29ch" y="13em" width="4ch" height="1em" class="bg bc132"/>
-<rect x="33ch" y="13em" width="4ch" height="1em" class="bg bc133"/>
-<rect x="37ch" y="13em" width="4ch" height="1em" class="bg bc134"/>
-<rect x="41ch" y="13em" width="4ch" height="1em" class="bg bc135"/>
-<rect x="45ch" y="13em" width="4ch" height="1em" class="bg bc136"/>
-<rect x="50ch" y="13em" width="4ch" height="1em" class="bg bc137"/>
-<rect x="54ch" y="13em" width="4ch" height="1em" class="bg bc138"/>
-<rect x="58ch" y="13em" width="4ch" height="1em" class="bg bc139"/>
-<rect x="62ch" y="13em" width="4ch" height="1em" class="bg bc140"/>
-<rect x="66ch" y="13em" width="4ch" height="1em" class="bg bc141"/>
-<rect x="70ch" y="13em" width="4ch" height="1em" class="bg bc142"/>
-<rect x="0ch" y="14em" width="4ch" height="1em" class="bg bc143"/>
-<rect x="4ch" y="14em" width="4ch" height="1em" class="bg bc144"/>
-<rect x="8ch" y="14em" width="4ch" height="1em" class="bg bc145"/>
-<rect x="12ch" y="14em" width="4ch" height="1em" class="bg bc146"/>
-<rect x="16ch" y="14em" width="4ch" height="1em" class="bg bc147"/>
-<rect x="20ch" y="14em" width="4ch" height="1em" class="bg bc148"/>
-<rect x="25ch" y="14em" width="4ch" height="1em" class="bg bc149"/>
-<rect x="29ch" y="14em" width="4ch" height="1em" class="bg bc150"/>
-<rect x="33ch" y="14em" width="4ch" height="1em" class="bg bc151"/>
-<rect x="37ch" y="14em" width="4ch" height="1em" class="bg bc152"/>
-<rect x="41ch" y="14em" width="4ch" height="1em" class="bg bc153"/>
-<rect x="45ch" y="14em" width="4ch" height="1em" class="bg bc154"/>
-<rect x="50ch" y="14em" width="4ch" height="1em" class="bg bc155"/>
-<rect x="54ch" y="14em" width="4ch" height="1em" class="bg bc156"/>
-<rect x="58ch" y="14em" width="4ch" height="1em" class="bg bc157"/>
-<rect x="62ch" y="14em" width="4ch" height="1em" class="bg bc158"/>
-<rect x="66ch" y="14em" width="4ch" height="1em" class="bg bc159"/>
-<rect x="70ch" y="14em" width="4ch" height="1em" class="bg bc160"/>
-<rect x="0ch" y="15em" width="4ch" height="1em" class="bg bc161"/>
-<rect x="4ch" y="15em" width="4ch" height="1em" class="bg bc162"/>
-<rect x="8ch" y="15em" width="4ch" height="1em" class="bg bc163"/>
-<rect x="12ch" y="15em" width="4ch" height="1em" class="bg bc164"/>
-<rect x="16ch" y="15em" width="4ch" height="1em" class="bg bc165"/>
-<rect x="20ch" y="15em" width="4ch" height="1em" class="bg bc166"/>
-<rect x="25ch" y="15em" width="4ch" height="1em" class="bg bc167"/>
-<rect x="29ch" y="15em" width="4ch" height="1em" class="bg bc168"/>
-<rect x="33ch" y="15em" width="4ch" height="1em" class="bg bc169"/>
-<rect x="37ch" y="15em" width="4ch" height="1em" class="bg bc170"/>
-<rect x="41ch" y="15em" width="4ch" height="1em" class="bg bc171"/>
-<rect x="45ch" y="15em" width="4ch" height="1em" class="bg bc172"/>
-<rect x="50ch" y="15em" width="4ch" height="1em" class="bg bc173"/>
-<rect x="54ch" y="15em" width="4ch" height="1em" class="bg bc174"/>
-<rect x="58ch" y="15em" width="4ch" height="1em" class="bg bc175"/>
-<rect x="62ch" y="15em" width="4ch" height="1em" class="bg bc176"/>
-<rect x="66ch" y="15em" width="4ch" height="1em" class="bg bc177"/>
-<rect x="70ch" y="15em" width="4ch" height="1em" class="bg bc178"/>
-<rect x="0ch" y="16em" width="4ch" height="1em" class="bg bc179"/>
-<rect x="4ch" y="16em" width="4ch" height="1em" class="bg bc180"/>
-<rect x="8ch" y="16em" width="4ch" height="1em" class="bg bc181"/>
-<rect x="12ch" y="16em" width="4ch" height="1em" class="bg bc182"/>
-<rect x="16ch" y="16em" width="4ch" height="1em" class="bg bc183"/>
-<rect x="20ch" y="16em" width="4ch" height="1em" class="bg bc184"/>
-<rect x="25ch" y="16em" width="4ch" height="1em" class="bg bc185"/>
-<rect x="29ch" y="16em" width="4ch" height="1em" class="bg bc186"/>
-<rect x="33ch" y="16em" width="4ch" height="1em" class="bg bc187"/>
-<rect x="37ch" y="16em" width="4ch" height="1em" class="bg bc188"/>
-<rect x="41ch" y="16em" width="4ch" height="1em" class="bg bc189"/>
-<rect x="45ch" y="16em" width="4ch" height="1em" class="bg bc190"/>
-<rect x="50ch" y="16em" width="4ch" height="1em" class="bg bc191"/>
-<rect x="54ch" y="16em" width="4ch" height="1em" class="bg bc192"/>
-<rect x="58ch" y="16em" width="4ch" height="1em" class="bg bc193"/>
-<rect x="62ch" y="16em" width="4ch" height="1em" class="bg bc194"/>
-<rect x="66ch" y="16em" width="4ch" height="1em" class="bg bc195"/>
-<rect x="70ch" y="16em" width="4ch" height="1em" class="bg bc196"/>
-<rect x="0ch" y="17em" width="4ch" height="1em" class="bg bc197"/>
-<rect x="4ch" y="17em" width="4ch" height="1em" class="bg bc198"/>
-<rect x="8ch" y="17em" width="4ch" height="1em" class="bg bc199"/>
-<rect x="12ch" y="17em" width="4ch" height="1em" class="bg bc200"/>
-<rect x="16ch" y="17em" width="4ch" height="1em" class="bg bc201"/>
-<rect x="20ch" y="17em" width="4ch" height="1em" class="bg bc202"/>
-<rect x="25ch" y="17em" width="4ch" height="1em" class="bg bc203"/>
-<rect x="29ch" y="17em" width="4ch" height="1em" class="bg bc204"/>
-<rect x="33ch" y="17em" width="4ch" height="1em" class="bg bc205"/>
-<rect x="37ch" y="17em" width="4ch" height="1em" class="bg bc206"/>
-<rect x="41ch" y="17em" width="4ch" height="1em" class="bg bc207"/>
-<rect x="45ch" y="17em" width="4ch" height="1em" class="bg bc208"/>
-<rect x="50ch" y="17em" width="4ch" height="1em" class="bg bc209"/>
-<rect x="54ch" y="17em" width="4ch" height="1em" class="bg bc210"/>
-<rect x="58ch" y="17em" width="4ch" height="1em" class="bg bc211"/>
-<rect x="62ch" y="17em" width="4ch" height="1em" class="bg bc212"/>
-<rect x="66ch" y="17em" width="4ch" height="1em" class="bg bc213"/>
-<rect x="70ch" y="17em" width="4ch" height="1em" class="bg bc214"/>
-<rect x="4ch" y="19em" width="4ch" height="1em" class="bg bc215"/>
-<rect x="8ch" y="19em" width="4ch" height="1em" class="bg bc216"/>
-<rect x="12ch" y="19em" width="4ch" height="1em" class="bg bc217"/>
-<rect x="16ch" y="19em" width="4ch" height="1em" class="bg bc218"/>
-<rect x="20ch" y="19em" width="4ch" height="1em" class="bg bc219"/>
-<rect x="24ch" y="19em" width="4ch" height="1em" class="bg bc220"/>
-<rect x="28ch" y="19em" width="4ch" height="1em" class="bg bc221"/>
-<rect x="32ch" y="19em" width="4ch" height="1em" class="bg bc222"/>
-<rect x="36ch" y="19em" width="4ch" height="1em" class="bg bc223"/>
-<rect x="40ch" y="19em" width="4ch" height="1em" class="bg bc224"/>
-<rect x="44ch" y="19em" width="4ch" height="1em" class="bg bc225"/>
-<rect x="0ch" y="20em" width="4ch" height="1em" class="bg bc226"/>
-<rect x="4ch" y="20em" width="4ch" height="1em" class="bg bc227"/>
-<rect x="8ch" y="20em" width="4ch" height="1em" class="bg bc228"/>
-<rect x="12ch" y="20em" width="4ch" height="1em" class="bg bc229"/>
-<rect x="16ch" y="20em" width="4ch" height="1em" class="bg bc230"/>
-<rect x="20ch" y="20em" width="4ch" height="1em" class="bg bc231"/>
-<rect x="24ch" y="20em" width="4ch" height="1em" class="bg bc232"/>
-<rect x="28ch" y="20em" width="4ch" height="1em" class="bg bc233"/>
-<rect x="32ch" y="20em" width="4ch" height="1em" class="bg bc234"/>
-<rect x="36ch" y="20em" width="4ch" height="1em" class="bg bc235"/>
-<rect x="40ch" y="20em" width="4ch" height="1em" class="bg bc236"/>
-<rect x="44ch" y="20em" width="4ch" height="1em" class="bg bc214"/>
-<text x="0" y="0.5em"><tspan>System colors:</tspan></text>
-<text x="0" y="1.5em"><tspan class="fa15">  0   1   2   3   4   5   6   7 </tspan></text>
-<text x="0" y="2.5em"><tspan class="fa15">  8 </tspan><tspan class="fa0">  9  10  11  12  13  14  15 </tspan></text>
-<text x="0" y="4.5em"><tspan>6x6x6 color cube and greyscale:</tspan></text>
-<text x="0" y="5.5em"><tspan class="fc0"> 16  22  28  34 </tspan><tspan class="fc1"> 40  46 </tspan><tspan> </tspan><tspan class="fc0"> 52  58  64 </tspan><tspan class="fc1"> 70  76  82 </tspan><tspan> </tspan><tspan class="fc0"> 88  94 100 </tspan><tspan class="fc1">106 112 118 </tspan></text>
-<text x="0" y="6.5em"><tspan class="fc0"> 17  23  29 </tspan><tspan class="fc1"> 35  41  47 </tspan><tspan> </tspan><tspan class="fc0"> 53  59  65 </tspan><tspan class="fc1"> 71  77  83 </tspan><tspan> </tspan><tspan class="fc0"> 89  95 </tspan><tspan class="fc1">101 107 113 119 </tspan></text>
-<text x="0" y="7.5em"><tspan class="fc0"> 18  24  30 </tspan><tspan class="fc1"> 36  42  48 </tspan><tspan> </tspan><tspan class="fc0"> 54  60  66 </tspan><tspan class="fc1"> 72  78  84 </tspan><tspan> </tspan><tspan class="fc0"> 90  96 </tspan><tspan class="fc1">102 108 114 120 </tspan></text>
-<text x="0" y="8.5em"><tspan class="fc0"> 19  25  31 </tspan><tspan class="fc1"> 37  43  49 </tspan><tspan> </tspan><tspan class="fc0"> 55  61 </tspan><tspan class="fc1"> 67  73  79  85 </tspan><tspan> </tspan><tspan class="fc0"> 91  97 </tspan><tspan class="fc1">103 109 115 121 </tspan></text>
-<text x="0" y="9.5em"><tspan class="fc0"> 20  26  32 </tspan><tspan class="fc1"> 38  44  50 </tspan><tspan> </tspan><tspan class="fc0"> 56  62 </tspan><tspan class="fc1"> 68  74  80  86 </tspan><tspan> </tspan><tspan class="fc0"> 92  98 </tspan><tspan class="fc1">104 110 116 122 </tspan></text>
-<text x="0" y="10.5em"><tspan class="fc0"> 21  27  33 </tspan><tspan class="fc1"> 39  45  51 </tspan><tspan> </tspan><tspan class="fc0"> 57  63 </tspan><tspan class="fc1"> 69  75  81  87 </tspan><tspan> </tspan><tspan class="fc0"> 93  99 </tspan><tspan class="fc1">105 111 117 123 </tspan></text>
-<text x="0" y="12.5em"><tspan class="fc0">124 130 </tspan><tspan class="fc1">136 142 148 154 </tspan><tspan> </tspan><tspan class="fc0">160 166 </tspan><tspan class="fc1">172 178 184 190 </tspan><tspan> </tspan><tspan class="fc0">196 202 </tspan><tspan class="fc1">208 214 220 226 </tspan></text>
-<text x="0" y="13.5em"><tspan class="fc0">125 131 </tspan><tspan class="fc1">137 143 149 155 </tspan><tspan> </tspan><tspan class="fc0">161 167 </tspan><tspan class="fc1">173 179 185 191 </tspan><tspan> </tspan><tspan class="fc0">197 </tspan><tspan class="fc1">203 209 215 221 227 </tspan></text>
-<text x="0" y="14.5em"><tspan class="fc0">126 132 </tspan><tspan class="fc1">138 144 150 156 </tspan><tspan> </tspan><tspan class="fc0">162 168 </tspan><tspan class="fc1">174 180 186 192 </tspan><tspan> </tspan><tspan class="fc0">198 </tspan><tspan class="fc1">204 210 216 222 228 </tspan></text>
-<text x="0" y="15.5em"><tspan class="fc0">127 133 </tspan><tspan class="fc1">139 145 151 157 </tspan><tspan> </tspan><tspan class="fc0">163 169 </tspan><tspan class="fc1">175 181 187 193 </tspan><tspan> </tspan><tspan class="fc0">199 </tspan><tspan class="fc1">205 211 217 223 229 </tspan></text>
-<text x="0" y="16.5em"><tspan class="fc0">128 134 </tspan><tspan class="fc1">140 146 152 158 </tspan><tspan> </tspan><tspan class="fc0">164 </tspan><tspan class="fc1">170 176 182 188 194 </tspan><tspan> </tspan><tspan class="fc0">200 </tspan><tspan class="fc1">206 212 218 224 230 </tspan></text>
-<text x="0" y="17.5em"><tspan class="fc0">129 135 </tspan><tspan class="fc1">141 147 153 159 </tspan><tspan> </tspan><tspan class="fc0">165 </tspan><tspan class="fc1">171 177 183 189 195 </tspan><tspan> </tspan><tspan class="fc0">201 </tspan><tspan class="fc1">207 213 219 225 231 </tspan></text>
-<text x="0" y="19.5em"><tspan class="fc0">232 233 234 235 236 237 238 239 240 241 242 243 </tspan></text>
-<text x="0" y="20.5em"><tspan class="fc1">244 245 246 247 248 249 250 251 252 253 254 255 </tspan></text>
+<g class="bg">
+<rect x="0ch" y="1em" width="4ch" height="1em" class="ba0"/>
+<rect x="4ch" y="1em" width="4ch" height="1em" class="ba1"/>
+<rect x="8ch" y="1em" width="4ch" height="1em" class="ba2"/>
+<rect x="12ch" y="1em" width="4ch" height="1em" class="ba3"/>
+<rect x="16ch" y="1em" width="4ch" height="1em" class="ba4"/>
+<rect x="20ch" y="1em" width="4ch" height="1em" class="ba5"/>
+<rect x="24ch" y="1em" width="4ch" height="1em" class="ba6"/>
+<rect x="28ch" y="1em" width="4ch" height="1em" class="ba7"/>
+<rect x="0ch" y="2em" width="4ch" height="1em" class="ba8"/>
+<rect x="4ch" y="2em" width="4ch" height="1em" class="ba9"/>
+<rect x="8ch" y="2em" width="4ch" height="1em" class="ba10"/>
+<rect x="12ch" y="2em" width="4ch" height="1em" class="ba11"/>
+<rect x="16ch" y="2em" width="4ch" height="1em" class="ba12"/>
+<rect x="20ch" y="2em" width="4ch" height="1em" class="ba13"/>
+<rect x="24ch" y="2em" width="4ch" height="1em" class="ba14"/>
+<rect x="28ch" y="2em" width="4ch" height="1em" class="ba15"/>
+<rect x="4ch" y="5em" width="4ch" height="1em" class="bc0"/>
+<rect x="8ch" y="5em" width="4ch" height="1em" class="bc1"/>
+<rect x="12ch" y="5em" width="4ch" height="1em" class="bc2"/>
+<rect x="16ch" y="5em" width="4ch" height="1em" class="bc3"/>
+<rect x="20ch" y="5em" width="4ch" height="1em" class="bc4"/>
+<rect x="25ch" y="5em" width="4ch" height="1em" class="bc5"/>
+<rect x="29ch" y="5em" width="4ch" height="1em" class="bc6"/>
+<rect x="33ch" y="5em" width="4ch" height="1em" class="bc7"/>
+<rect x="37ch" y="5em" width="4ch" height="1em" class="bc8"/>
+<rect x="41ch" y="5em" width="4ch" height="1em" class="bc9"/>
+<rect x="45ch" y="5em" width="4ch" height="1em" class="bc10"/>
+<rect x="50ch" y="5em" width="4ch" height="1em" class="bc11"/>
+<rect x="54ch" y="5em" width="4ch" height="1em" class="bc12"/>
+<rect x="58ch" y="5em" width="4ch" height="1em" class="bc13"/>
+<rect x="62ch" y="5em" width="4ch" height="1em" class="bc14"/>
+<rect x="66ch" y="5em" width="4ch" height="1em" class="bc15"/>
+<rect x="70ch" y="5em" width="4ch" height="1em" class="bc16"/>
+<rect x="0ch" y="6em" width="4ch" height="1em" class="bc17"/>
+<rect x="4ch" y="6em" width="4ch" height="1em" class="bc18"/>
+<rect x="8ch" y="6em" width="4ch" height="1em" class="bc19"/>
+<rect x="12ch" y="6em" width="4ch" height="1em" class="bc20"/>
+<rect x="16ch" y="6em" width="4ch" height="1em" class="bc21"/>
+<rect x="20ch" y="6em" width="4ch" height="1em" class="bc22"/>
+<rect x="25ch" y="6em" width="4ch" height="1em" class="bc23"/>
+<rect x="29ch" y="6em" width="4ch" height="1em" class="bc24"/>
+<rect x="33ch" y="6em" width="4ch" height="1em" class="bc25"/>
+<rect x="37ch" y="6em" width="4ch" height="1em" class="bc26"/>
+<rect x="41ch" y="6em" width="4ch" height="1em" class="bc27"/>
+<rect x="45ch" y="6em" width="4ch" height="1em" class="bc28"/>
+<rect x="50ch" y="6em" width="4ch" height="1em" class="bc29"/>
+<rect x="54ch" y="6em" width="4ch" height="1em" class="bc30"/>
+<rect x="58ch" y="6em" width="4ch" height="1em" class="bc31"/>
+<rect x="62ch" y="6em" width="4ch" height="1em" class="bc32"/>
+<rect x="66ch" y="6em" width="4ch" height="1em" class="bc33"/>
+<rect x="70ch" y="6em" width="4ch" height="1em" class="bc34"/>
+<rect x="0ch" y="7em" width="4ch" height="1em" class="bc35"/>
+<rect x="4ch" y="7em" width="4ch" height="1em" class="bc36"/>
+<rect x="8ch" y="7em" width="4ch" height="1em" class="bc37"/>
+<rect x="12ch" y="7em" width="4ch" height="1em" class="bc38"/>
+<rect x="16ch" y="7em" width="4ch" height="1em" class="bc39"/>
+<rect x="20ch" y="7em" width="4ch" height="1em" class="bc40"/>
+<rect x="25ch" y="7em" width="4ch" height="1em" class="bc41"/>
+<rect x="29ch" y="7em" width="4ch" height="1em" class="bc42"/>
+<rect x="33ch" y="7em" width="4ch" height="1em" class="bc43"/>
+<rect x="37ch" y="7em" width="4ch" height="1em" class="bc44"/>
+<rect x="41ch" y="7em" width="4ch" height="1em" class="bc45"/>
+<rect x="45ch" y="7em" width="4ch" height="1em" class="bc46"/>
+<rect x="50ch" y="7em" width="4ch" height="1em" class="bc47"/>
+<rect x="54ch" y="7em" width="4ch" height="1em" class="bc48"/>
+<rect x="58ch" y="7em" width="4ch" height="1em" class="bc49"/>
+<rect x="62ch" y="7em" width="4ch" height="1em" class="bc50"/>
+<rect x="66ch" y="7em" width="4ch" height="1em" class="bc51"/>
+<rect x="70ch" y="7em" width="4ch" height="1em" class="bc52"/>
+<rect x="0ch" y="8em" width="4ch" height="1em" class="bc53"/>
+<rect x="4ch" y="8em" width="4ch" height="1em" class="bc54"/>
+<rect x="8ch" y="8em" width="4ch" height="1em" class="bc55"/>
+<rect x="12ch" y="8em" width="4ch" height="1em" class="bc56"/>
+<rect x="16ch" y="8em" width="4ch" height="1em" class="bc57"/>
+<rect x="20ch" y="8em" width="4ch" height="1em" class="bc58"/>
+<rect x="25ch" y="8em" width="4ch" height="1em" class="bc59"/>
+<rect x="29ch" y="8em" width="4ch" height="1em" class="bc60"/>
+<rect x="33ch" y="8em" width="4ch" height="1em" class="bc61"/>
+<rect x="37ch" y="8em" width="4ch" height="1em" class="bc62"/>
+<rect x="41ch" y="8em" width="4ch" height="1em" class="bc63"/>
+<rect x="45ch" y="8em" width="4ch" height="1em" class="bc64"/>
+<rect x="50ch" y="8em" width="4ch" height="1em" class="bc65"/>
+<rect x="54ch" y="8em" width="4ch" height="1em" class="bc66"/>
+<rect x="58ch" y="8em" width="4ch" height="1em" class="bc67"/>
+<rect x="62ch" y="8em" width="4ch" height="1em" class="bc68"/>
+<rect x="66ch" y="8em" width="4ch" height="1em" class="bc69"/>
+<rect x="70ch" y="8em" width="4ch" height="1em" class="bc70"/>
+<rect x="0ch" y="9em" width="4ch" height="1em" class="bc71"/>
+<rect x="4ch" y="9em" width="4ch" height="1em" class="bc72"/>
+<rect x="8ch" y="9em" width="4ch" height="1em" class="bc73"/>
+<rect x="12ch" y="9em" width="4ch" height="1em" class="bc74"/>
+<rect x="16ch" y="9em" width="4ch" height="1em" class="bc75"/>
+<rect x="20ch" y="9em" width="4ch" height="1em" class="bc76"/>
+<rect x="25ch" y="9em" width="4ch" height="1em" class="bc77"/>
+<rect x="29ch" y="9em" width="4ch" height="1em" class="bc78"/>
+<rect x="33ch" y="9em" width="4ch" height="1em" class="bc79"/>
+<rect x="37ch" y="9em" width="4ch" height="1em" class="bc80"/>
+<rect x="41ch" y="9em" width="4ch" height="1em" class="bc81"/>
+<rect x="45ch" y="9em" width="4ch" height="1em" class="bc82"/>
+<rect x="50ch" y="9em" width="4ch" height="1em" class="bc83"/>
+<rect x="54ch" y="9em" width="4ch" height="1em" class="bc84"/>
+<rect x="58ch" y="9em" width="4ch" height="1em" class="bc85"/>
+<rect x="62ch" y="9em" width="4ch" height="1em" class="bc86"/>
+<rect x="66ch" y="9em" width="4ch" height="1em" class="bc87"/>
+<rect x="70ch" y="9em" width="4ch" height="1em" class="bc88"/>
+<rect x="0ch" y="10em" width="4ch" height="1em" class="bc89"/>
+<rect x="4ch" y="10em" width="4ch" height="1em" class="bc90"/>
+<rect x="8ch" y="10em" width="4ch" height="1em" class="bc91"/>
+<rect x="12ch" y="10em" width="4ch" height="1em" class="bc92"/>
+<rect x="16ch" y="10em" width="4ch" height="1em" class="bc93"/>
+<rect x="20ch" y="10em" width="4ch" height="1em" class="bc94"/>
+<rect x="25ch" y="10em" width="4ch" height="1em" class="bc95"/>
+<rect x="29ch" y="10em" width="4ch" height="1em" class="bc96"/>
+<rect x="33ch" y="10em" width="4ch" height="1em" class="bc97"/>
+<rect x="37ch" y="10em" width="4ch" height="1em" class="bc98"/>
+<rect x="41ch" y="10em" width="4ch" height="1em" class="bc99"/>
+<rect x="45ch" y="10em" width="4ch" height="1em" class="bc100"/>
+<rect x="50ch" y="10em" width="4ch" height="1em" class="bc101"/>
+<rect x="54ch" y="10em" width="4ch" height="1em" class="bc102"/>
+<rect x="58ch" y="10em" width="4ch" height="1em" class="bc103"/>
+<rect x="62ch" y="10em" width="4ch" height="1em" class="bc104"/>
+<rect x="66ch" y="10em" width="4ch" height="1em" class="bc105"/>
+<rect x="70ch" y="10em" width="4ch" height="1em" class="bc106"/>
+<rect x="0ch" y="12em" width="4ch" height="1em" class="bc107"/>
+<rect x="4ch" y="12em" width="4ch" height="1em" class="bc108"/>
+<rect x="8ch" y="12em" width="4ch" height="1em" class="bc109"/>
+<rect x="12ch" y="12em" width="4ch" height="1em" class="bc110"/>
+<rect x="16ch" y="12em" width="4ch" height="1em" class="bc111"/>
+<rect x="20ch" y="12em" width="4ch" height="1em" class="bc112"/>
+<rect x="25ch" y="12em" width="4ch" height="1em" class="bc113"/>
+<rect x="29ch" y="12em" width="4ch" height="1em" class="bc114"/>
+<rect x="33ch" y="12em" width="4ch" height="1em" class="bc115"/>
+<rect x="37ch" y="12em" width="4ch" height="1em" class="bc116"/>
+<rect x="41ch" y="12em" width="4ch" height="1em" class="bc117"/>
+<rect x="45ch" y="12em" width="4ch" height="1em" class="bc118"/>
+<rect x="50ch" y="12em" width="4ch" height="1em" class="bc119"/>
+<rect x="54ch" y="12em" width="4ch" height="1em" class="bc120"/>
+<rect x="58ch" y="12em" width="4ch" height="1em" class="bc121"/>
+<rect x="62ch" y="12em" width="4ch" height="1em" class="bc122"/>
+<rect x="66ch" y="12em" width="4ch" height="1em" class="bc123"/>
+<rect x="70ch" y="12em" width="4ch" height="1em" class="bc124"/>
+<rect x="0ch" y="13em" width="4ch" height="1em" class="bc125"/>
+<rect x="4ch" y="13em" width="4ch" height="1em" class="bc126"/>
+<rect x="8ch" y="13em" width="4ch" height="1em" class="bc127"/>
+<rect x="12ch" y="13em" width="4ch" height="1em" class="bc128"/>
+<rect x="16ch" y="13em" width="4ch" height="1em" class="bc129"/>
+<rect x="20ch" y="13em" width="4ch" height="1em" class="bc130"/>
+<rect x="25ch" y="13em" width="4ch" height="1em" class="bc131"/>
+<rect x="29ch" y="13em" width="4ch" height="1em" class="bc132"/>
+<rect x="33ch" y="13em" width="4ch" height="1em" class="bc133"/>
+<rect x="37ch" y="13em" width="4ch" height="1em" class="bc134"/>
+<rect x="41ch" y="13em" width="4ch" height="1em" class="bc135"/>
+<rect x="45ch" y="13em" width="4ch" height="1em" class="bc136"/>
+<rect x="50ch" y="13em" width="4ch" height="1em" class="bc137"/>
+<rect x="54ch" y="13em" width="4ch" height="1em" class="bc138"/>
+<rect x="58ch" y="13em" width="4ch" height="1em" class="bc139"/>
+<rect x="62ch" y="13em" width="4ch" height="1em" class="bc140"/>
+<rect x="66ch" y="13em" width="4ch" height="1em" class="bc141"/>
+<rect x="70ch" y="13em" width="4ch" height="1em" class="bc142"/>
+<rect x="0ch" y="14em" width="4ch" height="1em" class="bc143"/>
+<rect x="4ch" y="14em" width="4ch" height="1em" class="bc144"/>
+<rect x="8ch" y="14em" width="4ch" height="1em" class="bc145"/>
+<rect x="12ch" y="14em" width="4ch" height="1em" class="bc146"/>
+<rect x="16ch" y="14em" width="4ch" height="1em" class="bc147"/>
+<rect x="20ch" y="14em" width="4ch" height="1em" class="bc148"/>
+<rect x="25ch" y="14em" width="4ch" height="1em" class="bc149"/>
+<rect x="29ch" y="14em" width="4ch" height="1em" class="bc150"/>
+<rect x="33ch" y="14em" width="4ch" height="1em" class="bc151"/>
+<rect x="37ch" y="14em" width="4ch" height="1em" class="bc152"/>
+<rect x="41ch" y="14em" width="4ch" height="1em" class="bc153"/>
+<rect x="45ch" y="14em" width="4ch" height="1em" class="bc154"/>
+<rect x="50ch" y="14em" width="4ch" height="1em" class="bc155"/>
+<rect x="54ch" y="14em" width="4ch" height="1em" class="bc156"/>
+<rect x="58ch" y="14em" width="4ch" height="1em" class="bc157"/>
+<rect x="62ch" y="14em" width="4ch" height="1em" class="bc158"/>
+<rect x="66ch" y="14em" width="4ch" height="1em" class="bc159"/>
+<rect x="70ch" y="14em" width="4ch" height="1em" class="bc160"/>
+<rect x="0ch" y="15em" width="4ch" height="1em" class="bc161"/>
+<rect x="4ch" y="15em" width="4ch" height="1em" class="bc162"/>
+<rect x="8ch" y="15em" width="4ch" height="1em" class="bc163"/>
+<rect x="12ch" y="15em" width="4ch" height="1em" class="bc164"/>
+<rect x="16ch" y="15em" width="4ch" height="1em" class="bc165"/>
+<rect x="20ch" y="15em" width="4ch" height="1em" class="bc166"/>
+<rect x="25ch" y="15em" width="4ch" height="1em" class="bc167"/>
+<rect x="29ch" y="15em" width="4ch" height="1em" class="bc168"/>
+<rect x="33ch" y="15em" width="4ch" height="1em" class="bc169"/>
+<rect x="37ch" y="15em" width="4ch" height="1em" class="bc170"/>
+<rect x="41ch" y="15em" width="4ch" height="1em" class="bc171"/>
+<rect x="45ch" y="15em" width="4ch" height="1em" class="bc172"/>
+<rect x="50ch" y="15em" width="4ch" height="1em" class="bc173"/>
+<rect x="54ch" y="15em" width="4ch" height="1em" class="bc174"/>
+<rect x="58ch" y="15em" width="4ch" height="1em" class="bc175"/>
+<rect x="62ch" y="15em" width="4ch" height="1em" class="bc176"/>
+<rect x="66ch" y="15em" width="4ch" height="1em" class="bc177"/>
+<rect x="70ch" y="15em" width="4ch" height="1em" class="bc178"/>
+<rect x="0ch" y="16em" width="4ch" height="1em" class="bc179"/>
+<rect x="4ch" y="16em" width="4ch" height="1em" class="bc180"/>
+<rect x="8ch" y="16em" width="4ch" height="1em" class="bc181"/>
+<rect x="12ch" y="16em" width="4ch" height="1em" class="bc182"/>
+<rect x="16ch" y="16em" width="4ch" height="1em" class="bc183"/>
+<rect x="20ch" y="16em" width="4ch" height="1em" class="bc184"/>
+<rect x="25ch" y="16em" width="4ch" height="1em" class="bc185"/>
+<rect x="29ch" y="16em" width="4ch" height="1em" class="bc186"/>
+<rect x="33ch" y="16em" width="4ch" height="1em" class="bc187"/>
+<rect x="37ch" y="16em" width="4ch" height="1em" class="bc188"/>
+<rect x="41ch" y="16em" width="4ch" height="1em" class="bc189"/>
+<rect x="45ch" y="16em" width="4ch" height="1em" class="bc190"/>
+<rect x="50ch" y="16em" width="4ch" height="1em" class="bc191"/>
+<rect x="54ch" y="16em" width="4ch" height="1em" class="bc192"/>
+<rect x="58ch" y="16em" width="4ch" height="1em" class="bc193"/>
+<rect x="62ch" y="16em" width="4ch" height="1em" class="bc194"/>
+<rect x="66ch" y="16em" width="4ch" height="1em" class="bc195"/>
+<rect x="70ch" y="16em" width="4ch" height="1em" class="bc196"/>
+<rect x="0ch" y="17em" width="4ch" height="1em" class="bc197"/>
+<rect x="4ch" y="17em" width="4ch" height="1em" class="bc198"/>
+<rect x="8ch" y="17em" width="4ch" height="1em" class="bc199"/>
+<rect x="12ch" y="17em" width="4ch" height="1em" class="bc200"/>
+<rect x="16ch" y="17em" width="4ch" height="1em" class="bc201"/>
+<rect x="20ch" y="17em" width="4ch" height="1em" class="bc202"/>
+<rect x="25ch" y="17em" width="4ch" height="1em" class="bc203"/>
+<rect x="29ch" y="17em" width="4ch" height="1em" class="bc204"/>
+<rect x="33ch" y="17em" width="4ch" height="1em" class="bc205"/>
+<rect x="37ch" y="17em" width="4ch" height="1em" class="bc206"/>
+<rect x="41ch" y="17em" width="4ch" height="1em" class="bc207"/>
+<rect x="45ch" y="17em" width="4ch" height="1em" class="bc208"/>
+<rect x="50ch" y="17em" width="4ch" height="1em" class="bc209"/>
+<rect x="54ch" y="17em" width="4ch" height="1em" class="bc210"/>
+<rect x="58ch" y="17em" width="4ch" height="1em" class="bc211"/>
+<rect x="62ch" y="17em" width="4ch" height="1em" class="bc212"/>
+<rect x="66ch" y="17em" width="4ch" height="1em" class="bc213"/>
+<rect x="70ch" y="17em" width="4ch" height="1em" class="bc214"/>
+<rect x="4ch" y="19em" width="4ch" height="1em" class="bc215"/>
+<rect x="8ch" y="19em" width="4ch" height="1em" class="bc216"/>
+<rect x="12ch" y="19em" width="4ch" height="1em" class="bc217"/>
+<rect x="16ch" y="19em" width="4ch" height="1em" class="bc218"/>
+<rect x="20ch" y="19em" width="4ch" height="1em" class="bc219"/>
+<rect x="24ch" y="19em" width="4ch" height="1em" class="bc220"/>
+<rect x="28ch" y="19em" width="4ch" height="1em" class="bc221"/>
+<rect x="32ch" y="19em" width="4ch" height="1em" class="bc222"/>
+<rect x="36ch" y="19em" width="4ch" height="1em" class="bc223"/>
+<rect x="40ch" y="19em" width="4ch" height="1em" class="bc224"/>
+<rect x="44ch" y="19em" width="4ch" height="1em" class="bc225"/>
+<rect x="0ch" y="20em" width="4ch" height="1em" class="bc226"/>
+<rect x="4ch" y="20em" width="4ch" height="1em" class="bc227"/>
+<rect x="8ch" y="20em" width="4ch" height="1em" class="bc228"/>
+<rect x="12ch" y="20em" width="4ch" height="1em" class="bc229"/>
+<rect x="16ch" y="20em" width="4ch" height="1em" class="bc230"/>
+<rect x="20ch" y="20em" width="4ch" height="1em" class="bc231"/>
+<rect x="24ch" y="20em" width="4ch" height="1em" class="bc232"/>
+<rect x="28ch" y="20em" width="4ch" height="1em" class="bc233"/>
+<rect x="32ch" y="20em" width="4ch" height="1em" class="bc234"/>
+<rect x="36ch" y="20em" width="4ch" height="1em" class="bc235"/>
+<rect x="40ch" y="20em" width="4ch" height="1em" class="bc236"/>
+<rect x="44ch" y="20em" width="4ch" height="1em" class="bc214"/>
+</g>
+<g x="0">
+<text y="0.5em"><tspan>System colors:</tspan></text>
+<text y="1.5em"><tspan class="fa15">  0   1   2   3   4   5   6   7 </tspan></text>
+<text y="2.5em"><tspan class="fa15">  8 </tspan><tspan class="fa0">  9  10  11  12  13  14  15 </tspan></text>
+<text y="4.5em"><tspan>6x6x6 color cube and greyscale:</tspan></text>
+<text y="5.5em"><tspan class="fc0"> 16  22  28  34 </tspan><tspan class="fc1"> 40  46 </tspan><tspan> </tspan><tspan class="fc0"> 52  58  64 </tspan><tspan class="fc1"> 70  76  82 </tspan><tspan> </tspan><tspan class="fc0"> 88  94 100 </tspan><tspan class="fc1">106 112 118 </tspan></text>
+<text y="6.5em"><tspan class="fc0"> 17  23  29 </tspan><tspan class="fc1"> 35  41  47 </tspan><tspan> </tspan><tspan class="fc0"> 53  59  65 </tspan><tspan class="fc1"> 71  77  83 </tspan><tspan> </tspan><tspan class="fc0"> 89  95 </tspan><tspan class="fc1">101 107 113 119 </tspan></text>
+<text y="7.5em"><tspan class="fc0"> 18  24  30 </tspan><tspan class="fc1"> 36  42  48 </tspan><tspan> </tspan><tspan class="fc0"> 54  60  66 </tspan><tspan class="fc1"> 72  78  84 </tspan><tspan> </tspan><tspan class="fc0"> 90  96 </tspan><tspan class="fc1">102 108 114 120 </tspan></text>
+<text y="8.5em"><tspan class="fc0"> 19  25  31 </tspan><tspan class="fc1"> 37  43  49 </tspan><tspan> </tspan><tspan class="fc0"> 55  61 </tspan><tspan class="fc1"> 67  73  79  85 </tspan><tspan> </tspan><tspan class="fc0"> 91  97 </tspan><tspan class="fc1">103 109 115 121 </tspan></text>
+<text y="9.5em"><tspan class="fc0"> 20  26  32 </tspan><tspan class="fc1"> 38  44  50 </tspan><tspan> </tspan><tspan class="fc0"> 56  62 </tspan><tspan class="fc1"> 68  74  80  86 </tspan><tspan> </tspan><tspan class="fc0"> 92  98 </tspan><tspan class="fc1">104 110 116 122 </tspan></text>
+<text y="10.5em"><tspan class="fc0"> 21  27  33 </tspan><tspan class="fc1"> 39  45  51 </tspan><tspan> </tspan><tspan class="fc0"> 57  63 </tspan><tspan class="fc1"> 69  75  81  87 </tspan><tspan> </tspan><tspan class="fc0"> 93  99 </tspan><tspan class="fc1">105 111 117 123 </tspan></text>
+<text y="12.5em"><tspan class="fc0">124 130 </tspan><tspan class="fc1">136 142 148 154 </tspan><tspan> </tspan><tspan class="fc0">160 166 </tspan><tspan class="fc1">172 178 184 190 </tspan><tspan> </tspan><tspan class="fc0">196 202 </tspan><tspan class="fc1">208 214 220 226 </tspan></text>
+<text y="13.5em"><tspan class="fc0">125 131 </tspan><tspan class="fc1">137 143 149 155 </tspan><tspan> </tspan><tspan class="fc0">161 167 </tspan><tspan class="fc1">173 179 185 191 </tspan><tspan> </tspan><tspan class="fc0">197 </tspan><tspan class="fc1">203 209 215 221 227 </tspan></text>
+<text y="14.5em"><tspan class="fc0">126 132 </tspan><tspan class="fc1">138 144 150 156 </tspan><tspan> </tspan><tspan class="fc0">162 168 </tspan><tspan class="fc1">174 180 186 192 </tspan><tspan> </tspan><tspan class="fc0">198 </tspan><tspan class="fc1">204 210 216 222 228 </tspan></text>
+<text y="15.5em"><tspan class="fc0">127 133 </tspan><tspan class="fc1">139 145 151 157 </tspan><tspan> </tspan><tspan class="fc0">163 169 </tspan><tspan class="fc1">175 181 187 193 </tspan><tspan> </tspan><tspan class="fc0">199 </tspan><tspan class="fc1">205 211 217 223 229 </tspan></text>
+<text y="16.5em"><tspan class="fc0">128 134 </tspan><tspan class="fc1">140 146 152 158 </tspan><tspan> </tspan><tspan class="fc0">164 </tspan><tspan class="fc1">170 176 182 188 194 </tspan><tspan> </tspan><tspan class="fc0">200 </tspan><tspan class="fc1">206 212 218 224 230 </tspan></text>
+<text y="17.5em"><tspan class="fc0">129 135 </tspan><tspan class="fc1">141 147 153 159 </tspan><tspan> </tspan><tspan class="fc0">165 </tspan><tspan class="fc1">171 177 183 189 195 </tspan><tspan> </tspan><tspan class="fc0">201 </tspan><tspan class="fc1">207 213 219 225 231 </tspan></text>
+<text y="19.5em"><tspan class="fc0">232 233 234 235 236 237 238 239 240 241 242 243 </tspan></text>
+<text y="20.5em"><tspan class="fc1">244 245 246 247 248 249 250 251 252 253 254 255 </tspan></text>
+</g>
 </svg>

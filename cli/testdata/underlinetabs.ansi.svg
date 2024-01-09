@@ -19,14 +19,18 @@
         .fa12 { fill: #5555ff; }
     </style>
     <rect width="100%" height="100%" x="0" y="0" style="fill: #000000"/>
-<rect x="0ch" y="5em" width="9ch" height="1em" class="bg ba4"/>
-<text x="0" y="0.5em"><tspan text-decoration="underline">0       0</tspan></text>
-<text x="0" y="1.5em"><tspan text-decoration="underline">1       1</tspan></text>
-<text x="0" y="2.5em"><tspan text-decoration="underline">2       2</tspan></text>
-<text x="0" y="3.5em"><tspan text-decoration="underline">3       3</tspan></text>
-<text x="0" y="4.5em"><tspan class="fa12" text-decoration="underline">4       4</tspan></text>
-<text x="0" y="5.5em"><tspan text-decoration="underline">5       5</tspan></text>
-<text x="0" y="6.5em"><tspan text-decoration="underline">6       6</tspan></text>
-<text x="0" y="7.5em"><tspan text-decoration="underline">7       7</tspan></text>
-<text x="0" y="8.5em"><tspan text-decoration="underline">8               8</tspan></text>
+<g class="bg">
+<rect x="0ch" y="5em" width="9ch" height="1em" class="ba4"/>
+</g>
+<g x="0">
+<text y="0.5em"><tspan text-decoration="underline">0       0</tspan></text>
+<text y="1.5em"><tspan text-decoration="underline">1       1</tspan></text>
+<text y="2.5em"><tspan text-decoration="underline">2       2</tspan></text>
+<text y="3.5em"><tspan text-decoration="underline">3       3</tspan></text>
+<text y="4.5em"><tspan class="fa12" text-decoration="underline">4       4</tspan></text>
+<text y="5.5em"><tspan text-decoration="underline">5       5</tspan></text>
+<text y="6.5em"><tspan text-decoration="underline">6       6</tspan></text>
+<text y="7.5em"><tspan text-decoration="underline">7       7</tspan></text>
+<text y="8.5em"><tspan text-decoration="underline">8               8</tspan></text>
+</g>
 </svg>

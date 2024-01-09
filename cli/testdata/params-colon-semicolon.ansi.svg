@@ -19,6 +19,10 @@
         .fc0 { fill: #ffffff; }
     </style>
     <rect width="100%" height="100%" x="0" y="0" style="fill: #000000"/>
-<rect x="0ch" y="0em" width="40ch" height="1em" class="bg bc0"/>
-<text x="0" y="0.5em"><tspan class="fc0"> params with mix colon semicolon red bg </tspan></text>
+<g class="bg">
+<rect x="0ch" y="0em" width="40ch" height="1em" class="bc0"/>
+</g>
+<g x="0">
+<text y="0.5em"><tspan class="fc0"> params with mix colon semicolon red bg </tspan></text>
+</g>
 </svg>

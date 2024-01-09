@@ -15,5 +15,9 @@
         }
     </style>
     <rect width="100%" height="100%" x="0" y="0" style="fill: #000000"/>
-<text x="0" y="0.5em"><tspan>nonewline</tspan></text>
+<g class="bg">
+</g>
+<g x="0">
+<text y="0.5em"><tspan>nonewline</tspan></text>
+</g>
 </svg>
