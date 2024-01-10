@@ -58,7 +58,29 @@ go build -o ansisvg .
 
 ## Fonts
 
-Note that embedded fonts might not be supported by some SVG viewers. At time of writing this is not supported by Inkscape (see https://gitlab.com/inkscape/inbox/-/issues/301).
+`ansisvg` can either use system-installed fonts (`-fontname`), link to a webfont on a HTTP server (`-fontref`) or embed a webfont from the local filesystem (`-fontfile`).
+
+### Compatibility issues
+
+* Embedded and/or linked fonts might not be supported by some SVG viewers. At time of writing this is [not supported by Inkscape](https://gitlab.com/inkscape/inbox/-/issues/301).
+
+* For SVGs that are intended to be included in websites via `<img>`, the only way to make a custom font work is [embedding it in the SVG](https://vecta.io/blog/how-to-use-fonts-in-svg).
+
+### Variations of custom fonts (regular/bold/italic)
+
+* System wide fonts (`-fontname`) get correctly rendered with variations, but when using external fonts with `-fontref` or `-fontfile` the SVG viewer knows only the regular variant and will try to render italic/bold text 'extrapolated' from it which may look different than the actual font variation. To use the actual bold/italic font variants, different woff2 files have to be used for the respective text styles which needs additional CSS code (currently not supported by `ansisvg`).
+
+* Bold style 'extrapolated' from the regular font may even break monospace alignment. Use `-grid` option to mitigate that.
+
+## Font-relative vs. pixel coordinates
+
+By default, `ansisvg` uses font-relative `ch`/`em` coordinates. This should make SVG dimensions and line/character spacing consistent with font family/size. When SVG dimensions and/or text coordinates are off, it is possible to force explicit pixel units for coordinates by specifying `-charboxsize` in X/Y pixel units, e.g. `8x16`.
+
+Inkscape currently [cannot deal with SVG size expressed in font-relative units](https://gitlab.com/inkscape/inkscape/-/issues/4737), a quick workaround is Ctrl-Shift-R (resize page to content).
+
+## Consolidated text vs. grid mode
+
+By default, `ansisvg` consolidates text to `<tspan>` chunks, leaving the X positioning of characters to the SVG renderer. This usually works well for monospace fonts. However if not all glyphs involved are monospace (e.g. when exotic characters are used, making the SVG renderer fall back to a different font for those characters) then the alignment will be off; this can be worked around with `-grid` mode which will make `ansisvg` put each character to explicit positions, making the SVG bigger and less readable but ensuring proper positioning/alignment for all characters.
 
 ## Tricks
 
