@@ -22,16 +22,18 @@ func argsSplit(s string) []string {
 	return rs
 }
 
-func TestMain(t *testing.T) {
+func testHelper(t *testing.T, pattern string, ext string) {
 	difftest.TestWithOptions(t, difftest.Options{
 		Path:        "testdata",
-		Pattern:     "*.ansi",
+		Pattern:     pattern,
 		ColorDiff:   os.Getenv("TEST_COLOR") != "",
-		WriteOutput: *update || os.Getenv("WRITE_ACTUAL") != "",
+		WriteOutput: *update,
 		Fn: func(t *testing.T, path, input string) (string, string, error) {
-			testBaseDir := filepath.Dir(path)
+			testDir := filepath.Dir(path)
+			testBase := filepath.Base(path)
+			testName := testBase[0 : len(testBase)-len(filepath.Ext(testBase))]
 			readFile := func(s string) ([]byte, error) {
-				return os.ReadFile(filepath.Join(testBaseDir, s))
+				return os.ReadFile(filepath.Join(testDir, s))
 			}
 			readFileOrEmpty := func(s string) []byte {
 				b, err := readFile(s)
@@ -41,7 +43,7 @@ func TestMain(t *testing.T) {
 				return b
 			}
 
-			args := string(readFileOrEmpty(filepath.Base(path) + ".args"))
+			args := string(readFileOrEmpty(testName + ".args"))
 			actualStdout := &bytes.Buffer{}
 			actualStderr := &bytes.Buffer{}
 			if err := cli.Main(cli.Env{
@@ -54,7 +56,12 @@ func TestMain(t *testing.T) {
 				t.Error(err)
 			}
 
-			return path + ".svg", actualStdout.String(), nil
+			return filepath.Join(testDir, testName) + ext, actualStdout.String(), nil
 		},
 	})
+}
+
+func TestMain(t *testing.T) {
+	testHelper(t, "*.ansi", ".svg")
+	testHelper(t, "*.stdin", ".stdout")
 }
