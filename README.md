@@ -8,11 +8,11 @@ Can be used to produce nice looking example output for presentations, markdown f
 does not support programs that do cursor movements like ncurses programs etc.
 
 ```sh
-./colortest | ansisvg > colortest.ansi.svg
+./colortest | ansisvg > colortest.svg
  ```
-Produces [colortest.ansi.svg](cli/testdata/colortest.ansi.svg):
+Produces [colortest.svg](cli/testdata/colortest.svg):
 
-![ansisvg output for colortest](cli/testdata/colortest.ansi.svg)
+![ansisvg output for colortest](cli/testdata/colortest.svg)
 
 ```
 $ ansisvg -h
