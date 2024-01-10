@@ -10,8 +10,19 @@
             white-space: pre;
             fill: #bbbbbb;
         }
+        .bg {
+            stroke-width: "0.5px";
+        }
+        <!-- Background custom colors -->
+        .bc0 { stroke: #870000; fill: #870000; }
+        <!-- Foreground custom colors -->
+        .fc0 { fill: #ffffff; }
     </style>
     <rect width="100%" height="100%" x="0" y="0" style="fill: #000000"/>
-<rect x="0ch" y="0em" width="40ch" height="1em" stroke-width="0.5px" stroke="#870000" style="fill:#870000"/>
-<text x="0" y="0.5em"><tspan style="fill:#ffffff"> params with mix colon semicolon red bg </tspan></text>
+<g class="bg">
+<rect x="0ch" y="0em" width="40ch" height="1em" class="bc0"/>
+</g>
+<g x="0">
+<text y="0.5em"><tspan class="fc0"> params with mix colon semicolon red bg </tspan></text>
+</g>
 </svg>

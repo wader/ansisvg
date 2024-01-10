@@ -10,17 +10,27 @@
             white-space: pre;
             fill: #bbbbbb;
         }
+        .bg {
+            stroke-width: "0.5px";
+        }
+        <!-- Foreground ANSI colors -->
+        .fa2 { fill: #00bb00; }
+        .fa4 { fill: #0000bb; }
     </style>
     <rect width="100%" height="100%" x="0" y="0" style="fill: #000000"/>
-<text x="0" y="0.5em"><tspan style="font-weight:bold">{</tspan></text>
-<text x="0" y="1.5em"><tspan style="font-weight:bold">  </tspan><tspan style="fill:#0000bb;font-weight:bold">&#34;true&#34;</tspan><tspan style="font-weight:bold">: </tspan><tspan>true</tspan><tspan style="font-weight:bold">,</tspan></text>
-<text x="0" y="2.5em"><tspan style="font-weight:bold">  </tspan><tspan style="fill:#0000bb;font-weight:bold">&#34;false&#34;</tspan><tspan style="font-weight:bold">: </tspan><tspan>false</tspan><tspan style="font-weight:bold">,</tspan></text>
-<text x="0" y="3.5em"><tspan style="font-weight:bold">  </tspan><tspan style="fill:#0000bb;font-weight:bold">&#34;string&#34;</tspan><tspan style="font-weight:bold">: </tspan><tspan style="fill:#00bb00">&#34;string&#34;</tspan><tspan style="font-weight:bold">,</tspan></text>
-<text x="0" y="4.5em"><tspan style="font-weight:bold">  </tspan><tspan style="fill:#0000bb;font-weight:bold">&#34;number&#34;</tspan><tspan style="font-weight:bold">: </tspan><tspan>123.1</tspan><tspan style="font-weight:bold">,</tspan></text>
-<text x="0" y="5.5em"><tspan style="font-weight:bold">  </tspan><tspan style="fill:#0000bb;font-weight:bold">&#34;array&#34;</tspan><tspan style="font-weight:bold">: [</tspan></text>
-<text x="0" y="6.5em"><tspan style="font-weight:bold">    </tspan><tspan>1</tspan><tspan style="font-weight:bold">,</tspan></text>
-<text x="0" y="7.5em"><tspan style="font-weight:bold">    </tspan><tspan>2</tspan><tspan style="font-weight:bold">,</tspan></text>
-<text x="0" y="8.5em"><tspan style="font-weight:bold">    </tspan><tspan>3</tspan></text>
-<text x="0" y="9.5em"><tspan style="font-weight:bold">  ]</tspan></text>
-<text x="0" y="10.5em"><tspan style="font-weight:bold">}</tspan></text>
+<g class="bg">
+</g>
+<g x="0">
+<text y="0.5em"><tspan style="font-weight:bold">{</tspan></text>
+<text y="1.5em"><tspan style="font-weight:bold">  </tspan><tspan class="fa4" style="font-weight:bold">&#34;true&#34;</tspan><tspan style="font-weight:bold">: </tspan><tspan>true</tspan><tspan style="font-weight:bold">,</tspan></text>
+<text y="2.5em"><tspan style="font-weight:bold">  </tspan><tspan class="fa4" style="font-weight:bold">&#34;false&#34;</tspan><tspan style="font-weight:bold">: </tspan><tspan>false</tspan><tspan style="font-weight:bold">,</tspan></text>
+<text y="3.5em"><tspan style="font-weight:bold">  </tspan><tspan class="fa4" style="font-weight:bold">&#34;string&#34;</tspan><tspan style="font-weight:bold">: </tspan><tspan class="fa2">&#34;string&#34;</tspan><tspan style="font-weight:bold">,</tspan></text>
+<text y="4.5em"><tspan style="font-weight:bold">  </tspan><tspan class="fa4" style="font-weight:bold">&#34;number&#34;</tspan><tspan style="font-weight:bold">: </tspan><tspan>123.1</tspan><tspan style="font-weight:bold">,</tspan></text>
+<text y="5.5em"><tspan style="font-weight:bold">  </tspan><tspan class="fa4" style="font-weight:bold">&#34;array&#34;</tspan><tspan style="font-weight:bold">: [</tspan></text>
+<text y="6.5em"><tspan style="font-weight:bold">    </tspan><tspan>1</tspan><tspan style="font-weight:bold">,</tspan></text>
+<text y="7.5em"><tspan style="font-weight:bold">    </tspan><tspan>2</tspan><tspan style="font-weight:bold">,</tspan></text>
+<text y="8.5em"><tspan style="font-weight:bold">    </tspan><tspan>3</tspan></text>
+<text y="9.5em"><tspan style="font-weight:bold">  ]</tspan></text>
+<text y="10.5em"><tspan style="font-weight:bold">}</tspan></text>
+</g>
 </svg>

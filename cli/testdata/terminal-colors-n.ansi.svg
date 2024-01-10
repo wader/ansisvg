@@ -10,277 +10,546 @@
             white-space: pre;
             fill: #bbbbbb;
         }
+        .bg {
+            stroke-width: "0.5px";
+        }
+        <!-- Background ANSI colors -->
+        .ba0 { stroke: #000000; fill: #000000; }
+        .ba1 { stroke: #bb0000; fill: #bb0000; }
+        .ba2 { stroke: #00bb00; fill: #00bb00; }
+        .ba3 { stroke: #bbbb00; fill: #bbbb00; }
+        .ba4 { stroke: #0000bb; fill: #0000bb; }
+        .ba5 { stroke: #bb00bb; fill: #bb00bb; }
+        .ba6 { stroke: #00bbbb; fill: #00bbbb; }
+        .ba7 { stroke: #bbbbbb; fill: #bbbbbb; }
+        .ba8 { stroke: #555555; fill: #555555; }
+        .ba9 { stroke: #ff5555; fill: #ff5555; }
+        .ba10 { stroke: #55ff55; fill: #55ff55; }
+        .ba11 { stroke: #ffff55; fill: #ffff55; }
+        .ba12 { stroke: #5555ff; fill: #5555ff; }
+        .ba13 { stroke: #ff55ff; fill: #ff55ff; }
+        .ba14 { stroke: #55ffff; fill: #55ffff; }
+        .ba15 { stroke: #ffffff; fill: #ffffff; }
+        <!-- Foreground ANSI colors -->
+        .fa0 { fill: #000000; }
+        .fa15 { fill: #ffffff; }
+        <!-- Background custom colors -->
+        .bc0 { stroke: #005f00; fill: #005f00; }
+        .bc1 { stroke: #008700; fill: #008700; }
+        .bc2 { stroke: #00af00; fill: #00af00; }
+        .bc3 { stroke: #00d700; fill: #00d700; }
+        .bc4 { stroke: #00ff00; fill: #00ff00; }
+        .bc5 { stroke: #5f0000; fill: #5f0000; }
+        .bc6 { stroke: #5f5f00; fill: #5f5f00; }
+        .bc7 { stroke: #5f8700; fill: #5f8700; }
+        .bc8 { stroke: #5faf00; fill: #5faf00; }
+        .bc9 { stroke: #5fd700; fill: #5fd700; }
+        .bc10 { stroke: #5fff00; fill: #5fff00; }
+        .bc11 { stroke: #870000; fill: #870000; }
+        .bc12 { stroke: #875f00; fill: #875f00; }
+        .bc13 { stroke: #878700; fill: #878700; }
+        .bc14 { stroke: #87af00; fill: #87af00; }
+        .bc15 { stroke: #87d700; fill: #87d700; }
+        .bc16 { stroke: #87ff00; fill: #87ff00; }
+        .bc17 { stroke: #00005f; fill: #00005f; }
+        .bc18 { stroke: #005f5f; fill: #005f5f; }
+        .bc19 { stroke: #00875f; fill: #00875f; }
+        .bc20 { stroke: #00af5f; fill: #00af5f; }
+        .bc21 { stroke: #00d75f; fill: #00d75f; }
+        .bc22 { stroke: #00ff5f; fill: #00ff5f; }
+        .bc23 { stroke: #5f005f; fill: #5f005f; }
+        .bc24 { stroke: #5f5f5f; fill: #5f5f5f; }
+        .bc25 { stroke: #5f875f; fill: #5f875f; }
+        .bc26 { stroke: #5faf5f; fill: #5faf5f; }
+        .bc27 { stroke: #5fd75f; fill: #5fd75f; }
+        .bc28 { stroke: #5fff5f; fill: #5fff5f; }
+        .bc29 { stroke: #87005f; fill: #87005f; }
+        .bc30 { stroke: #875f5f; fill: #875f5f; }
+        .bc31 { stroke: #87875f; fill: #87875f; }
+        .bc32 { stroke: #87af5f; fill: #87af5f; }
+        .bc33 { stroke: #87d75f; fill: #87d75f; }
+        .bc34 { stroke: #87ff5f; fill: #87ff5f; }
+        .bc35 { stroke: #000087; fill: #000087; }
+        .bc36 { stroke: #005f87; fill: #005f87; }
+        .bc37 { stroke: #008787; fill: #008787; }
+        .bc38 { stroke: #00af87; fill: #00af87; }
+        .bc39 { stroke: #00d787; fill: #00d787; }
+        .bc40 { stroke: #00ff87; fill: #00ff87; }
+        .bc41 { stroke: #5f0087; fill: #5f0087; }
+        .bc42 { stroke: #5f5f87; fill: #5f5f87; }
+        .bc43 { stroke: #5f8787; fill: #5f8787; }
+        .bc44 { stroke: #5faf87; fill: #5faf87; }
+        .bc45 { stroke: #5fd787; fill: #5fd787; }
+        .bc46 { stroke: #5fff87; fill: #5fff87; }
+        .bc47 { stroke: #870087; fill: #870087; }
+        .bc48 { stroke: #875f87; fill: #875f87; }
+        .bc49 { stroke: #878787; fill: #878787; }
+        .bc50 { stroke: #87af87; fill: #87af87; }
+        .bc51 { stroke: #87d787; fill: #87d787; }
+        .bc52 { stroke: #87ff87; fill: #87ff87; }
+        .bc53 { stroke: #0000af; fill: #0000af; }
+        .bc54 { stroke: #005faf; fill: #005faf; }
+        .bc55 { stroke: #0087af; fill: #0087af; }
+        .bc56 { stroke: #00afaf; fill: #00afaf; }
+        .bc57 { stroke: #00d7af; fill: #00d7af; }
+        .bc58 { stroke: #00ffaf; fill: #00ffaf; }
+        .bc59 { stroke: #5f00af; fill: #5f00af; }
+        .bc60 { stroke: #5f5faf; fill: #5f5faf; }
+        .bc61 { stroke: #5f87af; fill: #5f87af; }
+        .bc62 { stroke: #5fafaf; fill: #5fafaf; }
+        .bc63 { stroke: #5fd7af; fill: #5fd7af; }
+        .bc64 { stroke: #5fffaf; fill: #5fffaf; }
+        .bc65 { stroke: #8700af; fill: #8700af; }
+        .bc66 { stroke: #875faf; fill: #875faf; }
+        .bc67 { stroke: #8787af; fill: #8787af; }
+        .bc68 { stroke: #87afaf; fill: #87afaf; }
+        .bc69 { stroke: #87d7af; fill: #87d7af; }
+        .bc70 { stroke: #87ffaf; fill: #87ffaf; }
+        .bc71 { stroke: #0000d7; fill: #0000d7; }
+        .bc72 { stroke: #005fd7; fill: #005fd7; }
+        .bc73 { stroke: #0087d7; fill: #0087d7; }
+        .bc74 { stroke: #00afd7; fill: #00afd7; }
+        .bc75 { stroke: #00d7d7; fill: #00d7d7; }
+        .bc76 { stroke: #00ffd7; fill: #00ffd7; }
+        .bc77 { stroke: #5f00d7; fill: #5f00d7; }
+        .bc78 { stroke: #5f5fd7; fill: #5f5fd7; }
+        .bc79 { stroke: #5f87d7; fill: #5f87d7; }
+        .bc80 { stroke: #5fafd7; fill: #5fafd7; }
+        .bc81 { stroke: #5fd7d7; fill: #5fd7d7; }
+        .bc82 { stroke: #5fffd7; fill: #5fffd7; }
+        .bc83 { stroke: #8700d7; fill: #8700d7; }
+        .bc84 { stroke: #875fd7; fill: #875fd7; }
+        .bc85 { stroke: #8787d7; fill: #8787d7; }
+        .bc86 { stroke: #87afd7; fill: #87afd7; }
+        .bc87 { stroke: #87d7d7; fill: #87d7d7; }
+        .bc88 { stroke: #87ffd7; fill: #87ffd7; }
+        .bc89 { stroke: #0000ff; fill: #0000ff; }
+        .bc90 { stroke: #005fff; fill: #005fff; }
+        .bc91 { stroke: #0087ff; fill: #0087ff; }
+        .bc92 { stroke: #00afff; fill: #00afff; }
+        .bc93 { stroke: #00d7ff; fill: #00d7ff; }
+        .bc94 { stroke: #00ffff; fill: #00ffff; }
+        .bc95 { stroke: #5f00ff; fill: #5f00ff; }
+        .bc96 { stroke: #5f5fff; fill: #5f5fff; }
+        .bc97 { stroke: #5f87ff; fill: #5f87ff; }
+        .bc98 { stroke: #5fafff; fill: #5fafff; }
+        .bc99 { stroke: #5fd7ff; fill: #5fd7ff; }
+        .bc100 { stroke: #5fffff; fill: #5fffff; }
+        .bc101 { stroke: #8700ff; fill: #8700ff; }
+        .bc102 { stroke: #875fff; fill: #875fff; }
+        .bc103 { stroke: #8787ff; fill: #8787ff; }
+        .bc104 { stroke: #87afff; fill: #87afff; }
+        .bc105 { stroke: #87d7ff; fill: #87d7ff; }
+        .bc106 { stroke: #87ffff; fill: #87ffff; }
+        .bc107 { stroke: #af0000; fill: #af0000; }
+        .bc108 { stroke: #af5f00; fill: #af5f00; }
+        .bc109 { stroke: #af8700; fill: #af8700; }
+        .bc110 { stroke: #afaf00; fill: #afaf00; }
+        .bc111 { stroke: #afd700; fill: #afd700; }
+        .bc112 { stroke: #afff00; fill: #afff00; }
+        .bc113 { stroke: #d70000; fill: #d70000; }
+        .bc114 { stroke: #d75f00; fill: #d75f00; }
+        .bc115 { stroke: #d78700; fill: #d78700; }
+        .bc116 { stroke: #d7af00; fill: #d7af00; }
+        .bc117 { stroke: #d7d700; fill: #d7d700; }
+        .bc118 { stroke: #d7ff00; fill: #d7ff00; }
+        .bc119 { stroke: #ff0000; fill: #ff0000; }
+        .bc120 { stroke: #ff5f00; fill: #ff5f00; }
+        .bc121 { stroke: #ff8700; fill: #ff8700; }
+        .bc122 { stroke: #ffaf00; fill: #ffaf00; }
+        .bc123 { stroke: #ffd700; fill: #ffd700; }
+        .bc124 { stroke: #ffff00; fill: #ffff00; }
+        .bc125 { stroke: #af005f; fill: #af005f; }
+        .bc126 { stroke: #af5f5f; fill: #af5f5f; }
+        .bc127 { stroke: #af875f; fill: #af875f; }
+        .bc128 { stroke: #afaf5f; fill: #afaf5f; }
+        .bc129 { stroke: #afd75f; fill: #afd75f; }
+        .bc130 { stroke: #afff5f; fill: #afff5f; }
+        .bc131 { stroke: #d7005f; fill: #d7005f; }
+        .bc132 { stroke: #d75f5f; fill: #d75f5f; }
+        .bc133 { stroke: #d7875f; fill: #d7875f; }
+        .bc134 { stroke: #d7af5f; fill: #d7af5f; }
+        .bc135 { stroke: #d7d75f; fill: #d7d75f; }
+        .bc136 { stroke: #d7ff5f; fill: #d7ff5f; }
+        .bc137 { stroke: #ff005f; fill: #ff005f; }
+        .bc138 { stroke: #ff5f5f; fill: #ff5f5f; }
+        .bc139 { stroke: #ff875f; fill: #ff875f; }
+        .bc140 { stroke: #ffaf5f; fill: #ffaf5f; }
+        .bc141 { stroke: #ffd75f; fill: #ffd75f; }
+        .bc142 { stroke: #ffff5f; fill: #ffff5f; }
+        .bc143 { stroke: #af0087; fill: #af0087; }
+        .bc144 { stroke: #af5f87; fill: #af5f87; }
+        .bc145 { stroke: #af8787; fill: #af8787; }
+        .bc146 { stroke: #afaf87; fill: #afaf87; }
+        .bc147 { stroke: #afd787; fill: #afd787; }
+        .bc148 { stroke: #afff87; fill: #afff87; }
+        .bc149 { stroke: #d70087; fill: #d70087; }
+        .bc150 { stroke: #d75f87; fill: #d75f87; }
+        .bc151 { stroke: #d78787; fill: #d78787; }
+        .bc152 { stroke: #d7af87; fill: #d7af87; }
+        .bc153 { stroke: #d7d787; fill: #d7d787; }
+        .bc154 { stroke: #d7ff87; fill: #d7ff87; }
+        .bc155 { stroke: #ff0087; fill: #ff0087; }
+        .bc156 { stroke: #ff5f87; fill: #ff5f87; }
+        .bc157 { stroke: #ff8787; fill: #ff8787; }
+        .bc158 { stroke: #ffaf87; fill: #ffaf87; }
+        .bc159 { stroke: #ffd787; fill: #ffd787; }
+        .bc160 { stroke: #ffff87; fill: #ffff87; }
+        .bc161 { stroke: #af00af; fill: #af00af; }
+        .bc162 { stroke: #af5faf; fill: #af5faf; }
+        .bc163 { stroke: #af87af; fill: #af87af; }
+        .bc164 { stroke: #afafaf; fill: #afafaf; }
+        .bc165 { stroke: #afd7af; fill: #afd7af; }
+        .bc166 { stroke: #afffaf; fill: #afffaf; }
+        .bc167 { stroke: #d700af; fill: #d700af; }
+        .bc168 { stroke: #d75faf; fill: #d75faf; }
+        .bc169 { stroke: #d787af; fill: #d787af; }
+        .bc170 { stroke: #d7afaf; fill: #d7afaf; }
+        .bc171 { stroke: #d7d7af; fill: #d7d7af; }
+        .bc172 { stroke: #d7ffaf; fill: #d7ffaf; }
+        .bc173 { stroke: #ff00af; fill: #ff00af; }
+        .bc174 { stroke: #ff5faf; fill: #ff5faf; }
+        .bc175 { stroke: #ff87af; fill: #ff87af; }
+        .bc176 { stroke: #ffafaf; fill: #ffafaf; }
+        .bc177 { stroke: #ffd7af; fill: #ffd7af; }
+        .bc178 { stroke: #ffffaf; fill: #ffffaf; }
+        .bc179 { stroke: #af00d7; fill: #af00d7; }
+        .bc180 { stroke: #af5fd7; fill: #af5fd7; }
+        .bc181 { stroke: #af87d7; fill: #af87d7; }
+        .bc182 { stroke: #afafd7; fill: #afafd7; }
+        .bc183 { stroke: #afd7d7; fill: #afd7d7; }
+        .bc184 { stroke: #afffd7; fill: #afffd7; }
+        .bc185 { stroke: #d700d7; fill: #d700d7; }
+        .bc186 { stroke: #d75fd7; fill: #d75fd7; }
+        .bc187 { stroke: #d787d7; fill: #d787d7; }
+        .bc188 { stroke: #d7afd7; fill: #d7afd7; }
+        .bc189 { stroke: #d7d7d7; fill: #d7d7d7; }
+        .bc190 { stroke: #d7ffd7; fill: #d7ffd7; }
+        .bc191 { stroke: #ff00d7; fill: #ff00d7; }
+        .bc192 { stroke: #ff5fd7; fill: #ff5fd7; }
+        .bc193 { stroke: #ff87d7; fill: #ff87d7; }
+        .bc194 { stroke: #ffafd7; fill: #ffafd7; }
+        .bc195 { stroke: #ffd7d7; fill: #ffd7d7; }
+        .bc196 { stroke: #ffffd7; fill: #ffffd7; }
+        .bc197 { stroke: #af00ff; fill: #af00ff; }
+        .bc198 { stroke: #af5fff; fill: #af5fff; }
+        .bc199 { stroke: #af87ff; fill: #af87ff; }
+        .bc200 { stroke: #afafff; fill: #afafff; }
+        .bc201 { stroke: #afd7ff; fill: #afd7ff; }
+        .bc202 { stroke: #afffff; fill: #afffff; }
+        .bc203 { stroke: #d700ff; fill: #d700ff; }
+        .bc204 { stroke: #d75fff; fill: #d75fff; }
+        .bc205 { stroke: #d787ff; fill: #d787ff; }
+        .bc206 { stroke: #d7afff; fill: #d7afff; }
+        .bc207 { stroke: #d7d7ff; fill: #d7d7ff; }
+        .bc208 { stroke: #d7ffff; fill: #d7ffff; }
+        .bc209 { stroke: #ff00ff; fill: #ff00ff; }
+        .bc210 { stroke: #ff5fff; fill: #ff5fff; }
+        .bc211 { stroke: #ff87ff; fill: #ff87ff; }
+        .bc212 { stroke: #ffafff; fill: #ffafff; }
+        .bc213 { stroke: #ffd7ff; fill: #ffd7ff; }
+        .bc214 { stroke: #ffffff; fill: #ffffff; }
+        .bc215 { stroke: #0b0b0b; fill: #0b0b0b; }
+        .bc216 { stroke: #161616; fill: #161616; }
+        .bc217 { stroke: #212121; fill: #212121; }
+        .bc218 { stroke: #2c2c2c; fill: #2c2c2c; }
+        .bc219 { stroke: #373737; fill: #373737; }
+        .bc220 { stroke: #424242; fill: #424242; }
+        .bc221 { stroke: #4d4d4d; fill: #4d4d4d; }
+        .bc222 { stroke: #585858; fill: #585858; }
+        .bc223 { stroke: #636363; fill: #636363; }
+        .bc224 { stroke: #6e6e6e; fill: #6e6e6e; }
+        .bc225 { stroke: #797979; fill: #797979; }
+        .bc226 { stroke: #858585; fill: #858585; }
+        .bc227 { stroke: #909090; fill: #909090; }
+        .bc228 { stroke: #9b9b9b; fill: #9b9b9b; }
+        .bc229 { stroke: #a6a6a6; fill: #a6a6a6; }
+        .bc230 { stroke: #b1b1b1; fill: #b1b1b1; }
+        .bc231 { stroke: #bcbcbc; fill: #bcbcbc; }
+        .bc232 { stroke: #c7c7c7; fill: #c7c7c7; }
+        .bc233 { stroke: #d2d2d2; fill: #d2d2d2; }
+        .bc234 { stroke: #dddddd; fill: #dddddd; }
+        .bc235 { stroke: #e8e8e8; fill: #e8e8e8; }
+        .bc236 { stroke: #f3f3f3; fill: #f3f3f3; }
+        <!-- Foreground custom colors -->
+        .fc0 { fill: #ffffff; }
+        .fc1 { fill: #000000; }
     </style>
     <rect width="100%" height="100%" x="0" y="0" style="fill: #000000"/>
-<rect x="0ch" y="1em" width="4ch" height="1em" stroke-width="0.5px" stroke="#000000" style="fill:#000000"/>
-<rect x="4ch" y="1em" width="4ch" height="1em" stroke-width="0.5px" stroke="#bb0000" style="fill:#bb0000"/>
-<rect x="8ch" y="1em" width="4ch" height="1em" stroke-width="0.5px" stroke="#00bb00" style="fill:#00bb00"/>
-<rect x="12ch" y="1em" width="4ch" height="1em" stroke-width="0.5px" stroke="#bbbb00" style="fill:#bbbb00"/>
-<rect x="16ch" y="1em" width="4ch" height="1em" stroke-width="0.5px" stroke="#0000bb" style="fill:#0000bb"/>
-<rect x="20ch" y="1em" width="4ch" height="1em" stroke-width="0.5px" stroke="#bb00bb" style="fill:#bb00bb"/>
-<rect x="24ch" y="1em" width="4ch" height="1em" stroke-width="0.5px" stroke="#00bbbb" style="fill:#00bbbb"/>
-<rect x="28ch" y="1em" width="4ch" height="1em" stroke-width="0.5px" stroke="#bbbbbb" style="fill:#bbbbbb"/>
-<rect x="0ch" y="2em" width="4ch" height="1em" stroke-width="0.5px" stroke="#555555" style="fill:#555555"/>
-<rect x="4ch" y="2em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ff5555" style="fill:#ff5555"/>
-<rect x="8ch" y="2em" width="8ch" height="1em" stroke-width="0.5px" stroke="#ffff55" style="fill:#ffff55"/>
-<rect x="16ch" y="2em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5555ff" style="fill:#5555ff"/>
-<rect x="20ch" y="2em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ff55ff" style="fill:#ff55ff"/>
-<rect x="24ch" y="2em" width="4ch" height="1em" stroke-width="0.5px" stroke="#55ffff" style="fill:#55ffff"/>
-<rect x="28ch" y="2em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ffffff" style="fill:#ffffff"/>
-<rect x="4ch" y="5em" width="4ch" height="1em" stroke-width="0.5px" stroke="#005f00" style="fill:#005f00"/>
-<rect x="8ch" y="5em" width="4ch" height="1em" stroke-width="0.5px" stroke="#008700" style="fill:#008700"/>
-<rect x="12ch" y="5em" width="4ch" height="1em" stroke-width="0.5px" stroke="#00af00" style="fill:#00af00"/>
-<rect x="16ch" y="5em" width="4ch" height="1em" stroke-width="0.5px" stroke="#00d700" style="fill:#00d700"/>
-<rect x="20ch" y="5em" width="4ch" height="1em" stroke-width="0.5px" stroke="#00ff00" style="fill:#00ff00"/>
-<rect x="25ch" y="5em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5f0000" style="fill:#5f0000"/>
-<rect x="29ch" y="5em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5f5f00" style="fill:#5f5f00"/>
-<rect x="33ch" y="5em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5f8700" style="fill:#5f8700"/>
-<rect x="37ch" y="5em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5faf00" style="fill:#5faf00"/>
-<rect x="41ch" y="5em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5fd700" style="fill:#5fd700"/>
-<rect x="45ch" y="5em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5fff00" style="fill:#5fff00"/>
-<rect x="50ch" y="5em" width="4ch" height="1em" stroke-width="0.5px" stroke="#870000" style="fill:#870000"/>
-<rect x="54ch" y="5em" width="4ch" height="1em" stroke-width="0.5px" stroke="#875f00" style="fill:#875f00"/>
-<rect x="58ch" y="5em" width="4ch" height="1em" stroke-width="0.5px" stroke="#878700" style="fill:#878700"/>
-<rect x="62ch" y="5em" width="4ch" height="1em" stroke-width="0.5px" stroke="#87af00" style="fill:#87af00"/>
-<rect x="66ch" y="5em" width="4ch" height="1em" stroke-width="0.5px" stroke="#87d700" style="fill:#87d700"/>
-<rect x="70ch" y="5em" width="4ch" height="1em" stroke-width="0.5px" stroke="#87ff00" style="fill:#87ff00"/>
-<rect x="0ch" y="6em" width="4ch" height="1em" stroke-width="0.5px" stroke="#00005f" style="fill:#00005f"/>
-<rect x="4ch" y="6em" width="4ch" height="1em" stroke-width="0.5px" stroke="#005f5f" style="fill:#005f5f"/>
-<rect x="8ch" y="6em" width="4ch" height="1em" stroke-width="0.5px" stroke="#00875f" style="fill:#00875f"/>
-<rect x="12ch" y="6em" width="4ch" height="1em" stroke-width="0.5px" stroke="#00af5f" style="fill:#00af5f"/>
-<rect x="16ch" y="6em" width="4ch" height="1em" stroke-width="0.5px" stroke="#00d75f" style="fill:#00d75f"/>
-<rect x="20ch" y="6em" width="4ch" height="1em" stroke-width="0.5px" stroke="#00ff5f" style="fill:#00ff5f"/>
-<rect x="25ch" y="6em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5f005f" style="fill:#5f005f"/>
-<rect x="29ch" y="6em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5f5f5f" style="fill:#5f5f5f"/>
-<rect x="33ch" y="6em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5f875f" style="fill:#5f875f"/>
-<rect x="37ch" y="6em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5faf5f" style="fill:#5faf5f"/>
-<rect x="41ch" y="6em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5fd75f" style="fill:#5fd75f"/>
-<rect x="45ch" y="6em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5fff5f" style="fill:#5fff5f"/>
-<rect x="50ch" y="6em" width="4ch" height="1em" stroke-width="0.5px" stroke="#87005f" style="fill:#87005f"/>
-<rect x="54ch" y="6em" width="4ch" height="1em" stroke-width="0.5px" stroke="#875f5f" style="fill:#875f5f"/>
-<rect x="58ch" y="6em" width="4ch" height="1em" stroke-width="0.5px" stroke="#87875f" style="fill:#87875f"/>
-<rect x="62ch" y="6em" width="4ch" height="1em" stroke-width="0.5px" stroke="#87af5f" style="fill:#87af5f"/>
-<rect x="66ch" y="6em" width="4ch" height="1em" stroke-width="0.5px" stroke="#87d75f" style="fill:#87d75f"/>
-<rect x="70ch" y="6em" width="4ch" height="1em" stroke-width="0.5px" stroke="#87ff5f" style="fill:#87ff5f"/>
-<rect x="0ch" y="7em" width="4ch" height="1em" stroke-width="0.5px" stroke="#000087" style="fill:#000087"/>
-<rect x="4ch" y="7em" width="4ch" height="1em" stroke-width="0.5px" stroke="#005f87" style="fill:#005f87"/>
-<rect x="8ch" y="7em" width="4ch" height="1em" stroke-width="0.5px" stroke="#008787" style="fill:#008787"/>
-<rect x="12ch" y="7em" width="4ch" height="1em" stroke-width="0.5px" stroke="#00af87" style="fill:#00af87"/>
-<rect x="16ch" y="7em" width="4ch" height="1em" stroke-width="0.5px" stroke="#00d787" style="fill:#00d787"/>
-<rect x="20ch" y="7em" width="4ch" height="1em" stroke-width="0.5px" stroke="#00ff87" style="fill:#00ff87"/>
-<rect x="25ch" y="7em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5f0087" style="fill:#5f0087"/>
-<rect x="29ch" y="7em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5f5f87" style="fill:#5f5f87"/>
-<rect x="33ch" y="7em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5f8787" style="fill:#5f8787"/>
-<rect x="37ch" y="7em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5faf87" style="fill:#5faf87"/>
-<rect x="41ch" y="7em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5fd787" style="fill:#5fd787"/>
-<rect x="45ch" y="7em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5fff87" style="fill:#5fff87"/>
-<rect x="50ch" y="7em" width="4ch" height="1em" stroke-width="0.5px" stroke="#870087" style="fill:#870087"/>
-<rect x="54ch" y="7em" width="4ch" height="1em" stroke-width="0.5px" stroke="#875f87" style="fill:#875f87"/>
-<rect x="58ch" y="7em" width="4ch" height="1em" stroke-width="0.5px" stroke="#878787" style="fill:#878787"/>
-<rect x="62ch" y="7em" width="4ch" height="1em" stroke-width="0.5px" stroke="#87af87" style="fill:#87af87"/>
-<rect x="66ch" y="7em" width="4ch" height="1em" stroke-width="0.5px" stroke="#87d787" style="fill:#87d787"/>
-<rect x="70ch" y="7em" width="4ch" height="1em" stroke-width="0.5px" stroke="#87ff87" style="fill:#87ff87"/>
-<rect x="0ch" y="8em" width="4ch" height="1em" stroke-width="0.5px" stroke="#0000af" style="fill:#0000af"/>
-<rect x="4ch" y="8em" width="4ch" height="1em" stroke-width="0.5px" stroke="#005faf" style="fill:#005faf"/>
-<rect x="8ch" y="8em" width="4ch" height="1em" stroke-width="0.5px" stroke="#0087af" style="fill:#0087af"/>
-<rect x="12ch" y="8em" width="4ch" height="1em" stroke-width="0.5px" stroke="#00afaf" style="fill:#00afaf"/>
-<rect x="16ch" y="8em" width="4ch" height="1em" stroke-width="0.5px" stroke="#00d7af" style="fill:#00d7af"/>
-<rect x="20ch" y="8em" width="4ch" height="1em" stroke-width="0.5px" stroke="#00ffaf" style="fill:#00ffaf"/>
-<rect x="25ch" y="8em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5f00af" style="fill:#5f00af"/>
-<rect x="29ch" y="8em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5f5faf" style="fill:#5f5faf"/>
-<rect x="33ch" y="8em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5f87af" style="fill:#5f87af"/>
-<rect x="37ch" y="8em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5fafaf" style="fill:#5fafaf"/>
-<rect x="41ch" y="8em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5fd7af" style="fill:#5fd7af"/>
-<rect x="45ch" y="8em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5fffaf" style="fill:#5fffaf"/>
-<rect x="50ch" y="8em" width="4ch" height="1em" stroke-width="0.5px" stroke="#8700af" style="fill:#8700af"/>
-<rect x="54ch" y="8em" width="4ch" height="1em" stroke-width="0.5px" stroke="#875faf" style="fill:#875faf"/>
-<rect x="58ch" y="8em" width="4ch" height="1em" stroke-width="0.5px" stroke="#8787af" style="fill:#8787af"/>
-<rect x="62ch" y="8em" width="4ch" height="1em" stroke-width="0.5px" stroke="#87afaf" style="fill:#87afaf"/>
-<rect x="66ch" y="8em" width="4ch" height="1em" stroke-width="0.5px" stroke="#87d7af" style="fill:#87d7af"/>
-<rect x="70ch" y="8em" width="4ch" height="1em" stroke-width="0.5px" stroke="#87ffaf" style="fill:#87ffaf"/>
-<rect x="0ch" y="9em" width="4ch" height="1em" stroke-width="0.5px" stroke="#0000d7" style="fill:#0000d7"/>
-<rect x="4ch" y="9em" width="4ch" height="1em" stroke-width="0.5px" stroke="#005fd7" style="fill:#005fd7"/>
-<rect x="8ch" y="9em" width="4ch" height="1em" stroke-width="0.5px" stroke="#0087d7" style="fill:#0087d7"/>
-<rect x="12ch" y="9em" width="4ch" height="1em" stroke-width="0.5px" stroke="#00afd7" style="fill:#00afd7"/>
-<rect x="16ch" y="9em" width="4ch" height="1em" stroke-width="0.5px" stroke="#00d7d7" style="fill:#00d7d7"/>
-<rect x="20ch" y="9em" width="4ch" height="1em" stroke-width="0.5px" stroke="#00ffd7" style="fill:#00ffd7"/>
-<rect x="25ch" y="9em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5f00d7" style="fill:#5f00d7"/>
-<rect x="29ch" y="9em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5f5fd7" style="fill:#5f5fd7"/>
-<rect x="33ch" y="9em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5f87d7" style="fill:#5f87d7"/>
-<rect x="37ch" y="9em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5fafd7" style="fill:#5fafd7"/>
-<rect x="41ch" y="9em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5fd7d7" style="fill:#5fd7d7"/>
-<rect x="45ch" y="9em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5fffd7" style="fill:#5fffd7"/>
-<rect x="50ch" y="9em" width="4ch" height="1em" stroke-width="0.5px" stroke="#8700d7" style="fill:#8700d7"/>
-<rect x="54ch" y="9em" width="4ch" height="1em" stroke-width="0.5px" stroke="#875fd7" style="fill:#875fd7"/>
-<rect x="58ch" y="9em" width="4ch" height="1em" stroke-width="0.5px" stroke="#8787d7" style="fill:#8787d7"/>
-<rect x="62ch" y="9em" width="4ch" height="1em" stroke-width="0.5px" stroke="#87afd7" style="fill:#87afd7"/>
-<rect x="66ch" y="9em" width="4ch" height="1em" stroke-width="0.5px" stroke="#87d7d7" style="fill:#87d7d7"/>
-<rect x="70ch" y="9em" width="4ch" height="1em" stroke-width="0.5px" stroke="#87ffd7" style="fill:#87ffd7"/>
-<rect x="0ch" y="10em" width="4ch" height="1em" stroke-width="0.5px" stroke="#0000ff" style="fill:#0000ff"/>
-<rect x="4ch" y="10em" width="4ch" height="1em" stroke-width="0.5px" stroke="#005fff" style="fill:#005fff"/>
-<rect x="8ch" y="10em" width="4ch" height="1em" stroke-width="0.5px" stroke="#0087ff" style="fill:#0087ff"/>
-<rect x="12ch" y="10em" width="4ch" height="1em" stroke-width="0.5px" stroke="#00afff" style="fill:#00afff"/>
-<rect x="16ch" y="10em" width="4ch" height="1em" stroke-width="0.5px" stroke="#00d7ff" style="fill:#00d7ff"/>
-<rect x="20ch" y="10em" width="4ch" height="1em" stroke-width="0.5px" stroke="#00ffff" style="fill:#00ffff"/>
-<rect x="25ch" y="10em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5f00ff" style="fill:#5f00ff"/>
-<rect x="29ch" y="10em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5f5fff" style="fill:#5f5fff"/>
-<rect x="33ch" y="10em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5f87ff" style="fill:#5f87ff"/>
-<rect x="37ch" y="10em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5fafff" style="fill:#5fafff"/>
-<rect x="41ch" y="10em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5fd7ff" style="fill:#5fd7ff"/>
-<rect x="45ch" y="10em" width="4ch" height="1em" stroke-width="0.5px" stroke="#5fffff" style="fill:#5fffff"/>
-<rect x="50ch" y="10em" width="4ch" height="1em" stroke-width="0.5px" stroke="#8700ff" style="fill:#8700ff"/>
-<rect x="54ch" y="10em" width="4ch" height="1em" stroke-width="0.5px" stroke="#875fff" style="fill:#875fff"/>
-<rect x="58ch" y="10em" width="4ch" height="1em" stroke-width="0.5px" stroke="#8787ff" style="fill:#8787ff"/>
-<rect x="62ch" y="10em" width="4ch" height="1em" stroke-width="0.5px" stroke="#87afff" style="fill:#87afff"/>
-<rect x="66ch" y="10em" width="4ch" height="1em" stroke-width="0.5px" stroke="#87d7ff" style="fill:#87d7ff"/>
-<rect x="70ch" y="10em" width="4ch" height="1em" stroke-width="0.5px" stroke="#87ffff" style="fill:#87ffff"/>
-<rect x="0ch" y="12em" width="4ch" height="1em" stroke-width="0.5px" stroke="#af0000" style="fill:#af0000"/>
-<rect x="4ch" y="12em" width="4ch" height="1em" stroke-width="0.5px" stroke="#af5f00" style="fill:#af5f00"/>
-<rect x="8ch" y="12em" width="4ch" height="1em" stroke-width="0.5px" stroke="#af8700" style="fill:#af8700"/>
-<rect x="12ch" y="12em" width="4ch" height="1em" stroke-width="0.5px" stroke="#afaf00" style="fill:#afaf00"/>
-<rect x="16ch" y="12em" width="4ch" height="1em" stroke-width="0.5px" stroke="#afd700" style="fill:#afd700"/>
-<rect x="20ch" y="12em" width="4ch" height="1em" stroke-width="0.5px" stroke="#afff00" style="fill:#afff00"/>
-<rect x="25ch" y="12em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d70000" style="fill:#d70000"/>
-<rect x="29ch" y="12em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d75f00" style="fill:#d75f00"/>
-<rect x="33ch" y="12em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d78700" style="fill:#d78700"/>
-<rect x="37ch" y="12em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d7af00" style="fill:#d7af00"/>
-<rect x="41ch" y="12em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d7d700" style="fill:#d7d700"/>
-<rect x="45ch" y="12em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d7ff00" style="fill:#d7ff00"/>
-<rect x="50ch" y="12em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ff0000" style="fill:#ff0000"/>
-<rect x="54ch" y="12em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ff5f00" style="fill:#ff5f00"/>
-<rect x="58ch" y="12em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ff8700" style="fill:#ff8700"/>
-<rect x="62ch" y="12em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ffaf00" style="fill:#ffaf00"/>
-<rect x="66ch" y="12em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ffd700" style="fill:#ffd700"/>
-<rect x="70ch" y="12em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ffff00" style="fill:#ffff00"/>
-<rect x="0ch" y="13em" width="4ch" height="1em" stroke-width="0.5px" stroke="#af005f" style="fill:#af005f"/>
-<rect x="4ch" y="13em" width="4ch" height="1em" stroke-width="0.5px" stroke="#af5f5f" style="fill:#af5f5f"/>
-<rect x="8ch" y="13em" width="4ch" height="1em" stroke-width="0.5px" stroke="#af875f" style="fill:#af875f"/>
-<rect x="12ch" y="13em" width="4ch" height="1em" stroke-width="0.5px" stroke="#afaf5f" style="fill:#afaf5f"/>
-<rect x="16ch" y="13em" width="4ch" height="1em" stroke-width="0.5px" stroke="#afd75f" style="fill:#afd75f"/>
-<rect x="20ch" y="13em" width="4ch" height="1em" stroke-width="0.5px" stroke="#afff5f" style="fill:#afff5f"/>
-<rect x="25ch" y="13em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d7005f" style="fill:#d7005f"/>
-<rect x="29ch" y="13em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d75f5f" style="fill:#d75f5f"/>
-<rect x="33ch" y="13em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d7875f" style="fill:#d7875f"/>
-<rect x="37ch" y="13em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d7af5f" style="fill:#d7af5f"/>
-<rect x="41ch" y="13em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d7d75f" style="fill:#d7d75f"/>
-<rect x="45ch" y="13em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d7ff5f" style="fill:#d7ff5f"/>
-<rect x="50ch" y="13em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ff005f" style="fill:#ff005f"/>
-<rect x="54ch" y="13em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ff5f5f" style="fill:#ff5f5f"/>
-<rect x="58ch" y="13em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ff875f" style="fill:#ff875f"/>
-<rect x="62ch" y="13em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ffaf5f" style="fill:#ffaf5f"/>
-<rect x="66ch" y="13em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ffd75f" style="fill:#ffd75f"/>
-<rect x="70ch" y="13em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ffff5f" style="fill:#ffff5f"/>
-<rect x="0ch" y="14em" width="4ch" height="1em" stroke-width="0.5px" stroke="#af0087" style="fill:#af0087"/>
-<rect x="4ch" y="14em" width="4ch" height="1em" stroke-width="0.5px" stroke="#af5f87" style="fill:#af5f87"/>
-<rect x="8ch" y="14em" width="4ch" height="1em" stroke-width="0.5px" stroke="#af8787" style="fill:#af8787"/>
-<rect x="12ch" y="14em" width="4ch" height="1em" stroke-width="0.5px" stroke="#afaf87" style="fill:#afaf87"/>
-<rect x="16ch" y="14em" width="4ch" height="1em" stroke-width="0.5px" stroke="#afd787" style="fill:#afd787"/>
-<rect x="20ch" y="14em" width="4ch" height="1em" stroke-width="0.5px" stroke="#afff87" style="fill:#afff87"/>
-<rect x="25ch" y="14em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d70087" style="fill:#d70087"/>
-<rect x="29ch" y="14em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d75f87" style="fill:#d75f87"/>
-<rect x="33ch" y="14em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d78787" style="fill:#d78787"/>
-<rect x="37ch" y="14em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d7af87" style="fill:#d7af87"/>
-<rect x="41ch" y="14em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d7d787" style="fill:#d7d787"/>
-<rect x="45ch" y="14em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d7ff87" style="fill:#d7ff87"/>
-<rect x="50ch" y="14em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ff0087" style="fill:#ff0087"/>
-<rect x="54ch" y="14em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ff5f87" style="fill:#ff5f87"/>
-<rect x="58ch" y="14em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ff8787" style="fill:#ff8787"/>
-<rect x="62ch" y="14em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ffaf87" style="fill:#ffaf87"/>
-<rect x="66ch" y="14em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ffd787" style="fill:#ffd787"/>
-<rect x="70ch" y="14em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ffff87" style="fill:#ffff87"/>
-<rect x="0ch" y="15em" width="4ch" height="1em" stroke-width="0.5px" stroke="#af00af" style="fill:#af00af"/>
-<rect x="4ch" y="15em" width="4ch" height="1em" stroke-width="0.5px" stroke="#af5faf" style="fill:#af5faf"/>
-<rect x="8ch" y="15em" width="4ch" height="1em" stroke-width="0.5px" stroke="#af87af" style="fill:#af87af"/>
-<rect x="12ch" y="15em" width="4ch" height="1em" stroke-width="0.5px" stroke="#afafaf" style="fill:#afafaf"/>
-<rect x="16ch" y="15em" width="4ch" height="1em" stroke-width="0.5px" stroke="#afd7af" style="fill:#afd7af"/>
-<rect x="20ch" y="15em" width="4ch" height="1em" stroke-width="0.5px" stroke="#afffaf" style="fill:#afffaf"/>
-<rect x="25ch" y="15em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d700af" style="fill:#d700af"/>
-<rect x="29ch" y="15em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d75faf" style="fill:#d75faf"/>
-<rect x="33ch" y="15em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d787af" style="fill:#d787af"/>
-<rect x="37ch" y="15em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d7afaf" style="fill:#d7afaf"/>
-<rect x="41ch" y="15em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d7d7af" style="fill:#d7d7af"/>
-<rect x="45ch" y="15em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d7ffaf" style="fill:#d7ffaf"/>
-<rect x="50ch" y="15em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ff00af" style="fill:#ff00af"/>
-<rect x="54ch" y="15em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ff5faf" style="fill:#ff5faf"/>
-<rect x="58ch" y="15em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ff87af" style="fill:#ff87af"/>
-<rect x="62ch" y="15em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ffafaf" style="fill:#ffafaf"/>
-<rect x="66ch" y="15em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ffd7af" style="fill:#ffd7af"/>
-<rect x="70ch" y="15em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ffffaf" style="fill:#ffffaf"/>
-<rect x="0ch" y="16em" width="4ch" height="1em" stroke-width="0.5px" stroke="#af00d7" style="fill:#af00d7"/>
-<rect x="4ch" y="16em" width="4ch" height="1em" stroke-width="0.5px" stroke="#af5fd7" style="fill:#af5fd7"/>
-<rect x="8ch" y="16em" width="4ch" height="1em" stroke-width="0.5px" stroke="#af87d7" style="fill:#af87d7"/>
-<rect x="12ch" y="16em" width="4ch" height="1em" stroke-width="0.5px" stroke="#afafd7" style="fill:#afafd7"/>
-<rect x="16ch" y="16em" width="4ch" height="1em" stroke-width="0.5px" stroke="#afd7d7" style="fill:#afd7d7"/>
-<rect x="20ch" y="16em" width="4ch" height="1em" stroke-width="0.5px" stroke="#afffd7" style="fill:#afffd7"/>
-<rect x="25ch" y="16em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d700d7" style="fill:#d700d7"/>
-<rect x="29ch" y="16em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d75fd7" style="fill:#d75fd7"/>
-<rect x="33ch" y="16em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d787d7" style="fill:#d787d7"/>
-<rect x="37ch" y="16em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d7afd7" style="fill:#d7afd7"/>
-<rect x="41ch" y="16em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d7d7d7" style="fill:#d7d7d7"/>
-<rect x="45ch" y="16em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d7ffd7" style="fill:#d7ffd7"/>
-<rect x="50ch" y="16em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ff00d7" style="fill:#ff00d7"/>
-<rect x="54ch" y="16em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ff5fd7" style="fill:#ff5fd7"/>
-<rect x="58ch" y="16em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ff87d7" style="fill:#ff87d7"/>
-<rect x="62ch" y="16em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ffafd7" style="fill:#ffafd7"/>
-<rect x="66ch" y="16em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ffd7d7" style="fill:#ffd7d7"/>
-<rect x="70ch" y="16em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ffffd7" style="fill:#ffffd7"/>
-<rect x="0ch" y="17em" width="4ch" height="1em" stroke-width="0.5px" stroke="#af00ff" style="fill:#af00ff"/>
-<rect x="4ch" y="17em" width="4ch" height="1em" stroke-width="0.5px" stroke="#af5fff" style="fill:#af5fff"/>
-<rect x="8ch" y="17em" width="4ch" height="1em" stroke-width="0.5px" stroke="#af87ff" style="fill:#af87ff"/>
-<rect x="12ch" y="17em" width="4ch" height="1em" stroke-width="0.5px" stroke="#afafff" style="fill:#afafff"/>
-<rect x="16ch" y="17em" width="4ch" height="1em" stroke-width="0.5px" stroke="#afd7ff" style="fill:#afd7ff"/>
-<rect x="20ch" y="17em" width="4ch" height="1em" stroke-width="0.5px" stroke="#afffff" style="fill:#afffff"/>
-<rect x="25ch" y="17em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d700ff" style="fill:#d700ff"/>
-<rect x="29ch" y="17em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d75fff" style="fill:#d75fff"/>
-<rect x="33ch" y="17em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d787ff" style="fill:#d787ff"/>
-<rect x="37ch" y="17em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d7afff" style="fill:#d7afff"/>
-<rect x="41ch" y="17em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d7d7ff" style="fill:#d7d7ff"/>
-<rect x="45ch" y="17em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d7ffff" style="fill:#d7ffff"/>
-<rect x="50ch" y="17em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ff00ff" style="fill:#ff00ff"/>
-<rect x="54ch" y="17em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ff5fff" style="fill:#ff5fff"/>
-<rect x="58ch" y="17em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ff87ff" style="fill:#ff87ff"/>
-<rect x="62ch" y="17em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ffafff" style="fill:#ffafff"/>
-<rect x="66ch" y="17em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ffd7ff" style="fill:#ffd7ff"/>
-<rect x="70ch" y="17em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ffffff" style="fill:#ffffff"/>
-<rect x="4ch" y="19em" width="4ch" height="1em" stroke-width="0.5px" stroke="#0b0b0b" style="fill:#0b0b0b"/>
-<rect x="8ch" y="19em" width="4ch" height="1em" stroke-width="0.5px" stroke="#161616" style="fill:#161616"/>
-<rect x="12ch" y="19em" width="4ch" height="1em" stroke-width="0.5px" stroke="#212121" style="fill:#212121"/>
-<rect x="16ch" y="19em" width="4ch" height="1em" stroke-width="0.5px" stroke="#2c2c2c" style="fill:#2c2c2c"/>
-<rect x="20ch" y="19em" width="4ch" height="1em" stroke-width="0.5px" stroke="#373737" style="fill:#373737"/>
-<rect x="24ch" y="19em" width="4ch" height="1em" stroke-width="0.5px" stroke="#424242" style="fill:#424242"/>
-<rect x="28ch" y="19em" width="4ch" height="1em" stroke-width="0.5px" stroke="#4d4d4d" style="fill:#4d4d4d"/>
-<rect x="32ch" y="19em" width="4ch" height="1em" stroke-width="0.5px" stroke="#585858" style="fill:#585858"/>
-<rect x="36ch" y="19em" width="4ch" height="1em" stroke-width="0.5px" stroke="#636363" style="fill:#636363"/>
-<rect x="40ch" y="19em" width="4ch" height="1em" stroke-width="0.5px" stroke="#6e6e6e" style="fill:#6e6e6e"/>
-<rect x="44ch" y="19em" width="4ch" height="1em" stroke-width="0.5px" stroke="#797979" style="fill:#797979"/>
-<rect x="0ch" y="20em" width="4ch" height="1em" stroke-width="0.5px" stroke="#858585" style="fill:#858585"/>
-<rect x="4ch" y="20em" width="4ch" height="1em" stroke-width="0.5px" stroke="#909090" style="fill:#909090"/>
-<rect x="8ch" y="20em" width="4ch" height="1em" stroke-width="0.5px" stroke="#9b9b9b" style="fill:#9b9b9b"/>
-<rect x="12ch" y="20em" width="4ch" height="1em" stroke-width="0.5px" stroke="#a6a6a6" style="fill:#a6a6a6"/>
-<rect x="16ch" y="20em" width="4ch" height="1em" stroke-width="0.5px" stroke="#b1b1b1" style="fill:#b1b1b1"/>
-<rect x="20ch" y="20em" width="4ch" height="1em" stroke-width="0.5px" stroke="#bcbcbc" style="fill:#bcbcbc"/>
-<rect x="24ch" y="20em" width="4ch" height="1em" stroke-width="0.5px" stroke="#c7c7c7" style="fill:#c7c7c7"/>
-<rect x="28ch" y="20em" width="4ch" height="1em" stroke-width="0.5px" stroke="#d2d2d2" style="fill:#d2d2d2"/>
-<rect x="32ch" y="20em" width="4ch" height="1em" stroke-width="0.5px" stroke="#dddddd" style="fill:#dddddd"/>
-<rect x="36ch" y="20em" width="4ch" height="1em" stroke-width="0.5px" stroke="#e8e8e8" style="fill:#e8e8e8"/>
-<rect x="40ch" y="20em" width="4ch" height="1em" stroke-width="0.5px" stroke="#f3f3f3" style="fill:#f3f3f3"/>
-<rect x="44ch" y="20em" width="4ch" height="1em" stroke-width="0.5px" stroke="#ffffff" style="fill:#ffffff"/>
-<text x="0" y="0.5em"><tspan>System colors:</tspan></text>
-<text x="0" y="1.5em"><tspan style="fill:#ffffff">  0   1   2   3   4   5   6   7 </tspan></text>
-<text x="0" y="2.5em"><tspan style="fill:#ffffff">  8 </tspan><tspan style="fill:#000000">  9  10  11  12  13  14  15 </tspan></text>
-<text x="0" y="4.5em"><tspan>6x6x6 color cube and greyscale:</tspan></text>
-<text x="0" y="5.5em"><tspan style="fill:#ffffff"> 16  22  28  34 </tspan><tspan style="fill:#000000"> 40  46 </tspan><tspan> </tspan><tspan style="fill:#ffffff"> 52  58  64 </tspan><tspan style="fill:#000000"> 70  76  82 </tspan><tspan> </tspan><tspan style="fill:#ffffff"> 88  94 100 </tspan><tspan style="fill:#000000">106 112 118 </tspan></text>
-<text x="0" y="6.5em"><tspan style="fill:#ffffff"> 17  23  29 </tspan><tspan style="fill:#000000"> 35  41  47 </tspan><tspan> </tspan><tspan style="fill:#ffffff"> 53  59  65 </tspan><tspan style="fill:#000000"> 71  77  83 </tspan><tspan> </tspan><tspan style="fill:#ffffff"> 89  95 </tspan><tspan style="fill:#000000">101 107 113 119 </tspan></text>
-<text x="0" y="7.5em"><tspan style="fill:#ffffff"> 18  24  30 </tspan><tspan style="fill:#000000"> 36  42  48 </tspan><tspan> </tspan><tspan style="fill:#ffffff"> 54  60  66 </tspan><tspan style="fill:#000000"> 72  78  84 </tspan><tspan> </tspan><tspan style="fill:#ffffff"> 90  96 </tspan><tspan style="fill:#000000">102 108 114 120 </tspan></text>
-<text x="0" y="8.5em"><tspan style="fill:#ffffff"> 19  25  31 </tspan><tspan style="fill:#000000"> 37  43  49 </tspan><tspan> </tspan><tspan style="fill:#ffffff"> 55  61 </tspan><tspan style="fill:#000000"> 67  73  79  85 </tspan><tspan> </tspan><tspan style="fill:#ffffff"> 91  97 </tspan><tspan style="fill:#000000">103 109 115 121 </tspan></text>
-<text x="0" y="9.5em"><tspan style="fill:#ffffff"> 20  26  32 </tspan><tspan style="fill:#000000"> 38  44  50 </tspan><tspan> </tspan><tspan style="fill:#ffffff"> 56  62 </tspan><tspan style="fill:#000000"> 68  74  80  86 </tspan><tspan> </tspan><tspan style="fill:#ffffff"> 92  98 </tspan><tspan style="fill:#000000">104 110 116 122 </tspan></text>
-<text x="0" y="10.5em"><tspan style="fill:#ffffff"> 21  27  33 </tspan><tspan style="fill:#000000"> 39  45  51 </tspan><tspan> </tspan><tspan style="fill:#ffffff"> 57  63 </tspan><tspan style="fill:#000000"> 69  75  81  87 </tspan><tspan> </tspan><tspan style="fill:#ffffff"> 93  99 </tspan><tspan style="fill:#000000">105 111 117 123 </tspan></text>
-<text x="0" y="12.5em"><tspan style="fill:#ffffff">124 130 </tspan><tspan style="fill:#000000">136 142 148 154 </tspan><tspan> </tspan><tspan style="fill:#ffffff">160 166 </tspan><tspan style="fill:#000000">172 178 184 190 </tspan><tspan> </tspan><tspan style="fill:#ffffff">196 202 </tspan><tspan style="fill:#000000">208 214 220 226 </tspan></text>
-<text x="0" y="13.5em"><tspan style="fill:#ffffff">125 131 </tspan><tspan style="fill:#000000">137 143 149 155 </tspan><tspan> </tspan><tspan style="fill:#ffffff">161 167 </tspan><tspan style="fill:#000000">173 179 185 191 </tspan><tspan> </tspan><tspan style="fill:#ffffff">197 </tspan><tspan style="fill:#000000">203 209 215 221 227 </tspan></text>
-<text x="0" y="14.5em"><tspan style="fill:#ffffff">126 132 </tspan><tspan style="fill:#000000">138 144 150 156 </tspan><tspan> </tspan><tspan style="fill:#ffffff">162 168 </tspan><tspan style="fill:#000000">174 180 186 192 </tspan><tspan> </tspan><tspan style="fill:#ffffff">198 </tspan><tspan style="fill:#000000">204 210 216 222 228 </tspan></text>
-<text x="0" y="15.5em"><tspan style="fill:#ffffff">127 133 </tspan><tspan style="fill:#000000">139 145 151 157 </tspan><tspan> </tspan><tspan style="fill:#ffffff">163 169 </tspan><tspan style="fill:#000000">175 181 187 193 </tspan><tspan> </tspan><tspan style="fill:#ffffff">199 </tspan><tspan style="fill:#000000">205 211 217 223 229 </tspan></text>
-<text x="0" y="16.5em"><tspan style="fill:#ffffff">128 134 </tspan><tspan style="fill:#000000">140 146 152 158 </tspan><tspan> </tspan><tspan style="fill:#ffffff">164 </tspan><tspan style="fill:#000000">170 176 182 188 194 </tspan><tspan> </tspan><tspan style="fill:#ffffff">200 </tspan><tspan style="fill:#000000">206 212 218 224 230 </tspan></text>
-<text x="0" y="17.5em"><tspan style="fill:#ffffff">129 135 </tspan><tspan style="fill:#000000">141 147 153 159 </tspan><tspan> </tspan><tspan style="fill:#ffffff">165 </tspan><tspan style="fill:#000000">171 177 183 189 195 </tspan><tspan> </tspan><tspan style="fill:#ffffff">201 </tspan><tspan style="fill:#000000">207 213 219 225 231 </tspan></text>
-<text x="0" y="19.5em"><tspan style="fill:#ffffff">232 233 234 235 236 237 238 239 240 241 242 243 </tspan></text>
-<text x="0" y="20.5em"><tspan style="fill:#000000">244 245 246 247 248 249 250 251 252 253 254 255 </tspan></text>
+<g class="bg">
+<rect x="0ch" y="1em" width="4ch" height="1em" class="ba0"/>
+<rect x="4ch" y="1em" width="4ch" height="1em" class="ba1"/>
+<rect x="8ch" y="1em" width="4ch" height="1em" class="ba2"/>
+<rect x="12ch" y="1em" width="4ch" height="1em" class="ba3"/>
+<rect x="16ch" y="1em" width="4ch" height="1em" class="ba4"/>
+<rect x="20ch" y="1em" width="4ch" height="1em" class="ba5"/>
+<rect x="24ch" y="1em" width="4ch" height="1em" class="ba6"/>
+<rect x="28ch" y="1em" width="4ch" height="1em" class="ba7"/>
+<rect x="0ch" y="2em" width="4ch" height="1em" class="ba8"/>
+<rect x="4ch" y="2em" width="4ch" height="1em" class="ba9"/>
+<rect x="8ch" y="2em" width="4ch" height="1em" class="ba10"/>
+<rect x="12ch" y="2em" width="4ch" height="1em" class="ba11"/>
+<rect x="16ch" y="2em" width="4ch" height="1em" class="ba12"/>
+<rect x="20ch" y="2em" width="4ch" height="1em" class="ba13"/>
+<rect x="24ch" y="2em" width="4ch" height="1em" class="ba14"/>
+<rect x="28ch" y="2em" width="4ch" height="1em" class="ba15"/>
+<rect x="4ch" y="5em" width="4ch" height="1em" class="bc0"/>
+<rect x="8ch" y="5em" width="4ch" height="1em" class="bc1"/>
+<rect x="12ch" y="5em" width="4ch" height="1em" class="bc2"/>
+<rect x="16ch" y="5em" width="4ch" height="1em" class="bc3"/>
+<rect x="20ch" y="5em" width="4ch" height="1em" class="bc4"/>
+<rect x="25ch" y="5em" width="4ch" height="1em" class="bc5"/>
+<rect x="29ch" y="5em" width="4ch" height="1em" class="bc6"/>
+<rect x="33ch" y="5em" width="4ch" height="1em" class="bc7"/>
+<rect x="37ch" y="5em" width="4ch" height="1em" class="bc8"/>
+<rect x="41ch" y="5em" width="4ch" height="1em" class="bc9"/>
+<rect x="45ch" y="5em" width="4ch" height="1em" class="bc10"/>
+<rect x="50ch" y="5em" width="4ch" height="1em" class="bc11"/>
+<rect x="54ch" y="5em" width="4ch" height="1em" class="bc12"/>
+<rect x="58ch" y="5em" width="4ch" height="1em" class="bc13"/>
+<rect x="62ch" y="5em" width="4ch" height="1em" class="bc14"/>
+<rect x="66ch" y="5em" width="4ch" height="1em" class="bc15"/>
+<rect x="70ch" y="5em" width="4ch" height="1em" class="bc16"/>
+<rect x="0ch" y="6em" width="4ch" height="1em" class="bc17"/>
+<rect x="4ch" y="6em" width="4ch" height="1em" class="bc18"/>
+<rect x="8ch" y="6em" width="4ch" height="1em" class="bc19"/>
+<rect x="12ch" y="6em" width="4ch" height="1em" class="bc20"/>
+<rect x="16ch" y="6em" width="4ch" height="1em" class="bc21"/>
+<rect x="20ch" y="6em" width="4ch" height="1em" class="bc22"/>
+<rect x="25ch" y="6em" width="4ch" height="1em" class="bc23"/>
+<rect x="29ch" y="6em" width="4ch" height="1em" class="bc24"/>
+<rect x="33ch" y="6em" width="4ch" height="1em" class="bc25"/>
+<rect x="37ch" y="6em" width="4ch" height="1em" class="bc26"/>
+<rect x="41ch" y="6em" width="4ch" height="1em" class="bc27"/>
+<rect x="45ch" y="6em" width="4ch" height="1em" class="bc28"/>
+<rect x="50ch" y="6em" width="4ch" height="1em" class="bc29"/>
+<rect x="54ch" y="6em" width="4ch" height="1em" class="bc30"/>
+<rect x="58ch" y="6em" width="4ch" height="1em" class="bc31"/>
+<rect x="62ch" y="6em" width="4ch" height="1em" class="bc32"/>
+<rect x="66ch" y="6em" width="4ch" height="1em" class="bc33"/>
+<rect x="70ch" y="6em" width="4ch" height="1em" class="bc34"/>
+<rect x="0ch" y="7em" width="4ch" height="1em" class="bc35"/>
+<rect x="4ch" y="7em" width="4ch" height="1em" class="bc36"/>
+<rect x="8ch" y="7em" width="4ch" height="1em" class="bc37"/>
+<rect x="12ch" y="7em" width="4ch" height="1em" class="bc38"/>
+<rect x="16ch" y="7em" width="4ch" height="1em" class="bc39"/>
+<rect x="20ch" y="7em" width="4ch" height="1em" class="bc40"/>
+<rect x="25ch" y="7em" width="4ch" height="1em" class="bc41"/>
+<rect x="29ch" y="7em" width="4ch" height="1em" class="bc42"/>
+<rect x="33ch" y="7em" width="4ch" height="1em" class="bc43"/>
+<rect x="37ch" y="7em" width="4ch" height="1em" class="bc44"/>
+<rect x="41ch" y="7em" width="4ch" height="1em" class="bc45"/>
+<rect x="45ch" y="7em" width="4ch" height="1em" class="bc46"/>
+<rect x="50ch" y="7em" width="4ch" height="1em" class="bc47"/>
+<rect x="54ch" y="7em" width="4ch" height="1em" class="bc48"/>
+<rect x="58ch" y="7em" width="4ch" height="1em" class="bc49"/>
+<rect x="62ch" y="7em" width="4ch" height="1em" class="bc50"/>
+<rect x="66ch" y="7em" width="4ch" height="1em" class="bc51"/>
+<rect x="70ch" y="7em" width="4ch" height="1em" class="bc52"/>
+<rect x="0ch" y="8em" width="4ch" height="1em" class="bc53"/>
+<rect x="4ch" y="8em" width="4ch" height="1em" class="bc54"/>
+<rect x="8ch" y="8em" width="4ch" height="1em" class="bc55"/>
+<rect x="12ch" y="8em" width="4ch" height="1em" class="bc56"/>
+<rect x="16ch" y="8em" width="4ch" height="1em" class="bc57"/>
+<rect x="20ch" y="8em" width="4ch" height="1em" class="bc58"/>
+<rect x="25ch" y="8em" width="4ch" height="1em" class="bc59"/>
+<rect x="29ch" y="8em" width="4ch" height="1em" class="bc60"/>
+<rect x="33ch" y="8em" width="4ch" height="1em" class="bc61"/>
+<rect x="37ch" y="8em" width="4ch" height="1em" class="bc62"/>
+<rect x="41ch" y="8em" width="4ch" height="1em" class="bc63"/>
+<rect x="45ch" y="8em" width="4ch" height="1em" class="bc64"/>
+<rect x="50ch" y="8em" width="4ch" height="1em" class="bc65"/>
+<rect x="54ch" y="8em" width="4ch" height="1em" class="bc66"/>
+<rect x="58ch" y="8em" width="4ch" height="1em" class="bc67"/>
+<rect x="62ch" y="8em" width="4ch" height="1em" class="bc68"/>
+<rect x="66ch" y="8em" width="4ch" height="1em" class="bc69"/>
+<rect x="70ch" y="8em" width="4ch" height="1em" class="bc70"/>
+<rect x="0ch" y="9em" width="4ch" height="1em" class="bc71"/>
+<rect x="4ch" y="9em" width="4ch" height="1em" class="bc72"/>
+<rect x="8ch" y="9em" width="4ch" height="1em" class="bc73"/>
+<rect x="12ch" y="9em" width="4ch" height="1em" class="bc74"/>
+<rect x="16ch" y="9em" width="4ch" height="1em" class="bc75"/>
+<rect x="20ch" y="9em" width="4ch" height="1em" class="bc76"/>
+<rect x="25ch" y="9em" width="4ch" height="1em" class="bc77"/>
+<rect x="29ch" y="9em" width="4ch" height="1em" class="bc78"/>
+<rect x="33ch" y="9em" width="4ch" height="1em" class="bc79"/>
+<rect x="37ch" y="9em" width="4ch" height="1em" class="bc80"/>
+<rect x="41ch" y="9em" width="4ch" height="1em" class="bc81"/>
+<rect x="45ch" y="9em" width="4ch" height="1em" class="bc82"/>
+<rect x="50ch" y="9em" width="4ch" height="1em" class="bc83"/>
+<rect x="54ch" y="9em" width="4ch" height="1em" class="bc84"/>
+<rect x="58ch" y="9em" width="4ch" height="1em" class="bc85"/>
+<rect x="62ch" y="9em" width="4ch" height="1em" class="bc86"/>
+<rect x="66ch" y="9em" width="4ch" height="1em" class="bc87"/>
+<rect x="70ch" y="9em" width="4ch" height="1em" class="bc88"/>
+<rect x="0ch" y="10em" width="4ch" height="1em" class="bc89"/>
+<rect x="4ch" y="10em" width="4ch" height="1em" class="bc90"/>
+<rect x="8ch" y="10em" width="4ch" height="1em" class="bc91"/>
+<rect x="12ch" y="10em" width="4ch" height="1em" class="bc92"/>
+<rect x="16ch" y="10em" width="4ch" height="1em" class="bc93"/>
+<rect x="20ch" y="10em" width="4ch" height="1em" class="bc94"/>
+<rect x="25ch" y="10em" width="4ch" height="1em" class="bc95"/>
+<rect x="29ch" y="10em" width="4ch" height="1em" class="bc96"/>
+<rect x="33ch" y="10em" width="4ch" height="1em" class="bc97"/>
+<rect x="37ch" y="10em" width="4ch" height="1em" class="bc98"/>
+<rect x="41ch" y="10em" width="4ch" height="1em" class="bc99"/>
+<rect x="45ch" y="10em" width="4ch" height="1em" class="bc100"/>
+<rect x="50ch" y="10em" width="4ch" height="1em" class="bc101"/>
+<rect x="54ch" y="10em" width="4ch" height="1em" class="bc102"/>
+<rect x="58ch" y="10em" width="4ch" height="1em" class="bc103"/>
+<rect x="62ch" y="10em" width="4ch" height="1em" class="bc104"/>
+<rect x="66ch" y="10em" width="4ch" height="1em" class="bc105"/>
+<rect x="70ch" y="10em" width="4ch" height="1em" class="bc106"/>
+<rect x="0ch" y="12em" width="4ch" height="1em" class="bc107"/>
+<rect x="4ch" y="12em" width="4ch" height="1em" class="bc108"/>
+<rect x="8ch" y="12em" width="4ch" height="1em" class="bc109"/>
+<rect x="12ch" y="12em" width="4ch" height="1em" class="bc110"/>
+<rect x="16ch" y="12em" width="4ch" height="1em" class="bc111"/>
+<rect x="20ch" y="12em" width="4ch" height="1em" class="bc112"/>
+<rect x="25ch" y="12em" width="4ch" height="1em" class="bc113"/>
+<rect x="29ch" y="12em" width="4ch" height="1em" class="bc114"/>
+<rect x="33ch" y="12em" width="4ch" height="1em" class="bc115"/>
+<rect x="37ch" y="12em" width="4ch" height="1em" class="bc116"/>
+<rect x="41ch" y="12em" width="4ch" height="1em" class="bc117"/>
+<rect x="45ch" y="12em" width="4ch" height="1em" class="bc118"/>
+<rect x="50ch" y="12em" width="4ch" height="1em" class="bc119"/>
+<rect x="54ch" y="12em" width="4ch" height="1em" class="bc120"/>
+<rect x="58ch" y="12em" width="4ch" height="1em" class="bc121"/>
+<rect x="62ch" y="12em" width="4ch" height="1em" class="bc122"/>
+<rect x="66ch" y="12em" width="4ch" height="1em" class="bc123"/>
+<rect x="70ch" y="12em" width="4ch" height="1em" class="bc124"/>
+<rect x="0ch" y="13em" width="4ch" height="1em" class="bc125"/>
+<rect x="4ch" y="13em" width="4ch" height="1em" class="bc126"/>
+<rect x="8ch" y="13em" width="4ch" height="1em" class="bc127"/>
+<rect x="12ch" y="13em" width="4ch" height="1em" class="bc128"/>
+<rect x="16ch" y="13em" width="4ch" height="1em" class="bc129"/>
+<rect x="20ch" y="13em" width="4ch" height="1em" class="bc130"/>
+<rect x="25ch" y="13em" width="4ch" height="1em" class="bc131"/>
+<rect x="29ch" y="13em" width="4ch" height="1em" class="bc132"/>
+<rect x="33ch" y="13em" width="4ch" height="1em" class="bc133"/>
+<rect x="37ch" y="13em" width="4ch" height="1em" class="bc134"/>
+<rect x="41ch" y="13em" width="4ch" height="1em" class="bc135"/>
+<rect x="45ch" y="13em" width="4ch" height="1em" class="bc136"/>
+<rect x="50ch" y="13em" width="4ch" height="1em" class="bc137"/>
+<rect x="54ch" y="13em" width="4ch" height="1em" class="bc138"/>
+<rect x="58ch" y="13em" width="4ch" height="1em" class="bc139"/>
+<rect x="62ch" y="13em" width="4ch" height="1em" class="bc140"/>
+<rect x="66ch" y="13em" width="4ch" height="1em" class="bc141"/>
+<rect x="70ch" y="13em" width="4ch" height="1em" class="bc142"/>
+<rect x="0ch" y="14em" width="4ch" height="1em" class="bc143"/>
+<rect x="4ch" y="14em" width="4ch" height="1em" class="bc144"/>
+<rect x="8ch" y="14em" width="4ch" height="1em" class="bc145"/>
+<rect x="12ch" y="14em" width="4ch" height="1em" class="bc146"/>
+<rect x="16ch" y="14em" width="4ch" height="1em" class="bc147"/>
+<rect x="20ch" y="14em" width="4ch" height="1em" class="bc148"/>
+<rect x="25ch" y="14em" width="4ch" height="1em" class="bc149"/>
+<rect x="29ch" y="14em" width="4ch" height="1em" class="bc150"/>
+<rect x="33ch" y="14em" width="4ch" height="1em" class="bc151"/>
+<rect x="37ch" y="14em" width="4ch" height="1em" class="bc152"/>
+<rect x="41ch" y="14em" width="4ch" height="1em" class="bc153"/>
+<rect x="45ch" y="14em" width="4ch" height="1em" class="bc154"/>
+<rect x="50ch" y="14em" width="4ch" height="1em" class="bc155"/>
+<rect x="54ch" y="14em" width="4ch" height="1em" class="bc156"/>
+<rect x="58ch" y="14em" width="4ch" height="1em" class="bc157"/>
+<rect x="62ch" y="14em" width="4ch" height="1em" class="bc158"/>
+<rect x="66ch" y="14em" width="4ch" height="1em" class="bc159"/>
+<rect x="70ch" y="14em" width="4ch" height="1em" class="bc160"/>
+<rect x="0ch" y="15em" width="4ch" height="1em" class="bc161"/>
+<rect x="4ch" y="15em" width="4ch" height="1em" class="bc162"/>
+<rect x="8ch" y="15em" width="4ch" height="1em" class="bc163"/>
+<rect x="12ch" y="15em" width="4ch" height="1em" class="bc164"/>
+<rect x="16ch" y="15em" width="4ch" height="1em" class="bc165"/>
+<rect x="20ch" y="15em" width="4ch" height="1em" class="bc166"/>
+<rect x="25ch" y="15em" width="4ch" height="1em" class="bc167"/>
+<rect x="29ch" y="15em" width="4ch" height="1em" class="bc168"/>
+<rect x="33ch" y="15em" width="4ch" height="1em" class="bc169"/>
+<rect x="37ch" y="15em" width="4ch" height="1em" class="bc170"/>
+<rect x="41ch" y="15em" width="4ch" height="1em" class="bc171"/>
+<rect x="45ch" y="15em" width="4ch" height="1em" class="bc172"/>
+<rect x="50ch" y="15em" width="4ch" height="1em" class="bc173"/>
+<rect x="54ch" y="15em" width="4ch" height="1em" class="bc174"/>
+<rect x="58ch" y="15em" width="4ch" height="1em" class="bc175"/>
+<rect x="62ch" y="15em" width="4ch" height="1em" class="bc176"/>
+<rect x="66ch" y="15em" width="4ch" height="1em" class="bc177"/>
+<rect x="70ch" y="15em" width="4ch" height="1em" class="bc178"/>
+<rect x="0ch" y="16em" width="4ch" height="1em" class="bc179"/>
+<rect x="4ch" y="16em" width="4ch" height="1em" class="bc180"/>
+<rect x="8ch" y="16em" width="4ch" height="1em" class="bc181"/>
+<rect x="12ch" y="16em" width="4ch" height="1em" class="bc182"/>
+<rect x="16ch" y="16em" width="4ch" height="1em" class="bc183"/>
+<rect x="20ch" y="16em" width="4ch" height="1em" class="bc184"/>
+<rect x="25ch" y="16em" width="4ch" height="1em" class="bc185"/>
+<rect x="29ch" y="16em" width="4ch" height="1em" class="bc186"/>
+<rect x="33ch" y="16em" width="4ch" height="1em" class="bc187"/>
+<rect x="37ch" y="16em" width="4ch" height="1em" class="bc188"/>
+<rect x="41ch" y="16em" width="4ch" height="1em" class="bc189"/>
+<rect x="45ch" y="16em" width="4ch" height="1em" class="bc190"/>
+<rect x="50ch" y="16em" width="4ch" height="1em" class="bc191"/>
+<rect x="54ch" y="16em" width="4ch" height="1em" class="bc192"/>
+<rect x="58ch" y="16em" width="4ch" height="1em" class="bc193"/>
+<rect x="62ch" y="16em" width="4ch" height="1em" class="bc194"/>
+<rect x="66ch" y="16em" width="4ch" height="1em" class="bc195"/>
+<rect x="70ch" y="16em" width="4ch" height="1em" class="bc196"/>
+<rect x="0ch" y="17em" width="4ch" height="1em" class="bc197"/>
+<rect x="4ch" y="17em" width="4ch" height="1em" class="bc198"/>
+<rect x="8ch" y="17em" width="4ch" height="1em" class="bc199"/>
+<rect x="12ch" y="17em" width="4ch" height="1em" class="bc200"/>
+<rect x="16ch" y="17em" width="4ch" height="1em" class="bc201"/>
+<rect x="20ch" y="17em" width="4ch" height="1em" class="bc202"/>
+<rect x="25ch" y="17em" width="4ch" height="1em" class="bc203"/>
+<rect x="29ch" y="17em" width="4ch" height="1em" class="bc204"/>
+<rect x="33ch" y="17em" width="4ch" height="1em" class="bc205"/>
+<rect x="37ch" y="17em" width="4ch" height="1em" class="bc206"/>
+<rect x="41ch" y="17em" width="4ch" height="1em" class="bc207"/>
+<rect x="45ch" y="17em" width="4ch" height="1em" class="bc208"/>
+<rect x="50ch" y="17em" width="4ch" height="1em" class="bc209"/>
+<rect x="54ch" y="17em" width="4ch" height="1em" class="bc210"/>
+<rect x="58ch" y="17em" width="4ch" height="1em" class="bc211"/>
+<rect x="62ch" y="17em" width="4ch" height="1em" class="bc212"/>
+<rect x="66ch" y="17em" width="4ch" height="1em" class="bc213"/>
+<rect x="70ch" y="17em" width="4ch" height="1em" class="bc214"/>
+<rect x="4ch" y="19em" width="4ch" height="1em" class="bc215"/>
+<rect x="8ch" y="19em" width="4ch" height="1em" class="bc216"/>
+<rect x="12ch" y="19em" width="4ch" height="1em" class="bc217"/>
+<rect x="16ch" y="19em" width="4ch" height="1em" class="bc218"/>
+<rect x="20ch" y="19em" width="4ch" height="1em" class="bc219"/>
+<rect x="24ch" y="19em" width="4ch" height="1em" class="bc220"/>
+<rect x="28ch" y="19em" width="4ch" height="1em" class="bc221"/>
+<rect x="32ch" y="19em" width="4ch" height="1em" class="bc222"/>
+<rect x="36ch" y="19em" width="4ch" height="1em" class="bc223"/>
+<rect x="40ch" y="19em" width="4ch" height="1em" class="bc224"/>
+<rect x="44ch" y="19em" width="4ch" height="1em" class="bc225"/>
+<rect x="0ch" y="20em" width="4ch" height="1em" class="bc226"/>
+<rect x="4ch" y="20em" width="4ch" height="1em" class="bc227"/>
+<rect x="8ch" y="20em" width="4ch" height="1em" class="bc228"/>
+<rect x="12ch" y="20em" width="4ch" height="1em" class="bc229"/>
+<rect x="16ch" y="20em" width="4ch" height="1em" class="bc230"/>
+<rect x="20ch" y="20em" width="4ch" height="1em" class="bc231"/>
+<rect x="24ch" y="20em" width="4ch" height="1em" class="bc232"/>
+<rect x="28ch" y="20em" width="4ch" height="1em" class="bc233"/>
+<rect x="32ch" y="20em" width="4ch" height="1em" class="bc234"/>
+<rect x="36ch" y="20em" width="4ch" height="1em" class="bc235"/>
+<rect x="40ch" y="20em" width="4ch" height="1em" class="bc236"/>
+<rect x="44ch" y="20em" width="4ch" height="1em" class="bc214"/>
+</g>
+<g x="0">
+<text y="0.5em"><tspan>System colors:</tspan></text>
+<text y="1.5em"><tspan class="fa15">  0   1   2   3   4   5   6   7 </tspan></text>
+<text y="2.5em"><tspan class="fa15">  8 </tspan><tspan class="fa0">  9  10  11  12  13  14  15 </tspan></text>
+<text y="4.5em"><tspan>6x6x6 color cube and greyscale:</tspan></text>
+<text y="5.5em"><tspan class="fc0"> 16  22  28  34 </tspan><tspan class="fc1"> 40  46 </tspan><tspan> </tspan><tspan class="fc0"> 52  58  64 </tspan><tspan class="fc1"> 70  76  82 </tspan><tspan> </tspan><tspan class="fc0"> 88  94 100 </tspan><tspan class="fc1">106 112 118 </tspan></text>
+<text y="6.5em"><tspan class="fc0"> 17  23  29 </tspan><tspan class="fc1"> 35  41  47 </tspan><tspan> </tspan><tspan class="fc0"> 53  59  65 </tspan><tspan class="fc1"> 71  77  83 </tspan><tspan> </tspan><tspan class="fc0"> 89  95 </tspan><tspan class="fc1">101 107 113 119 </tspan></text>
+<text y="7.5em"><tspan class="fc0"> 18  24  30 </tspan><tspan class="fc1"> 36  42  48 </tspan><tspan> </tspan><tspan class="fc0"> 54  60  66 </tspan><tspan class="fc1"> 72  78  84 </tspan><tspan> </tspan><tspan class="fc0"> 90  96 </tspan><tspan class="fc1">102 108 114 120 </tspan></text>
+<text y="8.5em"><tspan class="fc0"> 19  25  31 </tspan><tspan class="fc1"> 37  43  49 </tspan><tspan> </tspan><tspan class="fc0"> 55  61 </tspan><tspan class="fc1"> 67  73  79  85 </tspan><tspan> </tspan><tspan class="fc0"> 91  97 </tspan><tspan class="fc1">103 109 115 121 </tspan></text>
+<text y="9.5em"><tspan class="fc0"> 20  26  32 </tspan><tspan class="fc1"> 38  44  50 </tspan><tspan> </tspan><tspan class="fc0"> 56  62 </tspan><tspan class="fc1"> 68  74  80  86 </tspan><tspan> </tspan><tspan class="fc0"> 92  98 </tspan><tspan class="fc1">104 110 116 122 </tspan></text>
+<text y="10.5em"><tspan class="fc0"> 21  27  33 </tspan><tspan class="fc1"> 39  45  51 </tspan><tspan> </tspan><tspan class="fc0"> 57  63 </tspan><tspan class="fc1"> 69  75  81  87 </tspan><tspan> </tspan><tspan class="fc0"> 93  99 </tspan><tspan class="fc1">105 111 117 123 </tspan></text>
+<text y="12.5em"><tspan class="fc0">124 130 </tspan><tspan class="fc1">136 142 148 154 </tspan><tspan> </tspan><tspan class="fc0">160 166 </tspan><tspan class="fc1">172 178 184 190 </tspan><tspan> </tspan><tspan class="fc0">196 202 </tspan><tspan class="fc1">208 214 220 226 </tspan></text>
+<text y="13.5em"><tspan class="fc0">125 131 </tspan><tspan class="fc1">137 143 149 155 </tspan><tspan> </tspan><tspan class="fc0">161 167 </tspan><tspan class="fc1">173 179 185 191 </tspan><tspan> </tspan><tspan class="fc0">197 </tspan><tspan class="fc1">203 209 215 221 227 </tspan></text>
+<text y="14.5em"><tspan class="fc0">126 132 </tspan><tspan class="fc1">138 144 150 156 </tspan><tspan> </tspan><tspan class="fc0">162 168 </tspan><tspan class="fc1">174 180 186 192 </tspan><tspan> </tspan><tspan class="fc0">198 </tspan><tspan class="fc1">204 210 216 222 228 </tspan></text>
+<text y="15.5em"><tspan class="fc0">127 133 </tspan><tspan class="fc1">139 145 151 157 </tspan><tspan> </tspan><tspan class="fc0">163 169 </tspan><tspan class="fc1">175 181 187 193 </tspan><tspan> </tspan><tspan class="fc0">199 </tspan><tspan class="fc1">205 211 217 223 229 </tspan></text>
+<text y="16.5em"><tspan class="fc0">128 134 </tspan><tspan class="fc1">140 146 152 158 </tspan><tspan> </tspan><tspan class="fc0">164 </tspan><tspan class="fc1">170 176 182 188 194 </tspan><tspan> </tspan><tspan class="fc0">200 </tspan><tspan class="fc1">206 212 218 224 230 </tspan></text>
+<text y="17.5em"><tspan class="fc0">129 135 </tspan><tspan class="fc1">141 147 153 159 </tspan><tspan> </tspan><tspan class="fc0">165 </tspan><tspan class="fc1">171 177 183 189 195 </tspan><tspan> </tspan><tspan class="fc0">201 </tspan><tspan class="fc1">207 213 219 225 231 </tspan></text>
+<text y="19.5em"><tspan class="fc0">232 233 234 235 236 237 238 239 240 241 242 243 </tspan></text>
+<text y="20.5em"><tspan class="fc1">244 245 246 247 248 249 250 251 252 253 254 255 </tspan></text>
+</g>
 </svg>
