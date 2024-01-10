@@ -16,27 +16,24 @@ Produces [colortest.ansi.svg](cli/testdata/colortest.ansi.svg):
 
 ```
 $ ansisvg -h
-Usage of ansisvg:
-  -charboxsize value
-    	Character box size (forces pixel units instead of font-relative units)
-  -colorscheme string
-    	Color scheme (default "Builtin Dark")
-  -fontfile string
-    	Font file to use and embed
-  -fontname string
-    	Font name (default "Courier")
-  -fontref string
-    	External font file to reference
-  -fontsize int
-    	Font size (default 14)
-  -grid
-    	Enable grid mode (sets position for each character)
-  -listcolorschemes
-    	List color schemes
-  -transparent
-    	Transparent background
-  -width int
-    	Terminal width (auto)
+ansisvg - Convert ANSI to SVG
+Usage: ansisvg [FLAGS]
+
+Example usage:
+  program | ansisvg > file.svg
+
+--charboxsize       Character box size (use pixel units instead of font units)
+--colorscheme       Color scheme
+--fontfile          Font file to use and embed
+--fontname          Font name
+--fontref           External font URL to use
+--fontsize          Font size
+--grid              Grid mode (sets position for each character)
+--help, -h          Show help
+--listcolorschemes  List color schemes
+--transparent       Transparent background
+--version, -v       Show version
+--width, -w         Terminal width (auto if not set)
 ```
 
 Color themes are the ones from https://github.com/mbadolato/iTerm2-Color-Schemes
