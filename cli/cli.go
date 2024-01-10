@@ -32,6 +32,7 @@ func (d *boxSize) Set(s string) error {
 }
 
 type Env struct {
+	Version  string
 	ReadFile func(string) ([]byte, error)
 	Stdin    io.Reader
 	Stdout   io.Writer
@@ -41,6 +42,7 @@ type Env struct {
 
 func Main(env Env) error {
 	fs := flag.NewFlagSet("ansisvg", flag.ExitOnError)
+	var versionFlag = fs.Bool("version", false, "Show version")
 	var fontNameFlag = fs.String("fontname", ansitosvg.DefaultOptions.FontName, "Font name")
 	var fontFileFlag = fs.String("fontfile", "", "Font file to use and embed")
 	var fontRefFlag = fs.String("fontref", "", "External font file to reference")
@@ -56,6 +58,11 @@ func Main(env Env) error {
 	}
 	fs.Var(&characterBoxSize, "charboxsize", "Character box size (forces pixel units instead of font-relative units)")
 	_ = fs.Parse(env.Args[1:])
+
+	if *versionFlag {
+		fmt.Fprintln(env.Stdout, env.Version)
+		return nil
+	}
 
 	if *listColorSchemesFlag {
 		maxNameLen := 0

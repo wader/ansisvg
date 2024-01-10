@@ -41,7 +41,7 @@ Usage of ansisvg:
 
 Color themes are the ones from https://github.com/mbadolato/iTerm2-Color-Schemes
 
-## Install
+## Install and build
 
 To build you will need at least go 1.16 or later.
 
@@ -51,20 +51,18 @@ go install github.com/wader/ansisvg@master
 cp $(go env GOPATH)/bin/ansisvg /usr/local/bin
 ```
 
+Build from cloned repo:
+```
+go build -o ansisvg .
+```
+
 ## Fonts
 
 Note that embedded fonts might not be supported by some SVG viewers. At time of writing this is not supported by Inkscape (see https://gitlab.com/inkscape/inbox/-/issues/301).
 
-## Development
-
-Build from cloned repo:
-```
-go build -o ansisvg main.go
-```
-
 ## Tricks
 
-#### ANSI to PDF or PNG
+### ANSI to PDF or PNG
 
 ```
 ... | ansisvg | inkscape --pipe --export-type=pdf -o file.pdf
@@ -95,14 +93,19 @@ TERM=a AV_LOG_FORCE_COLOR=1 ffmpeg ... 2>&1 | ansisvg
 jq -C | ansisvg
 ```
 
-## Development
+## Development and release build
 
-Run all tests and write new difftest outputs
+Run all tests and write new test output:
 ```
-WRITE_ACTUAL=1 go test ./...
+go test ./... -update
 ```
 
-Visual inspect outputs in browser:
+Manual release build with version can be done with:
+```
+go build -ldflags "-X main.version=1.2.3" -o ansisvg .
+```
+
+Visual inspect test output in browser:
 ```
 for i in cli/testdata/*.ansi.svg; do echo "$i<br><img src=\"$i\"/><br>" ; done  > all.html
 open all.html
