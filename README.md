@@ -22,18 +22,18 @@ Usage: ansisvg [FLAGS]
 Example usage:
   program | ansisvg > file.svg
 
---charboxsize       Character box size (use pixel units instead of font units)
---colorscheme       Color scheme
---fontfile          Font file to use and embed
---fontname          Font name
---fontref           External font URL to use
---fontsize          Font size
+--charboxsize WxH   Character box size (use pixel units instead of font units)
+--colorscheme NAME  Color scheme
+--fontfile PATH     Font file to use and embed
+--fontname NAME     Font name
+--fontref URL       External font URL to use
+--fontsize NUMBER   Font size
 --grid              Grid mode (sets position for each character)
 --help, -h          Show help
 --listcolorschemes  List color schemes
 --transparent       Transparent background
 --version, -v       Show version
---width, -w         Terminal width (auto if not set)
+--width, -w NUMBER  Terminal width (auto if not set)
 ```
 
 Color themes are the ones from https://github.com/mbadolato/iTerm2-Color-Schemes

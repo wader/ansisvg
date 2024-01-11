@@ -45,14 +45,14 @@ func Main(env Env) error {
 	var versionFlag bool
 	fs.BoolVar(&versionFlag, "v", false, "")
 	fs.BoolVar(&versionFlag, "version", false, "Show version")
-	var fontNameFlag = fs.String("fontname", ansitosvg.DefaultOptions.FontName, "Font name")
-	var fontFileFlag = fs.String("fontfile", "", "Font file to use and embed")
-	var fontRefFlag = fs.String("fontref", "", "External font URL to use")
-	var fontSizeFlag = fs.Int("fontsize", ansitosvg.DefaultOptions.FontSize, "Font size")
+	var fontNameFlag = fs.String("fontname", ansitosvg.DefaultOptions.FontName, "NAME|Font name")
+	var fontFileFlag = fs.String("fontfile", "", "PATH|Font file to use and embed")
+	var fontRefFlag = fs.String("fontref", "", "URL|External font URL to use")
+	var fontSizeFlag = fs.Int("fontsize", ansitosvg.DefaultOptions.FontSize, "NUMBER|Font size")
 	var terminalWidthFlag int
 	fs.IntVar(&terminalWidthFlag, "w", 0, "")
-	fs.IntVar(&terminalWidthFlag, "width", 0, "Terminal width (auto if not set)")
-	var colorSchemeFlag = fs.String("colorscheme", ansitosvg.DefaultOptions.ColorScheme, "Color scheme")
+	fs.IntVar(&terminalWidthFlag, "width", 0, "NUMBER|Terminal width (auto if not set)")
+	var colorSchemeFlag = fs.String("colorscheme", ansitosvg.DefaultOptions.ColorScheme, "NAME|Color scheme")
 	var listColorSchemesFlag = fs.Bool("listcolorschemes", false, "List color schemes")
 	var transparentFlag = fs.Bool("transparent", ansitosvg.DefaultOptions.Transparent, "Transparent background")
 	var gridModeFlag = fs.Bool("grid", false, "Grid mode (sets position for each character)")
@@ -63,7 +63,7 @@ func Main(env Env) error {
 		Width:  ansitosvg.DefaultOptions.CharBoxSize.Width,
 		Height: ansitosvg.DefaultOptions.CharBoxSize.Height,
 	}
-	fs.Var(&charBoxSize, "charboxsize", "Character box size (use pixel units instead of font units)")
+	fs.Var(&charBoxSize, "charboxsize", "WxH|Character box size (use pixel units instead of font units)")
 	// handle error and usage output ourself
 	fs.Usage = func() {}
 	fs.SetOutput(io.Discard)
@@ -72,11 +72,26 @@ func Main(env Env) error {
 		"version": "v",
 		"width":   "w",
 	}
+	flagHelp := func(f *flag.Flag) (string, string) {
+		s := "--" + f.Name
+		if short, ok := longToShort[f.Name]; ok {
+			s += ", -" + short
+		}
+
+		arg, usage, found := strings.Cut(f.Usage, "|")
+		if found {
+			s += " " + arg
+		} else {
+			usage = arg
+		}
+		return s, usage
+	}
 	usage := func() {
 		maxNameLen := 0
 		fs.VisitAll(func(f *flag.Flag) {
-			if len(f.Name) > maxNameLen {
-				maxNameLen = len(f.Name)
+			fh, _ := flagHelp(f)
+			if len(fh) > maxNameLen {
+				maxNameLen = len(fh)
 			}
 		})
 
@@ -93,14 +108,9 @@ Example usage:
 				return
 			}
 
-			short := ""
-			if s, ok := longToShort[f.Name]; ok {
-				short = ", -" + s
-			}
-
-			flagNames := f.Name + short
-			pad := strings.Repeat(" ", maxNameLen-len(flagNames))
-			fmt.Fprintf(env.Stdout, "--%s%s%s  %s\n", f.Name, short, pad, f.Usage)
+			fh, usage := flagHelp(f)
+			pad := strings.Repeat(" ", maxNameLen-len(fh))
+			fmt.Fprintf(env.Stdout, "%s%s  %s\n", fh, pad, usage)
 		})
 	}
 	if err := fs.Parse(env.Args[1:]); err != nil {
