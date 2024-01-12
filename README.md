@@ -126,13 +126,13 @@ go build -ldflags "-X main.version=1.2.3" -o ansisvg .
 
 Visual inspect test output in browser:
 ```
-for i in cli/testdata/*.ansi.svg; do echo "$i<br><img src=\"$i\"/><br>" ; done  > all.html
+for i in cli/testdata/*.svg; do echo "$i<br><img src=\"$i\"/><br>" ; done  > all.html
 open all.html
 ```
 
 Using [ffcat](https://github.com/wader/ffcat):
 ```
-for i in cli/testdata/*.ansi; do echo $i ; cat $i | go run main.go | ffcat ; done
+for i in cli/testdata/*.ansi; do echo $i ; cat $i | go run . | ffcat ; done
 ```
 
 ## Thanks
