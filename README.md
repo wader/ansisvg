@@ -112,6 +112,22 @@ TERM=a AV_LOG_FORCE_COLOR=1 ffmpeg ... 2>&1 | ansisvg
 jq -C | ansisvg
 ```
 
+### Make screenshots from a terminal
+
+#### tmux
+
+```
+# <prefix>-H: Create a SVG screenshot of the current pane
+bind H capture-pane -e \; run "tmux save-buffer - | $HOME/go/bin/ansisvg > $HOME/Pictures/tmux-$(date +%F_%T).svg"; delete-buffer
+```
+
+#### kitty
+
+```
+# F3: Create a SVG screenshot of the current selection
+map f3 combine : copy_ansi_to_clipboard : launch sh -c 'kitty +kitten clipboard -g | $HOME/go/bin/ansisvg > $HOME/Pictures/kitty-$(date +%F_%T).svg'
+```
+
 ## Development and release build
 
 Run all tests and write new test output:
