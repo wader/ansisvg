@@ -182,18 +182,23 @@ func (s *Screen) lineToTextElement(l Line) textElement {
 		t = append(t, currentSpan)
 	}
 	for col, c := range l.Chars {
-		tempSpan := s.charToFgText(c)
+		newSpan := s.charToFgText(c)
 		if s.GridMode {
-			// If in grid mode, set X coordinate for each text span
-			tempSpan.X = s.columnCoordinate(col)
-		}
-		// Consolidate tempSpan to currentSpan only if not in grid mode and both spans have same style
-		if s.GridMode || tempSpan.Class != currentSpan.Class {
+			// In grid mode, set X coordinate for each text span
+			newSpan.X = s.columnCoordinate(col)
+			// In grid mode, we never consolidate
 			appendSpan()
-			currentSpan = tempSpan
+			currentSpan = newSpan
 			continue
 		}
-		currentSpan.Content += tempSpan.Content
+		// Don't consolidate if class is changing, but ignore whitespace
+		if newSpan.Class != currentSpan.Class && strings.TrimSpace(newSpan.Content) != "" {
+			appendSpan()
+			currentSpan = newSpan
+			continue
+		}
+		// Consolidate new content with previous one.
+		currentSpan.Content += newSpan.Content
 	}
 	appendSpan()
 
