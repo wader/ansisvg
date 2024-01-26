@@ -23,6 +23,6 @@
 <rect x="0ch" y="0em" width="40ch" height="1em" class="bc0"/>
 </g>
 <g x="0">
-<text y="0.5em"><tspan class="fc0"> params with mix colon semicolon red bg </tspan></text>
+<text y="0.5em"><tspan> </tspan><tspan class="fc0">params with mix colon semicolon red bg </tspan></text>
 </g>
 </svg>

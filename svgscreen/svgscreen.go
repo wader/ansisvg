@@ -37,11 +37,9 @@ type BoxSize struct {
 }
 
 type textSpan struct {
-	X          string
-	Style      template.CSS
-	Decoration template.CSS
-	Color      string
-	Content    string
+	X       string
+	Class   string
+	Content string
 }
 
 type textElement struct {
@@ -68,6 +66,12 @@ type SvgDom struct {
 	BgCustomColors []string
 	BgRects        []bgRect
 	TextElements   []textElement
+	ClassesUsed    struct {
+		Bold          bool
+		Italic        bool
+		Underline     bool
+		Strikethrough bool
+	}
 }
 
 type ColorMap struct {
@@ -133,26 +137,32 @@ func (s *Screen) resolveColor(c string, cmap *ColorMap) string {
 }
 
 func (s *Screen) charToFgText(c Char) textSpan {
-	var styles []string
-	deco := ""
+	var classes []string
 
 	if c.Intensity {
-		styles = append(styles, "font-weight:bold")
+		classes = append(classes, "bold")
+		s.Dom.ClassesUsed.Bold = true
 	}
 	if c.Italic {
-		styles = append(styles, "font-style:italic")
+		classes = append(classes, "italic")
+		s.Dom.ClassesUsed.Italic = true
 	}
 	if c.Underline {
-		deco = "underline"
+		classes = append(classes, "underline")
+		s.Dom.ClassesUsed.Underline = true
 	} else if c.Strikethrough {
-		deco = "line-through"
+		classes = append(classes, "strikethrough")
+		s.Dom.ClassesUsed.Strikethrough = true
+	}
+
+	color := s.resolveColor(c.Foreground, &s.Foreground)
+	if color != "" {
+		classes = append(classes, color)
 	}
 
 	return textSpan{
-		Style:      template.CSS(strings.Join(styles, ";")),
-		Decoration: template.CSS(deco),
-		Color:      s.resolveColor(c.Foreground, &s.Foreground),
-		Content:    c.Char,
+		Class:   strings.Join(classes, " "),
+		Content: c.Char,
 	}
 }
 
@@ -161,9 +171,8 @@ func (s *Screen) charToFgText(c Char) textSpan {
 func (s *Screen) lineToTextElement(l Line) textElement {
 	var t []textSpan
 	currentSpan := textSpan{
-		Style:      "",
-		Decoration: "",
-		Content:    "",
+		Class:   "",
+		Content: "",
 	}
 
 	appendSpan := func() {
@@ -173,18 +182,23 @@ func (s *Screen) lineToTextElement(l Line) textElement {
 		t = append(t, currentSpan)
 	}
 	for col, c := range l.Chars {
-		tempSpan := s.charToFgText(c)
+		newSpan := s.charToFgText(c)
 		if s.GridMode {
-			// If in grid mode, set X coordinate for each text span
-			tempSpan.X = s.columnCoordinate(col)
-		}
-		// Consolidate tempSpan to currentSpan only if not in grid mode and both spans have same style
-		if s.GridMode || tempSpan.Color != currentSpan.Color || tempSpan.Style != currentSpan.Style || tempSpan.Decoration != currentSpan.Decoration {
+			// In grid mode, set X coordinate for each text span
+			newSpan.X = s.columnCoordinate(col)
+			// In grid mode, we never consolidate
 			appendSpan()
-			currentSpan = tempSpan
+			currentSpan = newSpan
 			continue
 		}
-		currentSpan.Content += tempSpan.Content
+		// Don't consolidate if class is changing, but ignore whitespace
+		if newSpan.Class != currentSpan.Class && strings.TrimSpace(newSpan.Content) != "" {
+			appendSpan()
+			currentSpan = newSpan
+			continue
+		}
+		// Consolidate new content with previous one.
+		currentSpan.Content += newSpan.Content
 	}
 	appendSpan()
 

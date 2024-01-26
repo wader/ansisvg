@@ -27,6 +27,6 @@
 <rect x="11ch" y="0em" width="5ch" height="1em" class="ba1"/>
 </g>
 <g x="0">
-<text y="0.5em"><tspan class="fa3"> red </tspan><tspan class="fa1">yellow</tspan><tspan class="fa3"> red </tspan></text>
+<text y="0.5em"><tspan> </tspan><tspan class="fa3">red </tspan><tspan class="fa1">yellow </tspan><tspan class="fa3">red </tspan></text>
 </g>
 </svg>
