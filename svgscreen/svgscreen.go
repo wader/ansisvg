@@ -58,6 +58,8 @@ type bgRect struct {
 type SvgDom struct {
 	Width          string
 	Height         string
+	MarginX        string
+	MarginY        string
 	FontName       string
 	FontEmbedded   []byte
 	FontRef        string
@@ -96,13 +98,13 @@ type Screen struct {
 	Dom              SvgDom
 }
 
-func (s *Screen) columnCoordinate(col int) string {
+func (s *Screen) columnCoordinate(col float32) string {
 	unit := "ch"
 	if s.CharacterBoxSize.Width > 0 {
 		unit = "px"
-		col *= s.CharacterBoxSize.Width
+		col *= float32(s.CharacterBoxSize.Width)
 	}
-	return strconv.Itoa(col) + unit
+	return fmt.Sprintf("%g%s", col, unit)
 }
 
 func (s *Screen) rowCoordinate(row float32) string {
@@ -185,7 +187,7 @@ func (s *Screen) lineToTextElement(l Line) textElement {
 		newSpan := s.charToFgText(c)
 		if s.GridMode {
 			// In grid mode, set X coordinate for each text span
-			newSpan.X = s.columnCoordinate(col)
+			newSpan.X = s.columnCoordinate(float32(col))
 			// In grid mode, we never consolidate
 			appendSpan()
 			currentSpan = newSpan
@@ -246,9 +248,9 @@ func (s *Screen) setupBgRects() {
 				return
 			}
 			s.Dom.BgRects = append(s.Dom.BgRects, bgRect{
-				X:      s.columnCoordinate(currentRect.x),
+				X:      s.columnCoordinate(float32(currentRect.x)),
 				Y:      s.rowCoordinate(float32(y)),
-				Width:  s.columnCoordinate(currentRect.w),
+				Width:  s.columnCoordinate(float32(currentRect.w)),
 				Height: s.rowCoordinate(1),
 				Color:  currentRect.color,
 			})
@@ -298,9 +300,27 @@ func (s *Screen) Render(w io.Writer) error {
 	s.Foreground.Custom = map[string]int{}
 	s.Background.Custom = map[string]int{}
 
+	marginX := float32(5.0)
+	marginY := float32(5.0)
+
 	// Set SVG size
-	s.Dom.Width = s.columnCoordinate(s.TerminalWidth)
-	s.Dom.Height = s.rowCoordinate(float32(s.NrLines))
+	if s.CharacterBoxSize.Width == 0 {
+		// Font-relative coordinates
+		s.Dom.Width = s.columnCoordinate(float32(s.TerminalWidth) + 2*marginX)
+		s.Dom.Height = s.rowCoordinate(float32(s.NrLines) + 2*marginY)
+		if marginX > 0 || marginY > 0 {
+			s.Dom.MarginX = fmt.Sprintf("%gch", marginX)
+			s.Dom.MarginY = fmt.Sprintf("%gem", marginY)
+		}
+	} else {
+		// Pixel coordinates
+		s.Dom.Width = fmt.Sprintf("%gpx", float32(s.CharacterBoxSize.Width*s.TerminalWidth)+2*marginX)
+		s.Dom.Height = fmt.Sprintf("%gpx", float32(s.CharacterBoxSize.Height*s.NrLines)+2*marginY)
+		if marginX > 0 || marginY > 0 {
+			s.Dom.MarginX = fmt.Sprintf("%gpx", marginX)
+			s.Dom.MarginY = fmt.Sprintf("%gpx", marginY)
+		}
+	}
 
 	s.handleColorInversion()
 	s.setupBgRects()

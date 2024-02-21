@@ -9,6 +9,12 @@ whitespace only tspan:s preventing underline to be properly rendered.
 */ -}}
 <svg width="{{$.Dom.Width}}" height="{{$.Dom.Height}}" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
     <style>
+        {{- if ne $.Dom.MarginY "" }}
+        svg {
+            background-color: {{$.Background.Default}};
+            margin: {{$.Dom.MarginY}} {{$.Dom.MarginX}};
+	}
+        {{- end }}
         {{- if gt (len $.Dom.FontEmbedded) 0}}
         @font-face {
             font-family: {{$.Dom.FontName}};
