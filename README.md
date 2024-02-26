@@ -40,7 +40,7 @@ Color themes are the ones from https://github.com/mbadolato/iTerm2-Color-Schemes
 
 ## Install and build
 
-To build you will need at least go 1.16 or later.
+To build you will need at least go 1.18 or later.
 
 Install latest master and copy it to `/usr/local/bin`:
 ```sh
