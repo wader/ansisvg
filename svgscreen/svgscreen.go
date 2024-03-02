@@ -5,6 +5,7 @@ import (
 	_ "embed"
 	"encoding/base64"
 	"fmt"
+	"github.com/wader/ansisvg/svgscreen/xydim"
 	"html/template"
 	"io"
 	"strconv"
@@ -29,11 +30,6 @@ type Char struct {
 type Line struct {
 	Y     int
 	Chars []Char
-}
-
-type BoxSize struct {
-	Width  int
-	Height int
 }
 
 type textSpan struct {
@@ -89,7 +85,7 @@ type Screen struct {
 	Background  ColorMap
 	ANSIColors  [16]string
 
-	CharacterBoxSize BoxSize
+	CharacterBoxSize xydim.XyDimInt
 	TerminalWidth    int
 	Columns          int
 	NrLines          int
@@ -100,18 +96,18 @@ type Screen struct {
 
 func (s *Screen) columnCoordinate(col float32) string {
 	unit := "ch"
-	if s.CharacterBoxSize.Width > 0 {
+	if s.CharacterBoxSize.X > 0 {
 		unit = "px"
-		col *= float32(s.CharacterBoxSize.Width)
+		col *= float32(s.CharacterBoxSize.X)
 	}
 	return fmt.Sprintf("%g%s", col, unit)
 }
 
 func (s *Screen) rowCoordinate(row float32) string {
 	unit := "em"
-	if s.CharacterBoxSize.Height > 0 {
+	if s.CharacterBoxSize.Y > 0 {
 		unit = "px"
-		row *= float32(s.CharacterBoxSize.Height)
+		row *= float32(s.CharacterBoxSize.Y)
 	}
 	return fmt.Sprintf("%g%s", row, unit)
 }
@@ -304,7 +300,7 @@ func (s *Screen) Render(w io.Writer) error {
 	marginY := float32(5.0)
 
 	// Set SVG size
-	if s.CharacterBoxSize.Width == 0 {
+	if s.CharacterBoxSize.X == 0 {
 		// Font-relative coordinates
 		s.Dom.Width = s.columnCoordinate(float32(s.TerminalWidth) + 2*marginX)
 		s.Dom.Height = s.rowCoordinate(float32(s.NrLines) + 2*marginY)
@@ -314,8 +310,8 @@ func (s *Screen) Render(w io.Writer) error {
 		}
 	} else {
 		// Pixel coordinates
-		s.Dom.Width = fmt.Sprintf("%gpx", float32(s.CharacterBoxSize.Width*s.TerminalWidth)+2*marginX)
-		s.Dom.Height = fmt.Sprintf("%gpx", float32(s.CharacterBoxSize.Height*s.NrLines)+2*marginY)
+		s.Dom.Width = fmt.Sprintf("%gpx", float32(s.CharacterBoxSize.X*s.TerminalWidth)+2*marginX)
+		s.Dom.Height = fmt.Sprintf("%gpx", float32(s.CharacterBoxSize.Y*s.NrLines)+2*marginY)
 		if marginX > 0 || marginY > 0 {
 			s.Dom.MarginX = fmt.Sprintf("%gpx", marginX)
 			s.Dom.MarginY = fmt.Sprintf("%gpx", marginY)
