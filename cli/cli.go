@@ -40,6 +40,8 @@ func Main(env Env) error {
 	fs.BoolVar(&helpFlag, "help", false, "Show help")
 	charBoxSize := ansitosvg.DefaultOptions.CharBoxSize
 	fs.Var(&charBoxSize, "charboxsize", "WxH|Character box size (use pixel units instead of font units)")
+	marginSize := ansitosvg.DefaultOptions.MarginSize
+	fs.Var(&marginSize, "marginsize", "WxH|Margin size (in either pixel or font units)")
 	// handle error and usage output ourself
 	fs.Usage = func() {}
 	fs.SetOutput(io.Discard)
@@ -136,6 +138,7 @@ Example usage:
 			FontSize:      *fontSizeFlag,
 			TerminalWidth: terminalWidthFlag,
 			CharBoxSize:   charBoxSize,
+			MarginSize:    marginSize,
 			ColorScheme:   *colorSchemeFlag,
 			Transparent:   *transparentFlag,
 			GridMode:      *gridModeFlag,

@@ -17,6 +17,7 @@ type Options struct {
 	FontSize      int
 	TerminalWidth int
 	CharBoxSize   xydim.XyDimInt
+	MarginSize    xydim.XyDimFloat
 	ColorScheme   string
 	Transparent   bool
 	GridMode      bool
@@ -26,6 +27,7 @@ var DefaultOptions = Options{
 	FontName:    "Courier",
 	FontSize:    14,
 	CharBoxSize: xydim.XyDimInt{X: 0, Y: 0},
+	MarginSize:  xydim.XyDimFloat{X: 0, Y: 0},
 	ColorScheme: "Builtin Dark",
 	Transparent: false,
 }
@@ -131,6 +133,7 @@ func Convert(r io.Reader, w io.Writer, opts Options) error {
 			FontSize:     opts.FontSize,
 		},
 		CharacterBoxSize: opts.CharBoxSize,
+		MarginSize:       opts.MarginSize,
 		TerminalWidth:    terminalWidth,
 		Columns:          ad.MaxX + 1,
 		NrLines:          ad.MaxY + 1,

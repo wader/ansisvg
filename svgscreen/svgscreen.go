@@ -86,6 +86,7 @@ type Screen struct {
 	ANSIColors  [16]string
 
 	CharacterBoxSize xydim.XyDimInt
+	MarginSize       xydim.XyDimFloat
 	TerminalWidth    int
 	Columns          int
 	NrLines          int
@@ -296,25 +297,22 @@ func (s *Screen) Render(w io.Writer) error {
 	s.Foreground.Custom = map[string]int{}
 	s.Background.Custom = map[string]int{}
 
-	marginX := float32(5.0)
-	marginY := float32(5.0)
-
 	// Set SVG size
 	if s.CharacterBoxSize.X == 0 {
 		// Font-relative coordinates
-		s.Dom.Width = s.columnCoordinate(float32(s.TerminalWidth) + 2*marginX)
-		s.Dom.Height = s.rowCoordinate(float32(s.NrLines) + 2*marginY)
-		if marginX > 0 || marginY > 0 {
-			s.Dom.MarginX = fmt.Sprintf("%gch", marginX)
-			s.Dom.MarginY = fmt.Sprintf("%gem", marginY)
+		s.Dom.Width = s.columnCoordinate(float32(s.TerminalWidth) + 2*s.MarginSize.X)
+		s.Dom.Height = s.rowCoordinate(float32(s.NrLines) + 2*s.MarginSize.Y)
+		if s.MarginSize.X > 0 || s.MarginSize.Y > 0 {
+			s.Dom.MarginX = fmt.Sprintf("%gch", s.MarginSize.X)
+			s.Dom.MarginY = fmt.Sprintf("%gem", s.MarginSize.Y)
 		}
 	} else {
 		// Pixel coordinates
-		s.Dom.Width = fmt.Sprintf("%gpx", float32(s.CharacterBoxSize.X*s.TerminalWidth)+2*marginX)
-		s.Dom.Height = fmt.Sprintf("%gpx", float32(s.CharacterBoxSize.Y*s.NrLines)+2*marginY)
-		if marginX > 0 || marginY > 0 {
-			s.Dom.MarginX = fmt.Sprintf("%gpx", marginX)
-			s.Dom.MarginY = fmt.Sprintf("%gpx", marginY)
+		s.Dom.Width = fmt.Sprintf("%gpx", float32(s.CharacterBoxSize.X*s.TerminalWidth)+2*s.MarginSize.X)
+		s.Dom.Height = fmt.Sprintf("%gpx", float32(s.CharacterBoxSize.Y*s.NrLines)+2*s.MarginSize.Y)
+		if s.MarginSize.X > 0 || s.MarginSize.Y > 0 {
+			s.Dom.MarginX = fmt.Sprintf("%gpx", s.MarginSize.X)
+			s.Dom.MarginY = fmt.Sprintf("%gpx", s.MarginSize.Y)
 		}
 	}
 
