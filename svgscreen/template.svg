@@ -9,12 +9,6 @@ whitespace only tspan:s preventing underline to be properly rendered.
 */ -}}
 <svg width="{{$.Dom.Width}}" height="{{$.Dom.Height}}" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
     <style>
-        {{- if ne $.Dom.MarginY "" }}
-        svg {
-            background-color: {{$.Background.Default}};
-            margin: {{$.Dom.MarginY}} {{$.Dom.MarginX}};
-	}
-        {{- end }}
         {{- if gt (len $.Dom.FontEmbedded) 0}}
         @font-face {
             font-family: {{$.Dom.FontName}};
@@ -98,9 +92,7 @@ whitespace only tspan:s preventing underline to be properly rendered.
 {{- end}}
 </g>
 {{- end}}
-<g x="0">
 {{- range $li, $l := .Dom.TextElements}}
-<text y="{{$l.Y}}">{{- range $si, $s := $l.TextSpans}}<tspan{{if ne $s.X ""}} x="{{ $s.X }}"{{end}}{{if ne $s.Class ""}} class="{{$s.Class}}"{{end}}>{{$s.Content}}</tspan>{{- end}}</text>
+<text x="{{$l.X}}" y="{{$l.Y}}">{{- range $si, $s := $l.TextSpans}}<tspan{{if ne $s.X ""}} x="{{ $s.X }}"{{end}}{{if ne $s.Class ""}} class="{{$s.Class}}"{{end}}>{{$s.Content}}</tspan>{{- end}}</text>
 {{- end}}
-</g>
 </svg>
