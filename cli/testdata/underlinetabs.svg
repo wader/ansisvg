@@ -25,15 +25,13 @@
 <g class="bg">
 <rect x="0ch" y="5em" width="9ch" height="1em" class="ba4"/>
 </g>
-<g x="0">
-<text y="0.5em"><tspan class="underline">0       0</tspan></text>
-<text y="1.5em"><tspan class="underline">1       1</tspan></text>
-<text y="2.5em"><tspan class="underline">2       2</tspan></text>
-<text y="3.5em"><tspan class="underline">3       3</tspan></text>
-<text y="4.5em"><tspan class="underline fa12">4       4</tspan></text>
-<text y="5.5em"><tspan class="underline">5       5</tspan></text>
-<text y="6.5em"><tspan class="underline">6       6</tspan></text>
-<text y="7.5em"><tspan class="underline">7       7</tspan></text>
-<text y="8.5em"><tspan class="underline">8               8</tspan></text>
-</g>
+<text x="0ch" y="0.5em"><tspan class="underline">0       0</tspan></text>
+<text x="0ch" y="1.5em"><tspan class="underline">1       1</tspan></text>
+<text x="0ch" y="2.5em"><tspan class="underline">2       2</tspan></text>
+<text x="0ch" y="3.5em"><tspan class="underline">3       3</tspan></text>
+<text x="0ch" y="4.5em"><tspan class="underline fa12">4       4</tspan></text>
+<text x="0ch" y="5.5em"><tspan class="underline">5       5</tspan></text>
+<text x="0ch" y="6.5em"><tspan class="underline">6       6</tspan></text>
+<text x="0ch" y="7.5em"><tspan class="underline">7       7</tspan></text>
+<text x="0ch" y="8.5em"><tspan class="underline">8               8</tspan></text>
 </svg>

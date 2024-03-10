@@ -15,8 +15,6 @@
         }
     </style>
     <rect width="100%" height="100%" x="0" y="0" style="fill: #000000"/>
-<g x="0">
-<text y="25px"><tspan x="0px">h</tspan><tspan x="50px">e</tspan><tspan x="100px">l</tspan><tspan x="150px">l</tspan><tspan x="200px">o</tspan></text>
-<text y="75px"><tspan x="0px">w</tspan><tspan x="50px">o</tspan><tspan x="100px">r</tspan><tspan x="150px">l</tspan><tspan x="200px">d</tspan></text>
-</g>
+<text x="0px" y="25px"><tspan x="0px">h</tspan><tspan x="50px">e</tspan><tspan x="100px">l</tspan><tspan x="150px">l</tspan><tspan x="200px">o</tspan></text>
+<text x="0px" y="75px"><tspan x="0px">w</tspan><tspan x="50px">o</tspan><tspan x="100px">r</tspan><tspan x="150px">l</tspan><tspan x="200px">d</tspan></text>
 </svg>

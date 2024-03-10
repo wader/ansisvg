@@ -18,8 +18,6 @@
         }
     </style>
     <rect width="100%" height="100%" x="0" y="0" style="fill: #000000"/>
-<g x="0">
-<text y="0.5em"><tspan class="underline">under</tspan></text>
-<text y="1.5em"><tspan class="underline">line</tspan></text>
-</g>
+<text x="0ch" y="0.5em"><tspan class="underline">under</tspan></text>
+<text x="0ch" y="1.5em"><tspan class="underline">line</tspan></text>
 </svg>

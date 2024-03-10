@@ -532,24 +532,22 @@
 <rect x="40ch" y="20em" width="4ch" height="1em" class="bc236"/>
 <rect x="44ch" y="20em" width="4ch" height="1em" class="bc214"/>
 </g>
-<g x="0">
-<text y="0.5em"><tspan>System colors:</tspan></text>
-<text y="1.5em"><tspan>  </tspan><tspan class="fa15">0   1   2   3   4   5   6   7 </tspan></text>
-<text y="2.5em"><tspan>  </tspan><tspan class="fa15">8   </tspan><tspan class="fa0">9  10  11  12  13  14  15 </tspan></text>
-<text y="4.5em"><tspan>6x6x6 color cube and greyscale:</tspan></text>
-<text y="5.5em"><tspan> </tspan><tspan class="fc0">16  22  28  34  </tspan><tspan class="fc1">40  46   </tspan><tspan class="fc0">52  58  64  </tspan><tspan class="fc1">70  76  82   </tspan><tspan class="fc0">88  94 100 </tspan><tspan class="fc1">106 112 118  </tspan></text>
-<text y="6.5em"><tspan> </tspan><tspan class="fc0">17  23  29  </tspan><tspan class="fc1">35  41  47   </tspan><tspan class="fc0">53  59  65  </tspan><tspan class="fc1">71  77  83   </tspan><tspan class="fc0">89  95 </tspan><tspan class="fc1">101 107 113 119  </tspan></text>
-<text y="7.5em"><tspan> </tspan><tspan class="fc0">18  24  30  </tspan><tspan class="fc1">36  42  48   </tspan><tspan class="fc0">54  60  66  </tspan><tspan class="fc1">72  78  84   </tspan><tspan class="fc0">90  96 </tspan><tspan class="fc1">102 108 114 120  </tspan></text>
-<text y="8.5em"><tspan> </tspan><tspan class="fc0">19  25  31  </tspan><tspan class="fc1">37  43  49   </tspan><tspan class="fc0">55  61  </tspan><tspan class="fc1">67  73  79  85   </tspan><tspan class="fc0">91  97 </tspan><tspan class="fc1">103 109 115 121  </tspan></text>
-<text y="9.5em"><tspan> </tspan><tspan class="fc0">20  26  32  </tspan><tspan class="fc1">38  44  50   </tspan><tspan class="fc0">56  62  </tspan><tspan class="fc1">68  74  80  86   </tspan><tspan class="fc0">92  98 </tspan><tspan class="fc1">104 110 116 122  </tspan></text>
-<text y="10.5em"><tspan> </tspan><tspan class="fc0">21  27  33  </tspan><tspan class="fc1">39  45  51   </tspan><tspan class="fc0">57  63  </tspan><tspan class="fc1">69  75  81  87   </tspan><tspan class="fc0">93  99 </tspan><tspan class="fc1">105 111 117 123  </tspan></text>
-<text y="12.5em"><tspan class="fc0">124 130 </tspan><tspan class="fc1">136 142 148 154  </tspan><tspan class="fc0">160 166 </tspan><tspan class="fc1">172 178 184 190  </tspan><tspan class="fc0">196 202 </tspan><tspan class="fc1">208 214 220 226  </tspan></text>
-<text y="13.5em"><tspan class="fc0">125 131 </tspan><tspan class="fc1">137 143 149 155  </tspan><tspan class="fc0">161 167 </tspan><tspan class="fc1">173 179 185 191  </tspan><tspan class="fc0">197 </tspan><tspan class="fc1">203 209 215 221 227  </tspan></text>
-<text y="14.5em"><tspan class="fc0">126 132 </tspan><tspan class="fc1">138 144 150 156  </tspan><tspan class="fc0">162 168 </tspan><tspan class="fc1">174 180 186 192  </tspan><tspan class="fc0">198 </tspan><tspan class="fc1">204 210 216 222 228  </tspan></text>
-<text y="15.5em"><tspan class="fc0">127 133 </tspan><tspan class="fc1">139 145 151 157  </tspan><tspan class="fc0">163 169 </tspan><tspan class="fc1">175 181 187 193  </tspan><tspan class="fc0">199 </tspan><tspan class="fc1">205 211 217 223 229  </tspan></text>
-<text y="16.5em"><tspan class="fc0">128 134 </tspan><tspan class="fc1">140 146 152 158  </tspan><tspan class="fc0">164 </tspan><tspan class="fc1">170 176 182 188 194  </tspan><tspan class="fc0">200 </tspan><tspan class="fc1">206 212 218 224 230  </tspan></text>
-<text y="17.5em"><tspan class="fc0">129 135 </tspan><tspan class="fc1">141 147 153 159  </tspan><tspan class="fc0">165 </tspan><tspan class="fc1">171 177 183 189 195  </tspan><tspan class="fc0">201 </tspan><tspan class="fc1">207 213 219 225 231  </tspan></text>
-<text y="19.5em"><tspan class="fc0">232 233 234 235 236 237 238 239 240 241 242 243 </tspan></text>
-<text y="20.5em"><tspan class="fc1">244 245 246 247 248 249 250 251 252 253 254 255 </tspan></text>
-</g>
+<text x="0ch" y="0.5em"><tspan>System colors:</tspan></text>
+<text x="0ch" y="1.5em"><tspan>  </tspan><tspan class="fa15">0   1   2   3   4   5   6   7 </tspan></text>
+<text x="0ch" y="2.5em"><tspan>  </tspan><tspan class="fa15">8   </tspan><tspan class="fa0">9  10  11  12  13  14  15 </tspan></text>
+<text x="0ch" y="4.5em"><tspan>6x6x6 color cube and greyscale:</tspan></text>
+<text x="0ch" y="5.5em"><tspan> </tspan><tspan class="fc0">16  22  28  34  </tspan><tspan class="fc1">40  46   </tspan><tspan class="fc0">52  58  64  </tspan><tspan class="fc1">70  76  82   </tspan><tspan class="fc0">88  94 100 </tspan><tspan class="fc1">106 112 118  </tspan></text>
+<text x="0ch" y="6.5em"><tspan> </tspan><tspan class="fc0">17  23  29  </tspan><tspan class="fc1">35  41  47   </tspan><tspan class="fc0">53  59  65  </tspan><tspan class="fc1">71  77  83   </tspan><tspan class="fc0">89  95 </tspan><tspan class="fc1">101 107 113 119  </tspan></text>
+<text x="0ch" y="7.5em"><tspan> </tspan><tspan class="fc0">18  24  30  </tspan><tspan class="fc1">36  42  48   </tspan><tspan class="fc0">54  60  66  </tspan><tspan class="fc1">72  78  84   </tspan><tspan class="fc0">90  96 </tspan><tspan class="fc1">102 108 114 120  </tspan></text>
+<text x="0ch" y="8.5em"><tspan> </tspan><tspan class="fc0">19  25  31  </tspan><tspan class="fc1">37  43  49   </tspan><tspan class="fc0">55  61  </tspan><tspan class="fc1">67  73  79  85   </tspan><tspan class="fc0">91  97 </tspan><tspan class="fc1">103 109 115 121  </tspan></text>
+<text x="0ch" y="9.5em"><tspan> </tspan><tspan class="fc0">20  26  32  </tspan><tspan class="fc1">38  44  50   </tspan><tspan class="fc0">56  62  </tspan><tspan class="fc1">68  74  80  86   </tspan><tspan class="fc0">92  98 </tspan><tspan class="fc1">104 110 116 122  </tspan></text>
+<text x="0ch" y="10.5em"><tspan> </tspan><tspan class="fc0">21  27  33  </tspan><tspan class="fc1">39  45  51   </tspan><tspan class="fc0">57  63  </tspan><tspan class="fc1">69  75  81  87   </tspan><tspan class="fc0">93  99 </tspan><tspan class="fc1">105 111 117 123  </tspan></text>
+<text x="0ch" y="12.5em"><tspan class="fc0">124 130 </tspan><tspan class="fc1">136 142 148 154  </tspan><tspan class="fc0">160 166 </tspan><tspan class="fc1">172 178 184 190  </tspan><tspan class="fc0">196 202 </tspan><tspan class="fc1">208 214 220 226  </tspan></text>
+<text x="0ch" y="13.5em"><tspan class="fc0">125 131 </tspan><tspan class="fc1">137 143 149 155  </tspan><tspan class="fc0">161 167 </tspan><tspan class="fc1">173 179 185 191  </tspan><tspan class="fc0">197 </tspan><tspan class="fc1">203 209 215 221 227  </tspan></text>
+<text x="0ch" y="14.5em"><tspan class="fc0">126 132 </tspan><tspan class="fc1">138 144 150 156  </tspan><tspan class="fc0">162 168 </tspan><tspan class="fc1">174 180 186 192  </tspan><tspan class="fc0">198 </tspan><tspan class="fc1">204 210 216 222 228  </tspan></text>
+<text x="0ch" y="15.5em"><tspan class="fc0">127 133 </tspan><tspan class="fc1">139 145 151 157  </tspan><tspan class="fc0">163 169 </tspan><tspan class="fc1">175 181 187 193  </tspan><tspan class="fc0">199 </tspan><tspan class="fc1">205 211 217 223 229  </tspan></text>
+<text x="0ch" y="16.5em"><tspan class="fc0">128 134 </tspan><tspan class="fc1">140 146 152 158  </tspan><tspan class="fc0">164 </tspan><tspan class="fc1">170 176 182 188 194  </tspan><tspan class="fc0">200 </tspan><tspan class="fc1">206 212 218 224 230  </tspan></text>
+<text x="0ch" y="17.5em"><tspan class="fc0">129 135 </tspan><tspan class="fc1">141 147 153 159  </tspan><tspan class="fc0">165 </tspan><tspan class="fc1">171 177 183 189 195  </tspan><tspan class="fc0">201 </tspan><tspan class="fc1">207 213 219 225 231  </tspan></text>
+<text x="0ch" y="19.5em"><tspan class="fc0">232 233 234 235 236 237 238 239 240 241 242 243 </tspan></text>
+<text x="0ch" y="20.5em"><tspan class="fc1">244 245 246 247 248 249 250 251 252 253 254 255 </tspan></text>
 </svg>
