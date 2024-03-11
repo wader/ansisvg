@@ -5,6 +5,7 @@ import (
 	_ "embed"
 	"encoding/base64"
 	"fmt"
+	"github.com/wader/ansisvg/svgscreen/xydim"
 	"html/template"
 	"io"
 	"strconv"
@@ -31,11 +32,6 @@ type Line struct {
 	Chars []Char
 }
 
-type BoxSize struct {
-	Width  int
-	Height int
-}
-
 type textSpan struct {
 	X       string
 	Class   string
@@ -43,6 +39,7 @@ type textSpan struct {
 }
 
 type textElement struct {
+	X         string
 	Y         string
 	TextSpans []textSpan
 }
@@ -87,7 +84,8 @@ type Screen struct {
 	Background  ColorMap
 	ANSIColors  [16]string
 
-	CharacterBoxSize BoxSize
+	CharacterBoxSize xydim.XyDimInt
+	MarginSize       xydim.XyDimFloat
 	TerminalWidth    int
 	Columns          int
 	NrLines          int
@@ -96,20 +94,26 @@ type Screen struct {
 	Dom              SvgDom
 }
 
-func (s *Screen) columnCoordinate(col int) string {
+func (s *Screen) columnCoordinate(col float32, addMargin bool) string {
 	unit := "ch"
-	if s.CharacterBoxSize.Width > 0 {
+	if s.CharacterBoxSize.X > 0 {
 		unit = "px"
-		col *= s.CharacterBoxSize.Width
+		col *= float32(s.CharacterBoxSize.X)
 	}
-	return strconv.Itoa(col) + unit
+	if addMargin {
+		col += s.MarginSize.X
+	}
+	return fmt.Sprintf("%g%s", col, unit)
 }
 
-func (s *Screen) rowCoordinate(row float32) string {
+func (s *Screen) rowCoordinate(row float32, addMargin bool) string {
 	unit := "em"
-	if s.CharacterBoxSize.Height > 0 {
+	if s.CharacterBoxSize.Y > 0 {
 		unit = "px"
-		row *= float32(s.CharacterBoxSize.Height)
+		row *= float32(s.CharacterBoxSize.Y)
+	}
+	if addMargin {
+		row += s.MarginSize.Y
 	}
 	return fmt.Sprintf("%g%s", row, unit)
 }
@@ -185,7 +189,7 @@ func (s *Screen) lineToTextElement(l Line) textElement {
 		newSpan := s.charToFgText(c)
 		if s.GridMode {
 			// In grid mode, set X coordinate for each text span
-			newSpan.X = s.columnCoordinate(col)
+			newSpan.X = s.columnCoordinate(float32(col), true)
 			// In grid mode, we never consolidate
 			appendSpan()
 			currentSpan = newSpan
@@ -208,7 +212,8 @@ func (s *Screen) lineToTextElement(l Line) textElement {
 	}
 
 	return textElement{
-		Y:         s.rowCoordinate(float32(l.Y) + 0.5),
+		X:         s.columnCoordinate(0, true),
+		Y:         s.rowCoordinate(float32(l.Y)+0.5, true),
 		TextSpans: t,
 	}
 }
@@ -246,10 +251,10 @@ func (s *Screen) setupBgRects() {
 				return
 			}
 			s.Dom.BgRects = append(s.Dom.BgRects, bgRect{
-				X:      s.columnCoordinate(currentRect.x),
-				Y:      s.rowCoordinate(float32(y)),
-				Width:  s.columnCoordinate(currentRect.w),
-				Height: s.rowCoordinate(1),
+				X:      s.columnCoordinate(float32(currentRect.x), true),
+				Y:      s.rowCoordinate(float32(y), true),
+				Width:  s.columnCoordinate(float32(currentRect.w), false),
+				Height: s.rowCoordinate(1, false),
 				Color:  currentRect.color,
 			})
 		}
@@ -299,8 +304,15 @@ func (s *Screen) Render(w io.Writer) error {
 	s.Background.Custom = map[string]int{}
 
 	// Set SVG size
-	s.Dom.Width = s.columnCoordinate(s.TerminalWidth)
-	s.Dom.Height = s.rowCoordinate(float32(s.NrLines))
+	if s.CharacterBoxSize.X == 0 {
+		// Font-relative coordinates
+		s.Dom.Width = s.columnCoordinate(float32(s.TerminalWidth)+2*s.MarginSize.X, false)
+		s.Dom.Height = s.rowCoordinate(float32(s.NrLines)+2*s.MarginSize.Y, false)
+	} else {
+		// Pixel coordinates
+		s.Dom.Width = fmt.Sprintf("%gpx", float32(s.CharacterBoxSize.X*s.TerminalWidth)+2*s.MarginSize.X)
+		s.Dom.Height = fmt.Sprintf("%gpx", float32(s.CharacterBoxSize.Y*s.NrLines)+2*s.MarginSize.Y)
+	}
 
 	s.handleColorInversion()
 	s.setupBgRects()

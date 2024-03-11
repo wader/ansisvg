@@ -22,7 +22,5 @@
 <g class="bg">
 <rect x="7ch" y="0em" width="5ch" height="1em" class="bc0"/>
 </g>
-<g x="0">
-<text y="0.5em"><tspan> black </tspan><tspan class="fc0">write </tspan><tspan>black </tspan></text>
-</g>
+<text x="0ch" y="0.5em"><tspan> black </tspan><tspan class="fc0">write </tspan><tspan>black </tspan></text>
 </svg>

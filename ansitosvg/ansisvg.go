@@ -7,6 +7,7 @@ import (
 	"github.com/wader/ansisvg/ansidecoder"
 	"github.com/wader/ansisvg/colorscheme/schemes"
 	"github.com/wader/ansisvg/svgscreen"
+	"github.com/wader/ansisvg/svgscreen/xydim"
 )
 
 type Options struct {
@@ -15,7 +16,8 @@ type Options struct {
 	FontRef       string
 	FontSize      int
 	TerminalWidth int
-	CharBoxSize   svgscreen.BoxSize
+	CharBoxSize   xydim.XyDimInt
+	MarginSize    xydim.XyDimFloat
 	ColorScheme   string
 	Transparent   bool
 	GridMode      bool
@@ -24,7 +26,8 @@ type Options struct {
 var DefaultOptions = Options{
 	FontName:    "Courier",
 	FontSize:    14,
-	CharBoxSize: svgscreen.BoxSize{Width: 0, Height: 0},
+	CharBoxSize: xydim.XyDimInt{X: 0, Y: 0},
+	MarginSize:  xydim.XyDimFloat{X: 0, Y: 0},
 	ColorScheme: "Builtin Dark",
 	Transparent: false,
 }
@@ -129,15 +132,13 @@ func Convert(r io.Reader, w io.Writer, opts Options) error {
 			FontRef:      opts.FontRef,
 			FontSize:     opts.FontSize,
 		},
-		CharacterBoxSize: svgscreen.BoxSize{
-			Width:  opts.CharBoxSize.Width,
-			Height: opts.CharBoxSize.Height,
-		},
-		TerminalWidth: terminalWidth,
-		Columns:       ad.MaxX + 1,
-		NrLines:       ad.MaxY + 1,
-		Lines:         lines,
-		GridMode:      opts.GridMode,
+		CharacterBoxSize: opts.CharBoxSize,
+		MarginSize:       opts.MarginSize,
+		TerminalWidth:    terminalWidth,
+		Columns:          ad.MaxX + 1,
+		NrLines:          ad.MaxY + 1,
+		Lines:            lines,
+		GridMode:         opts.GridMode,
 	}
 	return s.Render(w)
 }

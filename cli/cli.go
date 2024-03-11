@@ -4,32 +4,11 @@ import (
 	"flag"
 	"fmt"
 	"io"
-	"strconv"
 	"strings"
 
 	"github.com/wader/ansisvg/ansitosvg"
 	"github.com/wader/ansisvg/colorscheme/schemes"
-	"github.com/wader/ansisvg/svgscreen"
 )
-
-type boxSize struct {
-	Width  int
-	Height int
-}
-
-func (d *boxSize) String() string {
-	return fmt.Sprintf("%dx%d", d.Width, d.Height)
-}
-
-func (d *boxSize) Set(s string) error {
-	parts := strings.Split(s, "x")
-	if len(parts) != 2 {
-		return fmt.Errorf("must be WxH")
-	}
-	d.Width, _ = strconv.Atoi(parts[0])
-	d.Height, _ = strconv.Atoi(parts[1])
-	return nil
-}
 
 type Env struct {
 	Version  string
@@ -59,11 +38,10 @@ func Main(env Env) error {
 	var helpFlag bool
 	fs.BoolVar(&helpFlag, "h", false, "")
 	fs.BoolVar(&helpFlag, "help", false, "Show help")
-	var charBoxSize = boxSize{
-		Width:  ansitosvg.DefaultOptions.CharBoxSize.Width,
-		Height: ansitosvg.DefaultOptions.CharBoxSize.Height,
-	}
+	charBoxSize := ansitosvg.DefaultOptions.CharBoxSize
 	fs.Var(&charBoxSize, "charboxsize", "WxH|Character box size (use pixel units instead of font units)")
+	marginSize := ansitosvg.DefaultOptions.MarginSize
+	fs.Var(&marginSize, "marginsize", "WxH|Margin size (in either pixel or font units)")
 	// handle error and usage output ourself
 	fs.Usage = func() {}
 	fs.SetOutput(io.Discard)
@@ -159,13 +137,11 @@ Example usage:
 			FontRef:       *fontRefFlag,
 			FontSize:      *fontSizeFlag,
 			TerminalWidth: terminalWidthFlag,
-			CharBoxSize: svgscreen.BoxSize{
-				Width:  charBoxSize.Width,
-				Height: charBoxSize.Height,
-			},
-			ColorScheme: *colorSchemeFlag,
-			Transparent: *transparentFlag,
-			GridMode:    *gridModeFlag,
+			CharBoxSize:   charBoxSize,
+			MarginSize:    marginSize,
+			ColorScheme:   *colorSchemeFlag,
+			Transparent:   *transparentFlag,
+			GridMode:      *gridModeFlag,
 		},
 	)
 }

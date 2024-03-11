@@ -181,25 +181,23 @@
 <rect x="63ch" y="19em" width="7ch" height="1em" class="ba6"/>
 <rect x="71ch" y="19em" width="7ch" height="1em" class="ba7"/>
 </g>
-<g x="0">
-<text y="1.5em"><tspan>                 40m     41m     42m     43m     44m     45m     46m     47m</tspan></text>
-<text y="2.5em"><tspan>     m   gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
-<text y="3.5em"><tspan>    1m   </tspan><tspan class="bold">gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
-<text y="4.5em"><tspan>   30m   </tspan><tspan class="fa0">gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
-<text y="5.5em"><tspan> 1;30m   </tspan><tspan class="bold fa0">gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
-<text y="6.5em"><tspan>   31m   </tspan><tspan class="fa1">gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
-<text y="7.5em"><tspan> 1;31m   </tspan><tspan class="bold fa1">gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
-<text y="8.5em"><tspan>   32m   </tspan><tspan class="fa2">gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
-<text y="9.5em"><tspan> 1;32m   </tspan><tspan class="bold fa2">gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
-<text y="10.5em"><tspan>   33m   </tspan><tspan class="fa3">gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
-<text y="11.5em"><tspan> 1;33m   </tspan><tspan class="bold fa3">gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
-<text y="12.5em"><tspan>   34m   </tspan><tspan class="fa4">gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
-<text y="13.5em"><tspan> 1;34m   </tspan><tspan class="bold fa4">gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
-<text y="14.5em"><tspan>   35m   </tspan><tspan class="fa5">gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
-<text y="15.5em"><tspan> 1;35m   </tspan><tspan class="bold fa5">gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
-<text y="16.5em"><tspan>   36m   </tspan><tspan class="fa6">gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
-<text y="17.5em"><tspan> 1;36m   </tspan><tspan class="bold fa6">gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
-<text y="18.5em"><tspan>   37m   </tspan><tspan class="fa7">gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
-<text y="19.5em"><tspan> 1;37m   </tspan><tspan class="bold fa7">gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
-</g>
+<text x="0ch" y="1.5em"><tspan>                 40m     41m     42m     43m     44m     45m     46m     47m</tspan></text>
+<text x="0ch" y="2.5em"><tspan>     m   gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
+<text x="0ch" y="3.5em"><tspan>    1m   </tspan><tspan class="bold">gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
+<text x="0ch" y="4.5em"><tspan>   30m   </tspan><tspan class="fa0">gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
+<text x="0ch" y="5.5em"><tspan> 1;30m   </tspan><tspan class="bold fa0">gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
+<text x="0ch" y="6.5em"><tspan>   31m   </tspan><tspan class="fa1">gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
+<text x="0ch" y="7.5em"><tspan> 1;31m   </tspan><tspan class="bold fa1">gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
+<text x="0ch" y="8.5em"><tspan>   32m   </tspan><tspan class="fa2">gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
+<text x="0ch" y="9.5em"><tspan> 1;32m   </tspan><tspan class="bold fa2">gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
+<text x="0ch" y="10.5em"><tspan>   33m   </tspan><tspan class="fa3">gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
+<text x="0ch" y="11.5em"><tspan> 1;33m   </tspan><tspan class="bold fa3">gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
+<text x="0ch" y="12.5em"><tspan>   34m   </tspan><tspan class="fa4">gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
+<text x="0ch" y="13.5em"><tspan> 1;34m   </tspan><tspan class="bold fa4">gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
+<text x="0ch" y="14.5em"><tspan>   35m   </tspan><tspan class="fa5">gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
+<text x="0ch" y="15.5em"><tspan> 1;35m   </tspan><tspan class="bold fa5">gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
+<text x="0ch" y="16.5em"><tspan>   36m   </tspan><tspan class="fa6">gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
+<text x="0ch" y="17.5em"><tspan> 1;36m   </tspan><tspan class="bold fa6">gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
+<text x="0ch" y="18.5em"><tspan>   37m   </tspan><tspan class="fa7">gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
+<text x="0ch" y="19.5em"><tspan> 1;37m   </tspan><tspan class="bold fa7">gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw     gYw  </tspan></text>
 </svg>

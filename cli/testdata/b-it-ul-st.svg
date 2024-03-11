@@ -27,12 +27,10 @@
         }
     </style>
     <rect width="100%" height="100%" x="0" y="0" style="fill: #000000"/>
-<g x="0">
-<text y="0.5em"><tspan>regular</tspan></text>
-<text y="1.5em"><tspan class="bold">bold</tspan></text>
-<text y="2.5em"><tspan class="italic">italic</tspan></text>
-<text y="3.5em"><tspan class="bold italic">bold italic</tspan></text>
-<text y="4.5em"><tspan class="underline">underline</tspan></text>
-<text y="5.5em"><tspan class="strikethrough">strikethrough</tspan></text>
-</g>
+<text x="0ch" y="0.5em"><tspan>regular</tspan></text>
+<text x="0ch" y="1.5em"><tspan class="bold">bold</tspan></text>
+<text x="0ch" y="2.5em"><tspan class="italic">italic</tspan></text>
+<text x="0ch" y="3.5em"><tspan class="bold italic">bold italic</tspan></text>
+<text x="0ch" y="4.5em"><tspan class="underline">underline</tspan></text>
+<text x="0ch" y="5.5em"><tspan class="strikethrough">strikethrough</tspan></text>
 </svg>

@@ -13,6 +13,7 @@ Example usage:
 --grid              Grid mode (sets position for each character)
 --help, -h          Show help
 --listcolorschemes  List color schemes
+--marginsize WxH    Margin size (in either pixel or font units)
 --transparent       Transparent background
 --version, -v       Show version
 --width, -w NUMBER  Terminal width (auto if not set)
