@@ -31,6 +31,7 @@ Example usage:
 --grid              Grid mode (sets position for each character)
 --help, -h          Show help
 --listcolorschemes  List color schemes
+--marginsize WxH    Margin size (in either pixel or font units)
 --transparent       Transparent background
 --version, -v       Show version
 --width, -w NUMBER  Terminal width (auto if not set)
@@ -74,6 +75,11 @@ go build -o ansisvg .
 By default, `ansisvg` uses font-relative `ch`/`em` coordinates. This should make SVG dimensions and line/character spacing consistent with font family/size. When SVG dimensions and/or text coordinates are off, it is possible to force explicit pixel units for coordinates by specifying `-charboxsize` in X/Y pixel units, e.g. `8x16`.
 
 Inkscape currently [cannot deal with SVG size expressed in font-relative units](https://gitlab.com/inkscape/inkscape/-/issues/4737), a quick workaround is Ctrl-Shift-R (resize page to content).
+
+## Margin size
+
+With `--marginsize` a margin can be defined, so there is a bit of empty space (or "border") around the image. Default is zero margin size, i.e. the terminal characters are touching the edge of the image.
+`--marginsize` is interpreted as X/Y in the currently selected units, i.e. `ch`/`em` by default, and `px` if `--charboxsize` is used.
 
 ## Consolidated text vs. grid mode
 
