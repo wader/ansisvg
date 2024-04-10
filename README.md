@@ -74,7 +74,9 @@ go build -o ansisvg .
 
 By default, `ansisvg` uses font-relative `ch`/`em` coordinates. This should make SVG dimensions and line/character spacing consistent with font family/size. When SVG dimensions and/or text coordinates are off, it is possible to force explicit pixel units for coordinates by specifying `-charboxsize` in X/Y pixel units, e.g. `8x16`.
 
-Inkscape currently [cannot deal with SVG size expressed in font-relative units](https://gitlab.com/inkscape/inkscape/-/issues/4737), a quick workaround is Ctrl-Shift-R (resize page to content).
+* Inkscape currently [cannot deal with SVG size expressed in font-relative units](https://gitlab.com/inkscape/inkscape/-/issues/4737), a quick workaround is Ctrl-Shift-R (resize page to content).
+
+* Some SVG processing tools like [asciidoctor](https://docs.asciidoctor.org/pdf-converter/latest/image-paths-and-formats/#image-formats) require the presence of the `viewBox` attribute. Use `-charboxsize` option to enable this attribute (it only works with pixel dimensions).
 
 ## Margin size
 
