@@ -55,6 +55,7 @@ type bgRect struct {
 type SvgDom struct {
 	Width          string
 	Height         string
+	ViewBox        string
 	FontName       string
 	FontEmbedded   []byte
 	FontRef        string
@@ -308,10 +309,14 @@ func (s *Screen) Render(w io.Writer) error {
 		// Font-relative coordinates
 		s.Dom.Width = s.columnCoordinate(float32(s.TerminalWidth)+2*s.MarginSize.X, false)
 		s.Dom.Height = s.rowCoordinate(float32(s.NrLines)+2*s.MarginSize.Y, false)
+		s.Dom.ViewBox = ""
 	} else {
 		// Pixel coordinates
-		s.Dom.Width = fmt.Sprintf("%gpx", float32(s.CharacterBoxSize.X*s.TerminalWidth)+2*s.MarginSize.X)
-		s.Dom.Height = fmt.Sprintf("%gpx", float32(s.CharacterBoxSize.Y*s.NrLines)+2*s.MarginSize.Y)
+		w := float32(s.CharacterBoxSize.X*s.TerminalWidth) + 2*s.MarginSize.X
+		h := float32(s.CharacterBoxSize.Y*s.NrLines) + 2*s.MarginSize.Y
+		s.Dom.Width = fmt.Sprintf("%gpx", w)
+		s.Dom.Height = fmt.Sprintf("%gpx", h)
+		s.Dom.ViewBox = fmt.Sprintf("0 0 %g %g", w, h)
 	}
 
 	s.handleColorInversion()

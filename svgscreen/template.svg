@@ -7,7 +7,7 @@ so currently using <use> instead.
 xml:space="preserve" is used to forces some svg readers (ex inkscape) to not collapse
 whitespace only tspan:s preventing underline to be properly rendered.
 */ -}}
-<svg width="{{$.Dom.Width}}" height="{{$.Dom.Height}}" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+<svg width="{{$.Dom.Width}}" height="{{$.Dom.Height}}" {{- if ne $.Dom.ViewBox "" }} viewBox="{{$.Dom.ViewBox}}"{{- end }} xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
     <style>
         {{- if gt (len $.Dom.FontEmbedded) 0}}
         @font-face {
