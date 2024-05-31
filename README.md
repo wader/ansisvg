@@ -39,7 +39,19 @@ Example usage:
 
 Color themes are the ones from https://github.com/mbadolato/iTerm2-Color-Schemes
 
-## Install and build
+## Install
+
+Pre-built binaries for Linux, macOS and Windows can be downloaded from [releases](https://github.com/wader/ansisvg/releases).
+
+### macOS
+
+For macOS you might have to allow to run the binary in security preferences. Alternatively run the below command:
+
+```sh
+xattr -d com.apple.quarantine ansisvg && spctl --add ansisvg
+```
+
+## Build
 
 To build you will need at least go 1.18 or later.
 
