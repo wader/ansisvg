@@ -53,6 +53,11 @@ whitespace only tspan:s preventing underline to be properly rendered.
             text-decoration: line-through;
         }
 {{- end}}
+{{- if $.Dom.ClassesUsed.Dim}}
+        .dim {
+            opacity: 0.5;
+        }
+{{- end}}
 {{- if anyColorUsed $.Background.ANSIUsed}}
         <!-- Background ANSI colors -->
 {{- end}}
