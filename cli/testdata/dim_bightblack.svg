@@ -1,0 +1,24 @@
+<svg width="21ch" height="1em" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+    <style>
+        * {
+            font-family: Courier, monospace;
+            font-size: 14px;
+        }
+        tspan, text {
+            font-variant-ligatures: none;
+            dominant-baseline: central;
+            white-space: pre;
+            fill: #bbbbbb;
+        }
+        .bg {
+            stroke-width: "0.5px";
+        }
+        .dim {
+            opacity: 0.5;
+        }
+        <!-- Foreground ANSI colors -->
+        .fa8 { fill: #555555; }
+    </style>
+    <rect width="100%" height="100%" x="0" y="0" style="fill: #000000"/>
+<text x="0ch" y="0.5em"><tspan>hello </tspan><tspan class="dim">dim </tspan><tspan class="dim fa8">brightblack</tspan></text>
+</svg>

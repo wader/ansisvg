@@ -5,11 +5,12 @@ import (
 	_ "embed"
 	"encoding/base64"
 	"fmt"
-	"github.com/wader/ansisvg/svgscreen/xydim"
 	"html/template"
 	"io"
 	"strconv"
 	"strings"
+
+	"github.com/wader/ansisvg/svgscreen/xydim"
 )
 
 //go:embed template.svg
@@ -22,6 +23,7 @@ type Char struct {
 	Background    string
 	Underline     bool
 	Intensity     bool
+	Dim           bool
 	Invert        bool
 	Italic        bool
 	Strikethrough bool
@@ -69,6 +71,7 @@ type SvgDom struct {
 		Italic        bool
 		Underline     bool
 		Strikethrough bool
+		Dim           bool
 	}
 }
 
@@ -147,6 +150,10 @@ func (s *Screen) charToFgText(c Char) textSpan {
 	if c.Intensity {
 		classes = append(classes, "bold")
 		s.Dom.ClassesUsed.Bold = true
+	}
+	if c.Dim {
+		classes = append(classes, "dim")
+		s.Dom.ClassesUsed.Dim = true
 	}
 	if c.Italic {
 		classes = append(classes, "italic")

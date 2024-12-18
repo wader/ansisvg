@@ -1,0 +1,35 @@
+<svg width="43ch" height="1em" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+    <style>
+        * {
+            font-family: Courier, monospace;
+            font-size: 14px;
+        }
+        tspan, text {
+            font-variant-ligatures: none;
+            dominant-baseline: central;
+            white-space: pre;
+            fill: #bbbbbb;
+        }
+        .bg {
+            stroke-width: "0.5px";
+        }
+        .bold {
+            font-weight: bold;
+        }
+        .dim {
+            opacity: 0.5;
+        }
+        <!-- Background ANSI colors -->
+        .ba1 { stroke: #bb0000; fill: #bb0000; }
+        <!-- Foreground ANSI colors -->
+        .fa1 { fill: #bb0000; }
+        <!-- Background custom colors -->
+        .bc0 { stroke: #bbbbbb; fill: #bbbbbb; }
+    </style>
+    <rect width="100%" height="100%" x="0" y="0" style="fill: #000000"/>
+<g class="bg">
+<rect x="18ch" y="0em" width="11ch" height="1em" class="ba1"/>
+<rect x="29ch" y="0em" width="8ch" height="1em" class="bc0"/>
+</g>
+<text x="0ch" y="0.5em"><tspan>hello </tspan><tspan class="dim">dim </tspan><tspan class="bold dim">intense background </tspan><tspan class="bold dim fa1">inverted </tspan><tspan>world</tspan></text>
+</svg>

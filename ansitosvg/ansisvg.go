@@ -74,6 +74,7 @@ func Convert(r io.Reader, w io.Writer, opts Options) error {
 				Background:    ad.Background.String(),
 				Underline:     ad.Underline,
 				Intensity:     ad.Intensity,
+				Dim:           ad.Dim,
 				Invert:        ad.Invert,
 				Italic:        ad.Italic,
 				Strikethrough: ad.Strikethrough,

@@ -32,6 +32,7 @@ func (cr codeRange) Is(c int) bool {
 
 var sgrReset = codeRange{0, 0}
 var sgrIncreaseIntensity = codeRange{1, 1}
+var sgrDim = codeRange{2, 2}
 var sgrNormal = codeRange{22, 22}
 var sgrForeground = codeRange{30, 37}
 var sgrForegroundBright = codeRange{90, 97}
@@ -78,6 +79,7 @@ type Decoder struct {
 	Background    Color
 	Underline     bool
 	Intensity     bool
+	Dim           bool
 	Invert        bool
 	Italic        bool
 	Strikethrough bool
@@ -218,6 +220,7 @@ func (d *Decoder) ReadRune() (r rune, size int, err error) {
 							d.Background = Color{N: -1}
 							d.Underline = false
 							d.Intensity = false
+							d.Dim = false
 							d.Invert = false
 							d.Italic = false
 							d.Strikethrough = false
@@ -225,6 +228,9 @@ func (d *Decoder) ReadRune() (r rune, size int, err error) {
 							d.Intensity = true
 						case sgrNormal.Is(n):
 							d.Intensity = false
+							d.Dim = false
+						case sgrDim.Is(n):
+							d.Dim = true
 						case sgrForeground.Is(n):
 							d.Foreground = Color{N: n - 30}
 						case sgrForegroundBright.Is(n):
