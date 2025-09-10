@@ -90,6 +90,7 @@ type Screen struct {
 
 	CharacterBoxSize xydim.XyDimInt
 	MarginSize       xydim.XyDimFloat
+	LineHeight       float32
 	TerminalWidth    int
 	Columns          int
 	NrLines          int
@@ -115,6 +116,9 @@ func (s *Screen) rowCoordinate(row float32, addMargin bool) string {
 	if s.CharacterBoxSize.Y > 0 {
 		unit = "px"
 		row *= float32(s.CharacterBoxSize.Y)
+	} else {
+		// Apply line height multiplier for em units
+		row *= s.LineHeight
 	}
 	if addMargin {
 		row += s.MarginSize.Y
