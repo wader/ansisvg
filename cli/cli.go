@@ -28,6 +28,7 @@ func Main(env Env) error {
 	var fontFileFlag = fs.String("fontfile", "", "PATH|Font file to use and embed")
 	var fontRefFlag = fs.String("fontref", "", "URL|External font URL to use")
 	var fontSizeFlag = fs.Int("fontsize", ansitosvg.DefaultOptions.FontSize, "NUMBER|Font size")
+	var lineHeightFlag = fs.Float64("lineheight", float64(ansitosvg.DefaultOptions.LineHeight), "NUMBER|Line height multiplier (default 1.0)")
 	var terminalWidthFlag int
 	fs.IntVar(&terminalWidthFlag, "w", 0, "")
 	fs.IntVar(&terminalWidthFlag, "width", 0, "NUMBER|Terminal width (auto if not set)")
@@ -136,6 +137,7 @@ Example usage:
 			FontEmbedded:  fontEmbedded,
 			FontRef:       *fontRefFlag,
 			FontSize:      *fontSizeFlag,
+			LineHeight:    float32(*lineHeightFlag),
 			TerminalWidth: terminalWidthFlag,
 			CharBoxSize:   charBoxSize,
 			MarginSize:    marginSize,

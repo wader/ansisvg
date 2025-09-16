@@ -1,0 +1,21 @@
+<svg width="4ch" height="9em" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+    <style>
+        * {
+            font-family: Courier, monospace;
+            font-size: 14px;
+        }
+        tspan, text {
+            font-variant-ligatures: none;
+            dominant-baseline: central;
+            white-space: pre;
+            fill: #bbbbbb;
+        }
+        .bg {
+            stroke-width: "0.5px";
+        }
+    </style>
+    <rect width="100%" height="100%" x="0" y="0" style="fill: #000000"/>
+<text x="0ch" y="1.5em"><tspan x="0ch">r</tspan><tspan x="1ch">o</tspan><tspan x="2ch">w</tspan><tspan x="3ch">1</tspan></text>
+<text x="0ch" y="4.5em"><tspan x="0ch">r</tspan><tspan x="1ch">o</tspan><tspan x="2ch">w</tspan><tspan x="3ch">2</tspan></text>
+<text x="0ch" y="7.5em"><tspan x="0ch">r</tspan><tspan x="1ch">o</tspan><tspan x="2ch">w</tspan><tspan x="3ch">3</tspan></text>
+</svg>

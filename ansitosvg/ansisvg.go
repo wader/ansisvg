@@ -21,6 +21,7 @@ type Options struct {
 	ColorScheme   string
 	Transparent   bool
 	GridMode      bool
+	LineHeight    float32
 }
 
 var DefaultOptions = Options{
@@ -30,6 +31,7 @@ var DefaultOptions = Options{
 	MarginSize:  xydim.XyDimFloat{X: 0, Y: 0},
 	ColorScheme: "Builtin Dark",
 	Transparent: false,
+	LineHeight:  1.0,
 }
 
 // Convert reads ANSI input from r and writes SVG to w
@@ -135,6 +137,7 @@ func Convert(r io.Reader, w io.Writer, opts Options) error {
 		},
 		CharacterBoxSize: opts.CharBoxSize,
 		MarginSize:       opts.MarginSize,
+		LineHeight:       opts.LineHeight,
 		TerminalWidth:    terminalWidth,
 		Columns:          ad.MaxX + 1,
 		NrLines:          ad.MaxY + 1,
