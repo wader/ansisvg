@@ -36,6 +36,7 @@ func Main(env Env) error {
 	var listColorSchemesFlag = fs.Bool("listcolorschemes", false, "List color schemes")
 	var transparentFlag = fs.Bool("transparent", ansitosvg.DefaultOptions.Transparent, "Transparent background")
 	var gridModeFlag = fs.Bool("grid", false, "Grid mode (sets position for each character)")
+	var fillOnlyFlag = fs.Bool("fillonly", false, "Remove strokes from SVG output (use fills only)")
 	var helpFlag bool
 	fs.BoolVar(&helpFlag, "h", false, "")
 	fs.BoolVar(&helpFlag, "help", false, "Show help")
@@ -144,6 +145,7 @@ Example usage:
 			ColorScheme:   *colorSchemeFlag,
 			Transparent:   *transparentFlag,
 			GridMode:      *gridModeFlag,
+			FillOnly:      *fillOnlyFlag,
 		},
 	)
 }

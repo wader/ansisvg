@@ -34,6 +34,7 @@ Example usage:
 --listcolorschemes   List color schemes
 --marginsize WxH     Margin size (in either pixel or font units)
 --transparent        Transparent background
+--fillonly           Remove strokes from SVG output (use fills only)
 --version, -v        Show version
 --width, -w NUMBER   Terminal width (auto if not set)
 ```

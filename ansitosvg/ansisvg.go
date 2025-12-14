@@ -21,6 +21,7 @@ type Options struct {
 	ColorScheme   string
 	Transparent   bool
 	GridMode      bool
+	FillOnly      bool
 	LineHeight    float32
 }
 
@@ -31,6 +32,7 @@ var DefaultOptions = Options{
 	MarginSize:  xydim.XyDimFloat{X: 0, Y: 0},
 	ColorScheme: "Builtin Dark",
 	Transparent: false,
+	FillOnly: false,
 	LineHeight:  1.0,
 }
 
@@ -143,6 +145,7 @@ func Convert(r io.Reader, w io.Writer, opts Options) error {
 		NrLines:          ad.MaxY + 1,
 		Lines:            lines,
 		GridMode:         opts.GridMode,
+		FillOnly:         opts.FillOnly,
 	}
 	return s.Render(w)
 }
