@@ -63,11 +63,11 @@ whitespace only tspan:s preventing underline to be properly rendered.
 {{- end}}
 {{- range $k, $v := $.ANSIColors -}}
         {{- if index $.Background.ANSIUsed $k}}
-                {{- if $.FillOnly}}
-                        .ba{{$k}} { fill: {{$v}}; }
-                {{- else }}
-                        .ba{{$k}} { stroke: {{$v}}; fill: {{$v}}; }
-                {{- end}}
+        {{- if $.FillOnly}}
+        .ba{{$k}} { fill: {{$v}}; }
+        {{- else }}
+        .ba{{$k}} { stroke: {{$v}}; fill: {{$v}}; }
+        {{- end}}
         {{- end}}
 {{- end}}
 {{- if anyColorUsed $.Foreground.ANSIUsed}}
@@ -83,9 +83,9 @@ whitespace only tspan:s preventing underline to be properly rendered.
 {{- end}}
 {{- range $k, $v := $.Dom.BgCustomColors}}
         {{- if $.FillOnly}}
-                .bc{{$k}} { fill: {{$v}}; }
+        .bc{{$k}} { fill: {{$v}}; }
         {{- else }}
-                .bc{{$k}} { stroke: {{$v}}; fill: {{$v}}; }
+        .bc{{$k}} { stroke: {{$v}}; fill: {{$v}}; }
         {{- end}}
 {{- end}}
 {{- if len $.Dom.FgCustomColors }}

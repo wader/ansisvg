@@ -6,6 +6,7 @@ Example usage:
 
 --charboxsize WxH    Character box size (use pixel units instead of font units)
 --colorscheme NAME   Color scheme
+--fillonly           Remove strokes from SVG output (use fills only)
 --fontfile PATH      Font file to use and embed
 --fontname NAME      Font name
 --fontref URL        External font URL to use
