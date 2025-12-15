@@ -13,8 +13,8 @@ import (
 	"github.com/wader/ansisvg/svgscreen/xydim"
 )
 
-//go:embed template.svg
-var templateSVG string
+//go:embed svgscreen.svg.tmpl
+var screenSVGTmpl string
 
 type Char struct {
 	Char          string
@@ -346,7 +346,7 @@ func (s *Screen) Render(w io.Writer) error {
 	setupCustomColors(s.Background.Custom, &s.Dom.BgCustomColors)
 
 	// Create SVG from template
-	t, err := t.Parse(templateSVG)
+	t, err := t.Parse(screenSVGTmpl)
 	if err != nil {
 		return err
 	}
