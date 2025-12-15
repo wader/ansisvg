@@ -96,6 +96,7 @@ type Screen struct {
 	NrLines          int
 	Lines            []Line
 	GridMode         bool
+	FillOnly         bool
 	Dom              SvgDom
 }
 

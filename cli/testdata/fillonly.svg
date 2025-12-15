@@ -1,0 +1,44 @@
+<svg width="14ch" height="3em" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+    <style>
+        * {
+            font-family: Courier, monospace;
+            font-size: 14px;
+        }
+        tspan, text {
+            font-variant-ligatures: none;
+            dominant-baseline: central;
+            white-space: pre;
+            fill: #bbbbbb;
+        }
+        .bg {
+            stroke-width: "0.5px";
+        }
+        <!-- Background custom colors -->
+        .bc0 { fill: #717171; }
+        .bc1 { fill: #e3e3e3; }
+        .bc2 { fill: #ffffff; }
+        .bc3 { fill: #dcdcdc; }
+        .bc4 { fill: #545454; }
+        <!-- Foreground custom colors -->
+        .fc0 { fill: #000000; }
+    </style>
+    <rect width="100%" height="100%" x="0" y="0" style="fill: #000000"/>
+<g class="bg">
+<rect x="0ch" y="0em" width="1ch" height="1em" class="bc0"/>
+<rect x="1ch" y="0em" width="1ch" height="1em" class="bc1"/>
+<rect x="2ch" y="0em" width="10ch" height="1em" class="bc2"/>
+<rect x="12ch" y="0em" width="1ch" height="1em" class="bc3"/>
+<rect x="13ch" y="0em" width="1ch" height="1em" class="bc4"/>
+<rect x="0ch" y="1em" width="1ch" height="1em" class="bc0"/>
+<rect x="1ch" y="1em" width="1ch" height="1em" class="bc1"/>
+<rect x="2ch" y="1em" width="10ch" height="1em" class="bc2"/>
+<rect x="12ch" y="1em" width="1ch" height="1em" class="bc3"/>
+<rect x="13ch" y="1em" width="1ch" height="1em" class="bc4"/>
+<rect x="0ch" y="2em" width="1ch" height="1em" class="bc0"/>
+<rect x="1ch" y="2em" width="1ch" height="1em" class="bc1"/>
+<rect x="2ch" y="2em" width="10ch" height="1em" class="bc2"/>
+<rect x="12ch" y="2em" width="1ch" height="1em" class="bc3"/>
+<rect x="13ch" y="2em" width="1ch" height="1em" class="bc4"/>
+</g>
+<text x="0ch" y="1.5em"><tspan>    </tspan><tspan class="fc0">TEST!!    </tspan></text>
+</svg>

@@ -24,6 +24,7 @@ Example usage:
 
 --charboxsize WxH    Character box size (use pixel units instead of font units)
 --colorscheme NAME   Color scheme
+--fillonly           Remove strokes from SVG output (use fills only)
 --fontfile PATH      Font file to use and embed
 --fontname NAME      Font name
 --fontref URL        External font URL to use
@@ -69,7 +70,7 @@ go build -o ansisvg .
 
 ## Fonts
 
-`ansisvg` can either use system-installed fonts (`-fontname`), link to a webfont on a HTTP server (`-fontref`) or embed a webfont from the local filesystem (`-fontfile`).
+`ansisvg` can either use system-installed fonts (`--fontname`), link to a webfont on a HTTP server (`-fontref`) or embed a webfont from the local filesystem (`--fontfile`).
 
 ### Compatibility issues
 
@@ -79,17 +80,17 @@ go build -o ansisvg .
 
 ### Variations of custom fonts (regular/bold/italic)
 
-* System wide fonts (`-fontname`) get correctly rendered with variations, but when using external fonts with `-fontref` or `-fontfile` the SVG viewer knows only the regular variant and will try to render italic/bold text 'extrapolated' from it which may look different than the actual font variation. To use the actual bold/italic font variants, different woff2 files have to be used for the respective text styles which needs additional CSS code (currently not supported by `ansisvg`).
+* System wide fonts (`-fontname`) get correctly rendered with variations, but when using external fonts with `--fontref` or `--fontfile` the SVG viewer knows only the regular variant and will try to render italic/bold text 'extrapolated' from it which may look different than the actual font variation. To use the actual bold/italic font variants, different woff2 files have to be used for the respective text styles which needs additional CSS code (currently not supported by `ansisvg`).
 
-* Bold style 'extrapolated' from the regular font may even break monospace alignment. Use `-grid` option to mitigate that.
+* Bold style 'extrapolated' from the regular font may even break monospace alignment. Use `--grid` option to mitigate that.
 
 ## Font-relative vs. pixel coordinates
 
-By default, `ansisvg` uses font-relative `ch`/`em` coordinates. This should make SVG dimensions and line/character spacing consistent with font family/size. When SVG dimensions and/or text coordinates are off, it is possible to force explicit pixel units for coordinates by specifying `-charboxsize` in X/Y pixel units, e.g. `8x16`.
+By default, `ansisvg` uses font-relative `ch`/`em` coordinates. This should make SVG dimensions and line/character spacing consistent with font family/size. When SVG dimensions and/or text coordinates are off, it is possible to force explicit pixel units for coordinates by specifying `--charboxsize` in X/Y pixel units, e.g. `8x16`.
 
 * Inkscape currently [cannot deal with SVG size expressed in font-relative units](https://gitlab.com/inkscape/inkscape/-/issues/4737), a quick workaround is Ctrl-Shift-R (resize page to content).
 
-* Some SVG processing tools like [asciidoctor](https://docs.asciidoctor.org/pdf-converter/latest/image-paths-and-formats/#image-formats) require the presence of the `viewBox` attribute. Use `-charboxsize` option to enable this attribute (it only works with pixel dimensions).
+* Some SVG processing tools like [asciidoctor](https://docs.asciidoctor.org/pdf-converter/latest/image-paths-and-formats/#image-formats) require the presence of the `viewBox` attribute. Use `--charboxsize` option to enable this attribute (it only works with pixel dimensions).
 
 ## Margin size
 
@@ -98,7 +99,11 @@ With `--marginsize` a margin can be defined, so there is a bit of empty space (o
 
 ## Consolidated text vs. grid mode
 
-By default, `ansisvg` consolidates text to `<tspan>` chunks, leaving the X positioning of characters to the SVG renderer. This usually works well for monospace fonts. However if not all glyphs involved are monospace (e.g. when exotic characters are used, making the SVG renderer fall back to a different font for those characters) then the alignment will be off; this can be worked around with `-grid` mode which will make `ansisvg` put each character to explicit positions, making the SVG bigger and less readable but ensuring proper positioning/alignment for all characters.
+By default, `ansisvg` consolidates text to `<tspan>` chunks, leaving the X positioning of characters to the SVG renderer. This usually works well for monospace fonts. However if not all glyphs involved are monospace (e.g. when exotic characters are used, making the SVG renderer fall back to a different font for those characters) then the alignment will be off; this can be worked around with `--grid` mode which will make `ansisvg` put each character to explicit positions, making the SVG bigger and less readable but ensuring proper positioning/alignment for all characters.
+
+## Illustrator Issues
+
+When handling ANSIs primarliy composed of block characters, e.g. █, ░, ▒, etc., a `stroke` is created by default in the output SVG that may cause overlapping of characters when viewed in Illustrator. The `--fillonly` mode is provided to remove `stroke` from the output SVG. This works especially well when combined with `--grid` and `--charboxsize`.
 
 ## Tricks
 
