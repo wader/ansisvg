@@ -32,7 +32,7 @@ var DefaultOptions = Options{
 	MarginSize:  xydim.XyDimFloat{X: 0, Y: 0},
 	ColorScheme: "Builtin Dark",
 	Transparent: false,
-	FillOnly: false,
+	FillOnly:    false,
 	LineHeight:  1.0,
 }
 
