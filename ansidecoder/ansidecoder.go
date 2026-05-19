@@ -19,6 +19,7 @@ const (
 	StateCSI              // Control Sequence Inducer ESC [
 	StateOSC              // Operating System Command ESC ]
 	StateOSCSeenESC       // Operating System Command ESC ] ... ESC
+	StateCUF              // Cursor forward
 )
 
 type codeRange [2]int
@@ -54,6 +55,7 @@ var sgrStrikethroughOff = codeRange{29, 29}
 const ESCRune = rune('\x1b')
 const BELRune = rune('\x07')
 const SGRByte = 'm' // Select Graphic Rendition
+const CUFByte = 'C' // Cursor forward
 const FinalBytes = "@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~)"
 
 type Color struct {
@@ -75,6 +77,8 @@ type Decoder struct {
 	// state of last returned rune
 	X             int
 	Y             int
+	TerminalWidth int
+	LineWrap      bool
 	Foreground    Color
 	Background    Color
 	Underline     bool
@@ -165,6 +169,7 @@ func (d *Decoder) ReadRune() (r rune, size int, err error) {
 			default:
 				d.X = d.nx
 				d.Y = d.ny
+
 				if d.Y > d.MaxY {
 					d.MaxY = d.Y
 				}
@@ -182,6 +187,11 @@ func (d *Decoder) ReadRune() (r rune, size int, err error) {
 						d.MaxX = d.X
 					}
 					d.nx++
+				}
+
+				if (d.LineWrap && d.TerminalWidth != 0) && d.nx >= d.TerminalWidth {
+					d.nx = 0
+					d.ny++
 				}
 
 				return r, n, err
@@ -267,6 +277,15 @@ func (d *Decoder) ReadRune() (r rune, size int, err error) {
 							d.Strikethrough = false
 						}
 					}
+				case CUFByte:
+					n := 1 // default
+					if len(pn) > 0 {
+						n = pn[0]
+					}
+					// TODO: clamp terminal width
+					d.nx += n
+				default:
+					// skip
 				}
 				d.State = StateCopy
 			default:

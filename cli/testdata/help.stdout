@@ -14,6 +14,7 @@ Example usage:
 --grid               Grid mode (sets position for each character)
 --help, -h           Show help
 --lineheight NUMBER  Line height multiplier (default 1.0)
+--linewrap           Wrap lines at terminal width (use with --width)
 --listcolorschemes   List color schemes
 --marginsize WxH     Margin size (in either pixel or font units)
 --transparent        Transparent background
