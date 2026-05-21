@@ -32,6 +32,7 @@ func Main(env Env) error {
 	var terminalWidthFlag int
 	fs.IntVar(&terminalWidthFlag, "w", 0, "")
 	fs.IntVar(&terminalWidthFlag, "width", 0, "NUMBER|Terminal width (auto if not set)")
+	var lineWrapFlag = fs.Bool("linewrap", false, "Wrap lines at terminal width (use with --width)")
 	var colorSchemeFlag = fs.String("colorscheme", ansitosvg.DefaultOptions.ColorScheme, "NAME|Color scheme")
 	var listColorSchemesFlag = fs.Bool("listcolorschemes", false, "List color schemes")
 	var transparentFlag = fs.Bool("transparent", ansitosvg.DefaultOptions.Transparent, "Transparent background")
@@ -140,6 +141,7 @@ Example usage:
 			FontSize:      *fontSizeFlag,
 			LineHeight:    float32(*lineHeightFlag),
 			TerminalWidth: terminalWidthFlag,
+			LineWrap:      *lineWrapFlag,
 			CharBoxSize:   charBoxSize,
 			MarginSize:    marginSize,
 			ColorScheme:   *colorSchemeFlag,

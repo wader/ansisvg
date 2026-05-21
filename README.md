@@ -32,6 +32,7 @@ Example usage:
 --grid               Grid mode (sets position for each character)
 --help, -h           Show help
 --lineheight NUMBER  Line height multiplier (default 1.0)
+--linewrap           Wrap lines at terminal width (use with --width)
 --listcolorschemes   List color schemes
 --marginsize WxH     Margin size (in either pixel or font units)
 --transparent        Transparent background
@@ -109,7 +110,7 @@ When handling ANSIs primarliy composed of block characters, e.g. █, ░, ▒, 
 
 ### ANSI to PDF or PNG
 
-```
+```sh
 ... | ansisvg | inkscape --pipe --export-type=pdf -o file.pdf
 ... | ansisvg | inkscape --pipe --export-type=png -o file.png
 ```
@@ -117,39 +118,48 @@ When handling ANSIs primarliy composed of block characters, e.g. █, ░, ▒, 
 
 ### Use `bat` to produce source code highlighting
 
-```
+```sh
 bat --color=always -p main.go | ansisvg
 ```
 
 ### Use `script` to run with a pty
 
-```
+```sh
 script -q /dev/null <command> | ansisvg
 ```
 
 ### ffmpeg
 
-```
+```sh
 TERM=a AV_LOG_FORCE_COLOR=1 ffmpeg ... 2>&1 | ansisvg
 ```
 
 ### jq
-```
+```sh
 jq -C | ansisvg
+```
+
+### Render ANSI art
+
+Install [ansimotd](https://github.com/retlehs/ansimotd) and optionally download
+font from https://int10h.org/oldschool-pc-fonts/download/
+
+```sh
+ansimotd display --file file.ans | ansivg --grid --fontfile PxPlus_IBM_VGA_8x16.ttf > file.svg
 ```
 
 ### Make screenshots from a terminal
 
 #### tmux
 
-```
+```sh
 # <prefix>-H: Create a SVG screenshot of the current pane
 bind H capture-pane -e \; run "tmux save-buffer - | $HOME/go/bin/ansisvg > $HOME/Pictures/tmux-$(date +%F_%T).svg"; delete-buffer
 ```
 
 #### kitty
 
-```
+```sh
 # F3: Create a SVG screenshot of the current selection
 map f3 combine : copy_ansi_to_clipboard : launch sh -c 'kitty +kitten clipboard -g | $HOME/go/bin/ansisvg > $HOME/Pictures/kitty-$(date +%F_%T).svg'
 ```

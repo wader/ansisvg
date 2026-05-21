@@ -16,6 +16,7 @@ type Options struct {
 	FontRef       string
 	FontSize      int
 	TerminalWidth int
+	LineWrap      bool
 	CharBoxSize   xydim.XyDimInt
 	MarginSize    xydim.XyDimFloat
 	ColorScheme   string
@@ -40,11 +41,17 @@ var DefaultOptions = Options{
 func Convert(r io.Reader, w io.Writer, opts Options) error {
 	ad := ansidecoder.NewDecoder(r)
 
+	ad.TerminalWidth = opts.TerminalWidth
+	ad.LineWrap = opts.LineWrap
+
 	lineNr := 0
 	var lines []svgscreen.Line
 	line := svgscreen.Line{
 		Y: lineNr,
 	}
+
+	lastX := 0
+	lastY := 0
 
 	for {
 		r, _, err := ad.ReadRune()
@@ -54,20 +61,32 @@ func Convert(r io.Reader, w io.Writer, opts Options) error {
 			return err
 		}
 
-		if r == '\n' {
+		if lastY != ad.Y {
+			lastY = ad.Y
+			lastX = 0
 			lines = append(lines, line)
 			lineNr++
 			line = svgscreen.Line{
 				Y: lineNr,
 			}
-			continue
 		}
 
 		n := 1
-		// normalize tab into spaces
-		if r == '\t' {
+		if r == '\n' {
+			lastX = 0
+			continue
+		} else if r == '\t' {
+			// normalize tab into spaces
 			r = ' '
 			n = 8 - (ad.X % 8)
+		} else {
+			d := ad.X - lastX
+			for i := 0; i < d; i++ {
+				line.Chars = append(line.Chars, svgscreen.Char{
+					Char: string([]rune{' '}),
+					X:    ad.X + i,
+				})
+			}
 		}
 
 		for i := 0; i < n; i++ {
@@ -84,6 +103,7 @@ func Convert(r io.Reader, w io.Writer, opts Options) error {
 				Strikethrough: ad.Strikethrough,
 			})
 		}
+		lastX = ad.X + n
 	}
 	if len(line.Chars) > 0 {
 		lines = append(lines, line)
