@@ -145,7 +145,7 @@ Install [ansimotd](https://github.com/retlehs/ansimotd) and optionally download
 font from https://int10h.org/oldschool-pc-fonts/download/
 
 ```sh
-ansimotd display --file file.ans | ansivg --grid --fontfile PxPlus_IBM_VGA_8x16.ttf > file.svg
+ansimotd display --file file.ans | ansisvg --grid --fontfile PxPlus_IBM_VGA_8x16.ttf > file.svg
 ```
 
 ### Make screenshots from a terminal
